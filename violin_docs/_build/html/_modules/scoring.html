@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>scoring &mdash; Violin  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Violin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Legal.html">License and funding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files.html">Input and Output Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../in_out.html">Input and Output Functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLN.in_out</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formatting.html">Formatting (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.formatting</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numeric.html">Numerical Functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.numeric</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network.html">Network Functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.network</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scoring.html">Scoring (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.scoring</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Violin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>scoring</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for scoring</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">scoring.py</span>
+
+<span class="sd">Handles the Match Level, Kind Score, and Epistemic Value functions for VIOLIN</span>
+<span class="sd">Created November 2019 - Casey Hansen MeLoDy Lab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">numeric</span> <span class="k">import</span> <span class="n">find_element_index</span><span class="p">,</span> <span class="n">compare</span>
+<span class="kn">from</span> <span class="nn">network</span> <span class="k">import</span> <span class="n">path_finding</span>
+
+<div class="viewcode-block" id="match_level"><a class="viewcode-back" href="../scoring.html#scoring.match_level">[docs]</a><span class="k">def</span> <span class="nf">match_level</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">reading_df</span><span class="p">,</span><span class="n">model_df</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function calculates the Match Level for an interaction from the reading</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : int</span>
+<span class="sd">        The line of the reading dataframe with the interaction to be scored</span>
+<span class="sd">    reading_df : pd.DataFrame</span>
+<span class="sd">        The reading dataframe</span>
+<span class="sd">    model_df : pd.DataFrame</span>
+<span class="sd">        The model dataframe</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    match : int</span>
+<span class="sd">        Match Level score value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1">#presence of regulated/regulator elements defaults to False</span>
+    <span class="n">regulated</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">regulator</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;PosReg Name&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;nan&quot;</span><span class="p">:</span> <span class="n">reg_name</span> <span class="o">=</span> <span class="s1">&#39;NegReg&#39;</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">reg_name</span> <span class="o">=</span> <span class="s1">&#39;PosReg&#39;</span>
+
+    <span class="c1">#Search for regulated from reading in model</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Name&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Type&#39;</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> 
+        <span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Identifier&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Type&#39;</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">regulated</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1">#Search for regulator from reading in model</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">reg_name</span><span class="o">+</span><span class="s1">&#39; Name&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">reg_name</span><span class="o">+</span><span class="s1">&#39; Type&#39;</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> 
+        <span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">reg_name</span><span class="o">+</span><span class="s1">&#39; ID&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">reg_name</span><span class="o">+</span><span class="s1">&#39; Type&#39;</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">regulator</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1">#Scoring Definition</span>
+    <span class="c1">#regulator and regulated in model</span>
+    <span class="k">if</span> <span class="n">regulated</span> <span class="ow">and</span> <span class="n">regulator</span><span class="p">:</span> <span class="n">match</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="c1">#regulator not in the model</span>
+    <span class="k">elif</span> <span class="n">regulated</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">regulator</span><span class="p">:</span> <span class="n">match</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="c1">#regulated not in the model</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">regulated</span> <span class="ow">and</span> <span class="n">regulator</span><span class="p">:</span> <span class="n">match</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="c1">#neither regulated nor regulator in model</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">match</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+    <span class="k">return</span> <span class="n">match</span></div>
+
+
+<div class="viewcode-block" id="kind_score"><a class="viewcode-back" href="../scoring.html#scoring.kind_score">[docs]</a><span class="k">def</span> <span class="nf">kind_score</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">model_df</span><span class="p">,</span><span class="n">reading_df</span><span class="p">,</span><span class="n">graph</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function calculates the Kind Score for an interaction in the reading</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x : int</span>
+<span class="sd">        The line of the reading dataframe with the interaction to be scored</span>
+<span class="sd">    model_df: pd.DataFrame</span>
+<span class="sd">        The model dataframe</span>
+<span class="sd">    reading_df : pd.DataFrame</span>
+<span class="sd">        The reading dataframe</span>
+<span class="sd">    graph : nx.Graph</span>
+<span class="sd">        edge list of the model,used when function calls path_finding module</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    kind : int</span>
+<span class="sd">        Kind Score score value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#Determines whether regulator is positive or negative</span>
+    <span class="k">if</span> <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;PosReg Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;nan&quot;</span><span class="p">:</span> 
+        <span class="n">regulator</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NegReg Name&#39;</span><span class="p">,</span><span class="s1">&#39;NegReg Type&#39;</span><span class="p">,</span><span class="s1">&#39;NegReg ID&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;NegReg&#39;</span><span class="p">,</span><span class="s1">&#39;NegReg IDs&#39;</span><span class="p">,</span><span class="s1">&#39;PosReg&#39;</span><span class="p">,</span><span class="s1">&#39;PosReg IDs&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">regulator</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;PosReg Name&#39;</span><span class="p">,</span><span class="s1">&#39;PosReg Type&#39;</span><span class="p">,</span><span class="s1">&#39;PosReg ID&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;PosReg&#39;</span><span class="p">,</span><span class="s1">&#39;PosReg IDs&#39;</span><span class="p">,</span><span class="s1">&#39;NegReg&#39;</span><span class="p">,</span><span class="s1">&#39;NegReg IDs&#39;</span><span class="p">]</span>
+
+    <span class="c1">#List of Regulated and Regulator Name, Type, ID</span>
+    <span class="n">nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Name&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Type&#39;</span><span class="p">],</span>
+            <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Element Identifier&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+            <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">2</span><span class="p">]]]</span>
+    <span class="c1">#List of interaction attributes (location, location ID, cell line, cell type, organism)</span>
+    <span class="n">reading_atts</span> <span class="o">=</span> <span class="p">[</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Location&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Location Identifier&#39;</span><span class="p">],</span>
+            <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Cell Line&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Cell Type&#39;</span><span class="p">],</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Organism&#39;</span><span class="p">]]</span>
+
+    <span class="c1">#Both regulator and regulated node found in the model</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span> <span class="ow">or</span> 
+        <span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> 
+        <span class="p">(</span><span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span> <span class="ow">or</span> 
+        <span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)):</span>
+
+       <span class="c1">#Determine if regulated is found as name or ID </span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span><span class="p">):</span> 
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">find_element_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="n">nodes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">model_df</span><span class="p">)</span>
+
+        <span class="c1">#Determine if regulator from reading is also a regulator in the model</span>
+        <span class="k">if</span> <span class="p">{</span><span class="n">nodes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">model_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span> <span class="ow">or</span> 
+            <span class="n">nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">model_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">4</span><span class="p">]])}:</span>
+
+            <span class="c1">#Generate list of model attributes to compare to reading attributes</span>
+            <span class="n">model_atts</span> <span class="o">=</span> <span class="p">[</span><span class="n">model_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="s1">&#39;Element Type&#39;</span><span class="p">],</span> <span class="n">model_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="s1">&#39;Location&#39;</span><span class="p">],</span>
+                        <span class="n">model_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="s1">&#39;Location ID&#39;</span><span class="p">],</span><span class="n">model_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="s1">&#39;Cell line&#39;</span><span class="p">],</span>
+                        <span class="n">model_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="s1">&#39;Cell type&#39;</span><span class="p">],</span><span class="n">model_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="s1">&#39;Organism&#39;</span><span class="p">]]</span> 
+            <span class="n">compare_atts</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="c1">#Create n-tuple of the results of compare() for each attribute </span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">reading_atts</span><span class="p">)):</span> <span class="n">compare_atts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">compare</span><span class="p">(</span><span class="n">model_atts</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">reading_atts</span><span class="p">[</span><span class="n">x</span><span class="p">]))</span>
+            <span class="c1">#Strong Corroboration - perfect match</span>
+            <span class="k">if</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">2</span>
+            <span class="c1">#Specification - reading contains information the model does not</span>
+            <span class="k">elif</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">30</span>
+            <span class="c1">#Weak Corroboration - model contains more information than the reading</span>
+            <span class="k">elif</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="c1">#Contradiction or questionable - some or all of the attributes differ</span>
+            <span class="k">elif</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">10</span>
+            <span class="c1">#Weak Corroboration - attributes either match or the model contains more information</span>
+            <span class="k">elif</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="c1">#Specification - attributes either match or the reading contains more information</span>
+            <span class="k">elif</span> <span class="mi">0</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">30</span>
+            <span class="c1">#Specification - model or reading contains more information, depending on attribute</span>
+            <span class="k">elif</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">compare_atts</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">compare_atts</span><span class="p">))</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">30</span>
+            <span class="c1">#Specification - combination of perfect match, model contains more information, </span>
+            <span class="c1"># reading contains more information</span>
+            <span class="k">else</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">30</span>
+
+        <span class="c1">#Regulator is in the wrong direction</span>
+        <span class="k">elif</span> <span class="p">{</span><span class="n">nodes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">model_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">5</span><span class="p">]])</span> <span class="ow">or</span> 
+              <span class="n">nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">model_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="n">regulator</span><span class="p">[</span><span class="mi">6</span><span class="p">]])}:</span> 
+            <span class="c1">#If it&#39;s an indirect interaction, it&#39;s possible that direct regulation has one action, </span>
+            <span class="c1"># but indirect has another.</span>
+            <span class="k">if</span> <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Interaction  Direct (D) or Indirect (I)&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span><span class="p">:</span>
+                <span class="n">kind</span> <span class="o">=</span> <span class="n">path_finding</span><span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">regulator</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">model_df</span><span class="p">,</span><span class="n">graph</span><span class="p">)</span>
+            <span class="c1">#Contradiction - If direct, then definitely a contradiction.</span>
+            <span class="k">else</span><span class="p">:</span><span class="n">kind</span> <span class="o">=</span> <span class="mi">10</span>
+    
+        <span class="c1">#Regulator from readin not in regulator lists in the model - look for path </span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="c1">#If path is found, score determined by path_finding()</span>
+            <span class="k">if</span> <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Interaction  Direct (D) or Indirect (I)&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;i&quot;</span><span class="p">:</span>
+                <span class="n">kind</span> <span class="o">=</span> <span class="n">path_finding</span><span class="p">(</span><span class="n">nodes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">regulator</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">nodes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">model_df</span><span class="p">,</span><span class="n">graph</span><span class="p">)</span>
+            <span class="c1">#Extension - no path found</span>
+            <span class="k">else</span><span class="p">:</span><span class="n">kind</span> <span class="o">=</span> <span class="mi">40</span>
+
+    <span class="c1">#Extension - One or both nodes from reading not in model</span>
+    <span class="k">else</span><span class="p">:</span> <span class="n">kind</span> <span class="o">=</span> <span class="mi">40</span>
+
+    <span class="k">return</span> <span class="n">kind</span></div>
+
+<span class="c1">#Calculating the Epistemic Value</span>
+<span class="c1">#TODO: Have Epistemic Value to calculate</span>
+
+<div class="viewcode-block" id="score_reading"><a class="viewcode-back" href="../scoring.html#scoring.score_reading">[docs]</a><span class="k">def</span> <span class="nf">score_reading</span><span class="p">(</span><span class="n">reading_df</span><span class="p">,</span><span class="n">model_df</span><span class="p">,</span><span class="n">graph</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates new columns for the Match Level, Kind Score, Epistemic Value, and Total Score.</span>
+<span class="sd">    Calls scoring functions and stores the values in the approriate column.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    reading_df : pd.DataFrame</span>
+<span class="sd">        The reading dataframe</span>
+<span class="sd">    model_df : pd.DataFrame</span>
+<span class="sd">        The model dataframe</span>
+<span class="sd">    graph : nx.Graph</span>
+<span class="sd">        edge list of the model, necessary for calling kind_score module</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    reading_df : pd.DataFrame</span>
+<span class="sd">        reading dataframe with added scores</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#Create new DF columns for score calculations</span>
+    <span class="n">reading_df</span><span class="p">[</span><span class="s1">&#39;Match Level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+    <span class="n">reading_df</span><span class="p">[</span><span class="s1">&#39;Kind Score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+    <span class="n">reading_df</span><span class="p">[</span><span class="s1">&#39;Epistemic Value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+    <span class="n">reading_df</span><span class="p">[</span><span class="s1">&#39;Total Score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+
+    <span class="c1">#Calculate scores</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">reading_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Match Level&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">match_level</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">reading_df</span><span class="p">,</span><span class="n">model_df</span><span class="p">)</span>
+        <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Kind Score&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kind_score</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">model_df</span><span class="p">,</span><span class="n">reading_df</span><span class="p">,</span><span class="n">graph</span><span class="p">)</span>
+        <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Epistemic Value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Total Score&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="p">{((</span><span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Evidence Count&#39;</span><span class="p">]</span><span class="o">*</span>
+                                            <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Match Level&#39;</span><span class="p">])</span><span class="o">+</span>
+                                            <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Kind Score&#39;</span><span class="p">])</span><span class="o">*</span>
+                                            <span class="n">reading_df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;Epistemic Value&#39;</span><span class="p">]}</span>
+
+    <span class="k">return</span> <span class="n">reading_df</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, MeLoDy Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
