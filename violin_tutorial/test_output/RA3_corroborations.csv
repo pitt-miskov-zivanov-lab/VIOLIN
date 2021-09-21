@@ -1,0 +1,49 @@
+,Element Name,Element Type,Element ID,Positive Reg Name,Positive Reg Type,Positive Reg ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Connection Type,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+290,erk,family,erk,ras,family,pf00071,nan,nan,nan,i,"['none', 'none', 'none', 'none', 'none']","['pmc4254013', 'pmc2064279', 'pmc5432316', 'pmc5746140', 'pmc5908790']","['nan', 'nan', 'nan', 'nan', 'nan']",5,10.0,1.0,1.0,51.0
+726,smad,family,smad,ras,family,pf00071,nan,nan,nan,i,"['none', 'none', 'none']","['pmc4440819', 'pmc4440819', 'pmc4440819']","['nan', 'nan', 'nan']",3,10.0,1.0,1.0,31.0
+252,erk,family,erk,mapk,family,erk,nan,nan,nan,i,"['none', 'none', 'none']","['pmc5467491', 'pmc5467491', 'pmc5190119']","['nan', 'nan', 'nan']",3,10.0,1.0,1.0,31.0
+639,raf,family,raf,ras,family,pf00071,nan,nan,nan,i,"['none', 'none', 'none']","['pmc4067595', 'pmc4067595', 'pmc2064279']","['nan', 'nan', 'nan']",3,10.0,1.0,1.0,31.0
+87,braf,protein,p15056,mapk,family,erk,nan,nan,nan,i,"['none', 'none']","['pmc3809567', 'pmc5599027']","['nan', 'nan']",2,10.0,1.0,1.0,21.0
+649,ras,family,pf00071,erk,family,erk,nan,nan,nan,i,"['none', 'none']","['pmc4440819', 'pmc4440819']","['nan', 'nan']",2,10.0,1.0,1.0,21.0
+431,mapk,family,erk,braf,protein,p15056,nan,nan,nan,i,"['none', 'none']","['pmc3809567', 'pmc5599027']","['nan', 'nan']",2,10.0,1.0,1.0,21.0
+571,p53,protein,p04637,nan,protein,nan,mdm2,protein,q00987,i,"['none', 'none']","['pmc5537703', 'pmc5537703']","['nan', 'nan']",2,10.0,1.0,1.0,21.0
+404,kras,protein,p01116,erk,family,erk,nan,nan,nan,i,"['none', 'none']","['pmc6006154', 'pmc6006154']","['nan', 'nan']",2,10.0,1.0,1.0,21.0
+706,sasp,protein,p10599,mtorc1,protein,mtorc1,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+633,raf,family,raf,braf,protein,p15056,nan,nan,nan,i,['none'],['pmc6472057'],['nan'],1,10.0,1.0,1.0,11.0
+516,mm,simple-chemical,6993082,mapk,family,erk,nan,nan,nan,i,['none'],['pmc4695180'],['nan'],1,10.0,1.0,1.0,11.0
+518,mtorc1,protein,mtorc1,erk,family,erk,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+519,mtorc1,protein,mtorc1,mek,family,mek,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+556,p38,family,p38,mapk,family,erk,nan,nan,nan,i,['none'],['pmc5190119'],['nan'],1,10.0,1.0,1.0,11.0
+590,pi3k,protein,pi3k,ras,family,pf00071,nan,nan,nan,i,['none'],['pmc3843736'],['nan'],1,10.0,1.0,1.0,11.0
+636,raf,family,raf,mapk,family,erk,nan,nan,nan,i,['none'],['pmc6472057'],['nan'],1,10.0,1.0,1.0,11.0
+634,raf,family,raf,erk,family,erk,nan,nan,nan,i,['none'],['pmc2064279'],['nan'],1,10.0,1.0,1.0,11.0
+723,smad,family,smad,erk,family,erk,nan,nan,nan,i,['none'],['pmc4440819'],['nan'],1,10.0,1.0,1.0,11.0
+499,mek2,protein,p36507,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+642,raf-1,protein,p04049,mapk,family,erk,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+657,ras,family,pf00071,mapk,family,erk,nan,nan,nan,i,['none'],['pmc3843736'],['nan'],1,10.0,1.0,1.0,11.0
+658,ras,family,pf00071,mek,family,mek,nan,nan,nan,i,['none'],['pmc2911390'],['nan'],1,10.0,1.0,1.0,11.0
+697,rb,protein,p06400,erk,family,erk,nan,nan,nan,i,['none'],['pmc2064279'],['nan'],1,10.0,1.0,1.0,11.0
+705,sasp,protein,p10599,er,protein,p03372,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+515,mm,simple-chemical,6993082,braf,protein,p15056,nan,nan,nan,i,['none'],['pmc4695180'],['nan'],1,10.0,1.0,1.0,11.0
+7,akt,family,akt,ras,family,pf00071,nan,nan,nan,i,['none'],['pmc2064279'],['nan'],1,10.0,1.0,1.0,11.0
+496,mek1,protein,q02750,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+386,jnk,family,jnk,mapk,family,erk,nan,nan,nan,i,['none'],['pmc5190119'],['nan'],1,10.0,1.0,1.0,11.0
+211,egfr,protein,p00533,pi3k,protein,pi3k,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+239,erk,family,erk,da-raf1,protein,p10398,nan,nan,nan,i,['none'],['pmc2064279'],['nan'],1,10.0,1.0,1.0,11.0
+253,erk,family,erk,mek,family,mek,nan,nan,nan,i,['none'],['pmc6006154'],['nan'],1,10.0,1.0,1.0,11.0
+284,erk,family,erk,pd,simple-chemical,7079450,nan,nan,nan,i,['none'],['pmc5824365'],['nan'],1,10.0,1.0,1.0,11.0
+288,erk,family,erk,raf,family,raf,nan,nan,nan,i,['none'],['pmc5746140'],['nan'],1,10.0,1.0,1.0,11.0
+301,erk1,protein,p27361,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+312,erk2,protein,p28482,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+384,jnk,family,jnk,jnk,family,jnk,nan,nan,nan,i,['none'],['pmc5636874'],['nan'],1,10.0,1.0,1.0,11.0
+416,lactate,simple-chemical,hmdb00190,erk,family,erk,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+475,mek,family,mek,erk,family,erk,nan,nan,nan,i,['none'],['pmc4846800'],['nan'],1,10.0,1.0,1.0,11.0
+417,lactate,simple-chemical,hmdb00190,mek,family,mek,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+427,map,protein,p12872,ras,family,pf00071,nan,nan,nan,i,['none'],['pmc5432316'],['nan'],1,10.0,1.0,1.0,11.0
+428,map2k1,protein,q02750,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+429,map2k2,protein,p36507,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+460,mapk,family,erk,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+467,mapk1,protein,p28482,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+468,mapk3,protein,p27361,raf-1,protein,p04049,nan,nan,nan,i,['none'],['pmc5609034'],['nan'],1,10.0,1.0,1.0,11.0
+11,ampk,protein,ampk,mek,family,mek,nan,nan,nan,i,['none'],['pmc5723691'],['nan'],1,10.0,1.0,1.0,11.0
+474,mek,family,mek,braf,protein,p15056,nan,nan,nan,i,['none'],['pmc4846800'],['nan'],1,10.0,1.0,1.0,11.0

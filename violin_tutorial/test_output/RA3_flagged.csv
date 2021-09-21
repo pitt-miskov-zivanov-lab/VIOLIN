@@ -1,0 +1,3 @@
+,Element Name,Element Type,Element ID,Positive Reg Name,Positive Reg Type,Positive Reg ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Connection Type,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+72,b-raf,protein,p15056,nan,protein,nan,da-raf1,protein,p10398,i,['none'],['pmc2064279'],['nan'],1,10.0,20.0,1.0,30.0
+90,braf,protein,p15056,nan,protein,nan,mammalian target of rapamycin,protein,p42345,i,['none'],['pmc4179759'],['nan'],1,10.0,20.0,1.0,30.0

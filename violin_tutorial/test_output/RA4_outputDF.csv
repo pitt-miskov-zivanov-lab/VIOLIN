@@ -1,0 +1,21 @@
+,Element Name,Element Type,Element ID,Positive Reg Name,Positive Reg Type,Positive Reg ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Connection Type,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+2,c-jun n-terminal kinase 1,protein,p45983,smoke,simple-chemical,ua-bp-sc-00380,nan,nan,nan,i,['none'],['pmcpmc5463402'],['nan'],1,100.0,40.0,1.0,140.0
+3,e2f1,protein,q01094,sclcs,protein,uaz09330,nan,nan,nan,i,['none'],['pmcpmc5463402'],['nan'],1,100.0,40.0,1.0,140.0
+4,es,simple-chemical,6995653,erk1/2,family,erk,nan,nan,nan,i,['none'],['pmcpmc6073214'],['nan'],1,100.0,40.0,1.0,140.0
+5,es,simple-chemical,6995653,rsk1,protein,q15418,nan,nan,nan,i,['none'],['pmcpmc6073214'],['nan'],1,100.0,40.0,1.0,140.0
+17,tert,protein,o14746,gabp,protein,q9zu50,nan,nan,nan,i,['none'],['pmcpmc5463402'],['nan'],1,100.0,40.0,1.0,140.0
+12,ras,family,pf00071,nan,nan,nan,sclcs,protein,uaz09330,i,['none'],['pmcpmc5463402'],['nan'],1,100.0,40.0,1.0,140.0
+0,apoptosis,bioprocess,go:0006915,tert,protein,o14746,nan,nan,nan,i,['none'],['pmcpmc5463402'],['nan'],1,1.0,40.0,1.0,41.0
+7,ga,protein,q9ui32,tert,protein,o14746,nan,nan,nan,i,['none'],['pmcpmc5463402'],['nan'],1,1.0,40.0,1.0,41.0
+1,autophagy,bioprocess,go:0006914,prkaa1,protein,q13131,nan,nan,nan,i,['none'],['pmcpmc5463402'],['nan'],1,1.0,40.0,1.0,41.0
+13,rsk,family,rsk,nan,nan,nan,erk,family,erk,i,['none'],['pmcpmc6073214'],['nan'],1,1.0,40.0,1.0,41.0
+9,inflammation,bioprocess,go:0006954,smoke,simple-chemical,ua-bp-sc-00380,nan,nan,nan,i,"['none', 'none']","['pmcpmc5463402', 'pmcpmc5463402']","['nan', 'nan']",2,0.1,40.0,1.0,40.2
+15,rsk1/2,protein,uaz08081,nan,nan,nan,ltn1,protein,o94822,i,['none'],['pmcpmc5935074'],['nan'],1,0.1,40.0,1.0,40.1
+18,translation,bioprocess,go:0006412,nan,nan,nan,ltn1,protein,o94822,i,['none'],['pmcpmc5935074'],['nan'],1,0.1,40.0,1.0,40.1
+16,tcf3,protein,p15923,nan,nan,nan,gsk3,family,gsk3,i,['none'],['pmcpmc6073214'],['nan'],1,0.1,40.0,1.0,40.1
+10,perk1/2,protein,q9zue0,nan,nan,nan,rsk,family,rsk,i,['none'],['pmcpmc6073214'],['nan'],1,0.1,40.0,1.0,40.1
+14,rsk1,protein,q15418,nan,nan,nan,ltn1,protein,o94822,i,['none'],['pmcpmc5935074'],['nan'],1,0.1,40.0,1.0,40.1
+11,phosphoinositide 3-kinase,protein,uaz00053,nan,nan,nan,sclcs,protein,uaz09330,i,['none'],['pmcpmc5463402'],['nan'],1,0.1,40.0,1.0,40.1
+8,gfp,family,pf01353,rsk1,protein,q15418,nan,nan,nan,i,['none'],['pmcpmc6073214'],['nan'],1,0.1,40.0,1.0,40.1
+6,fig,protein,q9hd26,nan,nan,nan,sugar,simple-chemical,5988,i,['none'],['pmcpmc5463402'],['nan'],1,0.1,40.0,1.0,40.1
+19,translation,bioprocess,go:0006412,nan,nan,nan,proteasome,protein,proteasome,i,['none'],['pmcpmc5935074'],['nan'],1,0.1,40.0,1.0,40.1
