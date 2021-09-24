@@ -1,0 +1,13 @@
+setup.py
+VIOLIN/formatting.py
+VIOLIN/in_out.py
+VIOLIN/network.py
+VIOLIN/numeric.py
+VIOLIN/scoring.py
+VIOLIN/visualize_violin.py
+VIOLIN.egg-info/PKG-INFO
+VIOLIN.egg-info/SOURCES.txt
+VIOLIN.egg-info/dependency_links.txt
+VIOLIN.egg-info/not-zip-safe
+VIOLIN.egg-info/requires.txt
+VIOLIN.egg-info/top_level.txt
