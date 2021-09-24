@@ -12,8 +12,10 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('/Users/casey/Framework/'))
-sys.path.insert(0, os.path.abspath('/Users/casey/Framework/VIOLIN/violin_tutorial/'))
+autodoc_mock_imports = ["_tkinter"]
+
+sys.path.insert(0, os.path.abspath('/Users/casey/master/'))
+sys.path.insert(0, os.path.abspath('/Users/casey/master/violin_tutorial/'))
 
 import VIOLIN.formatting
 import VIOLIN.in_out
