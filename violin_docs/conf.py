@@ -12,7 +12,8 @@
 #
 import os
 import sys
-autodoc_mock_imports = ["_tkinter"]
+import matplotlib
+matplotlib.use('agg')
 
 sys.path.insert(0, os.path.abspath('/Users/casey/master/'))
 sys.path.insert(0, os.path.abspath('/Users/casey/master/violin_tutorial/'))
