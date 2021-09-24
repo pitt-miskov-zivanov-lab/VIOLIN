@@ -13,6 +13,8 @@
 import os
 import sys
 
+autodoc_mock_imports = ['matplotlib']
+
 sys.path.insert(0, os.path.abspath('/Users/casey/master/'))
 sys.path.insert(0, os.path.abspath('/Users/casey/master/violin_tutorial/'))
 
