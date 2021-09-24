@@ -22,8 +22,6 @@ import VIOLIN.numeric
 import VIOLIN.scoring
 import VIOLIN.visualize_violin
 
-import use_violin
-
 
 # -- Project information -----------------------------------------------------
 
