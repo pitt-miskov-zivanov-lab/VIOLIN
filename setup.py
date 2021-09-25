@@ -15,7 +15,7 @@ setup(
     #license='',
     keywords='dynamic system boolean logical qualitative modeling simulation',
 
-    packages=['VIOLIN'],
+    packages=['VIOLIN','violin_tutorial'],
     include_package_data=True,
 
     install_requires=[

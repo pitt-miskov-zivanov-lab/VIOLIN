@@ -11,3 +11,4 @@ VIOLIN.egg-info/dependency_links.txt
 VIOLIN.egg-info/not-zip-safe
 VIOLIN.egg-info/requires.txt
 VIOLIN.egg-info/top_level.txt
+violin_tutorial/use_violin.py
