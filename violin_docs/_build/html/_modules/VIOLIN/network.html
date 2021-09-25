@@ -13,7 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
@@ -31,11 +32,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../numeric.html">Numerical Functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.numeric</span></code>)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../network.html">Network Functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.network</span></code>)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../scoring.html">Scoring (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.scoring</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../visualization.html">Visualization (<code class="xref py py-mod docutils literal notranslate"><span class="pre">VIOLIN.visualize_violin</span></code>)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
 
@@ -173,7 +174,7 @@
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="kn">from</span> <span class="nn">VIOLIN.numeric</span> <span class="k">import</span> <span class="n">compare</span>
+<span class="kn">from</span> <span class="nn">VIOLIN.numeric</span> <span class="kn">import</span> <span class="n">compare</span>
 
 
 <div class="viewcode-block" id="node_edge_list"><a class="viewcode-back" href="../../network.html#VIOLIN.network.node_edge_list">[docs]</a><span class="k">def</span> <span class="nf">node_edge_list</span><span class="p">(</span><span class="n">model_df</span><span class="p">):</span>

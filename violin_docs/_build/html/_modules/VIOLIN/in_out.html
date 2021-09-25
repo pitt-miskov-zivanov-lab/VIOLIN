@@ -295,6 +295,7 @@
     <span class="k">elif</span> <span class="n">reading_ext</span> <span class="o">==</span> <span class="s1">&#39;.tsv&#39;</span><span class="p">:</span> <span class="n">reading_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">reading</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The accepted file extensions are .txt, .csv, .xslx, and .tsv&quot;</span><span class="p">)</span>
 
+    <span class="c1">#Begin relative column name retrieval </span>
     <span class="c1">#Accepted target/regulated headers</span>
     <span class="n">t_name_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;elementname&quot;</span><span class="p">,</span><span class="s2">&quot;targetname&quot;</span><span class="p">,</span><span class="s2">&quot;regulatedname&quot;</span><span class="p">]</span>
     <span class="n">t_type_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;elementtype&quot;</span><span class="p">,</span><span class="s2">&quot;targettype&quot;</span><span class="p">,</span><span class="s2">&quot;regulatedtype&quot;</span><span class="p">]</span>
@@ -353,6 +354,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Your LEE input is missing information.&quot;</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span>
         <span class="s2">&quot;VIOLIN requires the following information: Name, Type, and ID of target node and regulators&quot;</span><span class="p">)</span>
+    <span class="c1">#End relative column name retrieval</span>
 
     <span class="c1">#Make sure evidence_cols match what is in the LEE input file</span>
     <span class="k">if</span> <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">evidence_score_cols</span><span class="p">)</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">reading_df</span><span class="o">.</span><span class="n">columns</span><span class="p">))):</span> 
