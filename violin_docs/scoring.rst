@@ -141,14 +141,14 @@ Defaults
 --------
 Default Match Score values
 
-.. literalinclude:: ../scoring.py
+.. literalinclude:: ../VIOLIN/scoring.py
     :language: python
     :lines: 28-31
     :lineno-start: 28
 
 Default Kind Score values
 
-.. literalinclude:: ../scoring.py
+.. literalinclude:: ../VIOLIN/scoring.py
     :language: python
     :lines: 14-27
     :lineno-start: 14
@@ -158,7 +158,7 @@ Usage
 *scoring.score_reading* scores the reading output in the following manner:
 
 
-.. literalinclude:: ../scoring.py
+.. literalinclude:: ../VIOLIN/scoring.py
     :language: python
     :lines: 406-414
     :lineno-start: 406

@@ -13,8 +13,6 @@
 import os
 import sys
 
-autodoc_mock_imports = ['matplotlib']
-
 sys.path.insert(0, os.path.abspath('/Users/casey/master/'))
 sys.path.insert(0, os.path.abspath('/Users/casey/master/violin_tutorial/'))
 
@@ -25,12 +23,14 @@ import VIOLIN.numeric
 import VIOLIN.scoring
 import VIOLIN.visualize_violin
 
+import use_violin
+
 
 # -- Project information -----------------------------------------------------
 
 project = 'Violin'
 copyright = '2021, MeLoDy Lab'
-author = 'MeLoDy Lab'
+author = 'Casey Hansen'
 
 
 # -- General configuration ---------------------------------------------------

@@ -13,7 +13,7 @@ and an LEE set from REACH.
 
 A `violin_tutorial` folder containing an example ipy notebook, input files, and expected output
 is included with the VIOLIN package. This tutorial recreates some of the data presented in 
-[Paper name and link]
+[Paper TBA]
 
 Tutorial 2: Specifying Score and Attributes
 -------------------------------------------
@@ -151,8 +151,7 @@ Model Representation
 While the BioRECIPES format is necessary for the DySE modeling framework, models are frequently presented as node-edge lists.
 In this case, the model will need to be converted to the BioRECIPE format using the :py:func:`VIOLIN.formatting.nconvert_to_biorecipes` function: ::
 
-    model_df,graph = formatting.convert_to_biorecipes(model, att_list=['location','organism'], separate=False)
+    model_df = formatting.convert_to_biorecipes(model, att_list=['location','organism'], separate=False)
 
 In a single step, VIOLIN separates the regulators into positive and negative (if needed) and condenses interactions into lists of regulators
-for each element, as shown in :ref:`files:Input`. VIOLIN also adds the weights representing the regulation sign, necessary for the :py:func:`VIOLIN.formatting.path_finding` function, 
-making use of the already created node-edge list instead of calling on the :py:func:`VIOLIN.formatting.node_edge_list` function.
+for each element, as shown in :ref:`files:Input`.

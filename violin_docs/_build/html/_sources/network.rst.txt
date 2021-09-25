@@ -14,7 +14,7 @@ And indirect LEE may be a :ref:`weak corroboration <scoring:Corroborations>` to 
 be a :ref:`specification <scoring:Extensions>`, identifying a more direct relationship between 2 nodes than is given in
 the model. This functionality reduces the number of false extensions.
 
-.. image:: ../PathFigure.png
+.. image:: _build/PathFigure.png
 
 Functions
 ---------

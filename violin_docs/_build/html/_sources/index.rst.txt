@@ -30,7 +30,7 @@ at varying levels of detail
 VIOLIN Methodology
 ------------------
 
-.. image:: ../VIOLIN_diagram.png
+.. image:: _build/VIOLIN_diagram.png
    :scale: 40 %
    :align: center
 
@@ -43,7 +43,7 @@ and a connecting *edge* between them. There may also be additional *attributes* 
 present additional details. VIOLIN takes advantage of this definiton when making
 its judgements.
 
-.. image:: ../ToyExample.png
+.. image:: _build/ToyExample.png
    :scale: 50 %
    :align: center
 
