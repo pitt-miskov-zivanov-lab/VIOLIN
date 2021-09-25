@@ -57,8 +57,8 @@ The `use_violin.py` script is included in the  `violin_tutorial` folder. The inp
 
 as well as the same filtering options from :doc:`visualization` 
 
-.. currentmodule:: use_violin
-.. autofunction:: use_violin
+.. currentmodule:: violin_tutorial.use_violin
+.. autofunction:: violin_tutorial.use_violin
 
 To run `use_violin.py` at the command line: ::
 
