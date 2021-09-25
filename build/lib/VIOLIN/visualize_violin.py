@@ -8,7 +8,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.ticker as mticker
-from sklearn import preprocessing
 import numpy as np
 plt.rcParams["font.family"] = "Arial"
 
