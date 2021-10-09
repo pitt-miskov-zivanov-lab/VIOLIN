@@ -5,9 +5,9 @@ This page details the formatting functions of VIOLIN, used during model and read
 
 The formatting step is important, as it:
 
-- identifies duplicate interactions in the reading output,
-- counts the number of times an interaction was found in the reading (:ref:`scoring:Evidence Score`),
-- converts the variable representation of the model regulators into the common names
+* identifies duplicate interactions in the reading output,
+* counts the number of times an interaction was found in the reading (:ref:`scoring:Evidence Score`),
+* converts the variable representation of the model regulators into the common names
 
 The formatting functions are also responsible for inputting models and machine
 reading output which are not in the BioRECIPES or REACH format (respectively).
