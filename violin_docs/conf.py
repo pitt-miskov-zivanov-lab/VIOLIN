@@ -23,7 +23,7 @@ import VIOLIN.numeric
 import VIOLIN.scoring
 import VIOLIN.visualize_violin
 
-import violin_tutorial.use_violin
+import violin_tutorial.use_violin_script
 
 
 # -- Project information -----------------------------------------------------
