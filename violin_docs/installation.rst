@@ -18,9 +18,11 @@ For Mac OSX, Python can also be installed at the command line by::
 
 Installing VIOLIN
 -----------------
-To install directly from github::
+A copy of the VIOLIN repository can be downloaded from the Bitbucket website at 
+`https://bitbucket.org/biodesignlab/violin/src/master/ <https://bitbucket.org/biodesignlab/violin/src/master/>`_,
+or cloned through git at the command line:
 
-    >> pip install git+https://bitbucket.org/biodesignlab/violin/src/master/
+    >> git clone https://bitbucket.org/biodesignlab/violin/src/master/
 
 You will then need to run the `setup.py` file to use VIOLIN as a package::
 
