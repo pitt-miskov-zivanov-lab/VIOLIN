@@ -11,9 +11,11 @@ Tutorial 1: Default Use (general extension)
 This tutorial assumes that the input files are a model in the standard BioRECIPES format
 and an LEE set from REACH.
 
-A `violin_tutorial` folder containing an example ipy notebook, input files, and expected output
-is included with the VIOLIN package. This tutorial recreates some of the data presented in 
-[Paper TBA]
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CIwezpI689c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
 Tutorial 2: Specifying Score and Attributes
 -------------------------------------------
