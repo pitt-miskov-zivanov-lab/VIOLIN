@@ -13,36 +13,18 @@ and an LEE set from REACH.
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <div style="position: relative; padding-bottom: 20.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/CIwezpI689c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
 Tutorial 2: Specifying Score and Attributes
 -------------------------------------------
-If the user wants to compare attributes in addition to the default, the additional attributes must be defined
-before inputting the reading, and then call them in the input_reading function::
 
-    attributes = ['Location ID']
-    reading_df, reading_cols = input_reading(reading_file, evidence_score_cols,atts=attributes)
+.. raw:: html
 
-If the user wants to use a different scoring scheme than the default (e.g. to account for the subclassifications in judgement),
-a scoring dictionary must be defined before calling the scoring function::
-
-    kind_dict = {"strong corroboration" : 2, 
-                "weak corroboration1" : 1,
-                "weak corroboration2" : 3,
-                "weak corroboration3" : 5,
-                "hanging extension" : 40, 
-                "full extension" : 41, 
-                "internal extension" : 42, 
-                "specification" : 30, 
-                "dir contradiction" : 10,
-                "sign contradiction" : 11,
-                "att contradiction" : 12,
-                "flagged1" : 20,
-                "flagged2" : 21,
-                "flagged3" : 22}
-    scored = score_reading(reading_df,model_df,graph,reading_cols,kind_values = kind_dict,attributes = attributes)
+    <div style="position: relative; padding-bottom: 20.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jCSfBH3vzQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
 Tutorial 3: Using VIOLIN at the terminal
 ----------------------------------------
@@ -60,11 +42,18 @@ The `use_violin_script.py` script is included in the  `violin_tutorial` folder. 
 as well as the same filtering options from :doc:`visualization` 
 
 .. currentmodule:: violin_tutorial.use_violin_script
-.. autofunction:: violin_tutorial.use_violin_script
+.. autofunction:: use_violin
 
 To run `use_violin_script.py` at the command line: ::
 
     python use_violin_script.py test_input/ModelA.csv test_input/RA2_reading.xlsx output extend 50%
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 20.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8kFBzVdhvvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
 
 
 
