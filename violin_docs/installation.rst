@@ -20,7 +20,7 @@ Installing VIOLIN
 -----------------
 A copy of the VIOLIN repository can be downloaded from the Bitbucket website at 
 `https://bitbucket.org/biodesignlab/violin/src/master/ <https://bitbucket.org/biodesignlab/violin/src/master/>`_,
-or cloned through git at the command line:
+or cloned through git at the command line::
 
     >> git clone https://bitbucket.org/biodesignlab/violin/src/master/
 
