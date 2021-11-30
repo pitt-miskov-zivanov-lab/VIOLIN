@@ -58,6 +58,7 @@ To run `use_violin_script.py` at the command line: ::
 
 Tutorial 4: Alternative Input
 ------------------------------
+.. raw:: html
 
     <div style="position: relative; padding-bottom: 10.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/gkHnisreKWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
