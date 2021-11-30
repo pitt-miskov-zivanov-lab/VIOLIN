@@ -31,7 +31,7 @@ def node_edge_list(model_df):
     else: target = 'Element Name'
 
     #Subset of the model, just element and regulator columns
-    graph = model_df[[target,'Positive Regulators','Negative Regulators']]
+    graph = model_df[[target,'Positive Regulators','Negative Regulators']].astype(str)
     #removes 'nan' placeholder
     graph = graph.replace('nan','')
 

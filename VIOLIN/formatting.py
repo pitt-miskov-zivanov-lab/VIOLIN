@@ -97,7 +97,6 @@ def add_regulator_names_id(model_df):
                     factor = model_df[sign+' Regulators'][y][idx:idx+2]
                     model_df[sign+' Regulators'][y] = model_df[sign+' Regulators'][y].replace(factor,'')
 
-                # print(model_df[sign+' Regulators'][y], '!' in model_df[sign+' Regulators'][y])
                 # Moving NOT regulators to the opposite sign
                 elif '!' in model_df[sign+' Regulators'][y]:
                     idx = model_df[sign+' Regulators'][y].index('!')
@@ -230,7 +229,7 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
                     model_cols['pos_source_'+x.lower().replace(" ","_")] = col_names[bare_cols.index((set(s_att_list) & set(bare_cols)).pop())]
                     model_cols['neg_source_'+x.lower().replace(" ","_")] = model_cols['pos_source_'+x.lower().replace(" ","_")].replace("positive","negative").replace("pos","neg").replace("Positive","Negative").replace("Pos","Neg")
                 else:
-                    raise ValueError("Attribute \""+x+"\" was not found in your LEE input document."+"\n"+
+                    raise ValueError("Attribute \""+x+"\" was not found in your Model input document."+"\n"+
                     "Please check your file and try again")
             #Import the Element and regulator sets
             #Both regulator sets will have "nan" items, representing those rows which do not have
@@ -246,8 +245,8 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
             neg_not_elements = np.setdiff1d(neg_regs,elements)[0]
 
             #get column names of all regulator attributes
-            pos_cols = [value for key, value in model_cols.items() if 'pos' in key.lower()]
-            neg_cols = [value for key, value in model_cols.items() if 'neg' in key.lower()]
+            pos_cols = {key: value for key, value in model_cols.items() if 'pos' in key.lower()}
+            neg_cols = {key: value for key, value in model_cols.items() if 'neg' in key.lower()}
 
             #get indices of not_elements
             pos_idx = []
@@ -258,34 +257,39 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
                 neg_idx.append(list(model_df[model_cols['neg_source_name']]).index(y))
 
             #create subsets of DF based on not_elements
-            pos_sub = model_df.loc[pos_idx,pos_cols]
-            neg_sub = model_df.loc[neg_idx,neg_cols]
+            pos_sub = model_df.loc[pos_idx,pos_cols.values()]
+            neg_sub = model_df.loc[neg_idx,neg_cols.values()]
 
             #Reduce sub DF to only unique rows
             unique_pos = pos_sub.drop_duplicates()
             unique_neg = neg_sub.drop_duplicates()
 
             #Add subsets to model_df
-            unique_pos.columns = [s.replace(model_cols['pos_source_name'], model_cols['target_name']) for s in unique_pos.columns]
-            unique_neg.columns = [s.replace(model_cols['neg_source_name'], model_cols['target_name']) for s in unique_neg.columns]
+            for each in list(pos_cols.keys()):
+                unique_pos.rename(columns={pos_cols[each]: model_cols[each.replace('pos_source','target')]},inplace=True)
+            for every in list(neg_cols.keys()):
+                unique_neg.rename(columns={neg_cols[every]: model_cols[every.replace('neg_source','target')]},inplace=True)          
             model_df = model_df.append(unique_pos,ignore_index=True).append(unique_neg,ignore_index=True).fillna('nan')
-
-            #Now need to combine rows with the same element
-            #remainders are the regulator columns which need to be retained
-            remainder = pos_cols + neg_cols
-            model_cols = [x for x in model_df if x not in remainder]
+          
 
             # Change column header names
             biorecipes_cols = {'target_name':'Element Name', 'target_type':'Element Type',
                                'target_id':'Element IDs','pos_source_name':'Positive Regulators',
                                'neg_source_name':'Negative Regulators'}
-            for x in biorecipes_cols:
+            for x in list(biorecipes_cols.keys()):
                 model_df = model_df.rename(columns={model_cols[x]:biorecipes_cols[x]})
 
+            #Delete Extraneous Columns
+            model_df = model_df.drop(columns=list(set(pos_cols.values())&set(model_df.columns)))
+            model_df = model_df.drop(columns=list(set(neg_cols.values())&set(model_df.columns)))
+
+            group_cols = [value for key, value in biorecipes_cols.items() if 'target' in key.lower()]
+            remainder = [x for x in model_df.columns if x not in group_cols]
+
             #As VIOLIN Identifies duplicates, it merges attributes from the remainder list into a single cell
-            biorecipes_model = model_df.groupby(model_cols)[remainder[0]].apply(list).reset_index(name=remainder[0])
+            biorecipes_model = model_df.groupby(group_cols)[remainder[0]].apply(list).reset_index(name=remainder[0])
             for x in range(1,len(remainder)):
-                sub = model_df.groupby(model_cols)[remainder[x]].apply(list).reset_index(name=remainder[x])
+                sub = model_df.groupby(group_cols)[remainder[x]].apply(list).reset_index(name=remainder[x])
                 biorecipes_model[remainder[x]] = sub[remainder[x]]
             for each in remainder:
                 biorecipes_model[each] = biorecipes_model[each].apply(','.join)
@@ -293,10 +297,11 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
             biorecipes_model = biorecipes_model.replace({'nan': ''}, regex=True)
                 
             biorecipes_model = biorecipes_model.sort_values(by='Element Name',ascending=True)
+
             
             #If Variables present, covert regulator variable name lists to common names and database identifiers
-            if 'Variable' not in model_cols:
-                biorecipes_model['Variable'] = biorecipes_model['Element Name']+'_'+biorecipes_model['Element Type']
+            if 'Variable' not in list(model_cols.keys()):
+                biorecipes_model['Variable'] = biorecipes_model['Element Name']
                 # remove whitespace from variable names
                 biorecipes_model['Variable'] = biorecipes_model['Variable'].map(lambda x: x.lstrip(' '))
                 biorecipes_model = add_regulator_names_id(biorecipes_model)
@@ -451,8 +456,6 @@ def convert_reading(reading, action, atts = []):
     reading_df : pd.DataFrame
         A dataframe with the specified formatting completed
     """
-
-    reqd_cols1 = ['Reg Name','Reg Type','Reg ID','Reg Sign']
     
     
     if type(reading) == str:
@@ -468,8 +471,6 @@ def convert_reading(reading, action, atts = []):
 
     else: raise ValueError("Unsupported input type. This functions accepts filenames and dataframes")
 
-    #To allow for "Reg" or "Regulator" in column headers
-    reading_df.columns = [s.replace('Regulator', 'Reg') for s in reading_df.columns]
 
     if action == 'separate':
         #Begin relative column name retrieval 
@@ -517,17 +518,46 @@ def convert_reading(reading, action, atts = []):
         #make sure necessary header column headers are present
 
         #Need to split the regulators into positive/negative before combining rows
-        for x in range(len(list(reading_df[reading_cols[source_name]]))):
-            if reading_df.loc[x,'Reg Sign'].lower() in ['negative','decrease','decreases','inhibit']:
-                for each in ['source_name','source_type','source_id']+s_att_list:
+        new_reading_cols = {}
+        for x in range(len(list(reading_df[reading_cols["source_name"]]))):
+            if reading_df.loc[x,reading_cols["source_sign"]].lower() in ['negative','decrease','decreases','inhibit']:
+                for each in list(reading_cols.keys()):
                     reading_df.loc[x,'Negative '+reading_cols[each]] =  reading_df.loc[x,reading_cols[each]]
+                    new_reading_cols['neg_'+each] = 'Negative '+reading_cols[each]
             else:
-                for each in ['source_name','source_type','source_id']+s_att_list:
+                for each in list(reading_cols.keys()):
                     reading_df.loc[x,'Positive '+reading_cols[each]] =  reading_df.loc[x,reading_cols[each]]
+                    new_reading_cols['pos_'+each] = 'Positive '+reading_cols[each]
         #Delete regulator sign column and unsigned columns
         for key in reading_cols:
                 reading_df = reading_df.drop(columns=reading_cols[key]).fillna('nan')
-        reading_df = reading_df.drop(columns=['Reg Sign']).fillna('nan')
+
+        #Add target names to new_reading_cols
+        #Accepted target/regulated headers
+        t_name_list = ["elementname","targetname","regulatedname"]
+        t_type_list = ["elementtype","targettype","regulatedtype"]
+        t_id_list = ["elementid","elementidentifier","targetid","targetidentifier","regulatedid","regulatredidentifier"]
+        t_att_pre = ["element","target","regulated",""]
+        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 & 
+        len(set(t_id_list) & set(bare_cols)) == 1}:
+            #If minimum necessary columns are found, define variables for the column header
+            target_name = col_names[bare_cols.index((set(t_name_list) & set(bare_cols)).pop())]
+            target_type = col_names[bare_cols.index((set(t_type_list) & set(bare_cols)).pop())]
+            target_id = col_names[bare_cols.index((set(t_id_list) & set(bare_cols)).pop())]
+            new_reading_cols['target_name'] = target_name
+            new_reading_cols['target_type'] = target_type
+            new_reading_cols['target_id'] = target_id
+            #And the attributes
+            for x in atts:
+                t_att_list = [pre + x.lower().replace(" ","") for pre in t_att_pre]
+                if len(set(t_att_list) & set(bare_cols)) == 1:
+                    reading_cols['target_'+x.lower().replace(" ","_")] = col_names[bare_cols.index((set(t_att_list) & set(bare_cols)).pop())]
+                else:
+                    raise ValueError("Attribute \""+x+"\" was not found in your LEE input document."+"\n"+
+                    "Please check your file and try again")
+
+        return reading_df, new_reading_cols
+
 
     elif action == 'combine':
         #Begin relative column name retrieval 
@@ -579,19 +609,22 @@ def convert_reading(reading, action, atts = []):
 
         reading_df['Reg Sign'] = pd.Series().astype(object)
         #Move everything to "Positive" columns, add regulation sign
-        if reading_df.loc[x,pos_source_name] == 'nan':
-            for each in ['name','type','id']+s_att_list:
-                reading_df.loc[x,reading_cols['pos_source_'+each]] = reading_df.loc[x,reading_cols['neg_source_'+each]]
-                reading_df.loc[x,'Reg Sign'] = 'decreases'
-        else: reading_df.loc[x,'Reg Sign'] = 'increases'
+        for y in range(len(list(reading_df[reading_cols['pos_source_name']]))):
+            if reading_df.loc[y,reading_cols['pos_source_name']] == 'nan':
+                for each in [z for z in list(reading_cols.keys()) if 'pos' in z]:
+                    reading_df.loc[y,reading_cols[each]] = reading_df.loc[y,reading_cols[each.replace('pos','neg')]]
+                    reading_df.loc[y,'Reg Sign'] = 'decreases'
+            else: reading_df.loc[y,'Reg Sign'] = 'increases'
 
         #Delete "Negative" Columns
-        for every in ['name','type','id']+s_att_list:
-            reading_df = reading_df.drop(columns=[reading_cols['neg_source_'+every]])
+        for every in [a for a in list(reading_cols.keys()) if 'neg' in a]:
+            reading_df = reading_df.drop(columns=[reading_cols[every]])
         #Delete "Positive " from header columns
         reading_df.columns = [s.replace('Positive ', '').replace('Pos','') for s in reading_df.columns]
 
+        return reading_df
+
     else: raise ValueError("Unsupported action. This function takes /'separate/' or /'combine/' as action input")
 
-    return reading_df
+    
         
