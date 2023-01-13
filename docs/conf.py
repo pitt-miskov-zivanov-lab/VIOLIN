@@ -14,7 +14,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src/violin/')))
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir)))
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'test/')))
 
 import formatting
 import in_out
@@ -23,7 +23,7 @@ import numeric
 import scoring
 import visualize_violin
 
-import test.use_violin_script
+import use_violin_script
 
 
 # -- Project information -----------------------------------------------------
