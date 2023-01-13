@@ -97,7 +97,7 @@ Flagged
 
 Evidence Score
 --------------
-The Evidence Score (S\ :sub:`E`\) is a measure of how many times an LEE is found in the machine reading output. In the :py:func:`VIOLIN.formatting.evidence_score` function, column names
+The Evidence Score (S\ :sub:`E`\) is a measure of how many times an LEE is found in the machine reading output. In the :py:func:`violin.formatting.evidence_score` function, column names
 are defined to determine how the function determines duplicates. For example, the Evidence Score can be calculated by comparing all LEE attributes and all machine readings spreadsheet columns.
 So only an exact match between LEEs will be counted as a duplicate. However, the user can also define fewer attributes, creating a more coarse-grained Evidence Score calculation.
 
@@ -141,14 +141,14 @@ Defaults
 --------
 Default Match Score values
 
-.. literalinclude:: ../scoring.py
+.. literalinclude:: ../src/violin/scoring.py
     :language: python
     :lines: 28-31
     :lineno-start: 28
 
 Default Kind Score values
 
-.. literalinclude:: ../scoring.py
+.. literalinclude:: ../src/violin/scoring.py
     :language: python
     :lines: 14-27
     :lineno-start: 14
@@ -158,7 +158,7 @@ Usage
 *scoring.score_reading* scores the reading output in the following manner:
 
 
-.. literalinclude:: ../scoring.py
+.. literalinclude:: ../src/violin/scoring.py
     :language: python
     :lines: 406-414
     :lineno-start: 406
