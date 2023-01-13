@@ -1,6 +1,6 @@
 .. _scoring:
 
-Scoring (:py:mod:`VIOLIN.scoring`)
+Scoring (:py:mod:`violin.scoring`)
 ==================================
 
 This page details the scoring functions of VIOLIN
@@ -8,8 +8,8 @@ This page details the scoring functions of VIOLIN
 Match Score
 -----------
 
-The Match Score (S\ :sub:`M`\) measures how many new nodes are found in the reading with respect to the model. 
-For an interaction from the reading **A → B**, where **A** is the regulator and **B** is the 
+The Match Score (S\ :sub:`M`\) measures how many new nodes are found in the reading with respect to the model.
+For an interaction from the reading **A → B**, where **A** is the regulator and **B** is the
 regulated node, this calculation considers 4 cases which determine the scoring outcome:
 
 #. Both **A** and **B** are in the model
@@ -18,7 +18,7 @@ regulated node, this calculation considers 4 cases which determine the scoring o
 #. Neither **A** nor **B** are in the model
 
 Deafult Match Level scores are given for the assumption that the user wants to extend a given model without
-adding new nodes which may not be useful to the network. Thus, new regulators and new edges between model nodes are 
+adding new nodes which may not be useful to the network. Thus, new regulators and new edges between model nodes are
 considered most important.
 
 Kind Score
@@ -26,8 +26,8 @@ Kind Score
 
 The Kind Score (S\ :sub:`K`\) measures the edges of a reading interaction (LEE) with respect to the model (MI).
 The Kind Score easily identifies the classification of an interaction, as well as
-searching for paths between nodes in the model when the reading interaction is identified as indirect. 
-Using the same assumption from the Match Level calculation, the Kind Score represents the following 
+searching for paths between nodes in the model when the reading interaction is identified as indirect.
+Using the same assumption from the Match Level calculation, the Kind Score represents the following
 scenarios:
 
 +----------------------+--------------------------------------------------------+
@@ -42,7 +42,7 @@ scenarios:
 |        Flagged       |                 Must be judged manually                |
 +----------------------+--------------------------------------------------------+
 
-And within each classification, there are further sub-classifications. 
+And within each classification, there are further sub-classifications.
 These subclassifications allow for more detailed scoring, if the user wishes.
 
 Corroborations
@@ -64,10 +64,10 @@ Extensions
 
     Hanging Extension: The target of the LEE is in the model
 
-    Internal Extension: Both the source and target of the LEE are in the model, 
+    Internal Extension: Both the source and target of the LEE are in the model,
     but there is no model interaction between them
 
-    Specification: LEE contains more information (attributes) than MI, or 
+    Specification: LEE contains more information (attributes) than MI, or
     shows a direct relationship compared to Model Path
 
 Contradictions
@@ -83,34 +83,34 @@ Contradictions
 
 Flagged
 ^^^^^^^
-    Flagged Type 1: Mismatched Direction and non-contradictory Other 
+    Flagged Type 1: Mismatched Direction and non-contradictory Other
     Attributes with a Direct connection type in the model
 
-    Flagged Type 2: An LEE with a corresponding path which has one or   
-    more Mismatched Attributes 
+    Flagged Type 2: An LEE with a corresponding path which has one or
+    more Mismatched Attributes
 
-    Flagged Type 3: An LEE which is a self-regulation based on the definition 
-    of model element 
+    Flagged Type 3: An LEE which is a self-regulation based on the definition
+    of model element
     (e.g. LEE has caspase-8 --> caspase-3, but the model considers cas-8 and cas-3 to be the same element)
 
 
 
-Evidence Score 
+Evidence Score
 --------------
 The Evidence Score (S\ :sub:`E`\) is a measure of how many times an LEE is found in the machine reading output. In the :py:func:`VIOLIN.formatting.evidence_score` function, column names
-are defined to determine how the function determines duplicates. For example, the Evidence Score can be calculated by comparing all LEE attributes and all machine readings spreadsheet columns. 
-So only an exact match between LEEs will be counted as a duplicate. However, the user can also define fewer attributes, creating a more coarse-grained Evidence Score calculation. 
+are defined to determine how the function determines duplicates. For example, the Evidence Score can be calculated by comparing all LEE attributes and all machine readings spreadsheet columns.
+So only an exact match between LEEs will be counted as a duplicate. However, the user can also define fewer attributes, creating a more coarse-grained Evidence Score calculation.
 
-Epistemic Value 
+Epistemic Value
 ---------------
 
-In the NLP output, we sometimes receive an Epistemic Value (S\ :sub:`B`\), which is a measure 
-of the believability of an interaction in the LEI. Zero, Low, Moderate, and High 
-believability correspond to numerical scores of 0.0, 0.33, 0.67, and 1.0, respectively. 
+In the NLP output, we sometimes receive an Epistemic Value (S\ :sub:`B`\), which is a measure
+of the believability of an interaction in the LEI. Zero, Low, Moderate, and High
+believability correspond to numerical scores of 0.0, 0.33, 0.67, and 1.0, respectively.
 
-Total Score 
+Total Score
 -----------
-The total score (S\ :sub:`T`\) is calculated by 
+The total score (S\ :sub:`T`\) is calculated by
 
 .. math:: S_T = [S_K + (S_E*S_M)]*S_B
 
@@ -118,16 +118,16 @@ The total score (S\ :sub:`T`\) is calculated by
 Functions
 ---------
 
-.. currentmodule:: VIOLIN.scoring
+.. currentmodule:: scoring
 .. autofunction:: match_score
 
-.. currentmodule:: VIOLIN.scoring
+.. currentmodule:: scoring
 .. autofunction:: kind_score
 
-.. currentmodule:: VIOLIN.scoring
+.. currentmodule:: scoring
 .. autofunction:: epistemic_value
 
-.. currentmodule:: VIOLIN.scoring
+.. currentmodule:: scoring
 .. autofunction:: score_reading
 
 
@@ -141,14 +141,14 @@ Defaults
 --------
 Default Match Score values
 
-.. literalinclude:: ../VIOLIN/scoring.py
+.. literalinclude:: ../scoring.py
     :language: python
     :lines: 28-31
     :lineno-start: 28
 
 Default Kind Score values
 
-.. literalinclude:: ../VIOLIN/scoring.py
+.. literalinclude:: ../scoring.py
     :language: python
     :lines: 14-27
     :lineno-start: 14
@@ -158,7 +158,7 @@ Usage
 *scoring.score_reading* scores the reading output in the following manner:
 
 
-.. literalinclude:: ../VIOLIN/scoring.py
+.. literalinclude:: ../scoring.py
     :language: python
     :lines: 406-414
     :lineno-start: 406

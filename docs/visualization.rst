@@ -1,4 +1,4 @@
-Visualization (:py:mod:`VIOLIN.visualize_violin`)
+Visualization (:py:mod:`violin.visualize_violin`)
 =================================================
 
 VIOLIN's visualization function creates a visual summary of the VIOLIN
@@ -20,7 +20,7 @@ on how to use the VIOLIN output. Visualization can be filtered by three possible
 Functions
 ---------
 
-.. currentmodule:: VIOLIN.visualize_violin
+.. currentmodule:: visualize_violin
 .. autofunction:: visualize
 
 
@@ -37,20 +37,20 @@ Visualizing the total output ::
 
     visualize(match_dict, kind_dict, 'RA2_sub_TotalOutput.csv', filter_opt='100%')
 
-.. image:: _build/Output_Overview.png
+.. image:: Output_Overview.png
    :scale: 30 %
    :align: center
 
 Visualizing subcategories::
 
-    kind_dict ={"strong corroboration" : 2, 
+    kind_dict ={"strong corroboration" : 2,
                 "weak corroboration1" : 1,
                 "weak corroboration2" : 3,
                 "weak corroboration3" : 5,
-                "hanging extension" : 40, 
-                "full extension" : 41, 
-                "internal extension" : 42, 
-                "specification" : 30, 
+                "hanging extension" : 40,
+                "full extension" : 41,
+                "internal extension" : 42,
+                "specification" : 30,
                 "dir contradiction" : 10,
                 "sign contradiction" : 11,
                 "att contradiction" : 12,
@@ -59,7 +59,7 @@ Visualizing subcategories::
                 "flagged3" : 22}
     visualize(match_dict, kind_dict, 'RA2_sub_TotalOutput.csv', filter_opt='100%')
 
-.. image:: _build/Subcategory_Overview.png
+.. image:: Subcategory_Overview.png
    :scale: 25 %
    :align: center
 
@@ -67,6 +67,6 @@ Visualizing an individual category (extensions) ::
 
     visualize(match_dict, kind_dict, 'RA2_sub_extensions.csv', filter_opt='100%')
 
-.. image:: _build/extensions_Overview.png
+.. image:: extensions_Overview.png
    :scale: 25 %
    :align: center

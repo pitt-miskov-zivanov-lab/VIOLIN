@@ -45,16 +45,16 @@ The `use_violin_script.py` script is included in the  `violin_tutorial` folder. 
 #. 'corroborate' - Kind and Match Score values for general corroboration (preference towards strong corroborations, weak corroborations, contradictions)
 #. 'corroborate subcategories' - general extension values with subcategories specified in Kind Score values
 
-as well as the same filtering options from :doc:`visualization` 
+as well as the same filtering options from :doc:`visualization`
 
-.. currentmodule:: violin_tutorial.use_violin_script
+.. currentmodule:: use_violin_script
 .. autofunction:: use_violin
 
 To run `use_violin_script.py` at the command line: ::
 
     python use_violin_script.py test_input/ModelA.csv test_input/RA2_reading.xlsx output extend 50%
 
-    
+
 
 Tutorial 4: Alternative Input
 ------------------------------

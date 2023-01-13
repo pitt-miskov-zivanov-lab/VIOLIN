@@ -1,7 +1,7 @@
-Formatting (:py:mod:`VIOLIN.formatting`)
+Formatting (:py:mod:`violin.formatting`)
 ========================================
 
-This page details the formatting functions of VIOLIN, used during model and reading input. 
+This page details the formatting functions of VIOLIN, used during model and reading input.
 
 The formatting step is important, as it:
 
@@ -15,22 +15,22 @@ reading output which are not in the BioRECIPES or REACH format (respectively).
 Functions
 ---------
 
-.. currentmodule:: VIOLIN.formatting
+.. currentmodule:: formatting
 .. autofunction:: evidence_score
 
-.. currentmodule:: VIOLIN.formatting
+.. currentmodule:: formatting
 .. autofunction:: add_regulator_names_id
 
-.. currentmodule:: VIOLIN.formatting
+.. currentmodule:: formatting
 .. autofunction:: convert_to_biorecipes
 
-.. currentmodule:: VIOLIN.formatting
+.. currentmodule:: formatting
 .. autofunction:: convert_reading
 
 
 Dependencies
 ------------
-**Python**: `pandas <https://pandas.pydata.org/>`_ and 
+**Python**: `pandas <https://pandas.pydata.org/>`_ and
 `NumPy <https://numpy.org/>`_ libraries, as well as the
 `os.path <https://docs.python.org/2/library/os.path.html>`_ module
 
@@ -39,4 +39,3 @@ Dependencies
 Usage
 -----
 This module is used in during file input in the `input/output` module. For an example of using the `convert` functions, see :ref:`tutorials:Tutorial 4: Alternative Input`.
-

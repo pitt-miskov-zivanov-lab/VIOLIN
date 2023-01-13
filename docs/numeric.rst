@@ -1,4 +1,4 @@
-Numerical Functions (:py:mod:`VIOLIN.numeric`)
+Numerical Functions (:py:mod:`violin.numeric`)
 ==============================================
 
 This page details the numeric operators of VIOLIN.
@@ -19,10 +19,10 @@ Both functions return numerical values to represent the outcome of the function.
 Functions
 ---------
 
-.. currentmodule:: VIOLIN.numeric
+.. currentmodule:: numeric
 .. autofunction:: find_element
 
-.. currentmodule:: VIOLIN.numeric
+.. currentmodule:: numeric
 .. autofunction:: compare
 
 
@@ -42,7 +42,7 @@ This example searches for the index of protein family AMPK in the model spreadsh
     >> 2
 
 This example compares the *location* of the reading interaction to the *location* of its counterpart interaction in the model.::
-    
+
     reading_att = "nan"
     model_att = "GO:0005737"
     compare(model_att,reading_att)
