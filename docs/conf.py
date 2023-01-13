@@ -13,17 +13,17 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src/violin/')))
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'test/')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src/')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir)))
 
-import formatting
-import in_out
-import network
-import numeric
-import scoring
-import visualize_violin
+import violin.formatting
+import violin.in_out
+import violin.network
+import violin.numeric
+import violin.scoring
+import violin.visualize_violin
 
-import use_violin_script
+import test.use_violin_script
 
 
 # -- Project information -----------------------------------------------------
