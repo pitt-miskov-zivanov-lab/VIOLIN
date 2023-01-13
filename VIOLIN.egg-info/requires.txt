@@ -1,4 +1,0 @@
-networkx
-numpy
-pandas
-tornado==4.5.3

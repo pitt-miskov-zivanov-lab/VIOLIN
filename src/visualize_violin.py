@@ -30,14 +30,14 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         How much VIOLIN output should be visualized. Can be filtered
         by top % of total score, evidence score (Se) threshold, or
         total score (St) threshold
-        Accepted options are 'X%','Se>Y', or 'St>Z', 
+        Accepted options are 'X%','Se>Y', or 'St>Z',
         where X, Y, and Z, are values
         Default is '100%' (Total Output)
     """
 
     # Input file
     output = pd.read_csv(file_name, sep=',',index_col=None).fillna("nan")
-    
+
     # Filtering by %
     if '%' in filter_opt:
         filter_value = int(filter_opt.replace('%',''))/100
@@ -53,13 +53,13 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
     elif 'Se>' in filter_opt:
         filter_value = int(filter_opt.replace('Se>',''))
         kept = output.loc[(output['Evidence Score'] >= filter_value)]
-    
+
     # Else - filter value error
     else:
         raise ValueError('Filter value not accepted'+'\n'+
-        'Accepted options are \'X%\',\'Se>Y\', or \'St>Z\','+'\n'+ 
+        'Accepted options are \'X%\',\'Se>Y\', or \'St>Z\','+'\n'+
         'where X, Y, and Z, are numerical values')
-    
+
     # If visualizing all categories of output
     if 'TotalOutput' in file_name:
         # Separating output my category
@@ -139,8 +139,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         plt.xlabel('Match Score')
 
         #Total Score plots
-        scores = list(set(kept['Total Score']))
-        scores = [float(i) for i in scores]
+        scores = list(set(kept['Total Score'].tolist()))
+        scores = [float(i.replace('{','').replace('}','')) for i in scores]
         X_axis = np.arange(len(scores))
         category = [corroborations['Total Score'],extensions['Total Score'],
                     contradictions['Total Score'],flagged['Total Score']]
@@ -149,7 +149,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
 
         plt.subplot(2, 2, 4)
         for idx in range(4):
-            evidence = category[idx].value_counts().keys().tolist()
+            evidence = [float(i.replace('{','').replace('}','')) for i in category[idx].value_counts().keys().tolist()]
             counts = category[idx].value_counts().tolist()
             for value in scores:
                 if value not in evidence:
@@ -178,7 +178,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             weak_corr2 = kind.count(kind_values['weak corroboration2'])
             weak_corr3 = kind.count(kind_values['weak corroboration3'])
             corrs = np.array([strong_corr, weak_corr1, weak_corr2, weak_corr3])
-            mylabels = ["Strong Corroborations: "+str(strong_corr), "Weak Corroborations1: "+str(weak_corr1), 
+            mylabels = ["Strong Corroborations: "+str(strong_corr), "Weak Corroborations1: "+str(weak_corr1),
                         "Weak Corroborations2: "+str(weak_corr2), "Weak Corroborations3: "+str(weak_corr3)]
             mycolors = ['#235490','#2B65AD','#718EC5','#B0BEDA']
             plt.figure(figsize=(16, 4))
@@ -192,31 +192,31 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             int_ext = kind.count(kind_values['internal extension'])
             spec = kind.count(kind_values['specification'])
             exts = np.array([full_ext, hang_ext, int_ext, spec])
-            mylabels = ["Full Extensions: "+str(full_ext), "Hanging Extensions: "+str(hang_ext), 
+            mylabels = ["Full Extensions: "+str(full_ext), "Hanging Extensions: "+str(hang_ext),
                         "Internal Extensions: "+str(int_ext), "Specifications: "+str(spec)]
             mycolors = ['#24552D','#49A155','#7DBA84','#B6D5B8']
             plt.subplot(1, 4, 2)
             plt.pie(exts,colors=mycolors)
             plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
-                                
+
             dir_cont = kind.count(kind_values['dir contradiction'])
             sign_cont = kind.count(kind_values['sign contradiction'])
             att_cont =  kind.count(kind_values['att contradiction'])
             conts = np.array([dir_cont, sign_cont, att_cont])
-            mylabels = ["Direction Contradictions: "+str(dir_cont), "Sign Contradictions: "+str(sign_cont), 
+            mylabels = ["Direction Contradictions: "+str(dir_cont), "Sign Contradictions: "+str(sign_cont),
                         "Attribute Contradictions: "+str(att_cont)]
             mycolors = ['#BE9735','#E2B441','#F9E6A9']
             plt.subplot(1, 4, 3)
             plt.pie(conts,colors=mycolors)
             plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
-                                
+
             flg1 = kind.count(kind_values['flagged1'])
             flg2 = kind.count(kind_values['flagged2'])
             flg3 = kind.count(kind_values['flagged3'])
             flgds = np.array([flg1, flg2, flg3])
-            mylabels = ["Flagged 1: "+str(flg1), "Flagged 2: "+str(flg2), 
+            mylabels = ["Flagged 1: "+str(flg1), "Flagged 2: "+str(flg2),
                         "Flagged 3: "+str(flg3)]
             mycolors = ['#AA5626','#C7652E','#F1C6A8']
             plt.subplot(1, 4, 4)
@@ -225,11 +225,11 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                        bbox_transform=plt.gcf().transFigure)
             plt.savefig('Subcategory_Overview.png',bbox_inches = "tight",dpi=200)
             plt.close
-    
+
     # If only visualizing one category:
     else:
         category = file_name.split('.')[0].split('_')[-1]
-        mycolors = {"corroborations" : 'royalblue', 
+        mycolors = {"corroborations" : 'royalblue',
                     "extensions" : 'limegreen',
                     "contradictions" : 'gold',
                     "flagged" : 'darkorange'}
@@ -264,7 +264,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         plt.ylabel('Number of LEEs')
         plt.xlabel('Match Score')
         ticks_loc = X_axis
-        
+
 
         #Total Score plots
         plt.subplot(2, 2, 3)

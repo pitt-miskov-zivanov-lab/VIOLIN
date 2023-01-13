@@ -9,8 +9,8 @@ import pandas as pd
 import os.path
 import numpy as np
 
-from VIOLIN.formatting import add_regulator_names_id, evidence_score
-from VIOLIN.network import node_edge_list
+from formatting import add_regulator_names_id, evidence_score
+from network import node_edge_list
 
 
 # Default Kind Score values
@@ -129,7 +129,7 @@ def input_reading(reading, evidence_score_cols=evidence_score_def, atts=[]):
     elif reading_ext == '.tsv': reading_df = pd.read_csv(reading, sep='\t',index_col=None).fillna("nan")
     else: raise ValueError("The accepted file extensions are .txt, .csv, .xslx, and .tsv")
 
-    #Begin relative column name retrieval 
+    #Begin relative column name retrieval
     #Accepted target/regulated headers
     t_name_list = ["elementname","targetname","regulatedname"]
     t_type_list = ["elementtype","targettype","regulatedtype"]
@@ -153,8 +153,8 @@ def input_reading(reading, evidence_score_cols=evidence_score_def, atts=[]):
     bare_cols = [x.lower().replace(" ","").replace("_","").replace("-","") for x in col_names]
 
     #Check intersection of accepted column names and file column names
-    if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 & 
-        len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 & 
+    if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 &
+        len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 &
         len(set(s_type_list) & set(bare_cols)) == 1 & len(set(s_id_list) & set(bare_cols)) == 1}:
         #If minimum necessary columns are found, define variables for the column header
         target_name = col_names[bare_cols.index((set(t_name_list) & set(bare_cols)).pop())]
@@ -184,14 +184,14 @@ def input_reading(reading, evidence_score_cols=evidence_score_def, atts=[]):
             else:
                 raise ValueError("Attribute \""+x+"\" was not found in your LEE input document."+"\n"+
                 "Please check your file and try again")
-        
+
     else:
         raise ValueError("Your LEE input is missing information."+"\n"+
         "VIOLIN requires the following information: Name, Type, and ID of target node and regulators")
     #End relative column name retrieval
 
     #Make sure evidence_cols match what is in the LEE input file
-    if (set(evidence_score_cols).issubset(set(reading_df.columns))): 
+    if (set(evidence_score_cols).issubset(set(reading_df.columns))):
         #Calculate the Evidence Score
         new_reading = evidence_score(reading_df,evidence_score_cols)
         ## Check that dataframes have been created correctly

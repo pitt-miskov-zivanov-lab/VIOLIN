@@ -7,7 +7,7 @@ def readme():
 setup(
     name='VIOLIN',
     version='1.0',
-    
+
     author='Casey Hansen',
     #author_email='',
     description='VIOLIN',
@@ -15,14 +15,14 @@ setup(
     #license='',
     keywords='dynamic system boolean logical qualitative modeling simulation',
 
-    packages=['VIOLIN','violin_tutorial'],
+    packages=['src','violin_tutorial'],
     include_package_data=True,
 
     install_requires=[
         'networkx',
         'numpy',
         'pandas',
-        'tornado==4.5.3' # to not interfere with jupyter
+        'tornado' # to not interfere with jupyter
     ],
     zip_safe=False # install as directory
     )
