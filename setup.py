@@ -5,7 +5,7 @@ def readme():
         return f.read()
 
 setup(
-    name='VIOLIN',
+    name='violin',
     version='1.0',
 
     author='Casey Hansen',
@@ -15,7 +15,7 @@ setup(
     #license='',
     keywords='dynamic system boolean logical qualitative modeling simulation',
 
-    packages=['src','violin_tutorial'],
+    packages=['src.violin','test'],
     include_package_data=True,
 
     install_requires=[

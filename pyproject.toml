@@ -1,0 +1,17 @@
+[project]
+name = "violin"
+version = "1.0"
+authors = [
+  { name="Casey Hansen", email="casey.e.hansen@gmail.com" },
+]
+description = "VIOLIN (Validating Interactions Of Likely Importance to the Network) is a tool used to automatically classify and judge literature-extracted interactions curated from machine readers by comparing them to existing models. This comparison can help identify key interactions for model extension."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pitt-miskov-zivanov-lab/VIOLIN"
