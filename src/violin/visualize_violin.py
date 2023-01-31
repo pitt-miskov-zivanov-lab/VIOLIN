@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.ticker as mticker
 import numpy as np
-plt.rcParams["font.family"] = "Arial"
 
 def visualize (match_values, kind_values, file_name, filter_opt='100%'):
     """
@@ -139,8 +138,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         plt.xlabel('Match Score')
 
         #Total Score plots
-        scores = list(set(kept['Total Score'].tolist()))
-        scores = [float(i.replace('{','').replace('}','')) for i in scores]
+        score_set = list(set(kept['Total Score'].tolist()))
+        scores = [float(i) for i in score_set]
         X_axis = np.arange(len(scores))
         category = [corroborations['Total Score'],extensions['Total Score'],
                     contradictions['Total Score'],flagged['Total Score']]
@@ -149,7 +148,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
 
         plt.subplot(2, 2, 4)
         for idx in range(4):
-            evidence = [float(i.replace('{','').replace('}','')) for i in category[idx].value_counts().keys().tolist()]
+            evidence = [float(i) for i in category[idx].value_counts().keys().tolist()]
             counts = category[idx].value_counts().tolist()
             for value in scores:
                 if value not in evidence:

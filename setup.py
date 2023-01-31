@@ -21,7 +21,7 @@ setup(
     install_requires=[
         'networkx',
         'numpy',
-        'pandas',
+        'pandas>=1.5.3',
         'tornado' # to not interfere with jupyter
     ],
     zip_safe=False # install as directory
