@@ -1,5 +1,5 @@
 Input and Output Functions (:py:mod:`violin.in_out`)
-===================================================
+=======================================================
 
 This page details the functions which handle the input files and output of VIOLIN.
 
