@@ -12,6 +12,7 @@ Welcome to VIOLIN's documentation!
 .. image:: https://mybinder.org/badge_logo.svg
     :target: https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb
 
+
 *VIOLIN (Validating Interactions Of Likely Importance to the Network)*
 is a tool used to automatically classify and judge literature-extracted
 interactions curated from machine readers by comparing them to existing models.
@@ -57,7 +58,7 @@ its judgements.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Contents
 
    Legal
    installation
@@ -73,7 +74,7 @@ its judgements.
 
 
 
-Indices and tables
-==================
+Indices
+-------
 
 * :ref:`genindex`

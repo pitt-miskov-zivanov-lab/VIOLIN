@@ -11,7 +11,7 @@ VIOLIN requires Python version 3.7 or higher, as well as the
 Python can be installed from the `Python <https://www.python.org/downloads/>`_ website
 for Mac or Windows OS.
 
-For Mac OSX, Python can also be installed at the command line by::
+For Mac OSX, Python can also be installed at the command line by:
 
 .. code-block:: bash
 
