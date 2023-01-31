@@ -6,4 +6,5 @@ dependencies:
     - networkx>=2.5
     - pandas
     - matplotlib
+    - openpyxl
     - tornado
