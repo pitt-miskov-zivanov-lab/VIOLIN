@@ -4,7 +4,7 @@ Tutorials
 
 Test files
 ----------
-Input files used to create publication data can be found at [link]
+Input files used to create publication data can be found `here <https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/input>`_
 
 Tutorial 1: Default Use (general extension)
 -------------------------------------------
@@ -50,10 +50,11 @@ as well as the same filtering options from :doc:`visualization`
 .. currentmodule:: use_violin_script
 .. autofunction:: use_violin
 
-To run `use_violin_script.py` at the command line: ::
+To run `use_violin_script.py` at the command line:
 
-    python use_violin_script.py test_input/ModelA.csv test_input/RA2_reading.xlsx output extend 50%
+.. code-block:: python
 
+   python examples/use_violin_script.py examples/input/ModelA.csv examples/input/RA2_reading.xlsx examples/output extend 50%
 
 
 Tutorial 4: Alternative Input

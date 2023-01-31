@@ -6,6 +6,12 @@
 ==================================
 Welcome to VIOLIN's documentation!
 ==================================
+.. image:: https://readthedocs.org/projects/theviolin/badge/?version=latest
+    :target: https://theviolin.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+.. image:: https://mybinder.org/badge_logo.svg
+    :target: https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb
+
 *VIOLIN (Validating Interactions Of Likely Importance to the Network)*
 is a tool used to automatically classify and judge literature-extracted
 interactions curated from machine readers by comparing them to existing models.
@@ -71,4 +77,3 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`search`
