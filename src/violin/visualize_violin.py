@@ -61,7 +61,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         'where X, Y, and Z, are numerical values')
 
     # If visualizing all categories of output
-    if 'TotalOutput' in file_name:
+    if '_outputDF' in file_name:
         # Separating output my category
         corroborations = kept[kept["Kind Score"].isin([kind_values['strong corroboration'],
                                                            kind_values['weak corroboration1'],
@@ -163,7 +163,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         plt.legend(prop={'size': 6})
         plt.ylabel('Number of LEEs')
         plt.xlabel('Total Score')
-        plt.savefig('Output_Overview.png',bbox_inches = "tight",dpi=200)
+        plt.show()
+        #plt.savefig('Output_Overview.png',bbox_inches = "tight",dpi=200)
         plt.close()
 
         # If Kind Score identifies sub-categories, add additional plot;

@@ -218,7 +218,7 @@ def output(reading_df, file_name, kind_values=kind_dict):
 
     #Output with all reading interactions, sorted by highest Total Score
     outputdf = reading_df.sort_values(by='Total Score', ascending=False)
-    output_file = file_name+'_TotalOutput.csv'
+    output_file = file_name+'_outputDF.csv'
     outputdf.to_csv(output_file)
 
     ## Corroborations ##

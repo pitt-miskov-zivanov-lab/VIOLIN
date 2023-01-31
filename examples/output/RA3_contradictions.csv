@@ -1,0 +1,5 @@
+,Element Name,Element Type,Element ID,Positive Reg Name,Positive Reg Type,Positive Reg ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Connection Type,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+662,ras,family,pf00071,nan,protein,nan,da-raf1,protein,p10398,i,"['none', 'none', 'none', 'none']","['pmc2064279', 'pmc2064279', 'pmc2064279', 'pmc2064279']","['nan', 'nan', 'nan', 'nan']",4,10.0,10.0,1.0,50.0
+256,erk,family,erk,nan,family,nan,mek,family,mek,i,['none'],['pmc5908790'],['nan'],1,10.0,10.0,1.0,20.0
+480,mek,family,mek,nan,protein,nan,da-raf1,protein,p10398,i,['none'],['pmc2064279'],['nan'],1,10.0,10.0,1.0,20.0
+647,ras,family,pf00071,braf,protein,p15056,nan,nan,nan,i,['none'],['pmc5069826'],['nan'],1,10.0,10.0,1.0,20.0

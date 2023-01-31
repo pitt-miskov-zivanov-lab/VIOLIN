@@ -1,0 +1,9 @@
+dependencies:
+  - python
+  - numpy
+  - pip
+  - pip:
+    - networkx>=2.5
+    - pandas
+    - matplotlib
+    - tornado
