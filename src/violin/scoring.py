@@ -408,9 +408,6 @@ def score_reading(reading_df, model_df, graph, reading_cols,
         scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,reading_cols,match_values)
         scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,reading_cols,kind_values,attributes,mi_cxn)
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
-        scored_reading_df.at[x,'Total Score'] =  {((scored_reading_df.at[x,'Evidence Score']*
-                                                    scored_reading_df.at[x,'Match Score'])+
-                                                    scored_reading_df.at[x,'Kind Score'])*
-                                                    scored_reading_df.at[x,'Epistemic Value']}
+        scored_reading_df.at[x,'Total Score'] =  ((scored_reading_df.at[x,'Evidence Score']*scored_reading_df.at[x,'Match Score'])+scored_reading_df.at[x,'Kind Score'])*scored_reading_df.at[x,'Epistemic Value']
 
     return scored_reading_df

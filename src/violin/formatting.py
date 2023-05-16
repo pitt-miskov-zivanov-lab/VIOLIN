@@ -40,11 +40,11 @@ def evidence_score(reading_df, col_names):
     for x in range(1,len(remainder)):
         sub = reading.groupby(col_names)[remainder[x]].apply(list).reset_index(name=remainder[x])
         counted_reading[remainder[x]] = sub[remainder[x]]
-    
+
     #Counting the number of duplicates
     counted_reading['Evidence Score'] = counted_reading[remainder[0]].str.len()
     # counted_reading.to_csv("Trying.csv")
-    
+
     return counted_reading
 
 def add_regulator_names_id(model_df):
@@ -66,7 +66,7 @@ def add_regulator_names_id(model_df):
     #Also adds new columns for the positive and negative regulator names and IDs
     col_headers = list(model_df.columns)
     model_df = model_df[col_headers]
-    #Columns for positive 
+    #Columns for positive
     model_df['Positive Names'] = pd.Series().astype(object)
     model_df['Positive IDs'] = pd.Series().astype(object)
     model_df['Negative Names'] = pd.Series().astype(object)
@@ -74,8 +74,11 @@ def add_regulator_names_id(model_df):
 
     #Convert Regulators
     for sign in ['Negative','Positive']:
+        #list1 = ["\\)\\(","\\]\\[","\\}\\{","\\)\\[","\\]\\(","\\)\\{","\\}\\(","\\]\\{","}["]
+        #list2 = ["(",")","\\[","]","{","\\}","^"]
         list1 = ["\\)\\(","\\]\\[","\\}\\{","\\)\\[","\\]\\(","\\)\\{","\\}\\(","\\]\\{","\\}\\["]
         list2 = ["\\(","\\)","\\[","\\]","\\{","\\}","^"]
+
         for char1 in list1:
             model_df[sign+' Regulators'] = model_df[sign+' Regulators'].str.replace(char1, ",")
         for char2 in list2:
@@ -91,7 +94,7 @@ def add_regulator_names_id(model_df):
                     idx = model_df[sign+' Regulators'][y].index('*')
                     factor = model_df[sign+' Regulators'][y][idx-1:idx+1]
                     model_df[sign+' Regulators'][y] = model_df[sign+' Regulators'][y].replace(factor,'')
-                
+
                 if '=' in model_df[sign+' Regulators'][y]:
                     idx = model_df[sign+' Regulators'][y].index('*')
                     factor = model_df[sign+' Regulators'][y][idx:idx+2]
@@ -131,7 +134,7 @@ def add_regulator_names_id(model_df):
                     #Since there are multiple IDs for each element, need to keep track of which
                     #IDs go with which regulator
                     reg_id.append(model_df["Element IDs"][idx])
-                
+
                 model_df.at[y,sign+' Names'] = reg_name
                 model_df.at[y,sign+' IDs'] = reg_id
 
@@ -155,7 +158,7 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
         List of Element attributes (in addition to Name, ID, and Type)
         Default is no additional attributes
     separate : Boolean
-        Whether or not the model presents regulator in separate Positive/Negative columns (True) 
+        Whether or not the model presents regulator in separate Positive/Negative columns (True)
         or in a single column with Regulator Sign attribute (False)
         Default is True
 
@@ -198,8 +201,8 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
         s_att_pre = ["posreg","posregulator","positivereg","positiveregulator"]
 
         #Check intersection of accepted column names and file column names
-        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 & 
-            len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 & 
+        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 &
+            len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 &
             len(set(s_type_list) & set(bare_cols)) == 1 & len(set(s_id_list) & set(bare_cols)) == 1}:
             #If minimum necessary columns are found, define variables for the column header
             target_name = col_names[bare_cols.index((set(t_name_list) & set(bare_cols)).pop())]
@@ -251,9 +254,9 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
             #get indices of not_elements
             pos_idx = []
             neg_idx = []
-            for x in list(pos_not_elements): 
+            for x in list(pos_not_elements):
                 pos_idx.append(list(model_df[model_cols['pos_source_name']]).index(x))
-            for y in list(neg_not_elements): 
+            for y in list(neg_not_elements):
                 neg_idx.append(list(model_df[model_cols['neg_source_name']]).index(y))
 
             #create subsets of DF based on not_elements
@@ -268,9 +271,9 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
             for each in list(pos_cols.keys()):
                 unique_pos.rename(columns={pos_cols[each]: model_cols[each.replace('pos_source','target')]},inplace=True)
             for every in list(neg_cols.keys()):
-                unique_neg.rename(columns={neg_cols[every]: model_cols[every.replace('neg_source','target')]},inplace=True)          
+                unique_neg.rename(columns={neg_cols[every]: model_cols[every.replace('neg_source','target')]},inplace=True)
             model_df = model_df.append(unique_pos,ignore_index=True).append(unique_neg,ignore_index=True).fillna('nan')
-          
+
 
             # Change column header names
             biorecipes_cols = {'target_name':'Element Name', 'target_type':'Element Type',
@@ -295,10 +298,10 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
                 biorecipes_model[each] = biorecipes_model[each].apply(','.join)
             biorecipes_model = biorecipes_model.replace({',nan': ''}, regex=True)
             biorecipes_model = biorecipes_model.replace({'nan': ''}, regex=True)
-                
+
             biorecipes_model = biorecipes_model.sort_values(by='Element Name',ascending=True)
 
-            
+
             #If Variables present, covert regulator variable name lists to common names and database identifiers
             if 'Variable' not in list(model_cols.keys()):
                 biorecipes_model['Variable'] = biorecipes_model['Element Name']
@@ -306,7 +309,7 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
                 biorecipes_model['Variable'] = biorecipes_model['Variable'].map(lambda x: x.lstrip(' '))
                 biorecipes_model = add_regulator_names_id(biorecipes_model)
             else: biorecipes_model = add_regulator_names_id(biorecipes_model)
-        else: 
+        else:
             raise ValueError("Unaccepted Column Names. Please check that you have"+"\n"+
                              "Names, Types, and IDs for both source and target nodes")
 
@@ -321,8 +324,8 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
         s_att_pre = ["reg","regulator","source"]
 
         #Check intersection of accepted column names and file column names
-        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 & 
-            len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 & 
+        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 &
+            len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 &
             len(set(s_type_list) & set(bare_cols)) == 1 & len(set(s_id_list) & set(bare_cols)) == 1 &
             len(set(s_sign_list) & set(bare_cols)) == 1}:
             #If minimum necessary columns are found, define variables for the column header
@@ -367,7 +370,7 @@ def convert_to_biorecipes(model, att_list = [], separate = True):
 
             #get indices of not_elements
             not_idx = []
-            for x in list(not_elements): 
+            for x in list(not_elements):
                 not_idx.append(list(model_df[model_cols['source_name']]).index(x))
 
             #create subsets of DF based on not_elements
@@ -456,8 +459,8 @@ def convert_reading(reading, action, atts = []):
     reading_df : pd.DataFrame
         A dataframe with the specified formatting completed
     """
-    
-    
+
+
     if type(reading) == str:
         reading_ext = os.path.splitext(reading)[1]
         if reading_ext == '.txt': reading_df = pd.read_csv(reading, sep='\t',index_col=None).fillna("nan")
@@ -473,7 +476,7 @@ def convert_reading(reading, action, atts = []):
 
 
     if action == 'separate':
-        #Begin relative column name retrieval 
+        #Begin relative column name retrieval
         #Accepted source/regulator headers (assuming separate positive and negative columns)
         s_name_list = ["regname","regulatorname","sourcename"]
         s_type_list = ["regtype","regulatortype","sourcetype"]
@@ -489,7 +492,7 @@ def convert_reading(reading, action, atts = []):
         bare_cols = [x.lower().replace(" ","").replace("_","").replace("-","") for x in col_names]
 
         #Check intersection of accepted column names and file column names
-        if {len(set(s_name_list) & set(bare_cols)) == 1 & 
+        if {len(set(s_name_list) & set(bare_cols)) == 1 &
             len(set(s_type_list) & set(bare_cols)) == 1 & len(set(s_id_list) & set(bare_cols)) == 1}:
             #If minimum necessary columns are found, define variables for the column header
             source_name = col_names[bare_cols.index((set(s_name_list) & set(bare_cols)).pop())]
@@ -497,7 +500,7 @@ def convert_reading(reading, action, atts = []):
             source_id = col_names[bare_cols.index((set(s_id_list) & set(bare_cols)).pop())]
             source_sign = col_names[bare_cols.index((set(s_sign_list) & set(bare_cols)).pop())]
             #store column header names in a dictionary
-            reading_cols = {"source_name" : source_name, "source_type" : source_type, 
+            reading_cols = {"source_name" : source_name, "source_type" : source_type,
                             "source_id" : source_id, "source_sign" : source_sign}
             #Now for the attributes:
             for x in atts:
@@ -509,7 +512,7 @@ def convert_reading(reading, action, atts = []):
                     reading_cols['source_'+x.lower().replace(" ","_")] = col_names[bare_cols.index((set(s_att_list) & set(bare_cols)).pop())]
                 else:
                     raise ValueError("Attribute \""+x+"\" was not found in your LEE input document."+"\n"+
-                    "Please check your file and try again")   
+                    "Please check your file and try again")
         else:
             raise ValueError("Your LEE input is missing information."+"\n"+
             "VIOLIN requires the following information: Name, Type, and ID of target node and regulators")
@@ -538,7 +541,7 @@ def convert_reading(reading, action, atts = []):
         t_type_list = ["elementtype","targettype","regulatedtype"]
         t_id_list = ["elementid","elementidentifier","targetid","targetidentifier","regulatedid","regulatredidentifier"]
         t_att_pre = ["element","target","regulated",""]
-        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 & 
+        if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 &
         len(set(t_id_list) & set(bare_cols)) == 1}:
             #If minimum necessary columns are found, define variables for the column header
             target_name = col_names[bare_cols.index((set(t_name_list) & set(bare_cols)).pop())]
@@ -560,7 +563,7 @@ def convert_reading(reading, action, atts = []):
 
 
     elif action == 'combine':
-        #Begin relative column name retrieval 
+        #Begin relative column name retrieval
         #Accepted source/regulator headers (assuming separate positive and negative columns)
         s_name_list = ["positiveregname","posregname","positiveregulatorname","posregulatorname",
                         "positivesourcename","possourcename"]
@@ -578,7 +581,7 @@ def convert_reading(reading, action, atts = []):
         bare_cols = [x.lower().replace(" ","").replace("_","").replace("-","") for x in col_names]
 
         #Check intersection of accepted column names and file column names
-        if {len(set(s_name_list) & set(bare_cols)) == 1 & 
+        if {len(set(s_name_list) & set(bare_cols)) == 1 &
             len(set(s_type_list) & set(bare_cols)) == 1 & len(set(s_id_list) & set(bare_cols)) == 1}:
             #If minimum necessary columns are found, define variables for the column header
             pos_source_name = col_names[bare_cols.index((set(s_name_list) & set(bare_cols)).pop())]
@@ -601,7 +604,7 @@ def convert_reading(reading, action, atts = []):
                     reading_cols['neg_source_'+x.lower().replace(" ","_")] = reading_cols['pos_source_'+x.lower().replace(" ","_")].replace("positive","negative").replace("pos","neg").replace("Positive","Negative").replace("Pos","Neg")
                 else:
                     raise ValueError("Attribute \""+x+"\" was not found in your LEE input document."+"\n"+
-                    "Please check your file and try again")   
+                    "Please check your file and try again")
         else:
             raise ValueError("Your LEE input is missing information."+"\n"+
             "VIOLIN requires the following information: Name, Type, and ID of target node and regulators")
@@ -625,6 +628,3 @@ def convert_reading(reading, action, atts = []):
         return reading_df
 
     else: raise ValueError("Unsupported action. This function takes /'separate/' or /'combine/' as action input")
-
-    
-        
