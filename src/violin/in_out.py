@@ -54,10 +54,11 @@ VIOLIN_reading_col = ["Element Name", "Element Type", "Database Name", "Element 
                  "Negative Reg ID", "Negative Reg Location", "Negative Reg Location ID", "Connection Type", "Mechanism",
                  "Paper ID", "Evidence"]
 
-BioRECIPE_reading_col = ['Regulator Name', 'Regulator Type', 'Regulator ID', 'Regulator Location', 'Regulator Database',
-					  'Regulated Name', 'Regulated Type', 'Regulated ID', 'Regulated Location', 'Regulated Database', 'Sign',
-					  'Connection Type', 'Location', 'Mechanism', 'Cell Line', 'Cell Type', 'Organism', 'Tissue Type',
-					  'Evidence', 'Score', 'Paper ID']
+BioRECIPE_reading_col = ["Regulator Name", "Regulator Type", "Regulator Subtype", "Regulator HGNC ID", "Regulator Database", "Regulator ID", "Regulator Compartment", "Regulator Compartment ID",
+                        "Regulated Name", "Regulated Type", "Regulated Subtype", "Regulated HGNC ID", "Regulated Database", "Regulated ID", "Regulated Compartment", "Regulated Compartment ID",
+                        "Sign", "Connection Type", "Mechanism", "Site",
+                        "Cell Line", "Cell Type", "Tissue Type", "Organism",
+                        "Score", "Source", "Statements", "Paper IDs"]
 
 def input_biorecipes(model, model_cols=model_columns):
     # FIXME: NOT operator cannot be parsed (e.g., !TCR_HIGH in BooleanTcell model)
@@ -168,8 +169,8 @@ def biorecipe_to_violin(BioRECIPE_reading=None, BioRECIPE_reading_df=None):
             VIOLIN_reading_df.loc[i, "Connection Type"] = "I"
 
         VIOLIN_reading_df.loc[i, "Mechanism"] = BioRECIPE_reading_df.loc[i, "Mechanism"]
-        VIOLIN_reading_df.loc[i, "Evidence"] = BioRECIPE_reading_df.loc[i, "Evidence"]
-        VIOLIN_reading_df.loc[i, "Paper ID"] = BioRECIPE_reading_df.loc[i, "Paper ID"]
+        VIOLIN_reading_df.loc[i, "Evidence"] = BioRECIPE_reading_df.loc[i, "Statements"]
+        VIOLIN_reading_df.loc[i, "Paper ID"] = BioRECIPE_reading_df.loc[i, "Paper IDs"]
 
     return VIOLIN_reading_df
 
@@ -222,8 +223,8 @@ def violin_to_biorecipe(VIOLIN_reading=None, VIOLIN_reading_df=None):
             BioRECIPE_reading_df.loc[i, "Connection Type"] = "False"
 
         BioRECIPE_reading_df.loc[i, "Mechanism"] = VIOLIN_reading_df.loc[i, "Mechanism"]
-        BioRECIPE_reading_df.loc[i, "Evidence"] = VIOLIN_reading_df.loc[i, "Evidence"]
-        BioRECIPE_reading_df.loc[i, "Paper ID"] = VIOLIN_reading_df.loc[i, "Paper ID"]
+        BioRECIPE_reading_df.loc[i, "Statements"] = VIOLIN_reading_df.loc[i, "Evidence"]
+        BioRECIPE_reading_df.loc[i, "Paper IDs"] = VIOLIN_reading_df.loc[i, "Paper ID"]
 
         # TODO: specify this as VIOLIN's output with scoring columns
         for score in ['Evidence Score', 'Match Score', 'Kind Score', 'Epistemic Value', 'Total Score']:
