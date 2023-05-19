@@ -3,7 +3,7 @@ import numpy as np
 from indra.belief import BeliefEngine
 from indra.statements import statements
 from indra.statements import Agent
-from indra.tools import assemble_corpus as ac                                                                                      
+from indra.tools import assemble_corpus as ac
 import requests
 from indra.sources import indra_db_rest as idr
 from indra import config
@@ -13,13 +13,13 @@ import time
 import json
 import pandas as pd
 
-BioRECIPE_reading_col = ['Regulator Name', 'Regulator Type', 'Regulator ID', 'Regulator Location',
-						 'Regulator Database',
-						 'Regulated Name', 'Regulated Type', 'Regulated ID', 'Regulated Location',
-						 'Regulated Database', 'Sign',
-						 'Connection Type', 'Location', 'Mechanism', 'Cell Line', 'Cell Type', 'Organism',
-						 'Tissue Type',
-						 'Evidence', 'Score', 'Paper ID']
+BioRECIPE_reading_col = [
+						"Regulator Name", "Regulator Type", "Regulator Subtype", "Regulator HGNC ID", "Regulator Database", "Regulator ID", "Regulator Compartment", "Regulator Compartment ID",
+                        "Regulated Name", "Regulated Type", "Regulated Subtype", "Regulated HGNC ID", "Regulated Database", "Regulated ID", "Regulated Compartment", "Regulated Compartment ID",
+                        "Sign", "Connection Type", "Mechanism", "Site",
+                        "Cell Line", "Cell Type", "Tissue Type", "Organism",
+                        "Score", "Source", "Statements", "Paper IDs"
+						]
 
 def main(indra_stats=False, flute=False, violin=False):
 	"""
@@ -101,7 +101,7 @@ def main(indra_stats=False, flute=False, violin=False):
 					networkArray[rowCount,9] = bScore
 					networkArray[rowCount,8] = intType
 					networkArray[rowCount,12] = p
-					valid_st=True 
+					valid_st=True
 
 					try:
 						paperStats = j["evidence"]
@@ -128,7 +128,7 @@ def main(indra_stats=False, flute=False, violin=False):
 						networkArray[rowCount, 3] = upstrName
 
 				except Exception as e:
-					try: 
+					try:
 						upstr = j["sub"]
 						upstrName = upstr["name"]
 
@@ -153,7 +153,7 @@ def main(indra_stats=False, flute=False, violin=False):
 						if networkArray[rowCount, 1] == 0:
 							networkArray[rowCount, 3] = upstrName
 
-					
+
 					except Exception as e:
 						pass
 
@@ -201,7 +201,7 @@ def main(indra_stats=False, flute=False, violin=False):
 						pass
 
 				if(valid_st):
-					rowCount+=1		
+					rowCount+=1
 
 		else:
 			noStatements.append(str(p))
@@ -251,13 +251,12 @@ def main(indra_stats=False, flute=False, violin=False):
 
 		fOut_BioRECIPE.loc[i, "Regulated Name"] = fOut.loc[i, "Regulated Name"]
 		fOut_BioRECIPE.loc[i, "Regulated Type"] = fOut.loc[i, "Regulated Type"]
-		fOut_BioRECIPE.loc[i, "Regulated ID"] = fOut.loc[i, "Regulated ID"]
+		fOut_BioRECIPE.loc[i, "Regulated ID"] = fOut.loc[i, "Regulated ID"].split(':')[-1]
 		fOut_BioRECIPE.loc[i, "Regulated Database"] = fOut.loc[i, "Regulated Database"]
 		fOut_BioRECIPE.loc[i, "Regulator Name"] = fOut.loc[i, "Regulator Name"]
 		fOut_BioRECIPE.loc[i, "Regulator Type"] = fOut.loc[i, "Regulator Type"]
-		fOut_BioRECIPE.loc[i, "Regulator ID"] = fOut.loc[i, "Regulator ID"]
+		fOut_BioRECIPE.loc[i, "Regulator ID"] = fOut.loc[i, "Regulator ID"].split(':')[-1]
 		fOut_BioRECIPE.loc[i, "Regulator Database"] = fOut.loc[i, "Regulator Database"]
-
 		fOut_BioRECIPE.loc[i, "Mechanism"] = fOut.loc[i, "Regulation Type"]
 
 		if fOut.loc[i, "Regulation Type"] in ["Activation", "IncreaseAmount", "Phosphorylation"]:
@@ -302,8 +301,8 @@ def main(indra_stats=False, flute=False, violin=False):
 		fOut_VIOLIN.loc[i, "Evidence"] = fOut.loc[i, "Evidence"]
 		fOut_VIOLIN.loc[i, "Paper ID"] = fOut.loc[i, "PMCID"]
 
-		fOut_BioRECIPE.loc[i, "Evidence"] = fOut.loc[i, "Evidence"]
-		fOut_BioRECIPE.loc[i, "Paper ID"] = fOut.loc[i, "PMCID"]
+		fOut_BioRECIPE.loc[i, "Statements"] = fOut.loc[i, "Evidence"]
+		fOut_BioRECIPE.loc[i, "Paper IDs"] = fOut.loc[i, "PMCID"]
 
 	fOut_BioRECIPE.to_excel(fName, index=False)
 
