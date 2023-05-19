@@ -93,7 +93,7 @@ def input_biorecipes(model, model_cols=model_columns):
 
     # rename columns
     # TODO: discuss the correct column naming (e.g., 'Direct', 'Organism')
-    model_df.rename(columns={"Positive Direct": "Positive Connection Type", "Negative Direct": "Negative Connection Type"})
+    model_df = model_df.rename(columns={"Positive Direct": "Positive Connection Type", "Negative Direct": "Negative Connection Type", "Compartment ID": "Location ID", "Compartment": "Location"})
 
     # Check to make sure column names in the files are compatible with
     # the Accepted Column Names and Required Column Names
