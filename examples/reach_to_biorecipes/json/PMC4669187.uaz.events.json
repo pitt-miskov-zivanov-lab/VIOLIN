@@ -1,0 +1,2234 @@
+{
+  "frames" : [ {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-3-41",
+    "text" : "HIV infection led to an increase in PD-1+",
+    "arguments" : [ {
+      "text" : "HIV infection",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-3-19"
+    }, {
+      "text" : "PD-1+",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-3-20"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 740,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "led to",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 699,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-3",
+    "found-by" : "Positive_activation_nested_syntax_2_verb",
+    "verbose-text" : "We observed that HIV infection led to an increase in PD-1+ and PD-L1+ Treg cells."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-3-40",
+    "text" : "HIV infection led to an increase in PD-1+ and PD-L1+",
+    "arguments" : [ {
+      "text" : "HIV infection",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-3-19"
+    }, {
+      "text" : "PD-L1+",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-3-21"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 751,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "led to",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 699,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-3",
+    "found-by" : "Positive_activation_nested_syntax_2_verb",
+    "verbose-text" : "We observed that HIV infection led to an increase in PD-1+ and PD-L1+ Treg cells."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-5-20",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-5-25"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 939,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 924,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-5",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-4-2" ],
+    "verbose-text" : "Treg cells from viremic individuals had a particularly high PD-1 expression and impaired proliferative capacity in comparison with Treg cells from individuals under antiretroviral treatment."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-21-66",
+    "text" : "programmed death ligand-1 (PD-L1), which notably reduces viral loads in several animal infection",
+    "arguments" : [ {
+      "text" : "infection",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-21-76"
+    }, {
+      "text" : "programmed death ligand-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-21-73"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 3844,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "reduces",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 3748,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-21",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "These defects can be partially restored by blocking the interaction between PD-1 and its ligand programmed death ligand-1 (PD-L1), which notably reduces viral loads in several animal infection models [7–10]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-21-65",
+    "text" : "PD-L1), which notably reduces viral loads in several animal infection",
+    "arguments" : [ {
+      "text" : "infection",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-21-76"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-21-74"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 3844,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "reduces",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 3775,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-21",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "These defects can be partially restored by blocking the interaction between PD-1 and its ligand programmed death ligand-1 (PD-L1), which notably reduces viral loads in several animal infection models [7–10]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-25-31",
+    "text" : "PD-L1 are expressed",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-25-92"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 4488,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressed",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 4469,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-25",
+    "found-by" : "expression_3",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-25-13" ],
+    "verbose-text" : "PD-1 and PD-L1 are expressed on several cell types including regulatory T cells (Treg cells) [20]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-25-30",
+    "text" : "PD-1 and PD-L1 are expressed",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-25-91"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 4488,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressed",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 4460,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-25",
+    "found-by" : "expression_3",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-25-13" ],
+    "verbose-text" : "PD-1 and PD-L1 are expressed on several cell types including regulatory T cells (Treg cells) [20]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-44-3",
+    "text" : "expression of PD-1 and its ligand PD-L1",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-44-162"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 7680,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 7641,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-44",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-44-23" ],
+    "verbose-text" : "To first evaluate the expression of PD-1 and its ligand PD-L1 on Treg cells from HIV-infected individuals, we used the gating strategy of Miyara and colleagues [40]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-44-4",
+    "text" : "expression of PD-1",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-44-160"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 7659,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 7641,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-44",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-44-23" ],
+    "verbose-text" : "To first evaluate the expression of PD-1 and its ligand PD-L1 on Treg cells from HIV-infected individuals, we used the gating strategy of Miyara and colleagues [40]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-46-61",
+    "text" : "FOXP3 expression",
+    "arguments" : [ {
+      "text" : "FOXP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-46-174"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 8098,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 8082,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-46",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-46-25" ],
+    "verbose-text" : "The advantage over the traditional Treg cell characterization by CD4+CD25hiCD127loFOXP3+ is that conventional CD4 T cells with an up-regulated CD25 and FOXP3 expression due to the generalized, infection-related immune activation are excluded from the analysis [41]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-49-48",
+    "text" : "PD-1 was expressed",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-49-187"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 8641,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressed",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 8623,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-49",
+    "found-by" : "expression_3",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-49-27" ],
+    "verbose-text" : "This difference in PD-1 expression was due to PD-1 on effector Treg cells (13.6% ± 1.2 SEM) since very little PD-1 was expressed on resting Treg cells (1.5% ± 0.2 SEM)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-49-46",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-49-183"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 8547,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 8532,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-49",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-49-27" ],
+    "verbose-text" : "This difference in PD-1 expression was due to PD-1 on effector Treg cells (13.6% ± 1.2 SEM) since very little PD-1 was expressed on resting Treg cells (1.5% ± 0.2 SEM)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-53-7",
+    "text" : "expression of PD-1",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-53-199"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 9178,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 9160,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-53",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-53-31" ],
+    "verbose-text" : "Furthermore, the expression of PD-1 and PD-L1 on Treg cells from HIV-infected individuals correlated positively (Fig 1C)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-53-8",
+    "text" : "expression of PD-1 and PD-L1",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-53-200"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 9188,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 9160,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-53",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-53-31" ],
+    "verbose-text" : "Furthermore, the expression of PD-1 and PD-L1 on Treg cells from HIV-infected individuals correlated positively (Fig 1C)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-60-44",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-60-221"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10175,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10160,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-60",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-59-34" ],
+    "verbose-text" : "(C) Correlation between PD-1 expression and PD-L1 expression on Treg cells from HIV-infected individuals."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-60-12",
+    "text" : "PD-L1 expression",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-60-222"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10196,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10180,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-60",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-59-34" ],
+    "verbose-text" : "(C) Correlation between PD-1 expression and PD-L1 expression on Treg cells from HIV-infected individuals."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-62-29",
+    "text" : "Expression of PD-1 (left panel) and PD-L1",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-62-227"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10370,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "Expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10329,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-62",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-59-34" ],
+    "verbose-text" : "(D) Expression of PD-1 (left panel) and PD-L1 (right panel) in healthy control’s PBMC exposed to HIV-1 Bal (black bars) at 0.3 multiplicity of infection, compared with mock control (white bars)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-62-28",
+    "text" : "Expression of PD-1",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-62-226"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10347,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "Expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10329,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-62",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-59-34" ],
+    "verbose-text" : "(D) Expression of PD-1 (left panel) and PD-L1 (right panel) in healthy control’s PBMC exposed to HIV-1 Bal (black bars) at 0.3 multiplicity of infection, compared with mock control (white bars)."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-65-33",
+    "text" : "PD-1 and PD-L1 on resting and effector Treg cells from HIV-infected individuals and healthy controls suggested that the virus itself could induce PD-L1",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-65-241"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-65-237"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10948,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induce",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 10797,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-65",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "ns, non significant.The differential distribution of PD-1 and PD-L1 on resting and effector Treg cells from HIV-infected individuals and healthy controls suggested that the virus itself could induce PD-L1 upregulation on Treg cells."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-69-15",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-69-248"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 11554,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 11539,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-69",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-69-39" ],
+    "verbose-text" : "In contrast, virus exposure had no effect on PD-1 expression (Fig 1D)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-73-58",
+    "text" : "gp120 induced PD-L1",
+    "arguments" : [ {
+      "text" : "gp120",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-73-264"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-73-265"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 12128,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 12109,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-73",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "In addition, we observed that the HIV-envelope protein gp120 induced PD-L1 upregulation in Treg cells providing an extra mechanistic insight into how HIV can induce PD-L1 (S3C Fig)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-74-55",
+    "text" : "PD-L1 pathway.PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-74-275"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 12526,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 12497,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-74",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-74-40" ],
+    "verbose-text" : "When taken together, our results show an upregulation of PD-1 and PD-L1 on Treg cells of HIV-infected individuals that may be mediated by different routes and suggest that the Treg cell compartment is likely to be influenced by immunotherapy targeting the PD-1/PD-L1 pathway.PD-1 expression on Treg cells is associated with disease progressionPD-1 expression on CD4- and CD8- T cells correlates with HIV disease progression [11,13,47]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-75-21",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-75-283"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 12748,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 12733,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-75",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-75-41" ],
+    "verbose-text" : "To test whether the same is true for Treg cells, we analysed PD-1 expression on these cells from HIV-infected individuals categorized into 4 groups according to CD4 T cell counts and viral load (S2 Table)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-78-11",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-78-297"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 13245,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 13230,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-78",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-77-43" ],
+    "verbose-text" : "PD-1 expression on Treg cells paralleled PD-1 on total CD4-T cells but differed from CD8-T cells (S4A Fig)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-84-5",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-84-318"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 13993,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 13978,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-84",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-84-46" ],
+    "verbose-text" : "(B) PD-1 expression on Treg cells from different HIV-infected study groups (black circles) and healthy controls (empty triangles) are shown as indicated."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-88-49",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-88-323"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 14457,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 14442,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-88",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-88-49" ],
+    "verbose-text" : "(C) Correlation of PD-1 expression on Treg cells from HIV-infected individuals with viral loads (up) and CD4 T cell counts (down), respectively."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-91-10",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-91-336"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15012,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 14997,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-91",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-91-52" ],
+    "verbose-text" : "To further substantiate the relation between PD-1 expression on Treg cells and antigen exposure, we followed 5 patients before and after antiretroviral treatment interruptions."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-93-50",
+    "text" : "cells.PD-1 expression",
+    "arguments" : [ {
+      "text" : "cells.PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-93-343"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15466,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15445,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-93",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-93-54" ],
+    "verbose-text" : "As can be seen in Fig 3, the percentage of PD-1 expressing Treg cells followed viremia and cART reduced PD-1 expression on Treg cells.PD-1 expression on Treg cells follows HIV viremia.PD-1 expression on Treg cells (including eTreg and rTreg) (black bars) from 5 individuals followed longitudinally before and after antiretroviral treatment interruptions (pre-cART, on, off, and on, respectively)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-93-1",
+    "text" : "PD-1 expressing Treg cells followed viremia and cART reduced PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1 expression",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC4669187-UAZ-r1-PMC4669187-93-2"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-93-2"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15436,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "reduced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15360,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-93",
+    "found-by" : "Negative_regulation_syntax_5_verb",
+    "verbose-text" : "As can be seen in Fig 3, the percentage of PD-1 expressing Treg cells followed viremia and cART reduced PD-1 expression on Treg cells.PD-1 expression on Treg cells follows HIV viremia.PD-1 expression on Treg cells (including eTreg and rTreg) (black bars) from 5 individuals followed longitudinally before and after antiretroviral treatment interruptions (pre-cART, on, off, and on, respectively)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-93-2",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-93-1"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15436,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15421,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-93",
+    "found-by" : "expression_1",
+    "verbose-text" : "As can be seen in Fig 3, the percentage of PD-1 expressing Treg cells followed viremia and cART reduced PD-1 expression on Treg cells.PD-1 expression on Treg cells follows HIV viremia.PD-1 expression on Treg cells (including eTreg and rTreg) (black bars) from 5 individuals followed longitudinally before and after antiretroviral treatment interruptions (pre-cART, on, off, and on, respectively)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-93-57",
+    "text" : "PD-1 expressing",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-93-2"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15375,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15360,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-93",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-93-54" ],
+    "verbose-text" : "As can be seen in Fig 3, the percentage of PD-1 expressing Treg cells followed viremia and cART reduced PD-1 expression on Treg cells.PD-1 expression on Treg cells follows HIV viremia.PD-1 expression on Treg cells (including eTreg and rTreg) (black bars) from 5 individuals followed longitudinally before and after antiretroviral treatment interruptions (pre-cART, on, off, and on, respectively)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-93-56",
+    "text" : "viremia.PD-1 expression",
+    "arguments" : [ {
+      "text" : "viremia.PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-93-346"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15516,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15493,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-93",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-93-54" ],
+    "verbose-text" : "As can be seen in Fig 3, the percentage of PD-1 expressing Treg cells followed viremia and cART reduced PD-1 expression on Treg cells.PD-1 expression on Treg cells follows HIV viremia.PD-1 expression on Treg cells (including eTreg and rTreg) (black bars) from 5 individuals followed longitudinally before and after antiretroviral treatment interruptions (pre-cART, on, off, and on, respectively)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-96-59",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-96-352"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15937,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 15922,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-96",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-96-56" ],
+    "verbose-text" : "To characterize the relationship between PD-1 expression and the proliferative capacity of Treg cells, PBMC from individuals of the different HIV study groups were labelled with Carboxyfluorescein succinimidyl ester (CFSE), stimulated with HIV Gag peptides and analysed for proliferation by CFSE dilution via flow cytometry."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-96-13",
+    "text" : "stimulated with HIV Gag peptides and analysed for proliferation",
+    "arguments" : [ {
+      "text" : "peptides",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-96-360"
+    }, {
+      "text" : "proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-96-361"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 16168,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "stimulated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 16105,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-96",
+    "found-by" : "Positive_activation_token_experimental_results_1",
+    "verbose-text" : "To characterize the relationship between PD-1 expression and the proliferative capacity of Treg cells, PBMC from individuals of the different HIV study groups were labelled with Carboxyfluorescein succinimidyl ester (CFSE), stimulated with HIV Gag peptides and analysed for proliferation by CFSE dilution via flow cytometry."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-98-45",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-98-366"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 16434,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 16419,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-98",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-97-57" ],
+    "verbose-text" : "It correlated positively with CD4 T cell counts and negatively with viral loads (Fig 4C and 4D) and PD-1 expression on Treg cells prior to stimulation (Fig 4E)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-106-62",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-106-387"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 17607,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 17592,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-106",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-106-63" ],
+    "verbose-text" : "Panels C to E show correlations between the percentage of proliferating Treg cells and CD4 T cell counts (C), HIV viral load (D), and PD-1 expression on Treg cells before stimulation (E), respectively."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-107-53",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-107-399"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-107-398"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18089,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18035,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-107",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Spearman’s rank correlation coefficients (r) and p values (P) are indicated.PD-L1 blockade increases the proliferative capacity of Treg cells but not their suppressive capacity per cellTo analyse the impact of a PD-L1 blockade on the proliferative capacity of Treg cells from HIV-infected individuals, CFSE-labelled PBMC were cultured in the presence of HIV Gag peptides and PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-113-32",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-113-421"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-113-420"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18986,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18932,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-113",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "PD-L1 blockade increases Treg cell proliferation but not its suppressive capacity per cell.In panels A to E, PBMC from HIV-infected individuals were stimulated with Gag peptides for 6 days in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-113-34",
+    "text" : "PD-L1 blockade increases Treg cell proliferation but not its suppressive capacity per cell.In panels A to E, PBMC from HIV-infected individuals were stimulated with Gag peptides for 6 days in the presence of a PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-113-421"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-113-413"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-negated" : true,
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18986,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increases",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18722,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-113",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "PD-L1 blockade increases Treg cell proliferation but not its suppressive capacity per cell.In panels A to E, PBMC from HIV-infected individuals were stimulated with Gag peptides for 6 days in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-113-42",
+    "text" : "PD-L1 blockade increases Treg cell proliferation",
+    "arguments" : [ {
+      "text" : "cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-113-415"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-113-413"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18770,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increases",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 18722,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-113",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "PD-L1 blockade increases Treg cell proliferation but not its suppressive capacity per cell.In panels A to E, PBMC from HIV-infected individuals were stimulated with Gag peptides for 6 days in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-114-35",
+    "text" : "PD-L1 blocking antibody (black line) or isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-114-429"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-114-428"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 19263,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 19199,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-114",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "(A) Flow cytometry histograms from an HIV-infected individual with <500 CD4/μL and >2000 viral RNA copies/mL blood showing CFSE dilution on Treg (including eTreg and rTreg), CD4- and CD8- T cells in presence of PD-L1 blocking antibody (black line) or isotype control antibody (grey line)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-130-38",
+    "text" : "Helios-expressing",
+    "arguments" : [ {
+      "text" : "Helios",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-130-478"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 21636,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 21619,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-130",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-129-73" ],
+    "verbose-text" : "As expected, the frequency of Helios-expressing Treg cells did not increase upon PD-L1 blockade (p = 0.862)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-131-9",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-131-486"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-131-485"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 21911,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 21857,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-131",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "To test the capacity of expanded Treg cells to suppress CD8 T cell proliferation, Treg cells were isolated from PBMCs after a 6-day-culture in the presence of PD-L1 blocking antibody or an isotype control antibody, and co-cultured with CFSE-labelled PBMCs in the presence of anti-CD3/anti-CD28 and interleukin-2."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-135-63",
+    "text" : "PD-L1 blockade significantly increased the proliferation",
+    "arguments" : [ {
+      "text" : "proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-135-518"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-135-517"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 23145,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increased",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 23089,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-135",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "The PD-L1 blockade significantly increased the proliferation of Treg cells from patients with high viremia irrespective of their CD4 T cell counts (Figs 6A and S6B)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-137-17",
+    "text" : "T cell proliferation mediated by the PD-L1",
+    "arguments" : [ {
+      "text" : "T cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-137-529"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-137-530"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 23512,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 23470,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-137",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "In contrast, the increase of CD8 T cell proliferation mediated by the PD-L1 blockade was significant with respect to the isotype antibody control for all 4 patient groups (Figs 6A and S6B)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-137-18",
+    "text" : "CD8 T cell proliferation mediated by the PD-L1",
+    "arguments" : [ {
+      "text" : "CD8",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-137-528"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-137-530"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 23512,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 23466,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-137",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "In contrast, the increase of CD8 T cell proliferation mediated by the PD-L1 blockade was significant with respect to the isotype antibody control for all 4 patient groups (Figs 6A and S6B)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-139-54",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-139-545"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-139-544"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 24073,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 24019,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-139",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "The inverse was true in the groups with controlled viremia.PD-L1 blockade differentially increases Treg and CD8 T cell proliferative capacity depending on host viremia.PBMC from HIV-infected individuals were stimulated with Gag peptides for 6 days in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-164-60",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-164-649"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-164-648"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 28180,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 28126,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-164",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "(A) PBMCs were stimulated with Gag peptides in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-186-16",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-186-729"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32222,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32207,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-186",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-186-112" ],
+    "verbose-text" : "However the fold change of Treg cell proliferation was not significantly correlated with PD-1 expression itself although PD-1 expression was correlated to viral loads."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-186-19",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-186-730"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32254,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32239,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-186",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-186-112" ],
+    "verbose-text" : "However the fold change of Treg cell proliferation was not significantly correlated with PD-1 expression itself although PD-1 expression was correlated to viral loads."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-188-47",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-188-734"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32522,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32507,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-188",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-188-114" ],
+    "verbose-text" : "One good candidate for this is IL-2 that is produced upon T cell stimulation but may have been limiting with increasing PD-1 expression and negative signalling on CD4 T cells, the main IL-2 producers."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-22",
+    "text" : "PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2",
+    "arguments" : [ {
+      "text" : "IL-2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-741"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-737"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32734,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "negatively regulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32648,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-23",
+    "text" : "PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade",
+    "arguments" : [ {
+      "text" : "signalling cascade",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-742"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-738"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32753,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "negatively regulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32653,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-24",
+    "text" : "PD-L1 pathway negatively regulates Treg cell proliferation",
+    "arguments" : [ {
+      "text" : "cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-740"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-738"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32711,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "negatively regulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32653,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-14",
+    "text" : "PD-1/PD-L1-mediated inhibition of proliferation",
+    "arguments" : [ {
+      "text" : "proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-745"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-744"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32843,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "inhibition",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32796,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_3_noun",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-26",
+    "text" : "PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade",
+    "arguments" : [ {
+      "text" : "signalling cascade",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-742"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-737"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32753,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "negatively regulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32648,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-25",
+    "text" : "PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2",
+    "arguments" : [ {
+      "text" : "IL-2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-741"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-738"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32734,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "negatively regulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32653,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-189-27",
+    "text" : "PD-1/PD-L1 pathway negatively regulates Treg cell proliferation",
+    "arguments" : [ {
+      "text" : "cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-740"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-189-737"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32711,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "negatively regulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 32648,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-189",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Consistent with this are previous observations that (i) the PD-1/PD-L1 pathway negatively regulates Treg cell proliferation by inhibiting the IL-2 signalling cascade [34] and (ii) exogenous IL-2 can overcome PD-1/PD-L1-mediated inhibition of proliferation [53]."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-206-64",
+    "text" : "CD45RA expression",
+    "arguments" : [ {
+      "text" : "CD45RA",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-206-861"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 37619,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 37602,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-206",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-206-127" ],
+    "verbose-text" : "Treg cells were identified as a joint population of effector Treg cells (CD4+CD45RA-FOXP3hi) (eTreg) and resting Treg cells (CD4+CD45RA+FOXP3lo) (rTreg), in which the cut offs for FOXP3 were set manually in relation to CD45RA expression as previously described [40] (Figs 1 and S1A)."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-217-51",
+    "text" : "PD-L1 expression",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-217-905"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 39421,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 39405,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-217",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-68-38" ],
+    "verbose-text" : "After 3 days, cells were harvested and stained to analyse PD-1 and PD-L1 expression on Treg cells by flow cytometry.The efficacy of HIV-1Bal inhibition by T20 treatment was controlled by stimulating the virus-exposed cells from above with 5μg/ml PHA at day 3 and culturing them for further 7 days."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-217-52",
+    "text" : "PD-1 and PD-L1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-217-904"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 39421,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 39396,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-217",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-68-38" ],
+    "verbose-text" : "After 3 days, cells were harvested and stained to analyse PD-1 and PD-L1 expression on Treg cells by flow cytometry.The efficacy of HIV-1Bal inhibition by T20 treatment was controlled by stimulating the virus-exposed cells from above with 5μg/ml PHA at day 3 and culturing them for further 7 days."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-251-43",
+    "text" : "PD-L1 expression",
+    "arguments" : [ {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-251-1058"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 45261,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 45245,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-251",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-250-149" ],
+    "verbose-text" : "(TIF)Click here for additional data file.HIV exposure induces PD-L1 on Treg cells.Shown are the percentages of PD-L1 expression on Treg cells for different conditions and individuals."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-256-36",
+    "text" : "file.PD-1 expression",
+    "arguments" : [ {
+      "text" : "file.PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-256-1078"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 45830,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 45810,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-256",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-256-153" ],
+    "verbose-text" : "(TIF)Click here for additional data file.PD-1 expression on CD4- and CD8- T cells."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-260-6",
+    "text" : "PD-1 expression",
+    "arguments" : [ {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-260-1088"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 46278,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 46263,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-260",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4669187-UAZ-r1-PMC4669187-260-157" ],
+    "verbose-text" : "(B) Correlations of PD-1 expression on CD4- and CD8- T cells with viral loads and CD4 T cell counts are shown, respectively."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-269-37",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-269-1120"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-269-1119"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 47674,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 47620,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-269",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "PBMC from HIV-infected individuals were stimulated with Gag peptides for 6 days in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  }, {
+    "frame-id" : "evem-PMC4669187-UAZ-r1-PMC4669187-273-39",
+    "text" : "PD-L1 blocking antibody or an isotype control antibody",
+    "arguments" : [ {
+      "text" : "isotype control antibody",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-273-1137"
+    }, {
+      "text" : "PD-L1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4669187-UAZ-r1-PMC4669187-273-1136"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 48275,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "blocking",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4669187-UAZ-r1-PMC4669187",
+      "offset" : 48221,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4669187-UAZ-r1-PMC4669187-273",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "(TIF)Click here for additional data file.Lack of correlation between FC in p24 and FC in percentage of proliferating Treg cells.PBMCs were stimulated with Gag peptides in the presence of a PD-L1 blocking antibody or an isotype control antibody."
+  } ],
+  "object-type" : "frame-collection",
+  "object-meta" : {
+    "processing-end" : "2023-03-18T23:39:52Z",
+    "doc-id" : "PMC4669187",
+    "component-type" : "machine",
+    "component" : "Reach",
+    "processing-start" : "2023-03-18T23:34:06Z",
+    "object-type" : "meta-info",
+    "organization" : "UAZ"
+  }
+}

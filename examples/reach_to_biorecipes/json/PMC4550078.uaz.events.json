@@ -1,0 +1,1665 @@
+{
+  "frames" : [ {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-0-27",
+    "text" : "Akt in T cells to resist tumor",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-0-5"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-0-3"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 46,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "resist",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 16,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-0",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Over-expressing Akt in T cells to resist tumor immunosuppression and increase anti-tumor activityBackgroundTumor employs various means to escape immunosurveillance and inhibit immune attack, and strategies have been developed to counteract the inhibitory signals."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-3-45",
+    "text" : "OT-1 cells over-expressing Akt inhibited B16-OVA tumor",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-3-30"
+    }, {
+      "text" : "OT-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-3-28"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1305,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "inhibited",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1251,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-3",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "What’s more, adoptive transfer of OT-1 cells over-expressing Akt inhibited B16-OVA tumor growth and prolonged mouse survival."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-4-41",
+    "text" : "EpCAM-expressing",
+    "arguments" : [ {
+      "text" : "EpCAM",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-4-38"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1525,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1509,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-4",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-1-2" ],
+    "verbose-text" : "To examine if over-expressing Akt could increase the anti-tumor activity of T cells in human cancer, PBLs co-expressing EpCAM specific CAR and Akt were cultured with EpCAM-expressing human prostate cancer cells PC3M, and less inhibition on cell proliferation and less apoptosis were observed."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-5-36",
+    "text" : "Akt in tumor specific T cells increases T cell proliferation",
+    "arguments" : [ {
+      "text" : "T cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-5-53"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-5-50"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1906,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increases",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1846,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-5",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In addition, adoptive transfer of PC3M specific T cells over-expressing Akt resulted in more dramatic tumor inhibitory effects in PC3M bearing NOD/SCID mice.ConclusionsThese data indicates that over-expressing Akt in tumor specific T cells increases T cell proliferation and activity in the tumor environment, and enhances anti-tumor effects of adoptively transferred T cells."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-5-35",
+    "text" : "tumor specific T cells increases T cell proliferation",
+    "arguments" : [ {
+      "text" : "T cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-5-53"
+    }, {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-5-51"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1906,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increases",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 1853,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-5",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In addition, adoptive transfer of PC3M specific T cells over-expressing Akt resulted in more dramatic tumor inhibitory effects in PC3M bearing NOD/SCID mice.ConclusionsThese data indicates that over-expressing Akt in tumor specific T cells increases T cell proliferation and activity in the tumor environment, and enhances anti-tumor effects of adoptively transferred T cells."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-13-24",
+    "text" : "Akt becomes phosphorylated and activated by PDK1",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-13-87"
+    }, {
+      "text" : "PDK1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-13-88"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 4298,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 4250,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-13",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "After recruitment to the plasma membrane, Akt becomes phosphorylated and activated by PDK1, and then plays an important role in diverse cellular processes including cell survival, glucose metabolism, and cytokine synthesis [6–8]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-15-25",
+    "text" : "PD-1 both inhibit Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-15-95"
+    }, {
+      "text" : "PD-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-15-94"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 4570,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "inhibit",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 4549,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-15",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Ligation of CTLA-4 and PD-1 both inhibit Akt activity, suggesting PI3K-Akt signaling is a major mechanism of immune regulation [9, 10]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-15-26",
+    "text" : "CTLA-4 and PD-1 both inhibit Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-15-95"
+    }, {
+      "text" : "CTLA-4",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-15-93"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 4570,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "inhibit",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 4538,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-15",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Ligation of CTLA-4 and PD-1 both inhibit Akt activity, suggesting PI3K-Akt signaling is a major mechanism of immune regulation [9, 10]."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-18-10",
+    "text" : "tumor specific T cells could increase T cell proliferation",
+    "arguments" : [ {
+      "text" : "T cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-114"
+    }, {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-112"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5342,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5284,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-18",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "To test this hypothesis, we used two different tumor models, B16-OVA tumor model and human prostate cancer PC3M tumor model, and demonstrated that over-expressing Akt in tumor specific T cells could increase T cell proliferation and cytokine secretion when co-cultured with tumor cells, and inhibit tumor growth in vivo."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-18-9",
+    "text" : "Akt in tumor specific T cells could increase T cell proliferation",
+    "arguments" : [ {
+      "text" : "T cell proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-114"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-111"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5342,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5277,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-18",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "To test this hypothesis, we used two different tumor models, B16-OVA tumor model and human prostate cancer PC3M tumor model, and demonstrated that over-expressing Akt in tumor specific T cells could increase T cell proliferation and cytokine secretion when co-cultured with tumor cells, and inhibit tumor growth in vivo."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-18-11",
+    "text" : "tumor specific T cells could increase T cell proliferation and cytokine secretion",
+    "arguments" : [ {
+      "text" : "cytokine secretion",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-115"
+    }, {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-112"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5365,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5284,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-18",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "To test this hypothesis, we used two different tumor models, B16-OVA tumor model and human prostate cancer PC3M tumor model, and demonstrated that over-expressing Akt in tumor specific T cells could increase T cell proliferation and cytokine secretion when co-cultured with tumor cells, and inhibit tumor growth in vivo."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-18-12",
+    "text" : "Akt in tumor specific T cells could increase T cell proliferation and cytokine secretion",
+    "arguments" : [ {
+      "text" : "cytokine secretion",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-115"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-18-111"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5365,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 5277,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-18",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "To test this hypothesis, we used two different tumor models, B16-OVA tumor model and human prostate cancer PC3M tumor model, and demonstrated that over-expressing Akt in tumor specific T cells could increase T cell proliferation and cytokine secretion when co-cultured with tumor cells, and inhibit tumor growth in vivo."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-47-34",
+    "text" : "Akt activation in T cells is inhibited by tumor",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-47-259"
+    }, {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-47-261"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12344,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "inhibited",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12297,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-47",
+    "found-by" : "Negative_activation_syntax_2_verb",
+    "verbose-text" : "As shown in Fig. 1a, incubation with B16-OVA culture supernatant inhibited Akt phosphorylation, suggesting that Akt activation in T cells is inhibited by tumor secreted factors."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-47-38",
+    "text" : "Akt phosphorylation",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-47-258"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12279,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12260,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-47",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-47-32" ],
+    "verbose-text" : "As shown in Fig. 1a, incubation with B16-OVA culture supernatant inhibited Akt phosphorylation, suggesting that Akt activation in T cells is inhibited by tumor secreted factors."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-48-17",
+    "text" : "Akt phosphorylation",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-48-272"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12585,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12566,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-48",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-48-33" ],
+    "verbose-text" : "To examine Akt activation state of T cells in tumor microenvironment in vivo, T cells were isolated from tumor draining lymph nodes (TDLN) and distant lymph nodes (LN) of B16-OVA tumor bearing mice, and Akt phosphorylation was detected."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-49-43",
+    "text" : "Akt was down-regulated in TDLN comparing to distant LN",
+    "arguments" : [ {
+      "text" : "LN",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-49-274"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-49-273"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12693,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "down-regulated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12639,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-49",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "As we expected, the phosphorylation of Akt was down-regulated in TDLN comparing to distant LN (Fig. 1b)."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-49-46",
+    "text" : "phosphorylation of Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-49-273"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12642,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 12620,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-49",
+    "found-by" : "Phosphorylation_token_of",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-48-33" ],
+    "verbose-text" : "As we expected, the phosphorylation of Akt was down-regulated in TDLN comparing to distant LN (Fig. 1b)."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-52-39",
+    "text" : "levels of Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-52-282"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 13015,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 13002,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-52",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-48-33" ],
+    "verbose-text" : "24 h later, cells were collected, and the levels of Akt, phosphorylated Akt, and β-actin were examined by western blot."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-56-31",
+    "text" : "Akt or myr-Akt could increase the cytokine production and proliferation",
+    "arguments" : [ {
+      "text" : "proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-56-314"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-56-312"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 14347,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 14276,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-56",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Together, these data demonstrates that over-expressing Akt or myr-Akt could increase the cytokine production and proliferation of tumor specific T cells in the presence of tumor.OT-1 cells transduced with Akt or myr-Akt display increased IFN-γ production and proliferation in the presence of B16-OVA tumor cells."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-56-30",
+    "text" : "Akt or myr-Akt could increase the cytokine production and proliferation of tumor",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-56-315"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-56-312"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 14356,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 14276,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-56",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Together, these data demonstrates that over-expressing Akt or myr-Akt could increase the cytokine production and proliferation of tumor specific T cells in the presence of tumor.OT-1 cells transduced with Akt or myr-Akt display increased IFN-γ production and proliferation in the presence of B16-OVA tumor cells."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-56-29",
+    "text" : "Akt or myr-Akt could increase the cytokine production",
+    "arguments" : [ {
+      "text" : "cytokine production",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-56-313"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-56-312"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 14329,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 14276,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-56",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Together, these data demonstrates that over-expressing Akt or myr-Akt could increase the cytokine production and proliferation of tumor specific T cells in the presence of tumor.OT-1 cells transduced with Akt or myr-Akt display increased IFN-γ production and proliferation in the presence of B16-OVA tumor cells."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-69-22",
+    "text" : "levels of B7-H1, TGF-β",
+    "arguments" : [ {
+      "text" : "TGF-β",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-69-380"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17339,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17317,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-69",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "As shown in Fig. 4a, PC3M lacks expressions of HLA-DR and CD80, whereas expresses high levels of B7-H1, TGF-β, and IL-10."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-69-21",
+    "text" : "levels of B7-H1, TGF-β, and IL-10",
+    "arguments" : [ {
+      "text" : "IL-10",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-69-381"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17350,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17317,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-69",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "As shown in Fig. 4a, PC3M lacks expressions of HLA-DR and CD80, whereas expresses high levels of B7-H1, TGF-β, and IL-10."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-69-13",
+    "text" : "expressions of HLA-DR and CD80",
+    "arguments" : [ {
+      "text" : "CD80",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-69-378"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17292,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressions",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17262,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-69",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "As shown in Fig. 4a, PC3M lacks expressions of HLA-DR and CD80, whereas expresses high levels of B7-H1, TGF-β, and IL-10."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-69-14",
+    "text" : "expressions of HLA-DR",
+    "arguments" : [ {
+      "text" : "HLA-DR",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-69-377"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17283,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressions",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17262,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-69",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "As shown in Fig. 4a, PC3M lacks expressions of HLA-DR and CD80, whereas expresses high levels of B7-H1, TGF-β, and IL-10."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-69-20",
+    "text" : "levels of B7-H1",
+    "arguments" : [ {
+      "text" : "B7-H1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-69-379"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17332,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17317,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-69",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "As shown in Fig. 4a, PC3M lacks expressions of HLA-DR and CD80, whereas expresses high levels of B7-H1, TGF-β, and IL-10."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-70-15",
+    "text" : "PBLs expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-70-382"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17405,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17390,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-70",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "To enhance the anti-tumor activity of PBLs expressing EpCAM specific CAR against the immunosuppressive PC3M tumor, we generated CAR-Akt, or CAR-myr-Akt co-expressing retroviral vectors (Fig. 4b), and verified the transduction efficiency of CAR and Akt in PBLs by RT-PCR, real-time PCR and western blot, respectively (Fig. 4c)."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-71-42",
+    "text" : "CAR expression",
+    "arguments" : [ {
+      "text" : "CAR",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-71-393"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17847,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17833,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-71",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-71-40" ],
+    "verbose-text" : "The transduction efficiency of CAR was also examined by staining with protein L, which is an immunoglobulin binding protein that can be used to determine CAR expression [17] (Additional file 1: Figure S1)."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-72-44",
+    "text" : "Akt inhibition promotes T cell differentiation",
+    "arguments" : [ {
+      "text" : "T cell differentiation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-72-395"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-72-394"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17958,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "promotes",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 17912,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-72",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Since it was reported that Akt inhibition promotes T cell differentiation to a memory phenotype [18], we evaluated CD62L expression in transduced T cells."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-72-5",
+    "text" : "CD62L expression",
+    "arguments" : [ {
+      "text" : "CD62L",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-72-396"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 18016,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 18000,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-72",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-68-39" ],
+    "verbose-text" : "Since it was reported that Akt inhibition promotes T cell differentiation to a memory phenotype [18], we evaluated CD62L expression in transduced T cells."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-76-6",
+    "text" : "levels of Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-76-430"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 18964,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 18951,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-76",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-76-42" ],
+    "verbose-text" : "c Human PBLs were transduced with retroviruses encoding EpCAM specific CAR, CAR-Akt, or CAR-myr-Akt, at 5 days after transduction, the mRNA levels of transduced CAR were determined by RT-PCR and real-time PCR, and the protein levels of Akt, phosphorylated Akt were determined by western blotTo determine if co-expressing Akt or myr-Akt could help PBLs resist tumor immunosuppression, PBLs transduced with CAR, CAR-Akt, or CAR-myr-Akt were co-cultured with PC3M tumor cells, 3 days later, T cell proliferation and apoptosis were examined."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-78-1",
+    "text" : "Akt increases the activity of CAR expressing",
+    "arguments" : [ {
+      "text" : "CAR expressing",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC4550078-UAZ-r1-PMC4550078-78-2"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-78-2"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 19890,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increases",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 19846,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-78",
+    "found-by" : "Positive_regulation_syntax_1_verb",
+    "verbose-text" : "In addition, incubation with tumor cells increased cell apoptosis in all groups, however, T cells co-expressing Akt displayed less apoptosis comparing to T cells expressing CAR only, and T cells transduced with myr-Akt displayed higher apoptosis rate than T cells transduced with wtAkt, suggesting that transducing wtAkt may be more beneficial than myr-Akt.Over-expressing Akt increases the activity of CAR expressing PBLs in the presence of PC3M."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-78-2",
+    "text" : "CAR expressing",
+    "arguments" : [ {
+      "text" : "CAR",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-78-1"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 19890,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 19876,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-78",
+    "found-by" : "expression_2",
+    "verbose-text" : "In addition, incubation with tumor cells increased cell apoptosis in all groups, however, T cells co-expressing Akt displayed less apoptosis comparing to T cells expressing CAR only, and T cells transduced with myr-Akt displayed higher apoptosis rate than T cells transduced with wtAkt, suggesting that transducing wtAkt may be more beneficial than myr-Akt.Over-expressing Akt increases the activity of CAR expressing PBLs in the presence of PC3M."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-81-48",
+    "text" : "PBLs co-expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-81-471"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20542,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "co-expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20524,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-81",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-80-45" ],
+    "verbose-text" : "As shown in Fig. 6a, PBLs co-expressing Akt caused more cell lysis than PBLs expressing CAR only."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-81-18",
+    "text" : "PBLs expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-81-473"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20590,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20575,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-81",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-80-45" ],
+    "verbose-text" : "As shown in Fig. 6a, PBLs co-expressing Akt caused more cell lysis than PBLs expressing CAR only."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-83-19",
+    "text" : "PBLs expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-83-486"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20888,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20873,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-83",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-82-46" ],
+    "verbose-text" : "As shown in Fig. 6b, PBLs co-expressing Akt significantly inhibited tumor growth comparing to PBLs expressing CAR only."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-83-4",
+    "text" : "PBLs co-expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-83-483"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20818,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "co-expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20800,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-83",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-82-46" ],
+    "verbose-text" : "As shown in Fig. 6b, PBLs co-expressing Akt significantly inhibited tumor growth comparing to PBLs expressing CAR only."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-83-32",
+    "text" : "PBLs co-expressing Akt significantly inhibited tumor",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-83-485"
+    }, {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-83-483"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20852,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "inhibited",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 20800,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-83",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "As shown in Fig. 6b, PBLs co-expressing Akt significantly inhibited tumor growth comparing to PBLs expressing CAR only."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-90-23",
+    "text" : "levels of Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-90-530"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 22662,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 22649,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-90",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-89-47" ],
+    "verbose-text" : "It could be partly explained by the similar phosphorylation levels of Akt observed for T cells transduced with wtAkt and myr-Akt (Fig. 4c), also the increased apoptosis observed for PBLs transduced with myr-Akt cultured alone or in the presence of tumor cells (Fig. 5b)."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-92-33",
+    "text" : "cell death through transcriptional activation of Fas receptor",
+    "arguments" : [ {
+      "text" : "cell death",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-92-549"
+    }, {
+      "text" : "Fas receptor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-92-550"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 23572,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 23511,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-92",
+    "found-by" : "Positive_activation_syntax_7_noun",
+    "verbose-text" : "This difference could be caused by the different experimental system used in their study, in which the apoptosis was evaluated at 4 weeks after retrovirus transduction, whereas our study characterized T cells at 5 days after transduction.The increased apoptosis observed for myr-Akt transduced T cells is contradictory to the well known pro-survival role of Akt, however, it was reported that Akt regulates Fas-mediated cell death through transcriptional activation of Fas receptor [21]."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-92-47",
+    "text" : "Fas-mediated cell death",
+    "arguments" : [ {
+      "text" : "Fas",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-92-548"
+    }, {
+      "text" : "cell death",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-92-549"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 23521,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 23498,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-92",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "This difference could be caused by the different experimental system used in their study, in which the apoptosis was evaluated at 4 weeks after retrovirus transduction, whereas our study characterized T cells at 5 days after transduction.The increased apoptosis observed for myr-Akt transduced T cells is contradictory to the well known pro-survival role of Akt, however, it was reported that Akt regulates Fas-mediated cell death through transcriptional activation of Fas receptor [21]."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-94-7",
+    "text" : "Akt increased AICD",
+    "arguments" : [ {
+      "text" : "AICD",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-94-557"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-94-556"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 23788,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increased",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 23770,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-94",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "It’s possible that over-expressing constitutively active Akt increased AICD of T cells, thus dampened the therapeutic efficacy of tumor specific T cells."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-97-8",
+    "text" : "Akt produced IFN-γ",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-97-570"
+    }, {
+      "text" : "IFN-γ",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-97-571"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 24529,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "produced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 24511,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-97",
+    "found-by" : "Positive_activation_token_1_verb",
+    "verbose-text" : "Our data supports over-expressing wtAkt to enhance the therapeutic effects of adoptively transferred tumor specific T cells, which serves as a foundation for broader clinical translation.OT-1 cells transduced with Akt produced IFN-γ and increased the percentage of proliferative cells on exposure to B16-OVA, indicating the specific activation of T cells by tumor."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-98-28",
+    "text" : "PBLs expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-98-574"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 24690,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 24675,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-98",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-98-55" ],
+    "verbose-text" : "In contrast, PBLs expressing CAR-Akt co-cultured with PC3M displayed decreased proliferation and increased apoptosis comparing to cultured alone, suggesting that PC3M model is more immunosuppressive, and up-regulating Akt is not sufficient to enable T cells to completely resist the suppression."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-98-37",
+    "text" : "PBLs expressing CAR-Akt co-cultured with PC3M displayed decreased proliferation and increased apoptosis",
+    "arguments" : [ {
+      "text" : "apoptosis",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-98-577"
+    }, {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-98-574"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 24778,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increased",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 24675,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-98",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In contrast, PBLs expressing CAR-Akt co-cultured with PC3M displayed decreased proliferation and increased apoptosis comparing to cultured alone, suggesting that PC3M model is more immunosuppressive, and up-regulating Akt is not sufficient to enable T cells to completely resist the suppression."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-99-16",
+    "text" : "PBLs expressing",
+    "arguments" : [ {
+      "text" : "PBLs",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-99-583"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 25080,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 25065,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-99",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC4550078-UAZ-r1-PMC4550078-98-55" ],
+    "verbose-text" : "Despite this, PBLs expressing CAR-Akt increased anti-tumor effects both in vitro and in vivo, comparing to PBLs expressing CAR only."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-100-40",
+    "text" : "Akt enabled TIL",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-100-592"
+    }, {
+      "text" : "TIL",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-100-593"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 25426,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "enabled",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 25411,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-100",
+    "found-by" : "Positive_activation_token_1_verb",
+    "verbose-text" : "It’s worth to mention that the EpCAM specific CAR we used consists of both CD28 and CD3ζ signaling domains, thus the increased cytotoxicity displayed by PBLs co-expressing Akt is probably due to resistance to inhibitory signaling conferred by Akt activation.The recent report by Crompton et al. found that inhibition of Akt enabled TIL a memory T cell signature with enhanced anti-tumor effect [23]."
+  }, {
+    "frame-id" : "evem-PMC4550078-UAZ-r1-PMC4550078-106-3",
+    "text" : "Akt could enable T cells to resist tumor",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-106-617"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC4550078-UAZ-r1-PMC4550078-106-615"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 26968,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "enable",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC4550078-UAZ-r1-PMC4550078",
+      "offset" : 26928,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC4550078-UAZ-r1-PMC4550078-106",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In contrast, we used adoptive cell therapy alone to treat tumor, and over-expressing Akt could enable T cells to resist tumor immunosuppression, which is the major advantage of our strategy.ConclusionsIn summary, our data demonstrates that over-expressing Akt in tumor specific T cells could improve the proliferation, cytokine production, and cytotoxicity of T cells in the presence of tumor."
+  } ],
+  "object-type" : "frame-collection",
+  "object-meta" : {
+    "processing-end" : "2023-03-18T23:38:29Z",
+    "doc-id" : "PMC4550078",
+    "component-type" : "machine",
+    "component" : "Reach",
+    "processing-start" : "2023-03-18T23:34:06Z",
+    "object-type" : "meta-info",
+    "organization" : "UAZ"
+  }
+}

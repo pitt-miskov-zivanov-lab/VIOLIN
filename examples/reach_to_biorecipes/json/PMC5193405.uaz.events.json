@@ -1,0 +1,4539 @@
+{
+  "frames" : [ {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-0-62",
+    "text" : "Erk Activation and Thymocyte SurvivalRole of CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-0-31"
+    }, {
+      "text" : "Erk",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-0-29"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 76,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "Activation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 28,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-0",
+    "found-by" : "Positive_activation_syntax_3_noun",
+    "verbose-text" : "CD5-CK2 Signaling Modulates Erk Activation and Thymocyte SurvivalRole of CD5-Associated CK2 in Thymocyte SelectionCD5 is well recognized for its importance in thymic selection."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-0-63",
+    "text" : "Erk Activation and Thymocyte SurvivalRole of CD5-Associated CK2",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-0-32"
+    }, {
+      "text" : "Erk",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-0-29"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 91,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "Activation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 28,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-0",
+    "found-by" : "Positive_activation_syntax_3_noun",
+    "verbose-text" : "CD5-CK2 Signaling Modulates Erk Activation and Thymocyte SurvivalRole of CD5-Associated CK2 in Thymocyte SelectionCD5 is well recognized for its importance in thymic selection."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-3-68",
+    "text" : "CD5-CK2 signaling in a MHC-II selecting TCR",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-3-42"
+    }, {
+      "text" : "CD5-CK2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-3-41"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 616,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "signaling",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 573,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-3",
+    "found-by" : "Positive_activation_syntax_3_noun",
+    "verbose-text" : "Using a gene-targeted mouse in which the CD5-CK2BD is selectively ablated (CD5-ΔCK2BD), we determined that loss of function of CD5-CK2 signaling in a MHC-II selecting TCR transgenic (OT-II) mouse resulted in decrease in double positive (DP) thymocytes, which correlated with enhanced apoptosis."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-4-137",
+    "text" : "levels of CD5 and CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-4-50"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 800,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 778,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-4",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-4-3" ],
+    "verbose-text" : "Remarkably, DP cells expressing high levels of CD5 and CD69 and single positive (CD4+SP) thymocytes were increased in CD5-ΔCK2BD mice indicating that CD5-CK2 signaling regulates positive selection and promotes survival."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-4-136",
+    "text" : "levels of CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-4-49"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 791,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 778,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-4",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-4-3" ],
+    "verbose-text" : "Remarkably, DP cells expressing high levels of CD5 and CD69 and single positive (CD4+SP) thymocytes were increased in CD5-ΔCK2BD mice indicating that CD5-CK2 signaling regulates positive selection and promotes survival."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-12-77",
+    "text" : "glycoprotein is expressed",
+    "arguments" : [ {
+      "text" : "glycoprotein",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-12-92"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 2911,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressed",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 2886,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-12",
+    "found-by" : "expression_3",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-12-8" ],
+    "verbose-text" : "This 67 KDa glycoprotein is expressed on the surface of thymocytes from the double negative (DN) stage, and is upregulated upon pre-TCR signaling and positive selection [6]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-13-89",
+    "text" : "CD5 expression",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-13-95"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 3070,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 3056,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-13",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-12-8" ],
+    "verbose-text" : "Indeed, CD5 expression has been used as a marker for post-selected thymocytes and correlates with the intensity of TCR-mediated signaling during self-peptide/MHC recognition at the DP stage (reviewed in [4])."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-16-97",
+    "text" : "Akt phosphorylation",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-16-109"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 3708,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 3689,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-16",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-15-10" ],
+    "verbose-text" : "CD5, in addition to regulating TCR signaling, also plays a crucial role in protecting developing thymocytes from apoptosis by a mechanism that involves Akt phosphorylation [9]."
+  }, {
+    "text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459 and 461",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-3",
+    "arguments" : [ {
+      "text" : "phosphorylates CD5 cytoplasmic Ser 459 and 461",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-4"
+    }, {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-5"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4591,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4385,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_1a_verb + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-20",
+    "verbose-text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459 and 461."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-6",
+    "text" : "phosphorylates CD5 cytoplasmic Ser 459",
+    "arguments" : [ {
+      "text" : "Ser 459",
+      "argument-type" : "entity",
+      "type" : "site",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-6"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-4"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4583,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4545,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-20",
+    "found-by" : "Phosphorylation_syntax_1a_verb",
+    "verbose-text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459 and 461."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-4",
+    "text" : "phosphorylates CD5 cytoplasmic Ser 459 and 461",
+    "arguments" : [ {
+      "text" : "461",
+      "argument-type" : "entity",
+      "type" : "site",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-3"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-4"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4591,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4545,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-20",
+    "found-by" : "Phosphorylation_syntax_1a_verb",
+    "verbose-text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459 and 461."
+  }, {
+    "text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-5",
+    "arguments" : [ {
+      "text" : "phosphorylates CD5 cytoplasmic Ser 459",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-6"
+    }, {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-5"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4583,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4385,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_1a_verb + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-20",
+    "verbose-text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459 and 461."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-20-134",
+    "text" : "CK2 constitutively associates with the 458-SSDSD-462 motif",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-5"
+    }, {
+      "text" : "458-SSDSD-462 motif",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-20-126"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4443,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "associates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4385,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-20",
+    "found-by" : "binding1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-20-13" ],
+    "verbose-text" : "CK2 constitutively associates with the 458-SSDSD-462 motif within the carboxy-terminal region of CD5 and following CD5 ± CD3 crosslinking becomes activated and phosphorylates CD5 cytoplasmic Ser 459 and 461."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-22-35",
+    "text" : "CK2 binding to CD5",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-22-133"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-22-134"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4766,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "binding",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 4748,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-22",
+    "found-by" : "binding_token_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-17-11" ],
+    "verbose-text" : "In this context, we recently showed that peripheral T cells require CK2 binding to CD5 for optimal Akt activity [11], however these studies were not performed in thymocytes."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-23-75",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-23-147"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5217,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5198,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-23",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-17-11" ],
+    "verbose-text" : "Therefore, here we sought to determine the role of CD5-CK2 signaling during thymocyte development using a CD5 knock-in mouse in which the nucleotides corresponding to the CK2 binding domain (S458-S461) were deleted.Our data show that CK2 binding to the CD5 cytoplasmic tail has a specific role during thymocyte selection to negatively regulate ERK phosphorylation and rescue thymocytes from apoptosis independently of Akt phosphorylation."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-23-31",
+    "text" : "CK2 binding to the CD5",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-23-143"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-23-144"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5110,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "binding",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5088,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-23",
+    "found-by" : "binding_syntax_24_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-17-11" ],
+    "verbose-text" : "Therefore, here we sought to determine the role of CD5-CK2 signaling during thymocyte development using a CD5 knock-in mouse in which the nucleotides corresponding to the CK2 binding domain (S458-S461) were deleted.Our data show that CK2 binding to the CD5 cytoplasmic tail has a specific role during thymocyte selection to negatively regulate ERK phosphorylation and rescue thymocytes from apoptosis independently of Akt phosphorylation."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-23-127",
+    "text" : "Akt phosphorylation",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-23-150"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5291,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5272,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-23",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-17-11" ],
+    "verbose-text" : "Therefore, here we sought to determine the role of CD5-CK2 signaling during thymocyte development using a CD5 knock-in mouse in which the nucleotides corresponding to the CK2 binding domain (S458-S461) were deleted.Our data show that CK2 binding to the CD5 cytoplasmic tail has a specific role during thymocyte selection to negatively regulate ERK phosphorylation and rescue thymocytes from apoptosis independently of Akt phosphorylation."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-25-52",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-25-157"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5548,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 5537,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-25",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-17-11" ],
+    "verbose-text" : "From our data, we infer that CD5 in addition to being a negative regulator of TCR signaling, controls pERK levels through the association and activation of CK2, to modulate the process of T cell selection.Materials and MethodsMiceC57BL/6 mice (CD5-WT) were purchased from the National Cancer Institute Frederick Cancer Research and bred in our colony."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-51-124",
+    "text" : "expression of CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-51-275"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 10127,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 10110,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-51",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-48-31" ],
+    "verbose-text" : "As we previously showed, the inability of CD5 to engage CK2 did not alter the expression of CD5 on any of the thymic T cell populations in TCR transgenic or non-transgenic mice (S1A and S1B Fig)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-66-78",
+    "text" : "expression of CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-66-341"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 12792,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 12775,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-66",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-66-42" ],
+    "verbose-text" : "To address this question, we analyzed the expression of CD5 and CD69 on the surface of the DP subpopulation, which identifies post-selected thymocytes [15]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-66-79",
+    "text" : "expression of CD5 and CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-66-342"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 12801,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 12775,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-66",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-66-42" ],
+    "verbose-text" : "To address this question, we analyzed the expression of CD5 and CD69 on the surface of the DP subpopulation, which identifies post-selected thymocytes [15]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-68-86",
+    "text" : "SP thymocytes down modulate CD69 to acquire competence",
+    "arguments" : [ {
+      "text" : "competence",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-68-353"
+    }, {
+      "text" : "SP",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-68-350"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13201,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "modulate",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13147,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-68",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "As a final step of maturation, CD4+SP thymocytes down modulate CD69 to acquire competence for emigration from the thymus and home to the peripheral lymphoid organs."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-68-87",
+    "text" : "SP thymocytes down modulate CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-68-352"
+    }, {
+      "text" : "SP",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-68-350"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13179,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "modulate",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13147,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-68",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "As a final step of maturation, CD4+SP thymocytes down modulate CD69 to acquire competence for emigration from the thymus and home to the peripheral lymphoid organs."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-69-70",
+    "text" : "expression of CD62L and CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-69-359"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13410,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13382,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-69",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-69-44" ],
+    "verbose-text" : "To characterize this stage of development, also known as recent thymic emigrants (RTE), we evaluated the expression of CD62L and CD69 on CD4+ SP T cells [16]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-69-69",
+    "text" : "expression of CD62L",
+    "arguments" : [ {
+      "text" : "CD62L",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-69-358"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13401,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13382,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-69",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-69-44" ],
+    "verbose-text" : "To characterize this stage of development, also known as recent thymic emigrants (RTE), we evaluated the expression of CD62L and CD69 on CD4+ SP T cells [16]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-73-43",
+    "text" : "levels of CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-73-372"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13925,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 13911,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-73",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-73-46" ],
+    "verbose-text" : "In this context, increased levels of CD69 were observed on CD5-ΔCK2BD CD4+SP thymocytes, indicating a defect in final CD69 downregulation, which is a prerequisite for thymic export (S3C Fig)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-75-132",
+    "text" : "CD69 expression",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-75-379"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14205,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14190,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-75",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-74-47" ],
+    "verbose-text" : "(A) Dot plots of CD5 and CD69 expression gated on DP cells from CD5-WT and CD5-ΔCK2BD OTII TCR-Tg (upper) and non-transgenic (lower) mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-75-131",
+    "text" : "CD5 and CD69 expression",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-75-378"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14205,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14182,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-75",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-74-47" ],
+    "verbose-text" : "(A) Dot plots of CD5 and CD69 expression gated on DP cells from CD5-WT and CD5-ΔCK2BD OTII TCR-Tg (upper) and non-transgenic (lower) mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-80-112",
+    "text" : "expression of CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-80-393"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14737,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14719,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-80",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-80-50" ],
+    "verbose-text" : "(C) Representative dot plot showing expression of CD69 and CD62L in CD4+SP gated cells from CD5-WT and CD5-ΔCK2BD non-TCR transgenic (upper) and OTII TCR transgenic (lower) mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-80-111",
+    "text" : "expression of CD69 and CD62L",
+    "arguments" : [ {
+      "text" : "CD62L",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-80-394"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14747,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 14719,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-80",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-80-50" ],
+    "verbose-text" : "(C) Representative dot plot showing expression of CD69 and CD62L in CD4+SP gated cells from CD5-WT and CD5-ΔCK2BD non-TCR transgenic (upper) and OTII TCR transgenic (lower) mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-87-41",
+    "text" : "CD5-CK2 signaling modulates Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-87-412"
+    }, {
+      "text" : "CD5-CK2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-87-411"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 15410,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "modulates",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 15379,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-87",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In peripheral T cells, CD5-CK2 signaling modulates Akt activity [11], a signaling pathway down regulated during the generation of nTreg [17, 18]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-89-38",
+    "text" : "TCR signaling, such as the ITIM",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-89-432"
+    }, {
+      "text" : "ITIM",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-89-433"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 15937,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "signaling",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 15906,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-89",
+    "found-by" : "Positive_activation_syntax_noun_Hearst",
+    "verbose-text" : "This result suggests that the CD5-CK2 signaling axis is not involved nTreg selection in the thymus and therefore is not responsible for the increased CD4:CD8 ratio observed in CD5-CK2ΔBD mice; however, other domains within the cytoplasmic tail of CD5 shown to regulate TCR signaling, such as the ITIM (Y429-441) domain or the carboxy-terminal Y463, may regulate nTreg generation.Generation of nTregs is not affected by the absence of CD5-CK2 binding domain."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-102-102",
+    "text" : "expression of caspase 3",
+    "arguments" : [ {
+      "text" : "caspase 3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-102-481"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 17684,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 17661,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-102",
+    "found-by" : "transcription_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-102-64" ],
+    "verbose-text" : "To test for susceptibility to AICD in vivo, we injected OTII TCR-Tg mice with PBS (control) or OVA peptide (300 μg) and measured expression of caspase 3."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-103-106",
+    "text" : "levels of caspase 3",
+    "arguments" : [ {
+      "text" : "caspase 3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-103-486"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 17847,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 17828,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-103",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-102-64" ],
+    "verbose-text" : "We found that DP and CD4+ SP thymocytes from CD5-ΔCK2BD OTII TCR-Tg mice had a slight increase in the proportion of cells expressing elevated levels of caspase 3 at basal conditions (PBS injected) and following injection with OVA peptide compared to CD5-WT OTII TCR-Tg mice (Fig 4B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-108-98",
+    "text" : "caspase 3 levels",
+    "arguments" : [ {
+      "text" : "caspase 3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-108-509"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18542,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18526,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-108",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-107-66" ],
+    "verbose-text" : "(B) Histograms (lower left) show proportion of cells with elevated caspase 3 levels relative to unstained cells within DP and CD4+SP thymocytes obtained from CD5-WT and CD5-ΔCK2BD OTII TCR-Tg mice after i.p injection with either PBS or OVAp."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-110-33",
+    "text" : "caspase 3 levels",
+    "arguments" : [ {
+      "text" : "caspase 3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-110-520"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18867,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18851,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-110",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-110-68" ],
+    "verbose-text" : "Scatter plots show MFI of caspase 3 levels in DP cells (top), proportion of DP cells expressing high levels of caspase 3 (middle) and MFI of high caspase 3 expressing CD4+ SP cells (bottom)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-110-84",
+    "text" : "caspase 3 expressing",
+    "arguments" : [ {
+      "text" : "caspase 3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-110-525"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18991,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18971,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-110",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-110-68" ],
+    "verbose-text" : "Scatter plots show MFI of caspase 3 levels in DP cells (top), proportion of DP cells expressing high levels of caspase 3 (middle) and MFI of high caspase 3 expressing CD4+ SP cells (bottom)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-110-115",
+    "text" : "levels of caspase 3",
+    "arguments" : [ {
+      "text" : "caspase 3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-110-523"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18945,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18926,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-110",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-110-68" ],
+    "verbose-text" : "Scatter plots show MFI of caspase 3 levels in DP cells (top), proportion of DP cells expressing high levels of caspase 3 (middle) and MFI of high caspase 3 expressing CD4+ SP cells (bottom)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-110-66",
+    "text" : "expressing high levels of caspase 3 (middle) and MFI",
+    "arguments" : [ {
+      "text" : "MFI",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-110-524"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18962,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 18910,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-110",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-110-68" ],
+    "verbose-text" : "Scatter plots show MFI of caspase 3 levels in DP cells (top), proportion of DP cells expressing high levels of caspase 3 (middle) and MFI of high caspase 3 expressing CD4+ SP cells (bottom)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-113-113",
+    "text" : "TCR-induced activation of Akt",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-113-538"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-113-539"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19463,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19434,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-113",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "In peripheral T cells, CD5-CK2 signaling is necessary for efficient TCR-induced activation of Akt to promote cell survival [11]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-113-116",
+    "text" : "Akt to promote cell survival",
+    "arguments" : [ {
+      "text" : "cell survival",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-113-540"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-113-539"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19488,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "promote",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19460,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-113",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In peripheral T cells, CD5-CK2 signaling is necessary for efficient TCR-induced activation of Akt to promote cell survival [11]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-115-105",
+    "text" : "CDC37, activated by CK2",
+    "arguments" : [ {
+      "text" : "CDC37",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-115-547"
+    }, {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-115-548"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19685,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19662,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-115",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "CDC37, activated by CK2, functions as a co-chaperone for heat shock protein 90 (HSP90) to promote survival [22]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-116-99",
+    "text" : "CK2 phosphorylation",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-116-555"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19889,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19870,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-116",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-100-63" ],
+    "verbose-text" : "We found that loss of CD5-CK2 signaling had not effect on OVAp induced pS13-CDC37, the site of CK2 phosphorylation (Fig 5B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-116-37",
+    "text" : "OVAp induced pS13-CDC37",
+    "arguments" : [ {
+      "text" : "OVAp",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-116-553"
+    }, {
+      "text" : "pS13-CDC37",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-116-554"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19856,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 19833,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-116",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "We found that loss of CD5-CK2 signaling had not effect on OVAp induced pS13-CDC37, the site of CK2 phosphorylation (Fig 5B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-121-60",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-121-581"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 20664,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 20653,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-121",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "Sustained pERK levels are required for positive selection of thymocytes and CD4+SP lineage commitment [23], however acute activation of ERK leads to apoptotic death [24]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-122-47",
+    "text" : "levels of pERK",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-122-589"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 20885,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 20871,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-122",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "In CD5-ΔCK2BD mice, DP and CD4+SP cells had higher basal levels of pERK compared to CD5-WT mice that was significantly increased after OVAp injection (Fig 6A)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-124-104",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-124-599"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 21308,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 21289,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-124",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "Deletion of the CD5-CK2BD results in increased basal and induced ERK phosphorylation in the absence of enhanced TCR proximal signaling."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-125-65",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-125-601"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 21403,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 21392,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-125",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "(A) Histograms (upper left) show pERK levels within DP or CD4+SP thymocytes obtained from CD5-WT OTII and CD5-ΔCK2BD OTII TCR-Tg mice after PBS or OVAp injection."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-131-130",
+    "text" : "TCR-induced calcium",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-131-624"
+    }, {
+      "text" : "calcium",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-131-625"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 22150,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 22131,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-131",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "*p<0.05, ****p<0.0001, unpaired two-tailed Student-t test.To investigate whether increased pERK was the result of enhanced TCR proximal signaling, we evaluated TCR-induced calcium mobilization in thymocytes from CD5-ΔCK2BD mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-133-126",
+    "text" : "TCR mediated apoptosis",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-133-634"
+    }, {
+      "text" : "apoptosis",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-133-635"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 22510,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 22488,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-133",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "Overall, the data suggest that CD5-CK2 signaling promotes thymocyte survival by regulating acute activation of ERK.Enhanced TCR mediated apoptosis and elevated Erk phosphorylation in CD5-CK2ΔBD is independent of peripheral T cell activationHyperactivation of peripheral T cell can induce/augment thymocyte death [25, 26]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-133-46",
+    "text" : "Erk phosphorylation",
+    "arguments" : [ {
+      "text" : "Erk",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-133-636"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 22543,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 22524,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-133",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-130-71" ],
+    "verbose-text" : "Overall, the data suggest that CD5-CK2 signaling promotes thymocyte survival by regulating acute activation of ERK.Enhanced TCR mediated apoptosis and elevated Erk phosphorylation in CD5-CK2ΔBD is independent of peripheral T cell activationHyperactivation of peripheral T cell can induce/augment thymocyte death [25, 26]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-139-122",
+    "text" : "expression of the anti-apoptotic molecule, Bcl-2",
+    "arguments" : [ {
+      "text" : "Bcl-2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-139-664"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23581,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23533,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-139",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-138-75" ],
+    "verbose-text" : "In order to elucidate the underlying mechanism for the increased cell death observed in the absence of CD5-CK2 signaling, we analyzed for changes in expression of the anti-apoptotic molecule, Bcl-2 and AICD associated molecules, FasL (Fig 7) and Fas (not shown)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-140-128",
+    "text" : "levels of Bcl-2",
+    "arguments" : [ {
+      "text" : "Bcl-2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-140-668"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23688,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23673,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-140",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-140-76" ],
+    "verbose-text" : "We observed reduced basal levels of Bcl-2 in CD5-ΔCK2BD DP and CD4+ SP thymocytes mice compared to WT, however, upon CD3 crosslinking Bcl2 levels increased only in CK2-signaling deficient thymocytes (Fig 7B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-140-73",
+    "text" : "CD3 crosslinking Bcl2 levels",
+    "arguments" : [ {
+      "text" : "CD3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-140-673"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23792,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23764,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-140",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-140-76" ],
+    "verbose-text" : "We observed reduced basal levels of Bcl-2 in CD5-ΔCK2BD DP and CD4+ SP thymocytes mice compared to WT, however, upon CD3 crosslinking Bcl2 levels increased only in CK2-signaling deficient thymocytes (Fig 7B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-140-74",
+    "text" : "Bcl2 levels",
+    "arguments" : [ {
+      "text" : "Bcl2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-140-674"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23792,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 23781,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-140",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-140-76" ],
+    "verbose-text" : "We observed reduced basal levels of Bcl-2 in CD5-ΔCK2BD DP and CD4+ SP thymocytes mice compared to WT, however, upon CD3 crosslinking Bcl2 levels increased only in CK2-signaling deficient thymocytes (Fig 7B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-143-109",
+    "text" : "FasL expression",
+    "arguments" : [ {
+      "text" : "FasL",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-143-690"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 24308,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 24293,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-143",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-142-78" ],
+    "verbose-text" : "Overall these data argue against an effect caused by extrinsic cell death pathways.Increased TCR dependent MAPK activation and enhanced AICD in CD5-CK2BD deficient mice is independent of peripheral T cells activation and thymocyte FasL expression."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-146-51",
+    "text" : "Bcl-2 levels",
+    "arguments" : [ {
+      "text" : "Bcl-2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-146-700"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 24701,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 24689,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-146",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-146-80" ],
+    "verbose-text" : "Subpopulation analysis show DP (middle panel) or CD4+ SP thymocytes (right panel) (B) Scatter plots showing Bcl-2 levels in DP and CD4+ SP thymocytes."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-147-95",
+    "text" : "FasL expression",
+    "arguments" : [ {
+      "text" : "FasL",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-147-705"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 24765,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 24750,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-147",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-102-64" ],
+    "verbose-text" : "(C) Bar graphs of FasL expression in PBS injected and anti-CD3 injected mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-150-36",
+    "text" : "expression of pJNK (F) pP38",
+    "arguments" : [ {
+      "text" : "pJNK (F) pP38",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-150-715"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25044,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25017,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-150",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-102-64" ],
+    "verbose-text" : "(E) Graphs showing expression of pJNK (F) pP38 and (G) pZap70."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-152-2",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-152-1"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25284,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25265,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-152",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "verbose-text" : "*p<0.05, **p<0.01, ***p<0.001, unpaired two-tailed Student-t test.As observed in adult mice, TCR activation led to increased ERK phosphorylation in CD5-ΔCK2BD mice but not in CD5-WT newborn mice (Fig 6 and Fig 7D)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-152-1",
+    "text" : "TCR activation led to increased ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK phosphorylation",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-152-2"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-152-2"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25284,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "led",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25233,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-152",
+    "found-by" : "Positive_regulation_syntax_7_verb",
+    "verbose-text" : "*p<0.05, **p<0.01, ***p<0.001, unpaired two-tailed Student-t test.As observed in adult mice, TCR activation led to increased ERK phosphorylation in CD5-ΔCK2BD mice but not in CD5-WT newborn mice (Fig 6 and Fig 7D)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-153-42",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-153-720"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25419,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25408,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-153",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-18-12" ],
+    "verbose-text" : "However, unlike the observation in adult mice, basal pERK levels were lower in CD5-ΔCK2BD mice compared to CD5-WT mice (Fig 7D)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-154-56",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-154-727"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25658,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25639,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-154",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-18-12" ],
+    "verbose-text" : "Since peripheral T cells are not activated in newborn mice, these results further demonstrate that CD5-CK2 signaling intrinsically regulates TCR dependent ERK phosphorylation in thymocytes.Other MAPK, such as JNK and P38, have been implicated in regulating survival versus cell death during thymocyte selection (reviewed in [1])."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-155-135",
+    "text" : "levels of pJNK",
+    "arguments" : [ {
+      "text" : "pJNK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-155-733"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25844,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25830,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-155",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-155-81" ],
+    "verbose-text" : "Although, basal levels of pJNK were significantly lower in CD5-ΔCK2BD CD4+ SP cells, anti-CD3 treatment enhanced pJNK levels in CD5-ΔCK2BD DP and CD4+ SP T cells; in contrast, such in vivo stimulation reduced pJNK levels in CD5-WT mice (Fig 7E)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-155-123",
+    "text" : "pJNK levels",
+    "arguments" : [ {
+      "text" : "pJNK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-155-739"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26034,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26023,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-155",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-155-81" ],
+    "verbose-text" : "Although, basal levels of pJNK were significantly lower in CD5-ΔCK2BD CD4+ SP cells, anti-CD3 treatment enhanced pJNK levels in CD5-ΔCK2BD DP and CD4+ SP T cells; in contrast, such in vivo stimulation reduced pJNK levels in CD5-WT mice (Fig 7E)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-155-44",
+    "text" : "pJNK levels",
+    "arguments" : [ {
+      "text" : "pJNK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-155-735"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25938,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 25927,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-155",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-155-81" ],
+    "verbose-text" : "Although, basal levels of pJNK were significantly lower in CD5-ΔCK2BD CD4+ SP cells, anti-CD3 treatment enhanced pJNK levels in CD5-ΔCK2BD DP and CD4+ SP T cells; in contrast, such in vivo stimulation reduced pJNK levels in CD5-WT mice (Fig 7E)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-157-54",
+    "text" : "Zap70 phosphorylation",
+    "arguments" : [ {
+      "text" : "Zap70",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-157-745"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26200,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26179,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-157",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-155-81" ],
+    "verbose-text" : "Finally, TCR-dependent Zap70 phosphorylation was not different between CD5-ΔCK2BD and CD5-WT newborn mice (Fig 7G)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-158-22",
+    "text" : "phosphorylation of ERK by CK2 on two Ser",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-19"
+    }, {
+      "text" : "Ser",
+      "argument-type" : "entity",
+      "type" : "site",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-20"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26590,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26550,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-158",
+    "found-by" : "Phosphorylation_token_of",
+    "verbose-text" : "This result indicates that TCR proximal signals in newborn mice and adult mice (Fig 6B) do not contribute to the enhanced MAPK activation observed in CD5-ΔCK2BD thymocytes.Nuclear pERK localization is not regulated through CD5-CK2 binding domain in developing T lymphocytes.The phosphorylation of ERK by CK2 on two Ser residues promotes translocation into the nucleus where it exerts its function as a modulator of transcriptional activity [30–32]."
+  }, {
+    "text" : "phosphorylation of ERK by CK2 on two Ser",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-158-21",
+    "arguments" : [ {
+      "text" : "phosphorylation of ERK by CK2 on two Ser",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-158-22"
+    }, {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-21"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26590,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26550,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_1a_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-158",
+    "verbose-text" : "This result indicates that TCR proximal signals in newborn mice and adult mice (Fig 6B) do not contribute to the enhanced MAPK activation observed in CD5-ΔCK2BD thymocytes.Nuclear pERK localization is not regulated through CD5-CK2 binding domain in developing T lymphocytes.The phosphorylation of ERK by CK2 on two Ser residues promotes translocation into the nucleus where it exerts its function as a modulator of transcriptional activity [30–32]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-158-50",
+    "text" : "TCR proximal signals in newborn mice and adult mice (Fig 6B) do not contribute to the enhanced MAPK activation",
+    "arguments" : [ {
+      "text" : "MAPK activation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-750"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-747"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-negated" : true,
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26409,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "contribute",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26299,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-158",
+    "found-by" : "Positive_activation_syntax_7_verb",
+    "verbose-text" : "This result indicates that TCR proximal signals in newborn mice and adult mice (Fig 6B) do not contribute to the enhanced MAPK activation observed in CD5-ΔCK2BD thymocytes.Nuclear pERK localization is not regulated through CD5-CK2 binding domain in developing T lymphocytes.The phosphorylation of ERK by CK2 on two Ser residues promotes translocation into the nucleus where it exerts its function as a modulator of transcriptional activity [30–32]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-158-90",
+    "text" : "TCR proximal signals in newborn mice and adult mice",
+    "arguments" : [ {
+      "text" : "mice",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-749"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-747"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26350,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "signals",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26299,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-158",
+    "found-by" : "Positive_activation_syntax_3_noun",
+    "verbose-text" : "This result indicates that TCR proximal signals in newborn mice and adult mice (Fig 6B) do not contribute to the enhanced MAPK activation observed in CD5-ΔCK2BD thymocytes.Nuclear pERK localization is not regulated through CD5-CK2 binding domain in developing T lymphocytes.The phosphorylation of ERK by CK2 on two Ser residues promotes translocation into the nucleus where it exerts its function as a modulator of transcriptional activity [30–32]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-158-91",
+    "text" : "TCR proximal signals in newborn mice",
+    "arguments" : [ {
+      "text" : "mice",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-748"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-158-747"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26335,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "signals",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26299,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-158",
+    "found-by" : "Positive_activation_syntax_3_noun",
+    "verbose-text" : "This result indicates that TCR proximal signals in newborn mice and adult mice (Fig 6B) do not contribute to the enhanced MAPK activation observed in CD5-ΔCK2BD thymocytes.Nuclear pERK localization is not regulated through CD5-CK2 binding domain in developing T lymphocytes.The phosphorylation of ERK by CK2 on two Ser residues promotes translocation into the nucleus where it exerts its function as a modulator of transcriptional activity [30–32]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-160-94",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-160-758"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26942,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 26931,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-160",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-159-83" ],
+    "verbose-text" : "Validating the flow cytometry data, we found that the total pERK levels in DP and CD4+ SP thymocytes were higher in CD5-ΔCK2BD mice at basal and following in vivo activation using OVAp (S4A Fig)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-161-40",
+    "text" : "levels of pERK",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-161-764"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27117,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27103,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-161",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-159-83" ],
+    "verbose-text" : "We quantitatively distinguished the levels of pERK in the cytoplasm and nucleus at basal and following OVAp injection to determine if pERK entry to the nucleus was altered in thymocytes from CD5-ΔCK2BD mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-162-12",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-162-11"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27372,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27361,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-162",
+    "found-by" : "amount_1",
+    "verbose-text" : "The data showed higher basal (Fig 8A, 8B, 8C and 8D) and OVAp (Fig 8A and 8B) induced pERK levels in the nuclei of DP and SP populations from CD5-ΔCK2BD compared to CD5 WT mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-162-11",
+    "text" : "OVAp (Fig 8A and 8B) induced pERK levels",
+    "arguments" : [ {
+      "text" : "pERK levels",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-162-12"
+    }, {
+      "text" : "OVAp",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-162-12"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27372,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27332,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-162",
+    "found-by" : "Positive_regulation_syntax_1_verb",
+    "verbose-text" : "The data showed higher basal (Fig 8A, 8B, 8C and 8D) and OVAp (Fig 8A and 8B) induced pERK levels in the nuclei of DP and SP populations from CD5-ΔCK2BD compared to CD5 WT mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-163-27",
+    "text" : "OVAp injection increased pERK levels",
+    "arguments" : [ {
+      "text" : "pERK levels",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-163-28"
+    }, {
+      "text" : "OVAp",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-163-25"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27489,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increased",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27453,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-163",
+    "found-by" : "Positive_regulation_syntax_1_verb",
+    "verbose-text" : "OVAp injection increased pERK levels in both CD5-WT and CD5-ΔCK2BD OTII-Tg mice, however, the magnitude of increase was greater in CD5-WT thymocytes (Fig 8A and 8B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-163-28",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-163-24"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27489,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 27478,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-163",
+    "found-by" : "amount_1",
+    "verbose-text" : "OVAp injection increased pERK levels in both CD5-WT and CD5-ΔCK2BD OTII-Tg mice, however, the magnitude of increase was greater in CD5-WT thymocytes (Fig 8A and 8B)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-170-76",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-170-799"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 28363,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 28352,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-170",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-168-84" ],
+    "verbose-text" : "The graphs reflect mean±SEM pERK levels inside the nucleus (left panels) or ratio of pERK in nucleus to whole cell (right panels) within DP (upper panels) or CD4+SP (lower)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-181-129",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-181-843"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 29961,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 29942,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-181",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-18-12" ],
+    "verbose-text" : "Therefore, the increased ERK phosphorylation observed in CD5-ΔCK2BD mice supports the role for CD5-CK2 signaling in down regulation of positive selection [34] and in restraining CD4+SP selection."
+  }, {
+    "text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-17",
+    "arguments" : [ {
+      "text" : "hyperphosphorylation of TCRζ",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-18"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-10"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30499,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30389,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_8_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-24",
+    "text" : "hyperphosphorylation of TCRζ, ZAP70, PLC-γ",
+    "arguments" : [ {
+      "text" : "PLC-γ",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-22"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30513,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "hyperphosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30471,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "found-by" : "Phosphorylation_syntax_8_noun",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-10",
+    "text" : "hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-9"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30525,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "hyperphosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30471,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "found-by" : "Phosphorylation_syntax_8_noun",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-19",
+    "arguments" : [ {
+      "text" : "hyperphosphorylation of TCRζ, ZAP70",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-20"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-10"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30506,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30389,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_8_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-23",
+    "arguments" : [ {
+      "text" : "hyperphosphorylation of TCRζ, ZAP70, PLC-γ",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-24"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-10"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30513,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30389,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_8_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-9",
+    "arguments" : [ {
+      "text" : "hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-10"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-10"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30525,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30389,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_8_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-20",
+    "text" : "hyperphosphorylation of TCRζ, ZAP70",
+    "arguments" : [ {
+      "text" : "ZAP70",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-18"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30506,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "hyperphosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30471,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "found-by" : "Phosphorylation_syntax_8_noun",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-26",
+    "text" : "hyperphosphorylation of TCR",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-23"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30498,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "hyperphosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30471,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "found-by" : "Phosphorylation_syntax_8_noun",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-18",
+    "text" : "hyperphosphorylation of TCRζ",
+    "arguments" : [ {
+      "text" : "ζ",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-17"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30499,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "hyperphosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30471,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "found-by" : "Phosphorylation_syntax_8_noun",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCR",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-25",
+    "arguments" : [ {
+      "text" : "hyperphosphorylation of TCR",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-184-26"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-184-10"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30498,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30389,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_8_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-184",
+    "verbose-text" : "TCR crosslinking in CD5-/- T cells resulted in increased calcium mobilization and hyperphosphorylation of TCRζ, ZAP70, PLC-γ[13] and ERK [9, 36]."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-185-45",
+    "text" : "TCR-induced calcium",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-185-860"
+    }, {
+      "text" : "calcium",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-185-861"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30615,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30596,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-185",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "In contrast, CD5-CK2 signaling deficient T cells have normal TCR-induced calcium flux and activation of Zap70, arguing in favor of an alternative CD5-CK2-dependent pathway in downregulation of ERK phosphorylation, independent of proximal TCR signaling."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-185-96",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-185-863"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30747,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 30728,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-185",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-183-89" ],
+    "verbose-text" : "In contrast, CD5-CK2 signaling deficient T cells have normal TCR-induced calcium flux and activation of Zap70, arguing in favor of an alternative CD5-CK2-dependent pathway in downregulation of ERK phosphorylation, independent of proximal TCR signaling."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-187-13",
+    "text" : "TCR signaling and downregulation of CD69 expression",
+    "arguments" : [ {
+      "text" : "CD69 expression",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-187-14"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-187-14"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31109,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "signaling",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31058,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-187",
+    "found-by" : "Positive_regulation_syntax_3_noun",
+    "verbose-text" : "The maturation and emigration of post-selected SP thymocytes requires cessation of TCR signaling and downregulation of CD69 expression (reviewed in [39])."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-187-14",
+    "text" : "CD69 expression",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-187-13"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31109,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31094,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-187",
+    "found-by" : "expression_1",
+    "verbose-text" : "The maturation and emigration of post-selected SP thymocytes requires cessation of TCR signaling and downregulation of CD69 expression (reviewed in [39])."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-188-16",
+    "text" : "CD69 expression",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-188-15"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31145,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31130,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-188",
+    "found-by" : "expression_1",
+    "verbose-text" : "CD69 expression is upregulated by AP-1 a nuclear downstream target of ERK [40]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-188-15",
+    "text" : "CD69 expression is upregulated by AP-1",
+    "arguments" : [ {
+      "text" : "CD69 expression",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-188-16"
+    }, {
+      "text" : "AP-1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-188-16"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31168,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "upregulated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31130,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-188",
+    "found-by" : "Positive_regulation_syntax_2_verb",
+    "verbose-text" : "CD69 expression is upregulated by AP-1 a nuclear downstream target of ERK [40]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-188-67",
+    "text" : "CD69 expression is upregulated by AP-1 a nuclear downstream target of ERK",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-188-874"
+    }, {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-188-15"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31203,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "upregulated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31130,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-188",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "CD69 expression is upregulated by AP-1 a nuclear downstream target of ERK [40]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-189-49",
+    "text" : "levels of CD69",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-189-879"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31426,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31412,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-189",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-187-90" ],
+    "verbose-text" : "Therefore, the reduced proportion of CD4+CD62LhiCD69lo thymocytes observed in CD5-ΔCK2BD mice is consistent with the sustained levels of elevated ERK phosphorylation, correlating with increased surface levels of CD69 within CD4+SP subpopulation."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-189-53",
+    "text" : "ERK phosphorylation",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-189-878"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31375,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31356,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-189",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-187-90" ],
+    "verbose-text" : "Therefore, the reduced proportion of CD4+CD62LhiCD69lo thymocytes observed in CD5-ΔCK2BD mice is consistent with the sustained levels of elevated ERK phosphorylation, correlating with increased surface levels of CD69 within CD4+SP subpopulation."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-191-64",
+    "text" : "thymocytes.CD5 expression",
+    "arguments" : [ {
+      "text" : "thymocytes.CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-191-886"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31842,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31817,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-191",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-190-91" ],
+    "verbose-text" : "Overall our data support a requirement for CD5-CK2 signaling for efficient maturation of post-selected thymocytes.CD5 expression strongly correlates with the strength of TCR signaling [6]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-192-114",
+    "text" : "expression of CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-192-889"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31982,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 31965,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-192",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-190-91" ],
+    "verbose-text" : "Interestingly, the lack of CD5-CK2 signaling had no effect on expression of CD5 on any thymic subpopulation Thus, TCR-induced CD5 upregulation is likely to be regulated by other CD5 cytoplasmic regions, like the CD5-ITIM domain [7]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-192-101",
+    "text" : "TCR-induced CD5",
+    "arguments" : [ {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-192-890"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-192-891"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 32032,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 32017,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-192",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "Interestingly, the lack of CD5-CK2 signaling had no effect on expression of CD5 on any thymic subpopulation Thus, TCR-induced CD5 upregulation is likely to be regulated by other CD5 cytoplasmic regions, like the CD5-ITIM domain [7]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-197-118",
+    "text" : "CK2 is highly expressed",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-197-913"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 32887,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressed",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 32864,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-197",
+    "found-by" : "expression_3",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-197-94" ],
+    "verbose-text" : "Finally, although CK2 is highly expressed in nTregs compared to effector T cells, our results show that CK2 associated with CD5 is not relevant for nTreg selection [44]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-199-81",
+    "text" : "CD5-mediated survival, CK2 [10, 20], Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-199-924"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-199-922"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33177,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33137,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-199",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Among the possible molecules involved in CD5-mediated survival, CK2 [10, 20], Akt [9] and ERK [45] are postulated to play a role in this process."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-199-80",
+    "text" : "CD5-mediated survival, CK2",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-199-923"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-199-922"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33163,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33137,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-199",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Among the possible molecules involved in CD5-mediated survival, CK2 [10, 20], Akt [9] and ERK [45] are postulated to play a role in this process."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-199-82",
+    "text" : "CD5-mediated survival, CK2 [10, 20], Akt [9] and ERK",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-199-925"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-199-922"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33189,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33137,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-199",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Among the possible molecules involved in CD5-mediated survival, CK2 [10, 20], Akt [9] and ERK [45] are postulated to play a role in this process."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-204-61",
+    "text" : "steroid levels",
+    "arguments" : [ {
+      "text" : "steroid",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-204-942"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33902,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 33888,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-204",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-202-97" ],
+    "verbose-text" : "AICD of DP thymocytes can be mediated by cytokines and/or increased steroid levels released by mature post-thymic T cells when hyper-activated [25, 26]."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-207-57",
+    "text" : "CD3 induced AICD",
+    "arguments" : [ {
+      "text" : "CD3",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-207-950"
+    }, {
+      "text" : "AICD",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-207-951"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34236,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34220,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-207",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "We show here that enhanced TCR/CD3 induced AICD also occurred in CD5-ΔCK2BD newborn mice that do not have significant numbers of mature post-thymic T cells."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-209-83",
+    "text" : "Bcl-2 expression",
+    "arguments" : [ {
+      "text" : "Bcl-2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-956"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34504,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34488,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-209",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-209-101" ],
+    "verbose-text" : "Analysis of Bcl-2 expression in CD5-ΔCK2BD newborn mice showed that under basal conditions the absence of CD5-CK2 resulted in decreased Bcl-2 levels, while after CD3 stimulation Bcl-2 is enhanced to the levels of WT mice suggesting that under steady state conditions this anti-apoptotic molecule may promote CK2-dependent thymocyte survival, while under AICD conditions other pro- or anti-apoptotic molecules may be involved.We further showed that this pro-survival activity of CD5-CK2 signal is active in the absence of AICD induced by Fas-FasL, arguing against an effect caused by extrinsic cell death pathways."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-209-119",
+    "text" : "CD3 stimulation Bcl-2",
+    "arguments" : [ {
+      "text" : "CD3",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-960"
+    }, {
+      "text" : "Bcl-2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-961"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34659,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "stimulation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34638,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-209",
+    "found-by" : "Positive_activation_token_1_noun",
+    "verbose-text" : "Analysis of Bcl-2 expression in CD5-ΔCK2BD newborn mice showed that under basal conditions the absence of CD5-CK2 resulted in decreased Bcl-2 levels, while after CD3 stimulation Bcl-2 is enhanced to the levels of WT mice suggesting that under steady state conditions this anti-apoptotic molecule may promote CK2-dependent thymocyte survival, while under AICD conditions other pro- or anti-apoptotic molecules may be involved.We further showed that this pro-survival activity of CD5-CK2 signal is active in the absence of AICD induced by Fas-FasL, arguing against an effect caused by extrinsic cell death pathways."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-209-117",
+    "text" : "AICD induced by Fas-FasL",
+    "arguments" : [ {
+      "text" : "AICD",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-968"
+    }, {
+      "text" : "Fas-FasL",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-969"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 35021,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34997,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-209",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "Analysis of Bcl-2 expression in CD5-ΔCK2BD newborn mice showed that under basal conditions the absence of CD5-CK2 resulted in decreased Bcl-2 levels, while after CD3 stimulation Bcl-2 is enhanced to the levels of WT mice suggesting that under steady state conditions this anti-apoptotic molecule may promote CK2-dependent thymocyte survival, while under AICD conditions other pro- or anti-apoptotic molecules may be involved.We further showed that this pro-survival activity of CD5-CK2 signal is active in the absence of AICD induced by Fas-FasL, arguing against an effect caused by extrinsic cell death pathways."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-209-88",
+    "text" : "levels of WT mice",
+    "arguments" : [ {
+      "text" : "mice",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-962"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34696,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34679,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-209",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-209-101" ],
+    "verbose-text" : "Analysis of Bcl-2 expression in CD5-ΔCK2BD newborn mice showed that under basal conditions the absence of CD5-CK2 resulted in decreased Bcl-2 levels, while after CD3 stimulation Bcl-2 is enhanced to the levels of WT mice suggesting that under steady state conditions this anti-apoptotic molecule may promote CK2-dependent thymocyte survival, while under AICD conditions other pro- or anti-apoptotic molecules may be involved.We further showed that this pro-survival activity of CD5-CK2 signal is active in the absence of AICD induced by Fas-FasL, arguing against an effect caused by extrinsic cell death pathways."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-209-110",
+    "text" : "Bcl-2 levels",
+    "arguments" : [ {
+      "text" : "Bcl-2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-209-959"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34624,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 34612,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-209",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-209-101" ],
+    "verbose-text" : "Analysis of Bcl-2 expression in CD5-ΔCK2BD newborn mice showed that under basal conditions the absence of CD5-CK2 resulted in decreased Bcl-2 levels, while after CD3 stimulation Bcl-2 is enhanced to the levels of WT mice suggesting that under steady state conditions this anti-apoptotic molecule may promote CK2-dependent thymocyte survival, while under AICD conditions other pro- or anti-apoptotic molecules may be involved.We further showed that this pro-survival activity of CD5-CK2 signal is active in the absence of AICD induced by Fas-FasL, arguing against an effect caused by extrinsic cell death pathways."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-215-108",
+    "text" : "Erk phosphorylation",
+    "arguments" : [ {
+      "text" : "Erk",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-215-992"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 35879,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 35860,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-215",
+    "found-by" : "Phosphorylation_token_3_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-215-105" ],
+    "verbose-text" : "Analysis of Erk phosphorylation by Imagestream further confirmed and provided more statistical power to the data obtained with standard flow cytometry (Fig 8 and S4 Fig.)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-216-34",
+    "text" : "levels of p-Erk",
+    "arguments" : [ {
+      "text" : "p-Erk",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-216-997"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36149,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36134,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-216",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-216-106" ],
+    "verbose-text" : "Interestingly, in contrast to adult mice, the absence of CD5-CK2 signaling in neonatal mice, led to reduced basal levels of p-Erk."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-216-107",
+    "text" : "CD5-CK2 signaling in neonatal mice",
+    "arguments" : [ {
+      "text" : "mice",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-216-996"
+    }, {
+      "text" : "CD5-CK2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-216-995"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36111,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "signaling",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36077,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-216",
+    "found-by" : "Positive_activation_syntax_3_noun",
+    "verbose-text" : "Interestingly, in contrast to adult mice, the absence of CD5-CK2 signaling in neonatal mice, led to reduced basal levels of p-Erk."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-217-30",
+    "text" : "phosphorylation of Erk",
+    "arguments" : [ {
+      "text" : "Erk",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-217-26"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36254,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36232,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-217",
+    "found-by" : "Phosphorylation_token_of",
+    "verbose-text" : "However, both adult and neonatal thymocytes from CD5-ΔCK2BD mice showed enhanced phosphorylation of Erk in response to CD3, compared to their WT counterparts (Figs 6 and 7)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-217-29",
+    "text" : "phosphorylation of Erk in response to CD3",
+    "arguments" : [ {
+      "text" : "phosphorylation of Erk",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-217-30"
+    }, {
+      "text" : "CD3",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-217-27"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36273,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "in response to",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36232,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-217",
+    "found-by" : "Positive_regulation_in_response_to",
+    "verbose-text" : "However, both adult and neonatal thymocytes from CD5-ΔCK2BD mice showed enhanced phosphorylation of Erk in response to CD3, compared to their WT counterparts (Figs 6 and 7)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-218-8",
+    "text" : "phosphorylation of pERK",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-218-7"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36358,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36335,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-218",
+    "found-by" : "Phosphorylation_syntax_1a_noun",
+    "verbose-text" : "Although, phosphorylation of pERK by CK2 is shown to promote its entry into the nucleus [30], we found that this was not altered in CD5-ΔCK2BD thymocytes."
+  }, {
+    "text" : "phosphorylation of pERK by CK2",
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-218-7",
+    "arguments" : [ {
+      "text" : "phosphorylation of pERK",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC5193405-UAZ-r1-PMC5193405-218-8"
+    }, {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-218-8"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36365,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36335,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Phosphorylation_syntax_1a_noun + toRelationMention",
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-218",
+    "verbose-text" : "Although, phosphorylation of pERK by CK2 is shown to promote its entry into the nucleus [30], we found that this was not altered in CD5-ΔCK2BD thymocytes."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-219-39",
+    "text" : "CK2 activated by CD5",
+    "arguments" : [ {
+      "text" : "CK2",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-219-1002"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-219-1003"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36525,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36505,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-219",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "This would indicate that CK2 activated by CD5 engagement does not participate directly in Erk translocation."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-220-58",
+    "text" : "JNK and P38 phosphorylation",
+    "arguments" : [ {
+      "text" : "JNK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-220-1005"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36642,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36615,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-220",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-217-107" ],
+    "verbose-text" : "Additionally, we analyzed JNK and P38 phosphorylation, as these MAPK have also been involved in thymocyte selection (reviewed in ([1])."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-220-59",
+    "text" : "P38 phosphorylation",
+    "arguments" : [ {
+      "text" : "P38",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-220-1006"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36642,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36623,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-220",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-217-107" ],
+    "verbose-text" : "Additionally, we analyzed JNK and P38 phosphorylation, as these MAPK have also been involved in thymocyte selection (reviewed in ([1])."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-221-48",
+    "text" : "phosphorylation of JNK",
+    "arguments" : [ {
+      "text" : "JNK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-221-1010"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36772,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36750,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-221",
+    "found-by" : "Phosphorylation_token_of",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-217-107" ],
+    "verbose-text" : "Similar to ERK, enhanced phosphorylation of JNK, but not of p38, was detected in newborn CD5-ΔCK2BD thymocytes in response to CD3 stimulation."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-222-103",
+    "text" : "P38 has recently been shown to promote thymocyte survival and can be activated downstream CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-222-1016"
+    }, {
+      "text" : "P38",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-222-1014"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36970,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36877,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-222",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Although P38 has recently been shown to promote thymocyte survival and can be activated downstream CD5 [47], our data suggest that CD5 does not mediate P38 dependent signals during thymocyte development.Collectively, our data demonstrate a key role of CK2 in CD5-mediated regulation of thymocyte selection and survival, by controlling the phosphorylation of ERK independent of proximal TCR signals."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-222-85",
+    "text" : "phosphorylation of ERK",
+    "arguments" : [ {
+      "text" : "ERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-222-1023"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37229,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37207,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-222",
+    "found-by" : "Phosphorylation_token_of",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "Although P38 has recently been shown to promote thymocyte survival and can be activated downstream CD5 [47], our data suggest that CD5 does not mediate P38 dependent signals during thymocyte development.Collectively, our data demonstrate a key role of CK2 in CD5-mediated regulation of thymocyte selection and survival, by controlling the phosphorylation of ERK independent of proximal TCR signals."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-222-55",
+    "text" : "CD5 does not mediate P38",
+    "arguments" : [ {
+      "text" : "P38",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-222-1018"
+    }, {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-222-1017"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-negated" : true,
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37023,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediate",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 36999,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-222",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Although P38 has recently been shown to promote thymocyte survival and can be activated downstream CD5 [47], our data suggest that CD5 does not mediate P38 dependent signals during thymocyte development.Collectively, our data demonstrate a key role of CK2 in CD5-mediated regulation of thymocyte selection and survival, by controlling the phosphorylation of ERK independent of proximal TCR signals."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-225-92",
+    "text" : "expression of CD5",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-225-1036"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37786,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37769,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-225",
+    "found-by" : "transcription_3",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "A knock-in mouse in which the ITIM domain of CD5 is selectively mutated will be an important tool to discriminate between CD5-ITIM and CD5-CK2 signaling activities.Supporting InformationSurface expression of CD5 and Va2 are not altered in the absence of CD5-CK2 signaling."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-225-93",
+    "text" : "expression of CD5 and Va2",
+    "arguments" : [ {
+      "text" : "Va2",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-225-1037"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37794,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37769,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-225",
+    "found-by" : "transcription_3",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "A knock-in mouse in which the ITIM domain of CD5 is selectively mutated will be an important tool to discriminate between CD5-ITIM and CD5-CK2 signaling activities.Supporting InformationSurface expression of CD5 and Va2 are not altered in the absence of CD5-CK2 signaling."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-226-100",
+    "text" : "CD5 levels",
+    "arguments" : [ {
+      "text" : "CD5",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-226-1039"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37885,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 37875,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-226",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-45-28" ],
+    "verbose-text" : "(A) Histograms representing CD5 levels in the different thymocyte subpopulations of both CD5-WT and CD5-ΔCK2BD non-Tg (A) and OTII transgenic (B) are shown."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-228-72",
+    "text" : "CD25 and CD44 expression",
+    "arguments" : [ {
+      "text" : "CD25",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-228-1047"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38263,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38239,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-228",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-102-64" ],
+    "verbose-text" : "(TIF)Click here for additional data file.DN subpopulations are unaffected in CD5-ΔCK2BD mice.Dot plots showing CD25 and CD44 expression within DN subpopulation (from Fig 1) are shown (left panels)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-228-71",
+    "text" : "CD44 expression",
+    "arguments" : [ {
+      "text" : "CD44",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-228-1048"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38263,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38248,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-228",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-102-64" ],
+    "verbose-text" : "(TIF)Click here for additional data file.DN subpopulations are unaffected in CD5-ΔCK2BD mice.Dot plots showing CD25 and CD44 expression within DN subpopulation (from Fig 1) are shown (left panels)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-229-120",
+    "text" : "CD44 expression",
+    "arguments" : [ {
+      "text" : "CD44",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-229-1054"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38423,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38408,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-229",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-229-108" ],
+    "verbose-text" : "Gates were set to identify DN1, DN2, DN3 and DN4 subpopulations based on CD25 and CD44 expression in OTII transgenic (A) or non-Tg (B) mice in the CD5-WT versus CD5-ΔCK2BD backgrounds."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-229-121",
+    "text" : "CD25 and CD44 expression",
+    "arguments" : [ {
+      "text" : "CD25",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-229-1053"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38423,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 38399,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-229",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-229-108" ],
+    "verbose-text" : "Gates were set to identify DN1, DN2, DN3 and DN4 subpopulations based on CD25 and CD44 expression in OTII transgenic (A) or non-Tg (B) mice in the CD5-WT versus CD5-ΔCK2BD backgrounds."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-238-125",
+    "text" : "CD69 levels",
+    "arguments" : [ {
+      "text" : "CD69",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-238-1084"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 39473,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 39462,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-238",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-82-51" ],
+    "verbose-text" : "(C) Graph representation of CD69 levels within CD4+SP cells in CD5-WT and CD5-ΔCK2BD non-Tg mice."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-244-32",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-244-1095"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 39882,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 39871,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-244",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-244-112" ],
+    "verbose-text" : "(A) Graphs representing total pERK levels detected by Imaging Flow Cytometry in CD4+SP and DP cells obtained from CD5-WT OTII and CD5-ΔCK2BD OTII TCR-Tg under basal conditions or after OVA stimulation (left panels), and from CD5-WT and CD5-ΔCK2BD non-Tg mice under basal conditions (right panels)."
+  }, {
+    "frame-id" : "evem-PMC5193405-UAZ-r1-PMC5193405-245-133",
+    "text" : "pERK levels",
+    "arguments" : [ {
+      "text" : "pERK",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC5193405-UAZ-r1-PMC5193405-245-1101"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 40207,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC5193405-UAZ-r1-PMC5193405",
+      "offset" : 40196,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC5193405-UAZ-r1-PMC5193405-245",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC5193405-UAZ-r1-PMC5193405-244-112" ],
+    "verbose-text" : "(B) Histograms from a representative experiment, showing pERK levels in whole cell, cytoplasm and nucleus of CD4+SP cells obtained from CD5-WT (B) and CD5-ΔCK2BD non-Tg mice, under basal conditions."
+  } ],
+  "object-type" : "frame-collection",
+  "object-meta" : {
+    "processing-end" : "2023-03-18T23:40:05Z",
+    "doc-id" : "PMC5193405",
+    "component-type" : "machine",
+    "component" : "Reach",
+    "processing-start" : "2023-03-18T23:34:06Z",
+    "object-type" : "meta-info",
+    "organization" : "UAZ"
+  }
+}

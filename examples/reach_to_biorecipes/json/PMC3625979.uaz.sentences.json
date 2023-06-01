@@ -1,0 +1,3466 @@
+{
+  "frames" : [ {
+    "text" : "MEK1 Is Required for PTEN Membrane Recruitment, AKT Regulation, and the Maintenance of Peripheral ToleranceSummaryThe Raf/MEK/ERK and PI3K/Akt pathways are prominent effectors of oncogenic Ras. These pathways negatively regulate each other, but the mechanism involved is incompletely understood. We now identify MEK1 as an essential regulator of lipid/protein phosphatase PTEN, through which it controls phosphatidylinositol-3-phosphate accumulation and AKT signaling. MEK1 ablation stabilizes AKT activation and, in vivo, causes a lupus-like autoimmune disease and myeloproliferation. Mechanistically, MEK1 is necessary for PTEN membrane recruitment as part of a ternary complex containing the multidomain adaptor MAGI1. Complex formation is independent of MEK1 kinase activity but requires phosphorylation of T292 on MEK1 by activated ERK. Thus, inhibiting the ERK pathway reduces PTEN membrane recruitment, increasing phosphatidylinositol-3-phosphate accumulation and AKT activation. Our data offer a conceptual framework for the observation that activation of the PI3K pathway frequently mediate resistance to MEK inhibitors and for the promising results obtained by combined MEK/PI3K inhibition in preclinical cancer models.Graphical AbstractHighlights► A complex of MEK1, MAGI1, and PTEN regulates PIP3 turnover and AKT signaling ► Ablation/inhibition of MEK1 blocks complex formation and PTEN membrane recruitment ► ERK-mediated MEK1 phosphorylation coordinates the timing of ERK and AKT signaling ► In vivo, MEK1 ablation induces AKT activation and a breach in peripheral toleranceIntroductionThe Raf/MEK/ERK pathway is among the most thoroughly studied downstream effectors of activated Ras (Wimmer and Baccarini, 2010). Deregulation of the pathway is implicated in both developmental disorders and cancer (Maurer et al., 2011; Schubbert et al., 2007). Consequently, numerous RAF and MEK inhibitors aimed at blocking ERK activation have been designed (Chapman and Miner, 2011; Poulikakos and Solit, 2011).The dual specificity kinases MEK1 and MEK2 are activated by RAF and mediate phosphorylation of ERK1 and ERK2 (Roskoski, 2012). MEK1 and MEK2 are very similar but differ structurally in a proline-rich domain in the C-terminal half of the catalytic core, which in MEK1 contains the negative regulatory phosphorylation sites T286, targeted by Cdk5 mainly in postmitotic neurons, and T292, essential for the negative feedback regulation of MEK by ERK1 and ERK2 (Roskoski, 2012).MEK1 and MEK2 also bind differentially to scaffolds such as MP1, which plays a role in ERK1 activation at late endosomes (Teis et al., 2002), and IQGAP1, which regulates adhesion/migration, promotes signaling from MEK1 to ERK, and attenuates MEK2/ERK signaling (Roy et al., 2005).Finally, disruption of the mek1 gene in vivo causes abnormal placenta development and lethality around embryonic day 9.5 (Bissonauth et al., 2006; Catalanotti et al., 2009; Giroux et al., 1999), while mek2−/− mice are normal (Bélanger et al., 2003).We have recently reported that MEK1 is essential for the regulation of the timing and strength of ERK signaling. By phosphorylating the T292 site in the proline-rich region of MEK1, ERK exerts negative feedback control on MEK1/MEK2 dimers. If MEK1 is absent, this control is disabled, leading to increased ERK signaling (Catalanotti et al., 2009).Besides this negative feedback within the pathway, ERK can interfere with phosphatidylinositol-3 kinase (PI3K)/AKT signaling, another major protumorigenic Ras effector (Liu et al., 2009; Song et al., 2012). In response to growth factors, PI3K converts phosphatidylinositol 4,5 diphosphate (PIP2) in the second messenger phosphatidylinositol 3,4,5 triphosphate (PIP3). AKT binds to PIP3 via its pleckstrin homology (PH) domain and translocates to the membrane, where it is activated by phosphorylation of T308 and S473. Tumor suppressor phosphatase and tensin homolog deleted on chromosome ten (PTEN) dephosphorylates PIP3, counteracting PI3K activity and restraining AKT activation (Liu et al., 2009; Song et al., 2012). Inhibition or silencing of MEK increases growth factor-stimulated AKT activation (Hoeflich et al., 2009; Ussar and Voss, 2004; Yu et al., 2002), a finding which was linked to ERK-mediated inhibition of PI3K recruitment to the epidermal growth factor (EGF) receptor via phosphorylation of the adaptor GAB1 (Lehr et al., 2004; Zhang et al., 2002).We show that MEK1 is required for the control of PIP3 accumulation at the cell membrane, which it regulates by ensuring the proper localization of PTEN in the context of a ternary complex with a multiprotein adaptor, MAGI1. MEK1 ablation deregulates the AKT pathway which, in vivo, induces a breach of peripheral self tolerance and myeloproliferation.ResultsMEK1 Is Essential for the Negative Regulation of AKT SignalingWe monitored the impact of MEK1 on AKT signaling in wild-type (WT) and MEK1 knockout (KO) mouse embryonic fibroblasts (MEFs) (Catalanotti et al., 2009) stimulated with epidermal growth factor (EGF). Phosphorylation of AKT and its downstream effectors mTOR, GSK3β, and S6K was reproducibly enhanced in MEK1-deficient cells (Figures 1A and 1C). The increase in AKT phosphorylation was rescued by the re-expression of full-length MEK1 (Figure 1B). The levels of the membrane lipid PIP3, necessary for AKT activation (Liu et al., 2009), were significantly higher in KO MEFs than in control cells (Figure 1D and Figures S1A and S1B available online). In contrast, PI3K expression and activity (Figures 1E and S1C) were comparable in WT and KO cells, as were PTEN expression and the EGF-induced dephosphorylation of the C-terminal residues which negatively regulate PTEN activity, its association with PDZ-containing proteins (Rahdar et al., 2009; Vazquez et al., 2001) and with PIP2 (Figure S1D). However, PTEN was hardly detectable at the membrane of KO MEFs, even after EGF stimulation (Figures 1F, S1E, and S1F), and membrane-associated PTEN activity was greatly reduced (Figure 1G). Consistently, focal adhesion kinase (FAK), a membrane-associated PTEN protein substrate (Tamura et al., 1998; Yamada and Araki, 2001), was also hyperphosphorylated in KO cells (Figure S1G). MEK1 ablation did not impact the specific activity of membrane PTEN; in the cytosol, activity transiently increased at 5 min of EGF treatment (Figure 1G). PTEN can be regulated by a variety of posttranslational modifications and by the interaction with other proteins (Song et al., 2012); which of these mechanisms is responsible for this transient increase in cytosolic PTEN activity is currently unknown. Thus, MEK1 is required for correct membrane localization of PTEN and for limiting PIP3 accumulation and AKT activation.MEK1 KO Mice Develop Myeloproliferation and Autoimmune DiseaseTo investigate the function of MEK1 in vivo, we used mice with epiblast-restricted MEK1 ablation (mek1f/f; Sox2Cre mice [Catalanotti et al., 2009], referred to as KO mice). These animals, in particular the females, had a significantly decreased survival rate (Figure 2A). Increased numbers of circulating lymphocytes could be detected in the blood of 1- to 3-month-old mice; this was exacerbated in old MEK1 KO animals, in which it was accompanied by granulocytosis and thrombocytosis (Figure 2B). By 8–10 months of age, 83% MEK1-deficient females had developed severe splenomegaly (Figure 2C), hepatomegaly with lesser frequency (Figure 2D; observed in 45% of the animals), and, occasionally, lymphadenopathy. Liver and spleen showed effacement of architecture, extramedullary hematopoiesis, accumulation of atypical megakaryocytes, and fibrosis (Figures 2E and S2A). Splenomegaly correlated with a massive increase in immature Mac1+Gr1+ myeloid cells (Figure 2F), a population observed in pathological conditions such as cancer and autoimmunity (Gabrilovich and Nagaraj, 2009). KO bone marrow and splenocytes isolated from young, unaffected animals gave rise to a significant higher number of colony forming units in semisolid media, indicating a cell-autonomous phenotype (Figure S2B). In addition, KO spleens contained significantly increased numbers of T (CD3+) and B (CD19+) cells (Figure 2F). The CD4+/CD8+ ratio was normal, but more T and B cells were activated, as shown by the coexpression of the activation marker CD69 with CD3 and CD19 (Figure 2G). Despite the autoimmune disease, splenic Tregs were not decreased (data not shown). A slight increase in activated T cells was the only phenotype detected in the spleen of young KO mice (Figure S2C). In contrast to the marked phenotypic alterations in spleen and liver, KO thymi were normal in terms of cellularity and subset distribution (Figure S2D).Among the nonhematopoietic organs, KO lungs showed thickening of the interstitial alveolar spaces with vascular congestion (Figure S2E); however, the kidneys were the organs most severely affected. The tubules were dilated and filled with proteinaceous material, and the glomeruli displayed signs of focal proliferation and sclerosis reminiscent of glomerulonephritis, accompanied by the deposition of immunocomplexes in the glomeruli (Figures 3A and 3B). In addition, antibodies against double-stranded DNA (dsDNA), a hallmark of lupus-like autoimmune diseases, were detected in the sera of seven out of seven KO 5- to 10-month-old females (Figure 3C; titer of 1:100 in five mice; 1:1000 in two mice). This correlated with a marked increase in the concentrations of serum immunoglobulins (IgG1, IgG2b, IgA) and in the frequency of IgA and IgG-producing B cells affected mice (Figures 3D and 3E). Circulating BAFF and interleukin-10 (IL-10) (Figure 3F), crucially implicated in the pathogenesis of lupus-like disease (Su et al., 2012), were also elevated, and the frequency of cells producing IL-10, GM-CSF, transforming growth factor β, and interferon γ (IFNγ) was elevated to varying degrees (Figure S3A). In all cases, the increase was most pronounced in CD4+ lymphocytes. IFNα, IL-3, IL-6, IL-17, and IL-23 were tested but proved similar in WT and KO (data not shown).Thus, the KO mice are prone to develop both myeloproliferation and a lupus-like autoimmune disorder reminiscent of those reported for pten+/− (Di Cristofano et al., 1999), hematopoetic (Guo et al., 2008; Yilmaz et al., 2006) or T cell-restricted PTEN KO mice (Liu et al., 2010; Suzuki et al., 2001), and constitutively active AKT transgenic mice (Kharas et al., 2010; Parsons et al., 2001).MEK1 Ablation Deregulates AKT Activation and Impairs Activation-Induced Cell DeathThe AKT deregulation caused by PTEN mislocalization (Figures 1 and S1) could contribute to the phenotypes of MEK1 KO mice. Indeed, AKT phosphorylation was detected to variable extents in KO kidneys, livers, lungs, spleens, and lymphnodes (Figures 3A, S2F, and S2G). In contrast, ERK phosphorylation, deregulated in cultured fibroblasts and in some organs in vivo (Catalanotti et al., 2009), was not affected (Figure S2H). Given the poor conditions of these animals, however, it is impossible to distinguish whether this phosphorylation is cause or consequence of the phenotypes observed. We therefore investigated in more detail the spleens of young MEK1 KO mice, which were normal but for a slight increase in the number of activated T cells (Figure S2C). pAKT (Figure 3G) was increased and membrane PTEN was decreased (Figure 3H) in the KO samples. Increased pAKT was also observed in KO CD4+ T cells stimulated with anti-CD3/CD28 (Figure 3I). KO CD4+ T lymphocytes and B cells were less responsive to activation-induced cell death (AICD), a phenotype abrogated by a PI3K, but not by a MEK inhibitor (Figures 3J and 3K), and to Fas-induced apoptosis (Figure 3L). In contrast, other functions of CD4+ cells and B cells, such as their ability to proliferate and express the activation marker CD69 in response to T or B cell receptor stimulation, were unaffected (Figures S3B and S3C), indicating that the resistance to AICD is the major cell-autonomous phenotype. KO MEFs were also resistant to various proapoptotic stimuli (Figures S3D and S3E). This is reminiscent of the impaired apoptosis observed in PTEN-deficient lymphocytes (Buckler et al., 2008; Di Cristofano et al., 1999; Liu et al., 2010; Suzuki et al., 2003) and fibroblasts (Stambolic et al., 1998).A MEK1/MAGI-1/PTEN Complex Regulates PTEN Membrane RecruitmentTo gain insight in PTEN regulation by MEK1, we tested whether MEK1 and PTEN interacted in cells. PTEN was present in MEK1 immunoprecipitates (IPs) from growth-factor stimulated fibroblasts (Figure 4A). Conversely, MEK1 but not MEK2 could be detected in PTEN IPs from WT cells, and interaction was enhanced upon growth factor stimulation (Figures 4B and 4D). Recombinant PTEN and MEK1 did not interact in vitro (Figure S4A), indicating a requirement for a scaffold protein that, since MEK1 impacts membrane localization of PTEN, should be involved in PTEN membrane recruitment. Membrane-associated guanylate kinase (MAGUK) family member with inverted domain structure-1 (MAGI1) is a PTEN binding partner which localizes to the plasma membrane, specifically in domains such as adherens junctions, which act as focal points for the regulation of PIP3 pools and therefore control the recruitment and activation of AKT by assembling signaling complexes involving E-cadherin, β-catenin, and PTEN (Bonifant et al., 2007; Kotelevets et al., 2005). MAGI1 contains six PDZ domains, a guanylate kinase (GUK) domain, and two WW domains flanked by two PDZ domains (Dobrosotskaya et al., 1997); PTEN binds selectively to the second PDZ domain of MAGI1 (Kotelevets et al., 2005). Several isoforms and splice variants of MAGI1 are expressed in different cell types (Dobrosotskaya et al., 1997; Emtage et al., 2009; Kotelevets et al., 2005; Laura et al., 2002; Xu et al., 2008). MAGI1 in MEFs appeared as multiple bands, with a predominant band of approximately 100 kD (MAGI1100, marked by an asterisk) and two further bands of about 130 and 150 kD. The 100 kD isoform was selectively recruited to the membrane upon growth factor stimulation of WT cells, but MEK1 ablation prevented MAGI1 membrane translocation (Figure 4C). In addition, MAGI1100 was detected in PTEN IPs from WT but not MEK1 KO MEF whole-cell lysates and membrane fractions (Figures 4D and S4B), and the interaction between PTEN and MAGI1 could be restored by addition of recombinant MEK1 to the KO lysates prior to PTEN immunoprecipitation (Figure 4E). MAGI1 was detectable in MEK1, but not in MEK2 IPs (Figures S4C and S4D). Thus, MEK1 is essential for the formation of a complex containing MAGI1 and PTEN and for their membrane translocation upon growth factor stimulation. The kinetics of EGF-induced complex formation was similar to that of MEK1 phosphorylation on the ERK-dependent negative regulatory residue T292, unique to MEK1. pT292 MEK1 was enriched in PTEN immunoprecipitates, as assessed by densitometry (10% of total pT292 MEK1 versus 0.7% of total MEK1 in PTEN IPs from EGF-stimulated cells), while neither the activating RAF-dependent (S218 and S222) nor the PAK-dependent (S298) sites correlated well with binding (Figure 4D). Thus, T292 might work as a temporal switch, ensuring that ternary complex formation and membrane translocation occur after ERK activation.MEK1 ablation decreases PTEN membrane localization and increases AKT phosphorylation in splenocytes (Figures 3G and 3H). MAGI1100 is expressed in spleen, and it is detectable, together with MEK1, in PTEN immunoprecipitates from WT but not KO organs (Figure 4F). Therefore, the mechanism described for the MEFs operates also in the spleen. In line with the lack of phenotype and AKT activation in KO thymi (Figures S2D and S2G), MAGI1100 was not expressed in thymus, and MEK1 was absent in PTEN immunoprecipitates from this organ (Figure 4F).In MEFs, MAGI1 is the most efficiently expressed MAGI protein (Figure S4E). Consistently, MAGI1 knockdown efficiently abrogated PTEN binding to MEK1 (Figure 4G), reduced PTEN membrane localization, and increased AKT activation (Figures S4F and S4G). Thus, MAGI1 is the scaffold mediating the interaction between MEK1 and PTEN. The ternary complex was also found in human, rat, and chicken cells (Figure S4H) and in monkey cells (Figure 5H), indicating that it represents an important conserved regulatory principle.We next examined the interaction of MEK1 with selected MAGI1 domains expressed as myc-fusion proteins (Xu et al., 2008). The GUK and, to a greater extent, the two WW domains were detectable in MEK1 IPs, whereas the PTEN-binding PDZ domains were not (Figure 5A). Consistently, deletion of either the GUK or the WW domains reduced MAGI1 binding to MEK1, and deletion of both domains abolished it (Figure 5B). MEK1 was detectable in full-length MAGI1, GUK, and WW domain IPs. GUK domains are phosphopeptide-binding modules (Zhu et al., 2011), and WW motifs recognize proline-rich ligands, also in conjunction with S/T phosphorylation (Gao et al., 2009; Ingham et al., 2005; Macias et al., 2002). Mutation of T292 in the proline-rich region of MEK1 to a nonphosphorylatable A (T292A) decreased, and a phosphomimetic (T292D) mutation increased, binding to MAGI1 and WW, but not GUK (Figures 5C–5E). Thus, if the GUK domain is phosphosensitive, binding must depend on a different phosphorylation site. Mutation of the WW domains of MAGI1, in particular of WW2, strongly reduced MEK1 binding by a WW MAGI1 fragment or by full-length MAGI1 (Figures 5F and 5G). Remarkably, a MAGI1 GUK-WW fragment, which binds to MEK1 but not to PTEN, strongly reduced the binding of endogenous MEK1 and MAGI1 to PTEN, reduced PTEN membrane recruitment, and triggered AKT hyperactivation (Figures 5H and 5I), mimicking the MEK1 KO. A MAGI1 GUK-WW2 domain mutant was less efficient in preventing MEK1/MAGI1 binding to PTEN and causing AKT activation (Figure 5H). The residual MEK1 binding/dominant negative activity of the MAGI1 GUK-WW2 domain mutant is likely due to the interaction of the MAGI1 GUK domain with other MEK1 binding sites (Figures 5A, 5B, and 5D). Together, the data support the hypothesis that perturbations of the ternary complex PTEN/MAGI/MEK1 result in AKT activation.MEK1 T292 Phosphorylation Controls Complex FormationTo further investigate the role of T292, we monitored complex formation in KO MEFs reconstituted with nonphosphorylatable T292A or phosphomimetic T292D MEK1 mutants. The mutants expressed at comparable levels, slightly lower than WT MEK1. MAGI1100 formed a complex with PTEN in WT and T292D cells, but not in KO or T292A cells; in addition, complex formation between MAGI1, PTEN, and the phosphomimetic MEK1 T292D mutant was not regulated by growth factor treatment (Figure 6A).Like KO MEFs, MEK1 T292A cells showed defective PTEN membrane recruitment, and PIP3 accumulation and AKT phosphorylation were increased above the levels observed in KO cells. The exact reasons for these differences between KO and reconstituted cells are unknown. In contrast, MEK1 T292D mutant cells displayed constitutive PTEN membrane recruitment, as well as low levels of PIP3 and AKT phosphorylation (Figures 6B–6D). Consistent with this biochemical behavior, MEK1 T292A cells were resistant to TNFα-induced apoptosis (Figure S5A). Thus, T292 phosphorylation is a prerequisite for proper complex formation and for the regulation of the PIP3 pathway.T292 is phosphorylated by ERK, which might thus regulate the timing of PTEN membrane recruitment and AKT signaling. Indeed, MEK inhibitors blocked both ERK and T292 phosphorylation, concomitantly increasing AKT phosphorylation (Figures 6E and S5B) and PIP3 accumulation (Figure 6F) and, most importantly, reducing the binding of MEK1 and MAGI1100 to PTEN and of MAGI1100 to MEK1 (Figures 6G and 6H). In MEK1 T292D MEFs, MEK inhibition did not perturb the association of PTEN with MEK1 or MAGI1100 or AKT phosphorylation (Figures 6I and 6J); thus, phosphorylation of T292 is required, and MEK1 kinase activity is dispensable, for the interaction of MEK1 with MAGI100 and PTEN.Two other MAGI family proteins, MAGI2 and MAGI3, were also able to form complexes with MEK1. Consistent with the data obtained for MAGI1, chemical inhibition of T292 phosphorylation decreased the recruitment of MAGI2 and 3 to the membrane (Figures S5C and S5D).DiscussionA Kinase-Independent Role for MEK1 in the Regulation of PTEN FunctionWe report the existence of a ternary complex between MEK1, MAGI1, and PTEN, mediating the translocation of PTEN to the membrane and therefore regulating the concentration of PIP3 and AKT activation. Both MEK1 and MAGI1 are necessary for complex formation, and PTEN will not bind to one component if the other is missing. The complex is held together by MAGI1, which contacts PTEN via its PDZ domain (Kotelevets et al., 2005) and MEK1. MAGI1 binds to MEK1 via its GUK and WW2 domains, but only binding to the WW domains is sensitive to the ERK-mediated phosphorylation of T292 in MEK1. The MAGI1 WW domains are very similar to the group Ib WW2 and WW3 domains of the ubiquitin ligase Nedd4L, whose binding to SMAD2 and SMAD3 depends on the phosphorylation of a T in the linker region (Gao et al., 2009); the NEDD4 WW2 domain has been found to bind to proteins containing PR sequences in an unbiased proteomic screen (Ingham et al., 2005). T292 of MEK1 is embedded in such a PR containing sequence (PPRPRTPGRP in MEK1, SPRPRPPGRP in MEK2); in addition, the MEK1 sequence does not contain any other predicted WW binding sites. Since the proline-rich loop of MEK1 is disordered in all available crystal structures, its interaction with the MAGI1 WW domains cannot be modeled, and at this point it is not possible to distinguish whether phosphorylation creates a reversible MAGI1 binding site on MEK1 or induces exposure of another MAGI1 binding site through an allosteric mechanism.Besides being essential for the assembly of the MEK1/MAGI/PTEN complex, pT292 is also required for the downregulation of MEK2-dependent ERK signaling, mediated by MEK1 in the context of a MEK1/MEK2 heterodimer (Catalanotti et al., 2009). Thus, phosphorylation of MEK1 T292 relays a negative feedback within the ERK pathway and initiates the deactivation of the PIP3/AKT pathway through the membrane localization of MAGI/PTEN, acting as a temporal switch for both cascades.MEK1 has been reported to bind to another WW domain containing protein, namely the proapoptotic tumor suppressor WOX1, associated with the death of activated T cell leukemia. In this case, however, the WOX1/MEK1 complex dissociates upon ERK activation (Lin et al., 2011). Thus, ERK differentially regulates binding of MEK1 to WW domain containing proteins and may negatively affect survival by promoting the translocation of WOX1 to the mitochondria (Lin et al., 2011) and the membrane recruitment of PTEN in the context of the MEK1/MAGI1/PTEN complex.Our data show that MEK1 binding to the GUK and WW domains of MAGI1 promotes both complex formation between MAGI1 and PTEN and their membrane translocation. We do not know in detail how this is accomplished. One hypothesis is that binding to MEK1 will cause a conformational change in MAGI1, exposing the PDZ domains necessary for PTEN binding (PDZ2 [Kotelevets et al., 2005]) and for the binding to membrane proteins such as cadherins (PDZ4 and PDZ5 [Kotelevets et al., 2005; Mizuhara et al., 2005; Xu et al., 2008]). Intramolecular interactions between the SH3 and the GUK domain of other MAGUK proteins have been described, postulated to keep the proteins in an inactive, “closed” conformation (Montgomery et al., 2004). In MAGI, the WW domain replaces the SH3. It is conceivable that the WW domain may also be involved in intramolecular interactions that can be interrupted by MEK1 binding. Whatever the mechanism involved, MEK1 kinase activity is not required for complex formation and MEK1 binds to MAGI1 as a monomer or as a MEK1 dimer, but not as a heterodimer.It is noteworthy that MEK1, but not PTEN, binds selectively to MAGI100, the only isoform translocated to the membrane in response to growth factors. Binding of PTEN to other MAGI1 isoforms may localize the phosphatase to other subcellular compartments, such as the nucleus (Dobrosotskaya et al., 1997; Laura et al., 2002), but it does not rescue membrane recruitment in the absence of MEK1. In addition, MAGI1100 is selectively expressed in organs and cells that are affected by MEK1 ablation (compare thymus and spleen in Figure 4F), where it correlates with the lack of PTEN membrane recruitment.The possibility also exists that it is MEK1, rather than MAGI1, that mediates the membrane recruitment of the ternary complex. In this context, MEK reportedly binds to paxillin, and growth factor treatment induces the recruitment of Raf and ERK to this complex. Activated ERK phosphorylates paxillin on S83, promoting its association with activated FAK and PI3K and increasing cell spreading (Ishibe et al., 2004). The study did not differentiate between MEK1 and MEK2; however, our data would predict that in the absence of MEK1 at least a certain number of focal adhesions would fail to recruit MAGI/PTEN, resulting in the increased FAK phosphorylation, growth factor-induced migration, and cell spreading (Catalanotti et al., 2009) observed in the MEK1 KO fibroblasts.Finally, some PTEN membrane binding, unaffected by EGF stimulation, can be observed in MEK1 KO fibroblasts (on average, approximately 20% of the WT). It is conceivable that this binding is mediated by the N-terminal PIP2-binding motif of PTEN, which has been shown to be necessary for membrane association (Rahdar et al., 2009). Alternative binding mechanisms likely underlie the rather modest EGF-mediated membrane recruitment of PTEN and MEK1, compared with the robust increase of MAGI1; consistent with this, a strong increase in the amount of both MEK1 and MAGI1100 is observed in membrane PTEN IPs from stimulated cells, indicating that EGF causes the preferential recruitment of the ternary complex to the membrane.Together, these data define a unique kinase-independent function of MEK1 outside the canonical pathway and provide insight into PTEN regulation.Biological Implications of a Disabled FeedbackMEK1 KO mice succumb early to an autoimmune disease accompanied by extramedullary hematopoiesis. The latter phenotype has been observed in PTEN cell-type-restricted KO or AKT transgenic mice (Guo et al., 2008; Kharas et al., 2010; Yilmaz et al., 2006), and we could show that KO bone marrow and spleen from unaffected animals contain significantly higher numbers of colony forming units, indicating a cell-autonomous phenotype. At this point, however, the contribution of the MEK1 KO environment, with its lymphoid dysregulation and autoimmune disease, is unclear. Cell-type-restricted MEK1 ablation and transplantation experiments are planned to clarify this matter.The autoimmune disease clearly correlates with a reduction in T cell activation-induced cell death and with AKT activation in T cells and kidney. A similar phenotype can be achieved by genetic manipulations increasing PIP3/AKT signaling (Borlado et al., 2000; Di Cristofano et al., 1999; Liu et al., 2010; Parsons et al., 2001; Suzuki et al., 2001), but also by adoptive transfer of mouse T lymphocytes treated ex vivo with MEK inhibitor (Deng et al., 2003) or T cell restricted expression of a dominant negative mek transgene (Sawalha et al., 2008). The latter treatments would mimic the MEK1 KO by reducing phosphorylation of the critical T292 residue in MEK1 and therefore PTEN membrane recruitment. Importantly, both reduced ERK activation (Gorelik and Richardson, 2010) and increased AKT signaling (Tang et al., 2009) have been observed in T cells from lupus patients. Together with our data, these results suggest that the activation of ERK and its crosstalk with the PI3K pathway are crucial players in the development of experimental and possibly clinical lupus-like autoimmune diseases.The MEK1 KO does not phenocopy T cell-restricted PTEN deletion in two aspects: the breach of central tolerance (Suzuki et al., 2001) and the development of T cell lymphomas (Liu et al., 2010). In both cases, the cells responsible for the phenotype originate in the thymus, which is not affected in the MEK1 KO mice. This lack of phenotype correlates with the lack of expression of MAGI100, and underscores the specific effect of MEK1 on this particular mechanism of PTEN regulation. In this context, it is important to consider that the impaired membrane localization of MAGI-1 in KO cells and organs might cause deregulation/mislocalization of one or more of its many interaction partners, thereby playing a role in the phenotype of the MEK1 KO mice.Is the regulation of PTEN by MEK1/MAGI relevant in the context of cancer? MAGI has been found mutated in human cancer genomes (Berger et al., 2011; Pleasance et al., 2010), and it can suppress the growth of tumor xenografts (Zaric et al., 2012). Based on this, it is in principle possible that MEK1 may act as a tumor suppressor under certain conditions, as observed in a model of Myc-induced B cell lymphoma (Bric et al., 2009). More broadly, inhibition of the Raf/MEK/ERK pathway often causes activation of the AKT pathway in cancer (Hoeflich et al., 2009; Mirzoeva et al., 2009; Wee et al., 2009), due to the release of yet incompletely identified negative feedback loops. The use of Raf or MEK inhibitors might, by preventing the phosphorylation of T292 in MEK1, decrease PTEN membrane recruitment, increasing PIP3 concentrations and favoring the emergence of resistance mechanisms relying on the PI3K/AKT pathway. This would provide a mechanistic framework for the combined inhibition of these pathways, which is being increasingly advocated as the treatment of choice (Hoeflich et al., 2012; Sos et al., 2009; Villanueva et al., 2010).Experimental ProceduresMicemek1f/f; Sox2Cre mice (Catalanotti et al., 2009) were maintained on a mixed Sv129/Bl6 background. Animal experiments were performed in accordance with a protocol authorized by the Austrian Ministry of Science and Communications.Cell Culture and TransfectionsMEFs and stable KO clones re-expressing WT and mutant MEK1 (Catalanotti et al., 2009) were grown in Dulbecco’s modified Eagle’s medium plus 10% (v/v) fetal calf serum (FCS) (PAA) and starved in 0.5% (v/v) FCS overnight prior to treatment with EGF (2 ng/ml, Biomedical Technologies). Inhibitors (10 nM PD0325901, Sigma-Aldrich; 10 μM U0126 and 50 μM LY294002, Cell Signaling) were added 1 hr before stimulation. MEFs were transfected with 30 nM MAGI siRNA duplexes (Sakurai et al., 2006) or nontargeting pool (D-001810-10-05, Dharmacon) with Lipofectamine RNAiMAX (Invitrogen). COS-7 cells were transfected with TurboFect (Fermentas).Splenic CD4+ T and B cells were purified with MACS negative selection kits (MiltenyiBiotec; purity approximately 95% by fluorescence-activated cell sorting [FACS]) and cultured in RPMI 1640 (PAA) plus 10% FCS, 1 mM sodium pyruvate (Sigma-Aldrich), 1% nonessential amino acids (Sigma-Aldrich), 50 μM β-ME, and 10 mM N-acetylcysteine. In T cells, AICD was induced with anti-CD3/CD28 (1 μg/ml and 0.5 μg/ml, both BD PharMingen) for 72 hr, followed by 16 hr stimulation with αCD3 (10 μg/ml). B cells were treated with soluble anti-IgM Fab2 fragment (0.1 μg/ml, Jackson ImmunoResearch) and analyzed 24 hr later. FasL (100 ng/ml, Adipogen) induced apoptosis was monitored 6 hr after the treatment. Cell death was measured by annexinV/propidium iodide staining (eBiosciences).Immunoprecipitation, Pull-Down, Cell Fractionation, Immunoblotting, ELISA, and ELISpotCells were lysed in a buffer containing 20 mM TrisHCl (pH 7.4), 137 mM NaCl, 1 mM CaCl2, 1 mM MgCl2, 1% NP-40, 1 mM Na3VO4, 50 mM NaF, 2 mM PMSF, and protein inhibitor cocktail (Roche). IPs were prepared by addition of the appropriate antibodies prior to incubation with protein A-sepharose (GE Healthcare) or protein G-agarose (Thermo Scientific). Phosphatase activity in PTEN IPs was monitored as described (Sanchez et al., 2005). Pull-down experiments were carried out in IP buffer plus 0.1% BSA with purified recombinant PTEN (Calbiochem) and MEK1 (gift of I. Moarefi, Crelux). The Thermo Scientific or ProteoJet membrane protein extraction kit (Fermentas) or hypotonic lysis/differential centrifugation were used to produce cytoplasmic and membrane (plasma, mitochondria, and ER/Golgi) fractions. Immunoblotting was performed with the antibodies detailed in the Supplemental Experimental Procedures. Echelon kits were used to determine PIP3 levels (mass ELISA) and PI3K activity (ELISA). Serum antibodies, BAFF, and IL-10 were detected by ELISA (Life Diagnostics and R&D Systems). ELISpot assays were performed with IgA and IgG ELISpot kits (Mabtech).ImmunofluorescenceAnti-dsDNA antibodies were detected by Crithidia luciliae (Orgentec) kinetoplast staining with FITC-conjugated goat anti-mouse Ig antibody (Invitrogen). Confocal images were acquired with LSM Meta (Zeiss). For details, see the Supplemental Experimental Procedures.Blood Analysis and FACSPeripheral blood cell counts were acquired with V-Sight (Menarini Diagnostics). Cells were stained with antibodies against CD19, CD3e, CD4, CD8a, Mac1, Gr-1, and CD69 (all BD PharMingen) and analyzed by FACSCalibur and FACSAria (BectonDickinson) and FlowJo software.Histology and ImmunohistochemistryHematoxylin and eosin staining and immunohistochemistry were carried out as described (Catalanotti et al., 2009) with pAKT (S473) and pERK (T202/Y204; both Cell Signaling). Reticular fibers were visualized by Gomori staining. Frozen kidney sections were examined as described in (Di Cristofano et al., 1999).Statistical AnalysisValues are expressed as mean (±SD) of at least three independent experiments. p values were calculated with the two-tailed Student’s t test. A p value ≤0.05 is considered statistically significant.",
+    "frame-id" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "section-id" : "",
+    "frame-type" : "passage",
+    "is-title" : false,
+    "section-name" : "",
+    "object-type" : "frame",
+    "index" : "PMC3625979",
+    "object-meta" : {
+      "component" : "nxml2fries",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 Is Required for PTEN Membrane Recruitment , AKT Regulation , and the Maintenance of Peripheral ToleranceSummaryThe Raf/MEK/ERK and PI3K / Akt pathways are prominent effectors of oncogenic Ras .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-0",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 193,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 0,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "These pathways negatively regulate each other , but the mechanism involved is incompletely understood .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-1",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 295,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 194,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "We now identify MEK1 as an essential regulator of lipid / protein phosphatase PTEN , through which it controls phosphatidylinositol-3-phosphate accumulation and AKT signaling .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-2",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 468,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 296,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 ablation stabilizes AKT activation and , in vivo , causes a lupus like autoimmune disease and myeloproliferation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-3",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 585,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 469,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Mechanistically , MEK1 is necessary for PTEN membrane recruitment as part of a ternary complex containing the multidomain adaptor MAGI1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-4",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 721,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 586,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Complex formation is independent of MEK1 kinase activity but requires phosphorylation of T292 on MEK1 by activated ERK .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-5",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 841,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 722,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , inhibiting the ERK pathway reduces PTEN membrane recruitment , increasing phosphatidylinositol-3-phosphate accumulation and AKT activation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-6",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 986,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 842,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Our data offer a conceptual framework for the observation that activation of the PI3K pathway frequently mediate resistance to MEK inhibitors and for the promising results obtained by combined MEK / PI3K inhibition in preclinical cancer models.Graphical AbstractHighlights ► A complex of MEK1 , MAGI1 , and PTEN regulates PIP3 turnover and AKT signaling ► Ablation / inhibition of MEK1 blocks complex formation and PTEN membrane recruitment ► ERK mediated MEK1 phosphorylation coordinates the timing of ERK and AKT signaling ► In vivo , MEK1 ablation induces AKT activation and a breach in peripheral toleranceIntroductionThe Raf/MEK/ERK pathway is among the most thoroughly studied downstream effectors of activated Ras ( Wimmer and Baccarini , 2010 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-7",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 1729,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 987,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Deregulation of the pathway is implicated in both developmental disorders and cancer ( Maurer et al ., 2011 ; Schubbert et al ., 2007 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-8",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 1861,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 1730,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Consequently , numerous RAF and MEK inhibitors aimed at blocking ERK activation have been designed ( Chapman and Miner , 2011 ; Poulikakos and Solit , 2011 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-9",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2014,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 1862,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The dual specificity kinases MEK1 and MEK2 are activated by RAF and mediate phosphorylation of ERK1 and ERK2 ( Roskoski , 2012 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-10",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2140,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2014,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 and MEK2 are very similar but differ structurally in a proline rich domain in the C-terminal half of the catalytic core , which in MEK1 contains the negative regulatory phosphorylation sites T286 , targeted by Cdk5 mainly in postmitotic neurons , and T292 , essential for the negative feedback regulation of MEK by ERK1 and ERK2 ( Roskoski , 2012 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-11",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2488,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2141,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 and MEK2 also bind differentially to scaffolds such as MP1 , which plays a role in ERK1 activation at late endosomes ( Teis et al ., 2002 ) , and IQGAP1 , which regulates adhesion / migration , promotes signaling from MEK1 to ERK , and attenuates MEK2 / ERK signaling ( Roy et al ., 2005 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-12",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2768,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2488,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Finally , disruption of the mek1 gene in vivo causes abnormal placenta development and lethality around embryonic day 9.5 ( Bissonauth et al ., 2006 ; Catalanotti et al ., 2009 ; Giroux et al ., 1999 ) , while mek2 −/− mice are normal ( B é langer et al ., 2003 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-13",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3017,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 2768,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "We have recently reported that MEK1 is essential for the regulation of the timing and strength of ERK signaling .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-14",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3129,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3017,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "By phosphorylating the T292 site in the proline rich region of MEK1 , ERK exerts negative feedback control on MEK1 / MEK2 dimers .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-15",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3256,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3130,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "If MEK1 is absent , this control is disabled , leading to increased ERK signaling ( Catalanotti et al ., 2009 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-16",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3364,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3257,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Besides this negative feedback within the pathway , ERK can interfere with phosphatidylinositol-3 kinase ( PI3K )/AKT signaling , another major protumorigenic Ras effector ( Liu et al ., 2009 ; Song et al ., 2012 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-17",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3570,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3364,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In response to growth factors , PI3K converts phosphatidylinositol 4,5 diphosphate ( PIP2 ) in the second messenger phosphatidylinositol 3,4,5 triphosphate ( PIP3 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-18",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3731,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3571,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "AKT binds to PIP3 via its pleckstrin homology ( PH ) domain and translocates to the membrane , where it is activated by phosphorylation of T308 and S473 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-19",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3882,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3732,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Tumor suppressor phosphatase and tensin homolog deleted on chromosome ten ( PTEN ) dephosphorylates PIP3 , counteracting PI3K activity and restraining AKT activation ( Liu et al ., 2009 ; Song et al ., 2012 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-20",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 4084,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 3883,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Inhibition or silencing of MEK increases growth factor stimulated AKT activation ( Hoeflich et al ., 2009 ; Ussar and Voss , 2004 ; Yu et al ., 2002 ) , a finding which was linked to ERK mediated inhibition of PI3K recruitment to the epidermal growth factor ( EGF ) receptor via phosphorylation of the adaptor GAB1 ( Lehr et al ., 2004 ; Zhang et al ., 2002 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-21",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 4430,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 4085,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "We show that MEK1 is required for the control of PIP3 accumulation at the cell membrane , which it regulates by ensuring the proper localization of PTEN in the context of a ternary complex with a multiprotein adaptor , MAGI1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-22",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 4653,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 4430,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 ablation deregulates the AKT pathway which , in vivo , induces a breach of peripheral self tolerance and myeloproliferation.ResultsMEK1 Is Essential for the Negative Regulation of AKT SignalingWe monitored the impact of MEK1 on AKT signaling in wild-type ( WT ) and MEK1 knockout ( KO ) mouse embryonic fibroblasts ( MEFs ) ( Catalanotti et al ., 2009 ) stimulated with epidermal growth factor ( EGF ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-23",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5048,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 4654,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Phosphorylation of AKT and its downstream effectors mTOR , GSK3 β , and S6K was reproducibly enhanced in MEK1 deficient cells ( Figures 1A and 1C ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-24",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5192,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5049,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The increase in AKT phosphorylation was rescued by the re-expression of full-length MEK1 ( Figure 1B ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-25",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5294,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5193,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The levels of the membrane lipid PIP3 , necessary for AKT activation ( Liu et al ., 2009 ) , were significantly higher in KO MEFs than in control cells ( Figure 1D and Figures S1A and S1B available online ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-26",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5495,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5295,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In contrast , PI3K expression and activity ( Figures 1E and S1C ) were comparable in WT and KO cells , as were PTEN expression and the EGF induced dephosphorylation of the C-terminal residues which negatively regulate PTEN activity , its association with PDZ containing proteins ( Rahdar et al ., 2009 ; Vazquez et al ., 2001 ) and with PIP2 ( Figure S1D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-27",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5841,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5496,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "However , PTEN was hardly detectable at the membrane of KO MEFs , even after EGF stimulation ( Figures 1F , S1E , and S1F ) , and membrane associated PTEN activity was greatly reduced ( Figure 1G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-28",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6031,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 5842,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Consistently , focal adhesion kinase ( FAK ) , a membrane associated PTEN protein substrate ( Tamura et al ., 1998 ; Yamada and Araki , 2001 ) , was also hyperphosphorylated in KO cells ( Figure S1G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-29",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6221,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6032,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 ablation did not impact the specific activity of membrane PTEN ; in the cytosol , activity transiently increased at 5 min of EGF treatment ( Figure 1G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-30",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6376,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6222,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "PTEN can be regulated by a variety of posttranslational modifications and by the interaction with other proteins ( Song et al ., 2012 ) ; which of these mechanisms is responsible for this transient increase in cytosolic PTEN activity is currently unknown .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-31",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6628,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6377,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , MEK1 is required for correct membrane localization of PTEN and for limiting PIP3 accumulation and AKT activation.MEK1 KO Mice Develop Myeloproliferation and Autoimmune DiseaseTo investigate the function of MEK1 in vivo , we used mice with epiblast restricted MEK1 ablation ( mek1f/f ; Sox2Cre mice [ Catalanotti et al ., 2009 ] , referred to as KO mice ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-32",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6982,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6629,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "These animals , in particular the females , had a significantly decreased survival rate ( Figure 2A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-33",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7081,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 6983,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Increased numbers of circulating lymphocytes could be detected in the blood of 1- to 3-month-old mice ; this was exacerbated in old MEK1 KO animals , in which it was accompanied by granulocytosis and thrombocytosis ( Figure 2B ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-34",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7307,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7082,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "By 8 – 10 months of age , 83 % MEK1 deficient females had developed severe splenomegaly ( Figure 2C ) , hepatomegaly with lesser frequency ( Figure 2D ; observed in 45 % of the animals ) , and , occasionally , lymphadenopathy .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-35",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7520,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7308,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Liver and spleen showed effacement of architecture , extramedullary hematopoiesis , accumulation of atypical megakaryocytes , and fibrosis ( Figures 2E and S2A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-36",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7678,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7521,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Splenomegaly correlated with a massive increase in immature Mac1+ Gr1+ myeloid cells ( Figure 2F ) , a population observed in pathological conditions such as cancer and autoimmunity ( Gabrilovich and Nagaraj , 2009 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-37",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7889,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7679,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "KO bone marrow and splenocytes isolated from young , unaffected animals gave rise to a significant higher number of colony forming units in semisolid media , indicating a cell-autonomous phenotype ( Figure S2B ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-38",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8098,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 7890,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In addition , KO spleens contained significantly increased numbers of T ( CD3+ ) and B ( CD19+ ) cells ( Figure 2F ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-39",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8209,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8099,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The CD4 +/CD8+ ratio was normal , but more T and B cells were activated , as shown by the coexpression of the activation marker CD69 with CD3 and CD19 ( Figure 2G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-40",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8370,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8210,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Despite the autoimmune disease , splenic Tregs were not decreased ( data not shown ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-41",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8453,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8371,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "A slight increase in activated T cells was the only phenotype detected in the spleen of young KO mice ( Figure S2C ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-42",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8569,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8454,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In contrast to the marked phenotypic alterations in spleen and liver , KO thymi were normal in terms of cellularity and subset distribution ( Figure S2D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-43",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8722,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8570,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Among the nonhematopoietic organs , KO lungs showed thickening of the interstitial alveolar spaces with vascular congestion ( Figure S2E ) ; however , the kidneys were the organs most severely affected .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-44",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8919,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8722,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The tubules were dilated and filled with proteinaceous material , and the glomeruli displayed signs of focal proliferation and sclerosis reminiscent of glomerulonephritis , accompanied by the deposition of immunocomplexes in the glomeruli ( Figures 3A and 3B ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-45",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9177,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 8920,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In addition , antibodies against double stranded DNA ( dsDNA ) , a hallmark of lupus like autoimmune diseases , were detected in the sera of seven out of seven KO 5- to 10-month-old females ( Figure 3C ; titer of 1:100 in five mice ; 1:1000 in two mice ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-46",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9424,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9178,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "This correlated with a marked increase in the concentrations of serum immunoglobulins ( IgG1 , IgG2b , IgA ) and in the frequency of IgA and IgG producing B cells affected mice ( Figures 3D and 3E ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-47",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9618,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9425,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Circulating BAFF and interleukin-10 ( IL-10 ) ( Figure 3F ) , crucially implicated in the pathogenesis of lupus like disease ( Su et al ., 2012 ) , were also elevated , and the frequency of cells producing IL-10 , GM-CSF , transforming growth factor β , and interferon γ ( IFN γ ) was elevated to varying degrees ( Figure S3A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-48",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9929,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9619,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In all cases , the increase was most pronounced in CD4+ lymphocytes .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-49",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9997,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9930,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "IFN α , IL-3 , IL-6 , IL-17 , and IL-23 were tested but proved similar in WT and KO ( data not shown ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-50",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10094,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 9998,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , the KO mice are prone to develop both myeloproliferation and a lupus like autoimmune disorder reminiscent of those reported for pten +/− ( Di Cristofano et al ., 1999 ) , hematopoetic ( Guo et al ., 2008 ; Yilmaz et al ., 2006 ) or T cell restricted PTEN KO mice ( Liu et al ., 2010 ; Suzuki et al ., 2001 ) , and constitutively active AKT transgenic mice ( Kharas et al ., 2010 ; Parsons et al ., 2001 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-51",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10484,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10094,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 Ablation Deregulates AKT Activation and Impairs Activation Induced Cell DeathThe AKT deregulation caused by PTEN mislocalization ( Figures 1 and S1 ) could contribute to the phenotypes of MEK1 KO mice .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-52",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10688,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10484,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Indeed , AKT phosphorylation was detected to variable extents in KO kidneys , livers , lungs , spleens , and lymphnodes ( Figures 3A , S2F , and S2G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-53",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10831,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10689,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In contrast , ERK phosphorylation , deregulated in cultured fibroblasts and in some organs in vivo ( Catalanotti et al ., 2009 ) , was not affected ( Figure S2H ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-54",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10987,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10832,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Given the poor conditions of these animals , however , it is impossible to distinguish whether this phosphorylation is cause or consequence of the phenotypes observed .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-55",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11153,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 10988,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "We therefore investigated in more detail the spleens of young MEK1 KO mice , which were normal but for a slight increase in the number of activated T cells ( Figure S2C ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-56",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11322,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11154,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "pAKT ( Figure 3G ) was increased and membrane PTEN was decreased ( Figure 3H ) in the KO samples .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-57",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11416,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11323,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Increased pAKT was also observed in KO CD4+ T cells stimulated with anti-CD3 / CD28 ( Figure 3I ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-58",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11511,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11417,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "KO CD4+ T lymphocytes and B cells were less responsive to activation induced cell death ( AICD ) , a phenotype abrogated by a PI3K , but not by a MEK inhibitor ( Figures 3J and 3K ) , and to Fas induced apoptosis ( Figure 3L ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-59",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11730,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11512,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In contrast , other functions of CD4+ cells and B cells , such as their ability to proliferate and express the activation marker CD69 in response to T or B cell receptor stimulation , were unaffected ( Figures S3B and S3C ) , indicating that the resistance to AICD is the major cell-autonomous phenotype .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-60",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12029,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 11731,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "KO MEFs were also resistant to various proapoptotic stimuli ( Figures S3D and S3E ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-61",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12112,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12030,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "This is reminiscent of the impaired apoptosis observed in PTEN deficient lymphocytes ( Buckler et al ., 2008 ; Di Cristofano et al ., 1999 ; Liu et al ., 2010 ; Suzuki et al ., 2003 ) and fibroblasts ( Stambolic et al ., 1998 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-62",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12329,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12113,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "A MEK1/MAGI-1/PTEN Complex Regulates PTEN Membrane RecruitmentTo gain insight in PTEN regulation by MEK1 , we tested whether MEK1 and PTEN interacted in cells .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-63",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12487,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12329,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "PTEN was present in MEK1 immunoprecipitates ( IPs ) from growth-factor stimulated fibroblasts ( Figure 4A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-64",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12592,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12488,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Conversely , MEK1 but not MEK2 could be detected in PTEN IPs from WT cells , and interaction was enhanced upon growth factor stimulation ( Figures 4B and 4D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-65",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12748,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12593,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Recombinant PTEN and MEK1 did not interact in vitro ( Figure S4A ) , indicating a requirement for a scaffold protein that , since MEK1 impacts membrane localization of PTEN , should be involved in PTEN membrane recruitment .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-66",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12967,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12749,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Membrane associated guanylate kinase ( MAGUK ) family member with inverted domain structure-1 ( MAGI1 ) is a PTEN binding partner which localizes to the plasma membrane , specifically in domains such as adherens junctions , which act as focal points for the regulation of PIP3 pools and therefore control the recruitment and activation of AKT by assembling signaling complexes involving E-cadherin , β-catenin , and PTEN ( Bonifant et al ., 2007 ; Kotelevets et al ., 2005 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-67",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 13430,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 12968,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI1 contains six PDZ domains , a guanylate kinase ( GUK ) domain , and two WW domains flanked by two PDZ domains ( Dobrosotskaya et al ., 1997 ) ; PTEN binds selectively to the second PDZ domain of MAGI1 ( Kotelevets et al ., 2005 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-68",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 13655,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 13431,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Several isoforms and splice variants of MAGI1 are expressed in different cell types ( Dobrosotskaya et al ., 1997 ; Emtage et al ., 2009 ; Kotelevets et al ., 2005 ; Laura et al ., 2002 ; Xu et al ., 2008 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-69",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 13852,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 13656,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI1 in MEFs appeared as multiple bands , with a predominant band of approximately 100 kD ( MAGI1100 , marked by an asterisk ) and two further bands of about 130 and 150 kD .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-70",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14023,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 13853,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The 100 kD isoform was selectively recruited to the membrane upon growth factor stimulation of WT cells , but MEK1 ablation prevented MAGI1 membrane translocation ( Figure 4C ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-71",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14198,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14024,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In addition , MAGI1100 was detected in PTEN IPs from WT but not MEK1 KO MEF whole-cell lysates and membrane fractions ( Figures 4D and S4B ) , and the interaction between PTEN and MAGI1 could be restored by addition of recombinant MEK1 to the KO lysates prior to PTEN immunoprecipitation ( Figure 4E ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-72",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14495,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14199,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI1 was detectable in MEK1 , but not in MEK2 IPs ( Figures S4C and S4D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-73",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14568,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14496,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , MEK1 is essential for the formation of a complex containing MAGI1 and PTEN and for their membrane translocation upon growth factor stimulation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-74",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14718,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14569,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The kinetics of EGF induced complex formation was similar to that of MEK1 phosphorylation on the ERK dependent negative regulatory residue T292 , unique to MEK1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-75",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14879,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14719,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "pT292 MEK1 was enriched in PTEN immunoprecipitates , as assessed by densitometry ( 10 % of total pT292 MEK1 versus 0.7 % of total MEK1 in PTEN IPs from EGF stimulated cells ) , while neither the activating RAF dependent ( S218 and S222 ) nor the PAK dependent ( S298 ) sites correlated well with binding ( Figure 4D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-76",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15186,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 14880,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , T292 might work as a temporal switch , ensuring that ternary complex formation and membrane translocation occur after ERK activation.MEK1 ablation decreases PTEN membrane localization and increases AKT phosphorylation in splenocytes ( Figures 3G and 3H ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-77",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15445,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15187,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI1100 is expressed in spleen , and it is detectable , together with MEK1 , in PTEN immunoprecipitates from WT but not KO organs ( Figure 4F ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-78",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15586,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15446,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Therefore , the mechanism described for the MEFs operates also in the spleen .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-79",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15663,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15587,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In line with the lack of phenotype and AKT activation in KO thymi ( Figures S2D and S2G ) , MAGI1100 was not expressed in thymus , and MEK1 was absent in PTEN immunoprecipitates from this organ ( Figure 4F ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-80",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15866,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15664,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In MEFs , MAGI1 is the most efficiently expressed MAGI protein ( Figure S4E ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-81",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15941,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15866,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Consistently , MAGI1 knockdown efficiently abrogated PTEN binding to MEK1 ( Figure 4G ) , reduced PTEN membrane localization , and increased AKT activation ( Figures S4F and S4G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-82",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16115,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 15942,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , MAGI1 is the scaffold mediating the interaction between MEK1 and PTEN .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-83",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16192,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16116,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The ternary complex was also found in human , rat , and chicken cells ( Figure S4H ) and in monkey cells ( Figure 5H ) , indicating that it represents an important conserved regulatory principle.We next examined the interaction of MEK1 with selected MAGI1 domains expressed as myc-fusion proteins ( Xu et al ., 2008 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-84",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16501,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16193,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The GUK and , to a greater extent , the two WW domains were detectable in MEK1 IPs , whereas the PTEN binding PDZ domains were not ( Figure 5A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-85",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16642,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16502,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Consistently , deletion of either the GUK or the WW domains reduced MAGI1 binding to MEK1 , and deletion of both domains abolished it ( Figure 5B ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-86",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16787,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16643,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEK1 was detectable in full-length MAGI1 , GUK , and WW domain IPs .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-87",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16853,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16788,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "GUK domains are phosphopeptide binding modules ( Zhu et al ., 2011 ) , and WW motifs recognize proline rich ligands , also in conjunction with S/T phosphorylation ( Gao et al ., 2009 ; Ingham et al ., 2005 ; Macias et al ., 2002 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-88",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17073,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 16854,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Mutation of T292 in the proline rich region of MEK1 to a nonphosphorylatable A ( T292A ) decreased , and a phosphomimetic ( T292D ) mutation increased , binding to MAGI1 and WW , but not GUK ( Figures 5C – 5E ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-89",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17274,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17074,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , if the GUK domain is phosphosensitive , binding must depend on a different phosphorylation site .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-90",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17376,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17275,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Mutation of the WW domains of MAGI1 , in particular of WW2 , strongly reduced MEK1 binding by a WW MAGI1 fragment or by full-length MAGI1 ( Figures 5F and 5G ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-91",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17533,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17377,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Remarkably , a MAGI1 GUK-WW fragment , which binds to MEK1 but not to PTEN , strongly reduced the binding of endogenous MEK1 and MAGI1 to PTEN , reduced PTEN membrane recruitment , and triggered AKT hyperactivation ( Figures 5H and 5I ) , mimicking the MEK1 KO .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-92",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17787,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17534,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "A MAGI1 GUK-WW2 domain mutant was less efficient in preventing MEK1 / MAGI1 binding to PTEN and causing AKT activation ( Figure 5H ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-93",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17917,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17788,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The residual MEK1 binding / dominant negative activity of the MAGI1 GUK-WW2 domain mutant is likely due to the interaction of the MAGI1 GUK domain with other MEK1 binding sites ( Figures 5A , 5B , and 5D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-94",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18118,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 17918,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Together , the data support the hypothesis that perturbations of the ternary complex PTEN / MAGI /  MEK1 result in AKT activation.MEK1 T292 Phosphorylation Controls Complex FormationTo further investigate the role of T292 , we monitored complex formation in KO MEFs reconstituted with nonphosphorylatable T292A or phosphomimetic T292D MEK1 mutants .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-95",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18460,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18119,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The mutants expressed at comparable levels , slightly lower than WT MEK1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-96",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18533,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18461,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI1100 formed a complex with PTEN in WT and T292D cells , but not in KO or T292A cells ; in addition , complex formation between MAGI1 , PTEN , and the phosphomimetic MEK1 T292D mutant was not regulated by growth factor treatment ( Figure 6A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-97",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18773,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18534,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Like KO MEFs , MEK1 T292A cells showed defective PTEN membrane recruitment , and PIP3 accumulation and AKT phosphorylation were increased above the levels observed in KO cells .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-98",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18947,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18773,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The exact reasons for these differences between KO and reconstituted cells are unknown .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-99",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19035,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 18948,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In contrast , MEK1 T292D mutant cells displayed constitutive PTEN membrane recruitment , as well as low levels of PIP3 and AKT phosphorylation ( Figures 6B – 6D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-100",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19193,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19036,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Consistent with this biochemical behavior , MEK1 T292A cells were resistant to TNF α-induced apoptosis ( Figure S5A ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-101",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19308,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19194,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , T292 phosphorylation is a prerequisite for proper complex formation and for the regulation of the PIP3 pathway.T292 is phosphorylated by ERK , which might thus regulate the timing of PTEN membrane recruitment and AKT signaling .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-102",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19541,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19309,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Indeed , MEK inhibitors blocked both ERK and T292 phosphorylation , concomitantly increasing AKT phosphorylation ( Figures 6E and S5B ) and PIP3 accumulation ( Figure 6F ) and , most importantly , reducing the binding of MEK1 and MAGI1100 to PTEN and of MAGI1100 to MEK1 ( Figures 6G and 6H ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-103",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19825,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19542,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In MEK1 T292D MEFs , MEK inhibition did not perturb the association of PTEN with MEK1 or MAGI1100 or AKT phosphorylation ( Figures 6I and 6J ) ; thus , phosphorylation of T292 is required , and MEK1 kinase activity is dispensable , for the interaction of MEK1 with MAGI100 and PTEN.Two other MAGI family proteins , MAGI2 and MAGI3 , were also able to form complexes with MEK1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-104",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20193,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 19826,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Consistent with the data obtained for MAGI1 , chemical inhibition of T292 phosphorylation decreased the recruitment of MAGI2 and 3 to the membrane ( Figures S5C and S5D ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-105",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20362,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20194,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "DiscussionA Kinase Independent Role for MEK1 in the Regulation of PTEN FunctionWe report the existence of a ternary complex between MEK1 , MAGI1 , and PTEN , mediating the translocation of PTEN to the membrane and therefore regulating the concentration of PIP3 and AKT activation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-106",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20639,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20362,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Both MEK1 and MAGI1 are necessary for complex formation , and PTEN will not bind to one component if the other is missing .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-107",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20761,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20640,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The complex is held together by MAGI1 , which contacts PTEN via its PDZ domain ( Kotelevets et al ., 2005 ) and MEK1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-108",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20875,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20762,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI1 binds to MEK1 via its GUK and WW2 domains , but only binding to the WW domains is sensitive to the ERK mediated phosphorylation of T292 in MEK1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-109",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 21025,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 20876,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The MAGI1 WW domains are very similar to the group Ib WW2 and WW3 domains of the ubiquitin ligase Nedd4L , whose binding to SMAD2 and SMAD3 depends on the phosphorylation of a T in the linker region ( Gao et al ., 2009 ) ; the NEDD4 WW2 domain has been found to bind to proteins containing PR sequences in an unbiased proteomic screen ( Ingham et al ., 2005 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-110",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 21378,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 21026,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "T292 of MEK1 is embedded in such a PR containing sequence ( PPRPRTPGRP in MEK1 , SPRPRPPGRP in MEK2 ) ; in addition , the MEK1 sequence does not contain any other predicted WW binding sites .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-111",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 21564,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 21379,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Since the proline rich loop of MEK1 is disordered in all available crystal structures , its interaction with the MAGI1 WW domains cannot be modeled , and at this point it is not possible to distinguish whether phosphorylation creates a reversible MAGI1 binding site on MEK1 or induces exposure of another MAGI1 binding site through an allosteric mechanism.Besides being essential for the assembly of the MEK1 / MAGI /  PTEN complex , pT292 is also required for the downregulation of MEK2 dependent ERK signaling , mediated by MEK1 in the context of a MEK1 / MEK2 heterodimer ( Catalanotti et al ., 2009 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-112",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 22156,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 21565,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , phosphorylation of MEK1 T292 relays a negative feedback within the ERK pathway and initiates the deactivation of the PIP3 / AKT pathway through the membrane localization of MAGI / PTEN , acting as a temporal switch for both cascades.MEK1 has been reported to bind to another WW domain containing protein , namely the proapoptotic tumor suppressor WOX1 , associated with the death of activated T cell leukemia .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-113",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 22565,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 22157,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In this case , however , the WOX1 / MEK1 complex dissociates upon ERK activation ( Lin et al ., 2011 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-114",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 22662,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 22566,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Thus , ERK differentially regulates binding of MEK1 to WW domain containing proteins and may negatively affect survival by promoting the translocation of WOX1 to the mitochondria ( Lin et al ., 2011 ) and the membrane recruitment of PTEN in the context of the MEK1/MAGI1/PTEN complex.Our data show that MEK1 binding to the GUK and WW domains of MAGI1 promotes both complex formation between MAGI1 and PTEN and their membrane translocation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-115",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23098,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 22663,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "We do not know in detail how this is accomplished .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-116",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23149,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23099,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "One hypothesis is that binding to MEK1 will cause a conformational change in MAGI1 , exposing the PDZ domains necessary for PTEN binding ( PDZ2 [ Kotelevets et al ., 2005 ] ) and for the binding to membrane proteins such as cadherins ( PDZ4 and PDZ5 [ Kotelevets et al ., 2005 ; Mizuhara et al ., 2005 ; Xu et al ., 2008 ] ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-117",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23460,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23150,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Intramolecular interactions between the SH3 and the GUK domain of other MAGUK proteins have been described , postulated to keep the proteins in an inactive , “ closed ” conformation ( Montgomery et al ., 2004 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-118",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23665,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23461,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In MAGI , the WW domain replaces the SH3 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-119",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23706,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23666,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "It is conceivable that the WW domain may also be involved in intramolecular interactions that can be interrupted by MEK1 binding .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-120",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23836,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23707,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Whatever the mechanism involved , MEK1 kinase activity is not required for complex formation and MEK1 binds to MAGI1 as a monomer or as a MEK1 dimer , but not as a heterodimer.It is noteworthy that MEK1 , but not PTEN , binds selectively to MAGI100 , the only isoform translocated to the membrane in response to growth factors .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-121",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24159,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 23837,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Binding of PTEN to other MAGI1 isoforms may localize the phosphatase to other subcellular compartments , such as the nucleus ( Dobrosotskaya et al ., 1997 ; Laura et al ., 2002 ) , but it does not rescue membrane recruitment in the absence of MEK1 .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-122",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24401,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24160,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In addition , MAGI1100 is selectively expressed in organs and cells that are affected by MEK1 ablation ( compare thymus and spleen in Figure 4F ) , where it correlates with the lack of PTEN membrane recruitment.The possibility also exists that it is MEK1 , rather than MAGI1 , that mediates the membrane recruitment of the ternary complex .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-123",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24735,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24402,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In this context , MEK reportedly binds to paxillin , and growth factor treatment induces the recruitment of Raf and ERK to this complex .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-124",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24870,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24736,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Activated ERK phosphorylates paxillin on S83 , promoting its association with activated FAK and PI3K and increasing cell spreading ( Ishibe et al ., 2004 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-125",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 25023,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 24871,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The study did not differentiate between MEK1 and MEK2 ; however , our data would predict that in the absence of MEK1 at least a certain number of focal adhesions would fail to recruit MAGI / PTEN , resulting in the increased FAK phosphorylation , growth factor induced migration , and cell spreading ( Catalanotti et al ., 2009 ) observed in the MEK1 KO fibroblasts.Finally , some PTEN membrane binding , unaffected by EGF stimulation , can be observed in MEK1 KO fibroblasts ( on average , approximately 20 % of the WT ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-126",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 25529,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 25024,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "It is conceivable that this binding is mediated by the N-terminal PIP2 binding motif of PTEN , which has been shown to be necessary for membrane association ( Rahdar et al ., 2009 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-127",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 25708,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 25530,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Alternative binding mechanisms likely underlie the rather modest EGF mediated membrane recruitment of PTEN and MEK1 , compared with the robust increase of MAGI1 ; consistent with this , a strong increase in the amount of both MEK1 and MAGI1100 is observed in membrane PTEN IPs from stimulated cells , indicating that EGF causes the preferential recruitment of the ternary complex to the membrane.Together , these data define a unique kinase independent function of MEK1 outside the canonical pathway and provide insight into PTEN regulation.Biological Implications of a Disabled FeedbackMEK1 KO mice succumb early to an autoimmune disease accompanied by extramedullary hematopoiesis .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-128",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 26387,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 25709,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The latter phenotype has been observed in PTEN cell-type-restricted KO or AKT transgenic mice ( Guo et al ., 2008 ; Kharas et al ., 2010 ; Yilmaz et al ., 2006 ) , and we could show that KO bone marrow and spleen from unaffected animals contain significantly higher numbers of colony forming units , indicating a cell-autonomous phenotype .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-129",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 26718,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 26388,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "At this point , however , the contribution of the MEK1 KO environment , with its lymphoid dysregulation and autoimmune disease , is unclear .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-130",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 26855,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 26719,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Cell-type-restricted MEK1 ablation and transplantation experiments are planned to clarify this matter.The autoimmune disease clearly correlates with a reduction in T cell activation induced cell death and with AKT activation in T cells and kidney .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-131",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27103,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 26856,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "A similar phenotype can be achieved by genetic manipulations increasing PIP3 / AKT signaling ( Borlado et al ., 2000 ; Di Cristofano et al ., 1999 ; Liu et al ., 2010 ; Parsons et al ., 2001 ; Suzuki et al ., 2001 ) , but also by adoptive transfer of mouse T lymphocytes treated ex vivo with MEK inhibitor ( Deng et al ., 2003 ) or T cell restricted expression of a dominant negative mek transgene ( Sawalha et al ., 2008 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-132",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27508,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27104,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The latter treatments would mimic the MEK1 KO by reducing phosphorylation of the critical T292 residue in MEK1 and therefore PTEN membrane recruitment .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-133",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27660,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27509,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Importantly , both reduced ERK activation ( Gorelik and Richardson , 2010 ) and increased AKT signaling ( Tang et al ., 2009 ) have been observed in T cells from lupus patients .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-134",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27831,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27661,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Together with our data , these results suggest that the activation of ERK and its crosstalk with the PI3K pathway are crucial players in the development of experimental and possibly clinical lupus like autoimmune diseases.The MEK1 KO does not phenocopy T cell restricted PTEN deletion in two aspects : the breach of central tolerance ( Suzuki et al ., 2001 ) and the development of T cell lymphomas ( Liu et al ., 2010 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-135",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28245,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 27832,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In both cases , the cells responsible for the phenotype originate in the thymus , which is not affected in the MEK1 KO mice .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-136",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28368,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28246,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "This lack of phenotype correlates with the lack of expression of MAGI100 , and underscores the specific effect of MEK1 on this particular mechanism of PTEN regulation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-137",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28535,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28369,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In this context , it is important to consider that the impaired membrane localization of MAGI-1 in KO cells and organs might cause deregulation / mislocalization of one or more of its many interaction partners , thereby playing a role in the phenotype of the MEK1 KO mice.Is the regulation of PTEN by MEK1 / MAGI relevant in the context of cancer ?",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-138",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28877,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28536,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MAGI has been found mutated in human cancer genomes ( Berger et al ., 2011 ; Pleasance et al ., 2010 ) , and it can suppress the growth of tumor xenografts ( Zaric et al ., 2012 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-139",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29049,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 28878,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Based on this , it is in principle possible that MEK1 may act as a tumor suppressor under certain conditions , as observed in a model of Myc induced B cell lymphoma ( Bric et al ., 2009 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-140",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29233,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29050,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "More broadly , inhibition of the Raf/MEK/ERK pathway often causes activation of the AKT pathway in cancer ( Hoeflich et al ., 2009 ; Mirzoeva et al ., 2009 ; Wee et al ., 2009 ) , due to the release of yet incompletely identified negative feedback loops .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-141",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29479,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29234,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The use of Raf or MEK inhibitors might , by preventing the phosphorylation of T292 in MEK1 , decrease PTEN membrane recruitment , increasing PIP3 concentrations and favoring the emergence of resistance mechanisms relying on the PI3K / AKT pathway .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-142",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29722,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29480,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "This would provide a mechanistic framework for the combined inhibition of these pathways , which is being increasingly advocated as the treatment of choice ( Hoeflich et al ., 2012 ; Sos et al ., 2009 ; Villanueva et al ., 2010 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-143",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29945,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29723,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Experimental ProceduresMicemek1f/f ; Sox2Cre mice ( Catalanotti et al ., 2009 ) were maintained on a mixed Sv129 / Bl6 background .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-144",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30069,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 29945,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Animal experiments were performed in accordance with a protocol authorized by the Austrian Ministry of Science and Communications.Cell Culture and TransfectionsMEFs and stable KO clones re-expressing WT and mutant MEK1 ( Catalanotti et al ., 2009 ) were grown in Dulbecco ’ s modified Eagle ’ s medium plus 10 % ( v/v ) fetal calf serum ( FCS ) ( PAA ) and starved in 0.5 % ( v/v ) FCS overnight prior to treatment with EGF ( 2 ng/ml , Biomedical Technologies ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-145",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30512,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30070,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Inhibitors ( 10 nM PD0325901 , Sigma-Aldrich ; 10 μ M U0126 and 50 μ M LY294002 , Cell Signaling ) were added 1 hr before stimulation .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-146",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30640,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30513,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "MEFs were transfected with 30 nM MAGI siRNA duplexes ( Sakurai et al ., 2006 ) or nontargeting pool ( D-001810-10-05 , Dharmacon ) with Lipofectamine RNAiMAX ( Invitrogen ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-147",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30806,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30641,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "COS-7 cells were transfected with TurboFect ( Fermentas ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-148",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30863,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30807,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Splenic CD4+ T and B cells were purified with MACS negative selection kits ( MiltenyiBiotec ; purity approximately 95 % by fluorescence activated cell sorting [ FACS ] ) and cultured in RPMI 1640 ( PAA ) plus 10 % FCS , 1 mM sodium pyruvate ( Sigma-Aldrich ) , 1 % nonessential amino acids ( Sigma-Aldrich ) , 50 μ M β-ME , and 10 mM N-acetylcysteine .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-149",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31195,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 30863,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "In T cells , AICD was induced with anti-CD3 / CD28 ( 1 μ g/ml and 0.5 μ g/ml , both BD PharMingen ) for 72 hr , followed by 16 hr stimulation with α CD3 ( 10 μ g/ml ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-150",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31350,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31196,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "B cells were treated with soluble anti-IgM Fab2 fragment ( 0.1 μ g/ml , Jackson ImmunoResearch ) and analyzed 24 hr later .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-151",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31469,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31351,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "FasL ( 100 ng/ml , Adipogen ) induced apoptosis was monitored 6 hr after the treatment .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-152",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31554,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31470,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Cell death was measured by annexinV / propidium iodide staining ( eBiosciences ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-153",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31632,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31555,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Immunoprecipitation , Pull-Down , Cell Fractionation , Immunoblotting , ELISA , and ELISpotCells were lysed in a buffer containing 20 mM TrisHCl ( pH 7.4 ) , 137 mM NaCl , 1 mM CaCl2 , 1 mM MgCl2 , 1 % NP-40 , 1 mM Na3VO4 , 50 mM NaF , 2 mM PMSF , and protein inhibitor cocktail ( Roche ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-154",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31903,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31632,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "IPs were prepared by addition of the appropriate antibodies prior to incubation with protein A-sepharose ( GE Healthcare ) or protein G-agarose ( Thermo Scientific ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-155",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32066,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 31904,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Phosphatase activity in PTEN IPs was monitored as described ( Sanchez et al ., 2005 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-156",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32150,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32067,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Pull-down experiments were carried out in IP buffer plus 0.1 % BSA with purified recombinant PTEN ( Calbiochem ) and MEK1 ( gift of I. Moarefi , Crelux ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-157",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32299,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32151,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "The Thermo Scientific or ProteoJet membrane protein extraction kit ( Fermentas ) or hypotonic lysis / differential centrifugation were used to produce cytoplasmic and membrane ( plasma , mitochondria , and ER/Golgi ) fractions .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-158",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32519,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32300,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Immunoblotting was performed with the antibodies detailed in the Supplemental Experimental Procedures .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-159",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32622,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32520,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Echelon kits were used to determine PIP3 levels ( mass ELISA ) and PI3K activity ( ELISA ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-160",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32710,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32623,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Serum antibodies , BAFF , and IL-10 were detected by ELISA ( Life Diagnostics and R & D Systems ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-161",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32803,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32711,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "ELISpot assays were performed with IgA and IgG ELISpot kits ( Mabtech ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-162",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32874,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32804,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "ImmunofluorescenceAnti-dsDNA antibodies were detected by Crithidia luciliae ( Orgentec ) kinetoplast staining with FITC conjugated goat anti-mouse Ig antibody ( Invitrogen ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-163",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33044,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 32874,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Confocal images were acquired with LSM Meta ( Zeiss ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-164",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33097,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33045,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "For details , see the Supplemental Experimental Procedures.Blood Analysis and FACSPeripheral blood cell counts were acquired with V-Sight ( Menarini Diagnostics ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-165",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33258,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33098,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Cells were stained with antibodies against CD19 , CD3e , CD4 , CD8a , Mac1 , Gr-1 , and CD69 ( all BD PharMingen ) and analyzed by FACSCalibur and FACSAria ( BectonDickinson ) and FlowJo software.Histology and ImmunohistochemistryHematoxylin and eosin staining and immunohistochemistry were carried out as described ( Catalanotti et al ., 2009 ) with pAKT ( S473 ) and pERK ( T202 / Y204 ; both Cell Signaling ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-166",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33651,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33259,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Reticular fibers were visualized by Gomori staining .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-167",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33704,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33652,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Frozen kidney sections were examined as described in ( Di Cristofano et al ., 1999 ) .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-168",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33787,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33705,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "Statistical AnalysisValues are expressed as mean ( ± SD ) of at least three independent experiments .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-169",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33884,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33787,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "p values were calculated with the two tailed Student ’ s t test .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-170",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33947,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33885,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  }, {
+    "text" : "A p value ≤ 0.05 is considered statistically significant .",
+    "frame-id" : "sent-PMC3625979-UAZ-r1-PMC3625979-171",
+    "passage" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+    "frame-type" : "sentence",
+    "end-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 34004,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3625979-UAZ-r1-PMC3625979",
+      "offset" : 33948,
+      "object-type" : "relative-pos"
+    },
+    "object-meta" : {
+      "component" : "BioNLPProcessor",
+      "object-type" : "meta-info"
+    }
+  } ],
+  "object-type" : "frame-collection",
+  "object-meta" : {
+    "processing-end" : "2023-03-18T23:37:40Z",
+    "doc-id" : "PMC3625979",
+    "component-type" : "machine",
+    "component" : "Reach",
+    "processing-start" : "2023-03-18T23:34:06Z",
+    "object-type" : "meta-info",
+    "organization" : "UAZ"
+  }
+}

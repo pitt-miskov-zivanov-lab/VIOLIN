@@ -1,0 +1,2697 @@
+{
+  "frames" : [ {
+    "text" : "phosphatase function that directly opposes PI3K signaling by dephosphorylating PIP3",
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-9-3",
+    "arguments" : [ {
+      "text" : "dephosphorylating PIP3",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC3375464-UAZ-r1-PMC3375464-9-4"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-9-5"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 2059,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 1976,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "Dephosphorylation_syntax_1a_verb + toRelationMention",
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-9",
+    "verbose-text" : "Pten encodes a protein with a lipid phosphatase function that directly opposes PI3K signaling by dephosphorylating PIP3 at the 3′ position to generate PIP2."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-9-4",
+    "text" : "dephosphorylating PIP3",
+    "arguments" : [ {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-9-4"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "dephosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 2059,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "dephosphorylating",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 2037,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-9",
+    "found-by" : "Dephosphorylation_syntax_1a_verb",
+    "verbose-text" : "Pten encodes a protein with a lipid phosphatase function that directly opposes PI3K signaling by dephosphorylating PIP3 at the 3′ position to generate PIP2."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-10-42",
+    "text" : "levels of PIP3",
+    "arguments" : [ {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-10-59"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 2144,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 2130,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-10",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-0-1" ],
+    "verbose-text" : "Cells lacking PTEN have elevated levels of PIP3 and constitutive activation of PI3K signaling pathways (Stambolic et al., 1998; Cantley and Neel, 1999)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-22-39",
+    "text" : "PI3Ks are activated by receptor tyrosine kinases that drive co-stimulatory, T cell receptor",
+    "arguments" : [ {
+      "text" : "PI3Ks",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-22-128"
+    }, {
+      "text" : "receptor",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-22-131"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5357,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5266,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-22",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "However, these studies indicate that potential therapies targeting PI3K for inflammatory diseases and cancer may not compromise all aspects of cellular immunity, and further suggest that PI3K signaling has specialized functions in the context of T cell activation.PTEN/PI3K signaling in mature T cells.Class 1A PI3Ks are activated by receptor tyrosine kinases that drive co-stimulatory, T cell receptor (TCR), and cytokine signaling pathways."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-22-38",
+    "text" : "PI3Ks are activated by receptor tyrosine kinases that drive co-stimulatory, T cell receptor (TCR",
+    "arguments" : [ {
+      "text" : "PI3Ks",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-22-128"
+    }, {
+      "text" : "TCR",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-22-132"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5362,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "activated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5266,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-22",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "However, these studies indicate that potential therapies targeting PI3K for inflammatory diseases and cancer may not compromise all aspects of cellular immunity, and further suggest that PI3K signaling has specialized functions in the context of T cell activation.PTEN/PI3K signaling in mature T cells.Class 1A PI3Ks are activated by receptor tyrosine kinases that drive co-stimulatory, T cell receptor (TCR), and cytokine signaling pathways."
+  }, {
+    "text" : "PDK1 and Akt bind PIP3",
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-77",
+    "arguments" : [ {
+      "text" : "PDK1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-137"
+    }, {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-139"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5523,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5501,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "binding1b",
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-29",
+    "text" : "Akt bind PIP3",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-138"
+    }, {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-139"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5523,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "bind",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5510,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "found-by" : "binding1b",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-24-4" ],
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-74",
+    "text" : "Akt bind PIP3, enabling Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-140"
+    }, {
+      "text" : "Akt bind PIP3",
+      "argument-type" : "complex",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "args" : {
+        "theme1" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-138",
+        "theme2" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-139"
+      }
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5537,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "enabling",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5510,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-28",
+    "text" : "PDK1 and Akt bind PIP3",
+    "arguments" : [ {
+      "text" : "PDK1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-137"
+    }, {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-139"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5523,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "bind",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5501,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "found-by" : "binding1b",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-24-4" ],
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "text" : "Akt bind PIP3",
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-75",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-138"
+    }, {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 1,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-139"
+    } ],
+    "type" : "complex-assembly",
+    "frame-type" : "event-mention",
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5523,
+      "object-type" : "relative-pos"
+    },
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5510,
+      "object-type" : "relative-pos"
+    },
+    "found-by" : "binding1b",
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-76",
+    "text" : "PDK1 and Akt bind PIP3, enabling Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-140"
+    }, {
+      "text" : "PDK1 and Akt bind PIP3",
+      "argument-type" : "complex",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "args" : {
+        "theme1" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-137",
+        "theme2" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-139"
+      }
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5537,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "enabling",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5501,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-24-52",
+    "text" : "phosphorylated by PDK1 on Ser308",
+    "arguments" : [ {
+      "text" : "PDK1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-141"
+    }, {
+      "text" : "Ser308",
+      "argument-type" : "entity",
+      "type" : "site",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-24-142"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5576,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 5544,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-24",
+    "found-by" : "Phosphorylation_syntax_3a_verb",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-24-4" ],
+    "verbose-text" : "Through their PH-domains, PDK1 and Akt bind PIP3, enabling Akt to be phosphorylated by PDK1 on Ser308."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-29-30",
+    "text" : "Activation of S6K and 4EBPs by mTORC1",
+    "arguments" : [ {
+      "text" : "4EBPs",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-29-161"
+    }, {
+      "text" : "mTORC1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-29-162"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6239,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "Activation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6202,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-29",
+    "found-by" : "Positive_activation_syntax_2_noun",
+    "verbose-text" : "Activation of S6K and 4EBPs by mTORC1 results in increased protein translation, allowing growth and proliferation, and upregulation of Hif-1α, important for glycolytic metabolism."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-29-25",
+    "text" : "protein translation, allowing growth and proliferation",
+    "arguments" : [ {
+      "text" : "proliferation",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-29-164"
+    }, {
+      "text" : "protein translation",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-29-163"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6315,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "allowing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6261,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-29",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Activation of S6K and 4EBPs by mTORC1 results in increased protein translation, allowing growth and proliferation, and upregulation of Hif-1α, important for glycolytic metabolism."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-30-32",
+    "text" : "GSK3 also contribute to Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-30-169"
+    }, {
+      "text" : "GSK3",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-30-168"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6441,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "contribute",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6414,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-30",
+    "found-by" : "Positive_activation_syntax_7_verb",
+    "verbose-text" : "Inhibitory targeting of Bad and GSK3 also contribute to Akt’s effect on cell cycle, survival and metabolism.PI3K activation is critical for optimal responses of T cells to cytokines which utilize the common gamma chain."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-31-47",
+    "text" : "IL-2R on activated T cells results in activation of the Jak",
+    "arguments" : [ {
+      "text" : "Jak",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-31-175"
+    }, {
+      "text" : "IL-2R",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-31-173"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6692,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "results in activation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6633,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-31",
+    "found-by" : "Positive_activation_syntax_8_verb",
+    "verbose-text" : "For example, engagement of the IL-2R on activated T cells results in activation of the Jak/Stat pathway, as well as the PI3K and MAPK pathways, and the combination of these signals is required for the observed proliferation and cell survival in response to IL-2."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-31-46",
+    "text" : "IL-2R on activated T cells results in activation of the Jak/Stat",
+    "arguments" : [ {
+      "text" : "Stat",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-31-176"
+    }, {
+      "text" : "IL-2R",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-31-173"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6697,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "results in activation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6633,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-31",
+    "found-by" : "Positive_activation_syntax_8_verb",
+    "verbose-text" : "For example, engagement of the IL-2R on activated T cells results in activation of the Jak/Stat pathway, as well as the PI3K and MAPK pathways, and the combination of these signals is required for the observed proliferation and cell survival in response to IL-2."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-32-31",
+    "text" : "PTEN, which is constitutively expressed",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-32-183"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6988,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expressed",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 6949,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-32",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-0-1" ],
+    "verbose-text" : "Thus, appropriate responses to TCR ligation and cytokines require downregulation of PTEN, which is constitutively expressed in naïve T cells."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-33-37",
+    "text" : "PTEN expression",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-33-186"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 7115,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 7100,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-33",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-30-5" ],
+    "verbose-text" : "This normally occurs as a consequence of TCR stimulation itself, which terminates detectable PTEN expression within 24–48 h."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-35-63",
+    "text" : "expression of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-35-187"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 7244,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 7226,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-35",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-35-6" ],
+    "verbose-text" : "First, retroviral mediated “enforced” expression of PTEN renders activated IL-2R+ T cells unable to fully respond to IL-2 stimulation."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-41-55",
+    "text" : "PTEN expression",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-41-214"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 8653,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 8638,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-41",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-41-11" ],
+    "verbose-text" : "Lastly, the promotion of iTreg generation and maintenance by PD-L1 is associated with downregulation of Akt signaling and concomitant upregulation of PTEN expression (Francisco et al., 2009)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-43-27",
+    "text" : "loss of Pten",
+    "arguments" : [ {
+      "text" : "Pten",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-43-221"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 9089,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 9077,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-43",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-42-12" ],
+    "verbose-text" : "In the absence of IL-7R and pre-TCR signaling, loss of Pten allows cells to bypass the β-selection checkpoint, indicating that PI3K signaling is crucial for the ongoing development of early T cell precursors."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-47-13",
+    "text" : "expression of the IL-7R",
+    "arguments" : [ {
+      "text" : "IL-7R",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-47-242"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10701,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10678,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-47",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-47-16" ],
+    "verbose-text" : "In quiescent cells, Foxos are active within the nucleus, where they maintain the pattern of chemokine and adhesion molecule expression, and expression of the IL-7R, needed for the migration and survival of circulating T cells (Fabre et al., 2008; Finlay et al., 2009; Kerdiles et al., 2010)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-47-70",
+    "text" : "chemokine and adhesion molecule expression",
+    "arguments" : [ {
+      "text" : "chemokine",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-47-240"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10672,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10630,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-47",
+    "found-by" : "expression_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-47-16" ],
+    "verbose-text" : "In quiescent cells, Foxos are active within the nucleus, where they maintain the pattern of chemokine and adhesion molecule expression, and expression of the IL-7R, needed for the migration and survival of circulating T cells (Fabre et al., 2008; Finlay et al., 2009; Kerdiles et al., 2010)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-48-1",
+    "text" : "Akt phosphorylation on Ser473, mediated by mTORC2",
+    "arguments" : [ {
+      "text" : "Akt phosphorylation on Ser473",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC3375464-UAZ-r1-PMC3375464-48-2"
+    }, {
+      "text" : "mTORC2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-48-3"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10879,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10830,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-48",
+    "found-by" : "Positive_regulation_syntax_2_verb",
+    "verbose-text" : "Akt phosphorylation on Ser473, mediated by mTORC2, is critical for Foxo inactivation, implicating mTOR in control over Foxos, and placing PTEN upstream in this pathway."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-48-2",
+    "text" : "Akt phosphorylation on Ser473",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-48-1"
+    }, {
+      "text" : "Ser473",
+      "argument-type" : "entity",
+      "type" : "site",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-48-2"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10859,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylation",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 10830,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-48",
+    "found-by" : "Phosphorylation_syntax_4_noun",
+    "verbose-text" : "Akt phosphorylation on Ser473, mediated by mTORC2, is critical for Foxo inactivation, implicating mTOR in control over Foxos, and placing PTEN upstream in this pathway."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-54-72",
+    "text" : "phosphorylate and inactivate Foxos (Hu et al., 2004",
+    "arguments" : [ {
+      "text" : "Hu et al., 2004",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-54-273"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12060,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylate",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12009,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-54",
+    "found-by" : "Phosphorylation_syntax_1a_verb",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-54-20" ],
+    "verbose-text" : "As IKKβ has been shown to phosphorylate and inactivate Foxos (Hu et al., 2004), this implicates Foxos in a critical negative feedback loop that may serve to limit inflammatory responses in certain settings, and is potentially important in the context of tumors which maintain low levels of Akt activation."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-54-73",
+    "text" : "phosphorylate and inactivate Foxos",
+    "arguments" : [ {
+      "text" : "Foxos",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-54-272"
+    } ],
+    "type" : "protein-modification",
+    "frame-type" : "event-mention",
+    "subtype" : "phosphorylation",
+    "is-direct" : true,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12043,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "phosphorylate",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12009,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-54",
+    "found-by" : "Phosphorylation_syntax_1a_verb",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-54-20" ],
+    "verbose-text" : "As IKKβ has been shown to phosphorylate and inactivate Foxos (Hu et al., 2004), this implicates Foxos in a critical negative feedback loop that may serve to limit inflammatory responses in certain settings, and is potentially important in the context of tumors which maintain low levels of Akt activation."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-54-34",
+    "text" : "levels of Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-54-276"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12276,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12263,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-54",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-54-20" ],
+    "verbose-text" : "As IKKβ has been shown to phosphorylate and inactivate Foxos (Hu et al., 2004), this implicates Foxos in a critical negative feedback loop that may serve to limit inflammatory responses in certain settings, and is potentially important in the context of tumors which maintain low levels of Akt activation."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-56-12",
+    "text" : "loss of Foxo1",
+    "arguments" : [ {
+      "text" : "Foxo1",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-56-282"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12633,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12620,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-56",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-56-22" ],
+    "verbose-text" : "T cell-specific loss of Foxo1 was shown to severely disrupt T cell homeostasis, resulting in multi-organ lymphocyte infiltration as well as exocrine pancreatitis and hind limb paralysis (Kerdiles et al., 2010)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-56-71",
+    "text" : "Foxo1 was shown to severely disrupt T cell homeostasis",
+    "arguments" : [ {
+      "text" : "T cell homeostasis",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-56-283"
+    }, {
+      "text" : "Foxo1",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-56-282"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12682,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "disrupt",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 12628,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-56",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "T cell-specific loss of Foxo1 was shown to severely disrupt T cell homeostasis, resulting in multi-organ lymphocyte infiltration as well as exocrine pancreatitis and hind limb paralysis (Kerdiles et al., 2010)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-59-60",
+    "text" : "reverse T cell anergy through the PI3K pathway by inactivation of Foxos",
+    "arguments" : [ {
+      "text" : "PI3K",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-299"
+    }, {
+      "text" : "Foxos",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-300"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13259,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "reverse",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13188,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-59",
+    "found-by" : "Negative_activation_syntax_3_verb",
+    "verbose-text" : "IL-2 was shown to reverse T cell anergy through the PI3K pathway by inactivation of Foxos, which prevented transcriptional upregulation of Sirt1.In mouse embryonic fibroblasts and lymphoid cells, growth factor and cytokine withdrawal upregulates BH3-only pro-apoptotic mediators Puma and Bim in a Foxo3a-dependent manner that requires downregulation of PI3K/Akt signaling (You et al., 2006)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-59-18",
+    "text" : "Foxos, which prevented transcriptional upregulation of Sirt1.In mouse embryonic fibroblasts and lymphoid cells, growth factor and cytokine withdrawal upregulates BH3-only pro-apoptotic mediators Puma",
+    "arguments" : [ {
+      "text" : "Puma",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-303"
+    }, {
+      "text" : "Foxos",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-300"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13453,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "prevented",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13254,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-59",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "IL-2 was shown to reverse T cell anergy through the PI3K pathway by inactivation of Foxos, which prevented transcriptional upregulation of Sirt1.In mouse embryonic fibroblasts and lymphoid cells, growth factor and cytokine withdrawal upregulates BH3-only pro-apoptotic mediators Puma and Bim in a Foxo3a-dependent manner that requires downregulation of PI3K/Akt signaling (You et al., 2006)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-59-61",
+    "text" : "IL-2 was shown to reverse T cell anergy",
+    "arguments" : [ {
+      "text" : "T cell anergy",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-298"
+    }, {
+      "text" : "IL-2",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-297"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13209,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "reverse",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13170,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-59",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "IL-2 was shown to reverse T cell anergy through the PI3K pathway by inactivation of Foxos, which prevented transcriptional upregulation of Sirt1.In mouse embryonic fibroblasts and lymphoid cells, growth factor and cytokine withdrawal upregulates BH3-only pro-apoptotic mediators Puma and Bim in a Foxo3a-dependent manner that requires downregulation of PI3K/Akt signaling (You et al., 2006)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-59-19",
+    "text" : "Foxos, which prevented transcriptional upregulation of Sirt1.In mouse embryonic fibroblasts and lymphoid cells, growth factor and cytokine withdrawal upregulates BH3-only pro-apoptotic mediators Puma and Bim",
+    "arguments" : [ {
+      "text" : "Bim",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-304"
+    }, {
+      "text" : "Foxos",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-59-300"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13461,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "prevented",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13254,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-59",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "IL-2 was shown to reverse T cell anergy through the PI3K pathway by inactivation of Foxos, which prevented transcriptional upregulation of Sirt1.In mouse embryonic fibroblasts and lymphoid cells, growth factor and cytokine withdrawal upregulates BH3-only pro-apoptotic mediators Puma and Bim in a Foxo3a-dependent manner that requires downregulation of PI3K/Akt signaling (You et al., 2006)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-62-58",
+    "text" : "Fas-mediated AICD",
+    "arguments" : [ {
+      "text" : "Fas",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-317"
+    }, {
+      "text" : "AICD",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-318"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13983,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13966,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-62",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "Given that Pten heterozygous mice display decreased sensitivity to Fas-mediated AICD, similar to lpr and gld mice (Van Parijs and Abbas, 1996), constitutive inactivation of Foxos due to loss of PTEN is likely a partial mechanism underlying the phenotype observed in these mice."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-62-68",
+    "text" : "loss of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-322"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 14097,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 14085,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-62",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-62-25" ],
+    "verbose-text" : "Given that Pten heterozygous mice display decreased sensitivity to Fas-mediated AICD, similar to lpr and gld mice (Van Parijs and Abbas, 1996), constitutive inactivation of Foxos due to loss of PTEN is likely a partial mechanism underlying the phenotype observed in these mice."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-62-44",
+    "text" : "mice display decreased sensitivity to Fas-mediated AICD",
+    "arguments" : [ {
+      "text" : "AICD",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-318"
+    }, {
+      "text" : "mice",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-316"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13983,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13928,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-62",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Given that Pten heterozygous mice display decreased sensitivity to Fas-mediated AICD, similar to lpr and gld mice (Van Parijs and Abbas, 1996), constitutive inactivation of Foxos due to loss of PTEN is likely a partial mechanism underlying the phenotype observed in these mice."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-62-45",
+    "text" : "Pten heterozygous mice display decreased sensitivity to Fas-mediated AICD",
+    "arguments" : [ {
+      "text" : "AICD",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-318"
+    }, {
+      "text" : "Pten",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-62-315"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13983,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 13910,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-62",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Given that Pten heterozygous mice display decreased sensitivity to Fas-mediated AICD, similar to lpr and gld mice (Van Parijs and Abbas, 1996), constitutive inactivation of Foxos due to loss of PTEN is likely a partial mechanism underlying the phenotype observed in these mice."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-63-35",
+    "text" : "loss of Pten",
+    "arguments" : [ {
+      "text" : "Pten",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-63-333"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 14554,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 14542,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-63",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-63-26" ],
+    "verbose-text" : "Additionally, the finding that a deficiency in Foxos is sufficient to drive the development of hemangiomas, similar to what is seen in patients with Cowden disease and Bannayan–Zonana syndrome, and thymic lymphomas, similar to mice with a T cell-specific deletion of Pten, as well suggests that inactivation of Foxos may be critical for the phenotype brought on by loss of Pten (Paik et al., 2007)."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-63-69",
+    "text" : "Foxos is sufficient to drive the development of hemangiomas",
+    "arguments" : [ {
+      "text" : "hemangiomas",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-63-325"
+    }, {
+      "text" : "Foxos",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-63-324"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 14283,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "drive",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 14224,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-63",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Additionally, the finding that a deficiency in Foxos is sufficient to drive the development of hemangiomas, similar to what is seen in patients with Cowden disease and Bannayan–Zonana syndrome, and thymic lymphomas, similar to mice with a T cell-specific deletion of Pten, as well suggests that inactivation of Foxos may be critical for the phenotype brought on by loss of Pten (Paik et al., 2007)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-66-7",
+    "text" : "PTEN loss, in which nearly 40% of fetal liver HSCs were subject to deletion of Pten, led to impaired HSC",
+    "arguments" : [ {
+      "text" : "HSC",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-66-351"
+    }, {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-66-347"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 15208,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "led",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 15104,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-66",
+    "found-by" : "Positive_activation_syntax_7_verb",
+    "verbose-text" : "Similar to the Mx-1-Cre model of PTEN loss, Vec-Cre-mediated PTEN loss, in which nearly 40% of fetal liver HSCs were subject to deletion of Pten, led to impaired HSC self-renewal and the development of a myeloproliferative disorder followed by leukemia (Guo et al., 2008)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-66-8",
+    "text" : "PTEN loss, in which nearly 40% of fetal liver HSCs were subject to deletion of Pten, led to impaired HSC self-renewal and the development of a myeloproliferative disorder",
+    "arguments" : [ {
+      "text" : "myeloproliferative disorder",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-66-352"
+    }, {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-66-347"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 15274,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "led",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 15104,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-66",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Similar to the Mx-1-Cre model of PTEN loss, Vec-Cre-mediated PTEN loss, in which nearly 40% of fetal liver HSCs were subject to deletion of Pten, led to impaired HSC self-renewal and the development of a myeloproliferative disorder followed by leukemia (Guo et al., 2008)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-69-66",
+    "text" : "levels of c-myc",
+    "arguments" : [ {
+      "text" : "c-myc",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-69-367"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 15933,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 15918,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-69",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-68-28" ],
+    "verbose-text" : "Similarly, this translocation, involving the c-myc and TCRα/δ loci and resulting in constitutively high levels of c-myc, was found to recur with 100% incidence in T cell lymphomas from mice in which Pten was deleted specifically in T cells (CD4-Cre × Ptenfl/fl mice, hereafter referred to as PTEN-ΔT mice; Liu et al., 2010)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-73-16",
+    "text" : "loss of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-73-403"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 17522,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 17510,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-73",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-73-30" ],
+    "verbose-text" : "Thus, within distinct developmental stages, PTEN is required for the prevention of lymphoma and autoimmunity.In the context of DNA damage, loss of PTEN enables cells to bypass the normal G2/M checkpoint enforced by CHK1 as a result of Akt-mediated CHK1 sequestration in the cytoplasm (Puc et al., 2005)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-73-56",
+    "text" : "Akt-mediated CHK1",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-73-405"
+    }, {
+      "text" : "CHK1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-73-406"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 17623,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "mediated",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 17606,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-73",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "Thus, within distinct developmental stages, PTEN is required for the prevention of lymphoma and autoimmunity.In the context of DNA damage, loss of PTEN enables cells to bypass the normal G2/M checkpoint enforced by CHK1 as a result of Akt-mediated CHK1 sequestration in the cytoplasm (Puc et al., 2005)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-77-6",
+    "text" : "levels of c-myc",
+    "arguments" : [ {
+      "text" : "c-myc",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-77-6"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 18314,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 18299,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-77",
+    "found-by" : "amount_1",
+    "verbose-text" : "Induction of the Notch pathway in malignant cells from these mice, however, was shown to increase cellular levels of c-myc, suggesting that PI3K and c-myc cooperate in multiple models of PTEN loss to promote lymphomagenesis and lymphoproliferative autoimmune disorder.Disruption of Foxo function has been shown to accelerate c-myc-driven lymphomagenesis (Bouchard et al., 2007), and constitutively active mutants of Foxo3a resistant to inactivation by Akt directly repress multiple target genes of c-myc and block c-myc-dependent proliferation and transformation (Bouchard et al., 2004; Jensen et al., 2011)."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-77-5",
+    "text" : "Notch pathway in malignant cells from these mice, however, was shown to increase cellular levels of c-myc",
+    "arguments" : [ {
+      "text" : "levels of c-myc",
+      "argument-type" : "event",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "evem-PMC3375464-UAZ-r1-PMC3375464-77-6"
+    }, {
+      "text" : "Notch",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-77-7"
+    } ],
+    "type" : "regulation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-regulation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 18314,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "increase",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 18209,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-77",
+    "found-by" : "Positive_regulation_syntax_1_verb",
+    "verbose-text" : "Induction of the Notch pathway in malignant cells from these mice, however, was shown to increase cellular levels of c-myc, suggesting that PI3K and c-myc cooperate in multiple models of PTEN loss to promote lymphomagenesis and lymphoproliferative autoimmune disorder.Disruption of Foxo function has been shown to accelerate c-myc-driven lymphomagenesis (Bouchard et al., 2007), and constitutively active mutants of Foxo3a resistant to inactivation by Akt directly repress multiple target genes of c-myc and block c-myc-dependent proliferation and transformation (Bouchard et al., 2004; Jensen et al., 2011)."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-81-36",
+    "text" : "Mice which express a single hypomorphic PDK1 allele similarly prevented a wide range of tumors",
+    "arguments" : [ {
+      "text" : "tumors",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-81-459"
+    }, {
+      "text" : "Mice",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-81-457"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 19921,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "prevented",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 19827,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-81",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Mice which express a single hypomorphic PDK1 allele similarly prevented a wide range of tumors when crossed to Pten heterozygous mice, indicating that the requirement for PDK1 in the context of tumor formation brought on by loss of PTEN is not limited to its role in controlling migratory capacity of T cells (Bayascas et al., 2005)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-81-24",
+    "text" : "Mice which express",
+    "arguments" : [ {
+      "text" : "Mice",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-81-457"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 19845,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "express",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 19827,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-81",
+    "found-by" : "expression_2",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-0-1" ],
+    "verbose-text" : "Mice which express a single hypomorphic PDK1 allele similarly prevented a wide range of tumors when crossed to Pten heterozygous mice, indicating that the requirement for PDK1 in the context of tumor formation brought on by loss of PTEN is not limited to its role in controlling migratory capacity of T cells (Bayascas et al., 2005)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-81-17",
+    "text" : "loss of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-81-463"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 20063,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 20051,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-81",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-0-1" ],
+    "verbose-text" : "Mice which express a single hypomorphic PDK1 allele similarly prevented a wide range of tumors when crossed to Pten heterozygous mice, indicating that the requirement for PDK1 in the context of tumor formation brought on by loss of PTEN is not limited to its role in controlling migratory capacity of T cells (Bayascas et al., 2005)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-86-20",
+    "text" : "phosphatase-inactive mutant, was shown to impair the tumor-suppressive APC-CDH1",
+    "arguments" : [ {
+      "text" : "APC-CDH1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-86-487"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-86-486"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21306,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "impair",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21227,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-86",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Additionally, nuclear exclusion of PTEN, but not a phosphatase-inactive mutant, was shown to impair the tumor-suppressive APC-CDH1 nuclear complex, again demonstrating tumor-suppressive capability of catalytically inactive PTEN (Song et al., 2011)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-86-22",
+    "text" : "PTEN, but not a phosphatase-inactive mutant, was shown to impair the tumor-suppressive APC-CDH1",
+    "arguments" : [ {
+      "text" : "APC-CDH1",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-86-487"
+    }, {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-86-485"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-negated" : true,
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21306,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "impair",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21211,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-86",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Additionally, nuclear exclusion of PTEN, but not a phosphatase-inactive mutant, was shown to impair the tumor-suppressive APC-CDH1 nuclear complex, again demonstrating tumor-suppressive capability of catalytically inactive PTEN (Song et al., 2011)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-86-21",
+    "text" : "phosphatase-inactive mutant, was shown to impair the tumor-suppressive APC-CDH1 nuclear complex, again demonstrating tumor-suppressive capability of catalytically inactive PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-86-488"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-86-486"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21403,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "impair",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21227,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-86",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Additionally, nuclear exclusion of PTEN, but not a phosphatase-inactive mutant, was shown to impair the tumor-suppressive APC-CDH1 nuclear complex, again demonstrating tumor-suppressive capability of catalytically inactive PTEN (Song et al., 2011)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-87-57",
+    "text" : "expression of Rad51",
+    "arguments" : [ {
+      "text" : "Rad51",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-87-493"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21662,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21643,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-87",
+    "found-by" : "transcription_1b",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-86-38" ],
+    "verbose-text" : "Additional protein–protein interactions within the nucleus, independent of PTEN catalytic activity, have been shown to increase the activity and stability of p53 (Li et al., 2006; Salmena et al., 2008), and upregulate expression of Rad51, an essential component of the DSB repair machinery (Baker, 2007; Shen et al., 2007)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-88-11",
+    "text" : "Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase",
+    "arguments" : [ {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-500"
+    }, {
+      "text" : "Cowden syndrome",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-498"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21918,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "lead",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21812,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-88",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "A lysine to glutamate mutation in PTEN (K289E) identified in a Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase activity or membrane localization of PTEN, as well strongly supports the idea that nuclear PTEN can be critical for tumor suppression independent of its role in opposing PI3K signaling in certain contexts (Trotman et al., 2007 See Figure 2)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-88-10",
+    "text" : "Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase activity or membrane localization",
+    "arguments" : [ {
+      "text" : "localization",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-502"
+    }, {
+      "text" : "Cowden syndrome",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-498"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21952,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "lead",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21812,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-88",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "A lysine to glutamate mutation in PTEN (K289E) identified in a Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase activity or membrane localization of PTEN, as well strongly supports the idea that nuclear PTEN can be critical for tumor suppression independent of its role in opposing PI3K signaling in certain contexts (Trotman et al., 2007 See Figure 2)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-88-14",
+    "text" : "nuclear import without disrupting phosphatase activity or membrane localization",
+    "arguments" : [ {
+      "text" : "localization",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-502"
+    }, {
+      "text" : "nuclear import",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-499"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21952,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "disrupting",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21873,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-88",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "A lysine to glutamate mutation in PTEN (K289E) identified in a Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase activity or membrane localization of PTEN, as well strongly supports the idea that nuclear PTEN can be critical for tumor suppression independent of its role in opposing PI3K signaling in certain contexts (Trotman et al., 2007 See Figure 2)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-88-9",
+    "text" : "Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase activity or membrane localization of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-503"
+    }, {
+      "text" : "Cowden syndrome",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-88-498"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21960,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "lead",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 21812,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-88",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "A lysine to glutamate mutation in PTEN (K289E) identified in a Cowden syndrome family, which lead to a dramatic decrease in nuclear import without disrupting phosphatase activity or membrane localization of PTEN, as well strongly supports the idea that nuclear PTEN can be critical for tumor suppression independent of its role in opposing PI3K signaling in certain contexts (Trotman et al., 2007 See Figure 2)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-89-50",
+    "text" : "phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR pathway, and inactivation of the Foxo",
+    "arguments" : [ {
+      "text" : "Foxo",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-516"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-508"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22507,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "causing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22214,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-89",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Molecular and phenotypic consequences of loss of PTEN phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR pathway, and inactivation of the Foxo family of transcription factors."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-89-49",
+    "text" : "phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-514"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-508"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22423,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "causing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22214,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-89",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Molecular and phenotypic consequences of loss of PTEN phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR pathway, and inactivation of the Foxo family of transcription factors."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-89-51",
+    "text" : "phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR",
+    "arguments" : [ {
+      "text" : "mTOR",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-515"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-508"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22469,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "causing",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22214,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-89",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "Molecular and phenotypic consequences of loss of PTEN phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR pathway, and inactivation of the Foxo family of transcription factors."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-89-53",
+    "text" : "levels of PIP3",
+    "arguments" : [ {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-513"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22387,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22373,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-89",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-89-40" ],
+    "verbose-text" : "Molecular and phenotypic consequences of loss of PTEN phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR pathway, and inactivation of the Foxo family of transcription factors."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-89-62",
+    "text" : "loss of PTEN phosphatase",
+    "arguments" : [ {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-89-508"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22225,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 22201,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-89",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-89-40" ],
+    "verbose-text" : "Molecular and phenotypic consequences of loss of PTEN phosphatase-dependent and -independent functions during hematopoiesis and within the T cell compartment.Loss of PTEN phosphatase activity results in increased levels of PIP3, causing hyperactivation of the Akt pathway and subsequent activation of the mTOR pathway, and inactivation of the Foxo family of transcription factors."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-92-26",
+    "text" : "phosphatase activity is sufficient to abrogate its tumor-suppressive effects, emphasizing the importance of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-92-543"
+    }, {
+      "text" : "phosphatase",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-92-542"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 23558,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "abrogate",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 23446,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-92",
+    "found-by" : "Negative_activation_syntax_1_verb",
+    "verbose-text" : "Whether depletion of hematopoietic stem cells (HSCs) and development of leukemia stem cells (LSCs), as well lymphomagenesis, depends on the absence of PTEN phosphatase activity (which likely maintains survival of genetically aberrant cells), PTEN phosphatase-independent activity (promoting genetic instability), or both, remains an open question.Inactivation of PTEN phosphatase activity is sufficient to abrogate its tumor-suppressive effects, emphasizing the importance of PTEN’s role in downregulation of PI3K signaling."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-94-33",
+    "text" : "levels of PIP3",
+    "arguments" : [ {
+      "text" : "PIP3",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-94-550"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "amount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 23953,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "levels",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 23939,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-94",
+    "found-by" : "amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-93-43" ],
+    "verbose-text" : "A C124S mutant has been shown to form a stable complex with PIP3, potentially protecting it from dephosphorylation by other lipid phosphatases to account for higher cellular levels of PIP3 compared to conditions in which PTEN is completely absent (Myers et al., 1998)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-95-15",
+    "text" : "tumor development induced by loss of PTEN",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-95-553"
+    }, {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-95-554"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24118,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24077,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-95",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "As well, the importance of Akt activity in tumor development induced by loss of PTEN has been reported in a number of studies (Stiles et al., 2002; Bayascas et al., 2005; Chen et al., 2006)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-95-67",
+    "text" : "loss of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-95-554"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24118,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24106,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-95",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-95-44" ],
+    "verbose-text" : "As well, the importance of Akt activity in tumor development induced by loss of PTEN has been reported in a number of studies (Stiles et al., 2002; Bayascas et al., 2005; Chen et al., 2006)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-96-48",
+    "text" : "expression of constitutively active Akt",
+    "arguments" : [ {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-96-561"
+    } ],
+    "type" : "transcription",
+    "frame-type" : "event-mention",
+    "subtype" : "transcription",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24529,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "expression",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24490,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-96",
+    "found-by" : "transcription_3",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-96-45" ],
+    "verbose-text" : "Constitutive Akt activation in T cells and thymocytes has been shown to be sufficient to drive autoimmunity and lymphoma (Rathmell et al., 2003) and thymomas (Malstrom et al., 2001), respectively, and bone marrow chimera experiments have demonstrated that enforced expression of constitutively active Akt in HSCs was sufficient for the development of myeloproliferative disease, T cell lymphoma, or AML (Kharas et al., 2010)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-98-65",
+    "text" : "loss of PTEN",
+    "arguments" : [ {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-98-576"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25206,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25194,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-98",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-96-45" ],
+    "verbose-text" : "In vitro studies using malignant cells from these mice demonstrated a dependence on Notch, suggesting that Akt at the very least must cooperate with other oncogenic pathways to allow tumor growth in this model, similar to what has been suggested in an MMTV-myrAkt breast cancer model with respect to tumorigenesis induced by loss of PTEN (Blanco-Aparicio et al., 2007)."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-98-43",
+    "text" : "Akt at the very least must cooperate with other oncogenic pathways to allow tumor",
+    "arguments" : [ {
+      "text" : "tumor",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-98-573"
+    }, {
+      "text" : "Akt",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-98-572"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25057,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "allow",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 24976,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-98",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In vitro studies using malignant cells from these mice demonstrated a dependence on Notch, suggesting that Akt at the very least must cooperate with other oncogenic pathways to allow tumor growth in this model, similar to what has been suggested in an MMTV-myrAkt breast cancer model with respect to tumorigenesis induced by loss of PTEN (Blanco-Aparicio et al., 2007)."
+  }, {
+    "is-hypothesis" : true,
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-98-59",
+    "text" : "tumorigenesis induced by loss of PTEN",
+    "arguments" : [ {
+      "text" : "tumorigenesis",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-98-575"
+    }, {
+      "text" : "PTEN",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-98-576"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25206,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25169,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-98",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "In vitro studies using malignant cells from these mice demonstrated a dependence on Notch, suggesting that Akt at the very least must cooperate with other oncogenic pathways to allow tumor growth in this model, similar to what has been suggested in an MMTV-myrAkt breast cancer model with respect to tumorigenesis induced by loss of PTEN (Blanco-Aparicio et al., 2007)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-99-54",
+    "text" : "Notch-induced tumorigenesis",
+    "arguments" : [ {
+      "text" : "Notch",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-99-577"
+    }, {
+      "text" : "tumorigenesis",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-99-578"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25301,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25274,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-99",
+    "found-by" : "Positive_early_activation",
+    "verbose-text" : "In contrast to this, in a model of Notch-induced tumorigenesis, genetic loss of Pten induced an oncogene addiction switch that rendered T-ALL cells resistant to Notch inhibition through GSIs and dependent on PI3K/Akt signaling to maintain tumor growth (Palomero et al., 2007)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-99-23",
+    "text" : "Pten induced an oncogene addiction",
+    "arguments" : [ {
+      "text" : "oncogene addiction",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-99-580"
+    }, {
+      "text" : "Pten",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-99-579"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "negative-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25353,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "induced",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25319,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-99",
+    "found-by" : "Positive_activation_syntax_1_verb",
+    "verbose-text" : "In contrast to this, in a model of Notch-induced tumorigenesis, genetic loss of Pten induced an oncogene addiction switch that rendered T-ALL cells resistant to Notch inhibition through GSIs and dependent on PI3K/Akt signaling to maintain tumor growth (Palomero et al., 2007)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-99-64",
+    "text" : "loss of Pten",
+    "arguments" : [ {
+      "text" : "Pten",
+      "argument-type" : "entity",
+      "type" : "theme",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-99-579"
+    } ],
+    "type" : "amount",
+    "frame-type" : "event-mention",
+    "subtype" : "decreaseamount",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25323,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "loss",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25311,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-99",
+    "found-by" : "decrease_amount_1",
+    "context" : [ "cntx-PMC3375464-UAZ-r1-PMC3375464-99-46" ],
+    "verbose-text" : "In contrast to this, in a model of Notch-induced tumorigenesis, genetic loss of Pten induced an oncogene addiction switch that rendered T-ALL cells resistant to Notch inhibition through GSIs and dependent on PI3K/Akt signaling to maintain tumor growth (Palomero et al., 2007)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-102-40",
+    "text" : "tumors driven by inducible c-myc",
+    "arguments" : [ {
+      "text" : "tumors",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-102-591"
+    }, {
+      "text" : "c-myc",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-102-592"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25881,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "driven",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25849,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-102",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "In tumors driven by inducible c-myc activation in a zebrafish model of T-ALL, constitutive activation of the Akt pathway through genetic disruption of Pten or transgenichexpression of Akt2 rendered cells in this model independent of c-myc for tumor progression (Gutierrez et al., 2011)."
+  }, {
+    "frame-id" : "evem-PMC3375464-UAZ-r1-PMC3375464-102-41",
+    "text" : "tumors driven by inducible c-myc activation in a zebrafish model of T-ALL",
+    "arguments" : [ {
+      "text" : "tumors",
+      "argument-type" : "entity",
+      "type" : "controlled",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-102-591"
+    }, {
+      "text" : "T-ALL",
+      "argument-type" : "entity",
+      "type" : "controller",
+      "object-type" : "argument",
+      "index" : 0,
+      "arg" : "ment-PMC3375464-UAZ-r1-PMC3375464-102-594"
+    } ],
+    "type" : "activation",
+    "frame-type" : "event-mention",
+    "subtype" : "positive-activation",
+    "is-direct" : false,
+    "end-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25922,
+      "object-type" : "relative-pos"
+    },
+    "trigger" : "driven",
+    "object-type" : "frame",
+    "start-pos" : {
+      "reference" : "pass-PMC3375464-UAZ-r1-PMC3375464",
+      "offset" : 25849,
+      "object-type" : "relative-pos"
+    },
+    "sentence" : "sent-PMC3375464-UAZ-r1-PMC3375464-102",
+    "found-by" : "Positive_activation_syntax_2_verb",
+    "verbose-text" : "In tumors driven by inducible c-myc activation in a zebrafish model of T-ALL, constitutive activation of the Akt pathway through genetic disruption of Pten or transgenichexpression of Akt2 rendered cells in this model independent of c-myc for tumor progression (Gutierrez et al., 2011)."
+  } ],
+  "object-type" : "frame-collection",
+  "object-meta" : {
+    "processing-end" : "2023-03-18T23:37:04Z",
+    "doc-id" : "PMC3375464",
+    "component-type" : "machine",
+    "component" : "Reach",
+    "processing-start" : "2023-03-18T23:34:06Z",
+    "object-type" : "meta-info",
+    "organization" : "UAZ"
+  }
+}
