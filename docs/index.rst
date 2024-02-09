@@ -6,8 +6,8 @@
 ==================================
 Welcome to VIOLIN's documentation!
 ==================================
-.. image:: https://readthedocs.org/projects/theviolin/badge/?version=latest
-    :target: https://theviolin.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/melody-violin/badge/?version=latest
+    :target: https://melody-violin.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 .. image:: https://mybinder.org/badge_logo.svg
     :target: https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb
