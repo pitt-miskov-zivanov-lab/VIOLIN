@@ -1,5 +1,5 @@
 # VIOLIN
-[![Documentation Status](https://readthedocs.org/projects/theviolin/badge/?version=latest)](https://theviolin.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/melody-violin/badge/?version=latest)](https://melody-violin.readthedocs.io/en/latest/?badge=latest)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
 
 ## Description of files and folders
