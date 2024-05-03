@@ -8,9 +8,10 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import pandas as pd
 import os.path
 import numpy as np
-
+import warnings
 from formatting import add_regulator_names_id, evidence_score
 from network import node_edge_list
+
 
 # Default Kind Score values
 kind_dict = {"strong corroboration": 2,
@@ -28,11 +29,11 @@ kind_dict = {"strong corroboration": 2,
              "flagged2": 20,
              "flagged3": 20}
 
-# Default Column Names for reading and model spreadsheets
 reading_columns = ['Element Name', 'Element Type', 'Element ID',
                    'Positive Reg Name', 'Positive Reg Type', 'Positive Reg ID',
                    'Negative Reg Name', 'Negative Reg Type', 'Negative Reg ID',
                    'Connection Type', 'Mechanism', 'Paper ID', 'Evidence']
+
 model_columns = ['Element Name', 'Element Type', 'Element IDs', 'Variable',
                  'Positive Regulators', 'Positive Regulators Connection Type',
                  'Negative Regulators', 'Negative Regulators Connection Type']
@@ -46,7 +47,6 @@ evidence_score_def = ['Element Name','Element Type','Element ID','Positive Reg N
                        'Positive Reg Type','Positive Reg ID','Negative Reg Name',
                        'Negative Reg Type','Negative Reg ID','Connection Type']
 
-###
 VIOLIN_reading_col = ["Element Name", "Element Type", "Database Name", "Element ID", "Location", "Location ID", "Cell Line",
                  "Cell Type", "Organism", "Positive Reg Name",
                  "Positive Reg Type", "Positive Reg ID", "Positive Reg Location", "Positive Reg Location ID",
@@ -60,9 +60,8 @@ BioRECIPE_reading_col = ["Regulator Name", "Regulator Type", "Regulator Subtype"
                         "Cell Line", "Cell Type", "Tissue Type", "Organism",
                         "Score", "Source", "Statements", "Paper IDs"]
 
-def input_biorecipes(model, model_cols=model_columns):
-    # FIXME: NOT operator cannot be parsed (e.g., !TCR_HIGH in BooleanTcell model)
 
+def input_biorecipes(model, model_cols=model_columns):
     """
     This function imports a model file which is already in the BioRECIPES
     format, and converts all characters to lower case
@@ -90,11 +89,7 @@ def input_biorecipes(model, model_cols=model_columns):
     elif model_ext == '.xlsx': model_df = pd.read_excel(model, index_col=None).fillna("nan")
     elif model_ext == '.tsv': model_df = pd.read_csv(model, sep='\t',index_col=None).fillna("nan")
     else: raise ValueError("The accepted file extensions are .txt, .csv, .xslx, and .tsv")
-
-    # rename columns
-    # TODO: discuss the correct column naming (e.g., 'Direct', 'Organism')
     model_df = model_df.rename(columns={"Positive Direct": "Positive Connection Type", "Negative Direct": "Negative Connection Type", "Compartment ID": "Location ID", "Compartment": "Location"})
-
     # Check to make sure column names in the files are compatible with
     # the Accepted Column Names and Required Column Names
     if {(set(model_cols).issubset(set(model_df.columns))) and
@@ -107,13 +102,11 @@ def input_biorecipes(model, model_cols=model_columns):
         # Convert all model text to lower-case
         new_model = new_model.apply(lambda x: x.astype(str).str.lower())
 
-        # Check that dataframes have been created correctly
-        # new_model.to_csv(r'MODEL_dataframe.csv')
     else:
         raise ValueError("Either your file does not match the column names," +
-                         " or you are missing necessary columns" + "\n" +
-                         "The model file column names you input: " + str(model_cols) + "\n" +
-                         "VIOLIN requires the following model columns: "+str(required_model))
+                             " or you are missing necessary columns" + "\n" +
+                             "The model file column names you input: " + str(model_cols) + "\n" +
+                             "VIOLIN requires the following model columns: " + str(required_model))
     return new_model
 
 def biorecipe_to_violin(BioRECIPE_reading=None, BioRECIPE_reading_df=None):
@@ -134,7 +127,7 @@ def biorecipe_to_violin(BioRECIPE_reading=None, BioRECIPE_reading_df=None):
 
     if BioRECIPE_reading:
         BioRECIPE_reading_df = pd.read_excel(BioRECIPE_reading, index_col=None)
-
+    BioRECIPE_reading_df = BioRECIPE_reading_df.astype(str)
     VIOLIN_reading_df = pd.DataFrame(columns=VIOLIN_reading_col)
 
     # convert BioRECIPE reading to VIOLN format
@@ -146,15 +139,18 @@ def biorecipe_to_violin(BioRECIPE_reading=None, BioRECIPE_reading_df=None):
         VIOLIN_reading_df.loc[i, "Element Type"] = BioRECIPE_reading_df.loc[i, "Regulated Type"]
         VIOLIN_reading_df.loc[i, "Element ID"] = BioRECIPE_reading_df.loc[i, "Regulated ID"]
 
+
         # TODO: make sure which kinds of events are classified as pos/neg
         if BioRECIPE_reading_df.loc[i, "Sign"].lower() in ["positive"]:
             VIOLIN_reading_df.loc[i, "Positive Reg Name"] = BioRECIPE_reading_df.loc[i, "Regulator Name"]
             VIOLIN_reading_df.loc[i, "Positive Reg Type"] = BioRECIPE_reading_df.loc[i, "Regulator Type"]
             VIOLIN_reading_df.loc[i, "Positive Reg ID"] = BioRECIPE_reading_df.loc[i, "Regulator ID"]
+
         elif BioRECIPE_reading_df.loc[i, "Sign"].lower() in ["negative"]:
             VIOLIN_reading_df.loc[i, "Negative Reg Name"] = BioRECIPE_reading_df.loc[i, "Regulator Name"]
             VIOLIN_reading_df.loc[i, "Negative Reg Type"] = BioRECIPE_reading_df.loc[i, "Regulator Type"]
             VIOLIN_reading_df.loc[i, "Negative Reg ID"] = BioRECIPE_reading_df.loc[i, "Regulator ID"]
+
         else:
             VIOLIN_reading_df.loc[i, "Positive Reg Name"] = BioRECIPE_reading_df.loc[i, "Regulator Name"]
             VIOLIN_reading_df.loc[i, "Positive Reg Type"] = BioRECIPE_reading_df.loc[i, "Regulator Type"]
@@ -200,16 +196,22 @@ def violin_to_biorecipe(VIOLIN_reading=None, VIOLIN_reading_df=None):
         BioRECIPE_reading_df.loc[i, "Regulated Name"] = VIOLIN_reading_df.loc[i, "Element Name"]
         BioRECIPE_reading_df.loc[i, "Regulated Type"] = VIOLIN_reading_df.loc[i, "Element Type"]
         BioRECIPE_reading_df.loc[i, "Regulated ID"] = VIOLIN_reading_df.loc[i, "Element ID"]
+        BioRECIPE_reading_df.loc[i, "Regulated Compartment"] = VIOLIN_reading_df.loc[i, "Location"]
+        BioRECIPE_reading_df.loc[i, "Regulated Compartment ID"] = VIOLIN_reading_df.loc[i, "Location ID"]
 
         if VIOLIN_reading_df.loc[i, "Positive Reg Name"]:
             BioRECIPE_reading_df.loc[i, "Regulator Name"] = VIOLIN_reading_df.loc[i, "Positive Reg Name"]
             BioRECIPE_reading_df.loc[i, "Regulator Type"] = VIOLIN_reading_df.loc[i, "Positive Reg Type"]
             BioRECIPE_reading_df.loc[i, "Regulator ID"] = VIOLIN_reading_df.loc[i, "Positive Reg ID"]
+            BioRECIPE_reading_df.loc[i, "Regulator Compartment"] = VIOLIN_reading_df.loc[i, "Positive Reg Location"]
+            BioRECIPE_reading_df.loc[i, "Regulator Compartment ID"] = VIOLIN_reading_df.loc[i, "Positive Reg Location ID"]
             BioRECIPE_reading_df.loc[i, "Sign"] = "positive"
         elif VIOLIN_reading_df.loc[i, "Negative Reg Name"]:
             BioRECIPE_reading_df.loc[i, "Regulator Name"] = VIOLIN_reading_df.loc[i, "Negative Reg Name"]
             BioRECIPE_reading_df.loc[i, "Regulator Type"] = VIOLIN_reading_df.loc[i, "Negative Reg Type"]
             BioRECIPE_reading_df.loc[i, "Regulator ID"] = VIOLIN_reading_df.loc[i, "Negative Reg ID"]
+            BioRECIPE_reading_df.loc[i, "Regulator Compartment"] = VIOLIN_reading_df.loc[i, "Negative Reg Location"]
+            BioRECIPE_reading_df.loc[i, "Regulator Compartment ID"] = VIOLIN_reading_df.loc[i, "Negative Reg Location ID"]
             BioRECIPE_reading_df.loc[i, "Sign"] = "negative"
         else:
             raise ValueError("Element {0} has no regulator".format(VIOLIN_reading_df.loc[i, "Element Name"]))
@@ -233,8 +235,7 @@ def violin_to_biorecipe(VIOLIN_reading=None, VIOLIN_reading_df=None):
 
     return BioRECIPE_reading_df
 
-
-def input_reading(reading=None, evidence_score_cols=evidence_score_def, atts=[], VIOLIN_reading=None):
+def input_reading(reading, evidence_score_cols=evidence_score_def, atts=[]):
     """
     This function imports the reading file into the correct mode
 
@@ -242,6 +243,7 @@ def input_reading(reading=None, evidence_score_cols=evidence_score_def, atts=[],
     ----------
     reading : str
         Directory and filename of the machine reading spreadsheet output
+        Accepted files: .txt, .csv, .tsv, .xlsx
     evidence_score_cols : list
         Column headings used to identify identical interactions in the machine reading output
     atts : list
@@ -254,24 +256,16 @@ def input_reading(reading=None, evidence_score_cols=evidence_score_def, atts=[],
         Formatted reading dataframe, including evidence count and list of PMCIDs
     """
 
-    #Upload reading files as dataframes based on the file extension
-    #now it is optional which is designed for being compatible with the old version of VIOLIN
-    if VIOLIN_reading:
-        reading_ext = os.path.splitext(VIOLIN_reading)[1]
+    #Upload the model and reading files as dataframes based on the file extension
+    reading_ext = os.path.splitext(reading)[1]
 
-        if reading_ext == '.txt': reading_df = pd.read_csv(VIOLIN_reading, sep='\t',index_col=None).fillna("nan")
-        elif reading_ext == '.csv': reading_df = pd.read_csv(VIOLIN_reading, sep=',',index_col=None).fillna("nan")
-        elif reading_ext == '.xlsx': reading_df = pd.read_excel(VIOLIN_reading,index_col=None).fillna("nan")
-        elif reading_ext == '.tsv': reading_df = pd.read_csv(VIOLIN_reading, sep='\t',index_col=None).fillna("nan")
-        else: raise ValueError("The accepted file extensions are .txt, .csv, .xslx, and .tsv")
-    elif reading:
-        #Upload reading files in BioRECIPE format and translate to VIOLIN reading format
-        reading_df = biorecipe_to_violin(BioRECIPE_reading=reading)
-    else:
-        raise ValueError("No reading file is detected")
+    if reading_ext == '.txt': reading_df = pd.read_csv(reading, sep='\t',index_col=None).fillna("nan")
+    elif reading_ext == '.csv': reading_df = pd.read_csv(reading, sep=',',index_col=None).fillna("nan")
+    elif reading_ext == '.xlsx': reading_df = pd.read_excel(reading,index_col=None).fillna("nan")
+    elif reading_ext == '.tsv': reading_df = pd.read_csv(reading, sep='\t',index_col=None).fillna("nan")
+    else: raise ValueError("The accepted file extensions are .txt, .csv, .xslx, and .tsv")
 
-
-    #Begin relative column name retrieval
+    #Begin relative column name retrieval 
     #Accepted target/regulated headers
     t_name_list = ["elementname","targetname","regulatedname"]
     t_type_list = ["elementtype","targettype","regulatedtype"]
@@ -295,8 +289,8 @@ def input_reading(reading=None, evidence_score_cols=evidence_score_def, atts=[],
     bare_cols = [x.lower().replace(" ","").replace("_","").replace("-","") for x in col_names]
 
     #Check intersection of accepted column names and file column names
-    if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 &
-        len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 &
+    if {len(set(t_name_list) & set(bare_cols)) == 1 & len(set(t_type_list) & set(bare_cols)) == 1 & 
+        len(set(t_id_list) & set(bare_cols)) == 1 & len(set(s_name_list) & set(bare_cols)) == 1 & 
         len(set(s_type_list) & set(bare_cols)) == 1 & len(set(s_id_list) & set(bare_cols)) == 1}:
         #If minimum necessary columns are found, define variables for the column header
         target_name = col_names[bare_cols.index((set(t_name_list) & set(bare_cols)).pop())]
@@ -326,14 +320,14 @@ def input_reading(reading=None, evidence_score_cols=evidence_score_def, atts=[],
             else:
                 raise ValueError("Attribute \""+x+"\" was not found in your LEE input document."+"\n"+
                 "Please check your file and try again")
-
+        
     else:
         raise ValueError("Your LEE input is missing information."+"\n"+
         "VIOLIN requires the following information: Name, Type, and ID of target node and regulators")
     #End relative column name retrieval
 
     #Make sure evidence_cols match what is in the LEE input file
-    if (set(evidence_score_cols).issubset(set(reading_df.columns))):
+    if (set(evidence_score_cols).issubset(set(reading_df.columns))): 
         #Calculate the Evidence Score
         new_reading = evidence_score(reading_df,evidence_score_cols)
         ## Check that dataframes have been created correctly
@@ -358,11 +352,8 @@ def output(reading_df, file_name, kind_values=kind_dict):
         Default values are found in kind_dict
     """
 
-    #TODO: how to deal with output format
-
     #Output with all reading interactions, sorted by highest Total Score
     outputdf = reading_df.sort_values(by='Total Score', ascending=False)
-    #outputdf = violin_to_biorecipe(VIOLIN_reading_df=outputdf)
     output_file = file_name+'_outputDF.csv'
     outputdf.to_csv(output_file)
 
@@ -372,28 +363,24 @@ def output(reading_df, file_name, kind_values=kind_dict):
                       (reading_df['Kind Score'] == kind_values['weak corroboration2']) |
                       (reading_df['Kind Score'] == kind_values['weak corroboration3'])]
     corr = corr.sort_values(by='Total Score', ascending=False)
-    #corr = violin_to_biorecipe(VIOLIN_reading_df=corr)
     corr_file = file_name+'_corroborations.csv'
     corr.to_csv(corr_file)
 
     ## Extensions ##
     ext = reading_df[(reading_df['Kind Score'] == kind_values['hanging extension']) | (reading_df['Kind Score'] == kind_values['full extension']) | (reading_df['Kind Score'] == kind_values['internal extension']) | (reading_df['Kind Score'] == kind_values['specification'])]
     ext = ext.sort_values(by='Total Score', ascending=False)
-    #ext = violin_to_biorecipe(VIOLIN_reading_df=ext)
     ext_file = file_name+'_extensions.csv'
     ext.to_csv(ext_file)
 
     ## Contradictions ##
     cont = reading_df[(reading_df['Kind Score'] == kind_values['dir contradiction']) | (reading_df['Kind Score'] == kind_values['sign contradiction']) | (reading_df['Kind Score'] == kind_values['att contradiction'])]
     cont = cont.sort_values(by='Total Score', ascending=False)
-    #cont = violin_to_biorecipe(VIOLIN_reading_df=cont)
     cont_file = file_name+'_contradictions.csv'
     cont.to_csv(cont_file)
 
     ## Special Cases ##
     que = reading_df[(reading_df['Kind Score'] == kind_values['flagged1']) | (reading_df['Kind Score'] == kind_values['flagged2']) | (reading_df['Kind Score'] == kind_values['flagged3'])]
     que = que.sort_values(by='Total Score', ascending=False)
-    #que = violin_to_biorecipe(VIOLIN_reading_df=que)
     que_file = file_name+'_flagged.csv'
     que.to_csv(que_file)
 

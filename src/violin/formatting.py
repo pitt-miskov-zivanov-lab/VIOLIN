@@ -85,42 +85,11 @@ def add_regulator_names_id(model_df):
             model_df[sign+' Regulators'] = model_df[sign+' Regulators'].str.replace(char2, "")
 
         for y in range(model_df.shape[0]):
-            if model_df[sign+' Regulators'][y]=="nan":
+            if model_df[sign+' Regulators'][y] == "nan":
                 model_df.at[y,sign+' Names'] = "nan"
                 model_df.at[y,sign+' IDs'] = "nan"
+
             else:
-                # Eliminating factors of regulation
-                if '*' in model_df[sign+' Regulators'][y]:
-                    idx = model_df[sign+' Regulators'][y].index('*')
-                    factor = model_df[sign+' Regulators'][y][idx-1:idx+1]
-                    model_df[sign+' Regulators'][y] = model_df[sign+' Regulators'][y].replace(factor,'')
-
-                if '=' in model_df[sign+' Regulators'][y]:
-                    idx = model_df[sign+' Regulators'][y].index('*')
-                    factor = model_df[sign+' Regulators'][y][idx:idx+2]
-                    model_df[sign+' Regulators'][y] = model_df[sign+' Regulators'][y].replace(factor,'')
-
-                # Moving NOT regulators to the opposite sign
-                elif '!' in model_df[sign+' Regulators'][y]:
-                    idx = model_df[sign+' Regulators'][y].index('!')
-                    #Remove everything before and up to !
-                    not_reg = model_df[sign+' Regulators'][y][idx+1:len(model_df[sign+' Regulators'][y])]
-                    # If NOT regulator has other regulators after it
-                    if "," in not_reg:
-                        idx2 = not_reg.index(",")
-                        not_reg = not_reg[0:idx2]
-                        # Remove from existing regulator list
-                        model_df[sign+' Regulators'][y] = model_df[sign+' Regulators'][y].replace("!"+not_reg+",",'')
-                        # Add regulator to opposite list
-                        if sign == 'Negative': model_df['Positive Regulators'][y] += ","+not_reg
-                        else: model_df['Negative Regulators'][y] += ","+not_reg
-                    else:
-                        # Remove from existing regulator list
-                        model_df[sign+' Regulators'][y] = model_df[sign+' Regulators'][y].replace(",!"+not_reg,'').replace("!"+not_reg,'')
-                        # Add regulator to opposite list
-                        if sign == 'Negative': model_df['Positive Regulators'][y] += ","+not_reg
-                        else: model_df['Negative Regulators'][y] += ","+not_reg
-
                 reg_name = model_df[sign+' Regulators'][y].split(',')
                 if '' in reg_name: reg_name.remove('')
                 reg_id = []
@@ -129,8 +98,9 @@ def add_regulator_names_id(model_df):
 
                 #find index for regulator in variable column, and copy the Element Name and IDs to the new columns
                 for element in reg_name:
-                    idx = list(model_df["Variable"]).index(element)
-                    reg_name[reg_name.index(element)] = model_df["Element Name"][idx]
+                    idx = list(model_df['Variable']).index(element)
+                    reg_name[reg_name.index(element)] = model_df['Element Name'][idx]
+                    #idx = list(model_df["Element Name"]).index(element)
                     #Since there are multiple IDs for each element, need to keep track of which
                     #IDs go with which regulator
                     reg_id.append(model_df["Element IDs"][idx])

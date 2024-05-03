@@ -9,13 +9,16 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import argparse
 import os.path
 import sys
+import tempfile
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src/')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '../src/')))
 
-from violin.in_out import input_biorecipes,input_reading,output
+from violin.in_out import input_biorecipes,input_reading,output, biorecipe_to_violin
 from violin.scoring import score_reading
 from violin.network import node_edge_list
 from violin.visualize_violin import visualize
+from violin.utils import *
+
 
 #Inputs: Model file, Reading File, Output Header, Classification, Filtering Option, Attributes
 def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100%'):
@@ -123,10 +126,16 @@ def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100
     else:
         raise ValueError('Unaccepted scoring option'+'\n'+
                          'options are: \'extend\', \'extend subcategories\', \'corroborate\', \'corroborate subcategories\'')
+    
+    model_tf = tempfile.NamedTemporaryFile(suffix='.xlsx')
+    reading_tf = tempfile.NamedTemporaryFile(suffix='.xlsx')
+    norm_model(model_file, model_tf)
+    reading_df = biorecipe_to_violin(lee_file)
+    reading_df.to_excel(reading_tf, index=False)
 
     # Import model and LEE set, using default input parameters
-    model_df = input_biorecipes(model_file)
-    reading_df, reading_cols = input_reading(lee_file)
+    model_df = input_biorecipes(model_tf.name)
+    reading_df, reading_cols = input_reading(reading=reading_tf.name)
     graph = node_edge_list(model_df)
 
     #Scoring and Output
@@ -134,7 +143,7 @@ def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100
     output(scored,out_file,kind_values=kind_dict)
 
     #Visualization
-    visualize(match_dict, kind_dict, out_file+'_TotalOutput.csv', filter_opt=filt_opt)
+    visualize(match_dict, kind_dict, out_file+'_outputDF.csv', filter_opt=filt_opt)
 
     return
 

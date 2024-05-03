@@ -11,23 +11,23 @@ from ast import literal_eval
 from numeric import find_element, compare
 from network import path_finding
 
-kind_dict = {"strong corroboration" : 2,
+kind_dict = {"strong corroboration" : 2, 
                 "weak corroboration1" : 1,
                 "weak corroboration2" : 1,
                 "weak corroboration3" : 1,
-                "hanging extension" : 40,
-                "full extension" : 40,
-                "internal extension" : 40,
-                "specification" : 30,
+                "hanging extension" : 40, 
+                "full extension" : 40, 
+                "internal extension" : 40, 
+                "specification" : 30, 
                 "dir contradiction" : 10,
                 "sign contradiction" : 10,
                 "att contradiction" : 10,
                 "flagged1" : 20,
                 "flagged2" : 20,
                 "flagged3" : 20}
-match_dict = {"source present" : 1,
-                "target present" : 100,
-                "both present" : 10,
+match_dict = {"source present" : 1, 
+                "target present" : 100, 
+                "both present" : 10, 
                 "neither present" : 0.1}
 atts_list = []
 
@@ -62,12 +62,12 @@ def match_score(x,reading_df,model_df,reading_cols,match_values = match_dict):
     else: reg_sign = 'pos'
 
     #Search for regulated from reading in model
-    if (find_element("name",reading_df.loc[x,reading_cols['target_name']],reading_df.loc[x,reading_cols['target_type']],model_df) != -1 or
+    if (find_element("name",reading_df.loc[x,reading_cols['target_name']],reading_df.loc[x,reading_cols['target_type']],model_df) != -1 or 
         find_element("id",reading_df.loc[x,reading_cols['target_id']],reading_df.loc[x,reading_cols['target_type']],model_df) != -1):
         regulated = True
 
     #Search for regulator from reading in model
-    if (find_element("name",reading_df.loc[x,reading_cols[reg_sign+'_source_name']],reading_df.loc[x,reading_cols[reg_sign+'_source_type']],model_df) != -1 or
+    if (find_element("name",reading_df.loc[x,reading_cols[reg_sign+'_source_name']],reading_df.loc[x,reading_cols[reg_sign+'_source_type']],model_df) != -1 or 
         find_element("id",reading_df.loc[x,reading_cols[reg_sign+'_source_id']],reading_df.loc[x,reading_cols[reg_sign+'_source_type']],model_df) != -1):
         regulator = True
 
@@ -128,7 +128,7 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
         signs.remove(reg_sign)
         opp_sign = signs[0]
     else:
-        if reading_df.at[x,reading_cols['pos_source_name']] == "nan":
+        if reading_df.at[x,reading_cols['pos_source_name']] == "nan": 
             reg_sign = 'Negative'
             opp_sign = 'Positive'
         else:
@@ -148,19 +148,19 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
 
     ###Comparing to model###
     #Both regulator (source) and regulated (target) node found in the model
-    if ((find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)!=-1 or
-        find_element("id",reading_df.at[x,reading_cols['target_id']],reading_df.at[x,reading_cols['target_type']],model_df)!=-1) and
-        (find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)!=-1 or
+    if ((find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)!=-1 or 
+        find_element("id",reading_df.at[x,reading_cols['target_id']],reading_df.at[x,reading_cols['target_type']],model_df)!=-1) and 
+        (find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)!=-1 or 
         find_element("id",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_id']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)!=-1)):
 
-
-        #Find indices of regulated element (target) in model
-        if (find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)!=-1):
+        
+        #Find indices of regulated element (target) in model 
+        if (find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)!=-1): 
             model_t_indices = find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)
         else: model_t_indices = find_element("id",reading_df.at[x,reading_cols['target_id']],reading_df.at[x,reading_cols['target_type']],model_df)
 
         #Find indices of regulator element (source) in model
-        if (find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)!=-1):
+        if (find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)!=-1): 
             model_s_indices = find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)
         else: model_s_indices = find_element("id",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_id']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)
         # print(t_indices,s_indices)
@@ -169,7 +169,7 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
         model_s_vars = [model_df.loc[i,'Variable'] for i in model_s_indices]
 
         kinds = []
-        #Have to loop over each instance of the regulated element (target) and regulator element (source) in the model,
+        #Have to loop over each instance of the regulated element (target) and regulator element (source) in the model, 
         # because the same element may exist in multiple "versions" (usually different locations)
         for t_idx in model_t_indices:
             #Regulator list in model
@@ -198,7 +198,7 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
 
                     #If LEE ="I" and MI = "I" or LEE = "D" and MI = "D": check attributes
                     if (lee_cxn_type == "i" and mi_cxn_type == "i") or (lee_cxn_type == "d" and mi_cxn_type != "i"):
-
+                        
                         compare_atts = compare(model_atts, reading_atts)
                         #Strong Corroboration - perfect match
                         if compare_atts == 0: kinds.append(kind_values['strong corroboration'])
@@ -238,7 +238,7 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
                         #Connection type
                         mi_cxn_type = model_df.loc[s_idx,reg_sign+' Connection Type'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
-
+                    
                     #Finding index MI regulator variable
                     model_reg_variable = literal_eval(model_df.loc[s_idx,reg_sign+' Regulators'])[reg_index]
                     model_reg_element = list(model_df['Variable']).index(model_reg_variable)
@@ -247,15 +247,15 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
 
                     # LEE = "I" and MI = "I"
                     if lee_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
-
+                    
                     # LEE = "D" and MI = "D"
-                    elif lee_cxn_type == "d" and mi_cxn_type != "i":
+                    elif lee_cxn_type == "d" and mi_cxn_type != "i": 
                         compare_atts = compare(model_atts, reading_atts)
                         #If the attributes are not contradictory - Flagged for manual review
                         if compare_atts in [0,1,2]: kinds.append(kind_values['flagged1'])
                         #Else - Contradiction
                         else: kinds.append(kind_values['dir contradiction'])
-
+                    
                     # LEE = "I" and MI = "D"
                     elif lee_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
@@ -263,15 +263,15 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
                         if compare_atts in [0,1,2]: kinds.append(kind_values['flagged1'])
                         #Else - Contradiction
                         else: kinds.append(kind_values['dir contradiction'])
-
+                    
                     # LEE = "D" and MI = "I"
                     elif lee_cxn_type == "d" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
-
+          
                 #MI with Mismatched direction, Mismatched sign
                 elif (model_df.loc[s_idx,opp_sign+" Regulators"] != "nan" and model_df.loc[t_idx,'Variable'] in literal_eval(model_df.loc[s_idx,opp_sign+" Regulators"])):
                     reg_index = literal_eval(model_df.loc[s_idx,opp_sign+" Regulators"]).index(model_df.loc[t_idx,'Variable'])
                     #Finding connection type
-                    if (opp_sign+' Connection Type') in model_df.columns.values.tolist():
+                    if (opp_sign+' Connection Type') in model_df.columns.values.tolist():    
                         mi_cxn_type = model_df.loc[s_idx,opp_sign+' Connection Type'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
 
@@ -300,9 +300,9 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
                         else: kinds.append(kind_values['dir contradiction'])
                     # LEE = "D" and MI = "D"
                     elif lee_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
-
+                                    
                 #If model does not contain interaction - check for path
-                else:
+                else: 
                     kinds.append(path_finding(model_df.loc[s_idx,'Variable'],model_df.loc[t_idx,'Variable'],reg_sign,model_df,graph,kind_values,lee_cxn_type,reading_atts,attributes))
 
         if len(kinds) == 1: kind = kinds[0]
@@ -328,12 +328,12 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
 
 
     #Both Extension - Both nodes from reading not in model
-    elif ((find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)==-1 and
-        find_element("id",reading_df.at[x,reading_cols['target_id']],reading_df.at[x,reading_cols['target_type']],model_df)==-1) and
-        (find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)==-1 and
+    elif ((find_element("name",reading_df.at[x,reading_cols['target_name']],reading_df.at[x,reading_cols['target_type']],model_df)==-1 and 
+        find_element("id",reading_df.at[x,reading_cols['target_id']],reading_df.at[x,reading_cols['target_type']],model_df)==-1) and 
+        (find_element("name",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_name']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)==-1 and 
         find_element("id",reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_id']],reading_df.at[x,reading_cols[reg_sign[0:3].lower()+'_source_type']],model_df)==-1)):
         kind = kind_values['full extension']
-    #Hanging Extension - One from reading not in model
+    #Hanging Extension - One from reading not in model   
     else: kind = kind_values['hanging extension']
     return kind
 
@@ -401,10 +401,9 @@ def score_reading(reading_df, model_df, graph, reading_cols,
     scored_reading_df['Kind Score'] = pd.Series()
     scored_reading_df['Epistemic Value'] = pd.Series()
     scored_reading_df['Total Score'] = pd.Series()
-
+    print(reading_df.shape[0])
     #Calculate scores
     for x in range(reading_df.shape[0]):
-
         scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,reading_cols,match_values)
         scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,reading_cols,kind_values,attributes,mi_cxn)
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
