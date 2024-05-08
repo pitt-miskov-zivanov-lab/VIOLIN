@@ -432,14 +432,17 @@ def norm_model(model_file, save_dir):
     # Read file as BioRECIPE format
     model_df = get_model(model_file)
     # check if the regulator and regulation columns are empty or not
+    c = 0
     for sign in ['Positive', 'Negative']:
         regulator = all(x in ['', 'Nan', 'nan'] for x in model_df[f'{sign} Regulator List'])
         regulation = all(x in ['', 'Nan', 'nan'] for x in model_df[f'{sign} Regulation Rule'])
 
         if regulator and regulation:
-            raise ValueError(
+            c+=1
+            if c > 1: 
+                raise ValueError(
                     "The regulation rule and list columns are both empty, please fill at least one column out"
-            )
+                )
     model_df = model_df.fillna('nan').replace('nan', '')
 
     # Resgister Model columns
@@ -451,7 +454,7 @@ def norm_model(model_file, save_dir):
     for row in range(len(model_df)):
         input_index = variable_index[row]
         for sign in ['Positive', 'Negative']:
-            if regulator and not regulation:
+            if regulator and c <= 1:
                 if model_df.loc[input_index, f'{sign} Regulation Rule'] == '':
                     model_df.loc[input_index, f'{sign} Regulator List'] = ''
                 else:
