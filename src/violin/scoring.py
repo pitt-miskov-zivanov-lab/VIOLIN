@@ -188,7 +188,8 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
                     model_s_element = list(model_df['Variable']).index(model_s_variable)
 
                     #Find MI connection type
-                    if (reg_sign+' Connection Type') in model_df.columns.values.tolist():
+                    if (reg_sign+' Connection Type') in model_df.columns.values.tolist() and \
+                            str(model_df.loc[t_idx,reg_sign+' Connection Type']).lower() not in ['', 'nan', 'NaN']:
                         #Connection type
                         mi_cxn_type = model_df.loc[t_idx,reg_sign+' Connection Type'].split(",")[s_index]
                     else: mi_cxn_type = mi_cxn
@@ -234,7 +235,8 @@ def kind_score(x, model_df, reading_df, graph, reading_cols,
                 elif (model_df.loc[s_idx,reg_sign+" Regulators"] != "nan" and model_df.loc[t_idx,'Variable'] in literal_eval(model_df.loc[s_idx,reg_sign+" Regulators"])):
                     reg_index = literal_eval(model_df.loc[s_idx,reg_sign+" Regulators"]).index(model_df.loc[t_idx,'Variable'])
                     #Finding connection type
-                    if (reg_sign+' Connection Type') in model_df.columns.values.tolist():
+                    if (reg_sign+' Connection Type') in model_df.columns.values.tolist() and \
+                            str(model_df.loc[t_idx,reg_sign+' Connection Type']).lower() not in ['', 'nan', 'NaN']:
                         #Connection type
                         mi_cxn_type = model_df.loc[s_idx,reg_sign+' Connection Type'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
