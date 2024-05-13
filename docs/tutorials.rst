@@ -38,7 +38,7 @@ This tutorial assumes that the input files are a model in the standard BioRECIPE
 and an LEE set from REACH. This tutorial also assumes that the user wants to run VIOLIN
 for basic extension using VIOLIN's default values, and visualization is for the total output
 
-The `use_violin_script.py` script is included in the  `violin_tutorial` folder. The input for this script allows for four classification schemes:
+The `use_violin_script.py` script is included in the  `examples` folder. The input for this script allows for four classification schemes:
 
 #. 'extend' - default Kind and Match Score values for general extension
 #. 'extend subcategories' - general extension values with subcategories specified in Kind Score values

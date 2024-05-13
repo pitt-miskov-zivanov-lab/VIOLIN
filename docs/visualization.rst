@@ -37,7 +37,7 @@ Visualizing the total output ::
 
     visualize(match_dict, kind_dict, 'RA2_sub_TotalOutput.csv', filter_opt='100%')
 
-.. image:: Output_Overview.png
+.. image:: figures/Output_Overview.png
    :scale: 30 %
    :align: center
 
@@ -59,7 +59,7 @@ Visualizing subcategories::
                 "flagged3" : 22}
     visualize(match_dict, kind_dict, 'RA2_sub_TotalOutput.csv', filter_opt='100%')
 
-.. image:: Subcategory_Overview.png
+.. image:: figures/Subcategory_Overview.png
    :scale: 25 %
    :align: center
 
@@ -67,6 +67,6 @@ Visualizing an individual category (extensions) ::
 
     visualize(match_dict, kind_dict, 'RA2_sub_extensions.csv', filter_opt='100%')
 
-.. image:: extensions_Overview.png
+.. image:: figures/extensions_Overview.png
    :scale: 25 %
    :align: center

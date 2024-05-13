@@ -1,8 +1,3 @@
-.. Violin documentation master file, created by
-   sphinx-quickstart on Tue Nov 19 09:44:57 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 ==================================
 Welcome to VIOLIN's documentation!
 ==================================
@@ -37,7 +32,7 @@ at varying levels of detail
 VIOLIN Methodology
 ------------------
 
-.. image:: VIOLIN_diagram.png
+.. image:: figures/VIOLIN_diagram.png
    :scale: 40 %
    :align: center
 
@@ -50,7 +45,7 @@ and a connecting *edge* between them. There may also be additional *attributes* 
 present additional details. VIOLIN takes advantage of this definiton when making
 its judgements.
 
-.. image:: ToyExample.png
+.. image:: figures/ToyExample.png
    :scale: 50 %
    :align: center
 
@@ -60,7 +55,7 @@ its judgements.
    :maxdepth: 1
    :caption: Contents
 
-   Legal
+   legal
    installation
    files
    in_out
@@ -68,6 +63,7 @@ its judgements.
    numeric
    network
    scoring
+   utils
    visualization
    tutorials
 

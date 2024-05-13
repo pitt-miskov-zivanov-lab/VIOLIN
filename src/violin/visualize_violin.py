@@ -223,7 +223,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             plt.pie(flgds,colors=mycolors)
             plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
-            plt.savefig('Subcategory_Overview.png',bbox_inches = "tight",dpi=200)
+            #plt.savefig('Subcategory_Overview.png',bbox_inches = "tight",dpi=200)
             plt.close
 
     # If only visualizing one category:
@@ -318,6 +318,6 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             counts = [output.shape[0]]
             numbs = np.array(counts)
             plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
-        plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
+        #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
         plt.close
     return

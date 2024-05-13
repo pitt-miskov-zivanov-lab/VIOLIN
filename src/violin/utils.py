@@ -84,6 +84,19 @@ VIOLIN_MODEL = OrderedDict([("number_row", "#"),
 
 def get_model_template(optional_columns=[], reading=pd.DataFrame()):
 
+    """
+    This function ???
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
+    """
+
     model_columns = [
             'Variable',
             '#',
@@ -124,7 +137,18 @@ def get_model_template(optional_columns=[], reading=pd.DataFrame()):
     return model_df
 
 def get_model(model_file: str) -> pd.DataFrame:
-    """Load model into a DataFrame and standardize column names
+
+    """
+    This function loads model into a DataFrame and standardize column names
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
     """
 
     global _VALID_CHARS
@@ -279,7 +303,18 @@ def get_model(model_file: str) -> pd.DataFrame:
 
 
 def format_variable_names(model: pd.DataFrame) -> pd.DataFrame:
-    """Format model variable names to make compatible with model checking
+
+    """
+    This function formats model variable names to make compatible with model checking
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
     """
 
     global _VALID_CHARS
@@ -315,7 +350,18 @@ def format_variable_names(model: pd.DataFrame) -> pd.DataFrame:
     return model
 
 def get_type(input_type):
-    """Standardize element types
+
+    """
+    This function standardizes element types
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
     """
 
     global _VALID_TYPES
@@ -332,9 +378,19 @@ def get_type(input_type):
         return 'other'
 
 def model_to_dict(model: pd.DataFrame):
-    """Convert model table to a dictionary
-    """
 
+    """
+    This function converts model table to a dictionary
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
+    """
     # convert dataframe to dict with variable name as the index
     model_dict = model.to_dict(orient='index')
 
@@ -342,6 +398,19 @@ def model_to_dict(model: pd.DataFrame):
 
 
 def get_model_from_delphi(model_file: str) -> pd.DataFrame:
+
+    """
+    This function ???
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
+    """
 
     global _IDX_COL
 
@@ -425,10 +494,22 @@ def get_model_from_delphi(model_file: str) -> pd.DataFrame:
 
 
 def norm_model(model_file, save_dir):
-    """wrap BioRECIPE model
-    model_file: model filename
-    save_dir: the directory of VIOLIN format model
+
     """
+    This function converts a BioRECIPE model to VIOLIN
+        # model_file: model filename
+        # save_dir: the directory of VIOLIN format model
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
+    """
+
     # Read file as BioRECIPE format
     model_df = get_model(model_file)
     # check if the regulator and regulation columns are empty or not
@@ -439,7 +520,7 @@ def norm_model(model_file, save_dir):
 
         if regulator and regulation:
             c+=1
-            if c > 1: 
+            if c > 1:
                 raise ValueError(
                     "The regulation rule and list columns are both empty, please fill at least one column out"
                 )
@@ -479,10 +560,24 @@ def norm_model(model_file, save_dir):
 
     df = pd.DataFrame(output_df, columns=VIOLIN_cols)
     df.to_excel(save_dir, index=False)
-    return 
+    return
 
 
 def get_element(reg_rule, layer):
+
+    """
+    This function ???
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
+    """
+
     if reg_rule:
         regulator_list = []
 
@@ -581,6 +676,20 @@ def get_element(reg_rule, layer):
 
 
 def split_comma_out_parentheses(reg_rule):
+
+    """
+    This function ???
+
+    Parameters
+    ----------
+    ???
+
+    Returns
+    -------
+    ???
+
+    """
+
     reg_list = list()
     parentheses = 0
     start = 0
@@ -595,6 +704,3 @@ def split_comma_out_parentheses(reg_rule):
             reg_list.append(reg_rule[start:index])
             start = index+1
     return reg_list
-
-
-

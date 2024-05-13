@@ -21,13 +21,13 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'example
 # -- Project information -----------------------------------------------------
 
 project = 'VIOLIN'
-copyright = '2021, Casey Hansen, Miskov-Zivanov Lab (MeLoDy lab)'
+copyright = '2024, Casey Hansen, Miskov-Zivanov Lab (MeLoDy lab)'
 author = 'Casey Hansen'
 
 # The short X.Y version
 version = 'Latest'
 # The full version, including alpha/beta/rc tags
-release = '2021'
+release = '2024'
 
 # -- General configuration ---------------------------------------------------
 
