@@ -74,13 +74,13 @@ Run the demonstrated example; or alternatively upload user-customized input file
    ```
 3. Run the provided notebook (Check [Jupyter notebook installation](https://jupyter.org/install) here).
    ```
-   jupyter notebook examples/use_VIOIN.ipynb
+   jupyter notebook examples/use_VIOLIN.ipynb
    ```
 
 ## Package Structure
 
 - [`setup.py`](setup.py): python file that help set up python dependencies installation
-- [`src/`](src/): directory that includes core python VIOLIN files
+- [`src/violin/`](src/violin/): directory that includes core python VIOLIN files
   - [`src/violin/formatting.py`](src/violin/formatting.py): functions of xxx;
   - [`src/violin/in_out.py`](src/violin/in_out.py): functions of xxx;
   - ???

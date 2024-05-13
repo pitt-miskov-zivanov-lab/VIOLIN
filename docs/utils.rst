@@ -6,29 +6,29 @@ This page details the functions of ???.
 Functions
 ---------
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: get_model_template
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: get_model
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: format_variable_names
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: get_type
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: model_to_dict
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: get_model_from_delphi
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: norm_model
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: get_element
 
-.. currentmodule:: formatting
+.. currentmodule:: utils
 .. autofunction:: split_comma_out_parentheses
