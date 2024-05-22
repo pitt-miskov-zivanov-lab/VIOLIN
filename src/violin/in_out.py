@@ -335,7 +335,23 @@ def input_reading(reading, evidence_score_cols=evidence_score_def, atts=[]):
     else: raise ValueError("The columns you chose for calculating the Evidence Score are not in youe LEE input file:"+str(evidence_score_cols))
     return new_reading, reading_cols
 
-
+def wrap_list_to_str(df, cols):
+    """
+    This function wraps the lists in the output dataframe to strings
+    Parameters
+    ----------
+    df: pd.DataFrame
+        output dataframe
+    cols: list
+        a list of columns name
+    Returns
+    -------
+    df: pd.DataFrame
+    """
+    for row in range(len(df)):
+        for col in cols:
+            df.loc[row, col] = ','.join(list(df.loc[row, col]))
+    return df
 def output(reading_df, file_name, kind_values=kind_dict):
     """
     This function outputs the scored reading interactions.
@@ -343,76 +359,73 @@ def output(reading_df, file_name, kind_values=kind_dict):
 
     Parameters
     ----------
-    reading_df : pd.DataFrame
-        Dataframe of the scored reading dataframe
+    reading_df : pd.dataframe
+        dataframe of the scored reading dataframe
     file_name : str
         Directory and filename of the output suffix
     kind_values : dict
         Dictionary containing the numerical values for the Kind Score classifications
         Default values are found in kind_dict
     """
+    global reading_columns
+
     # FIXME: fix hard code for workflow format
+    #reading_df.reset_index(inplace=True)
+    reading_df = reading_df.replace('nan', '')
+    reading_df = wrap_list_to_str(reading_df, ['Database Name', 'Mechanism', 'Paper ID', 'Evidence'])
+    reading_df[reading_columns] = reading_df[reading_columns].astype(str)
+
     #Output with all reading interactions, sorted by highest Total Score
     outputdf = reading_df.sort_values(by='Total Score', ascending=False)
-    outputdf = outputdf.astype(str).replace('nan', '').reset_index()
-    outputdf['Paper ID'] = outputdf['Paper ID'].str.replace('[', '').str.replace(']','')
     df_biorecipe = violin_to_biorecipe(VIOLIN_reading_df=outputdf)
-    df_biorecipe.to_excel(f'{file_name}_outputDF.xlsx', index=False)
-    output_file = file_name+'_scoreDF.xlsx'
+    df_biorecipe.to_csv(f'{file_name}_outputDF.csv', index=False)
+    output_file = file_name+'_scoreDF.csv'
     outputdf = outputdf[['Evidence Score', 'Match Score', 'Kind Score', 'Epistemic Value', 'Total Score']]
-    outputdf.to_excel(output_file, index=False)
+    outputdf.to_csv(output_file, index=False)
 
     ## Corroborations ##
     corr = reading_df[(reading_df['Kind Score'] == kind_values['strong corroboration']) |
                       (reading_df['Kind Score'] == kind_values['weak corroboration1']) |
                       (reading_df['Kind Score'] == kind_values['weak corroboration2']) |
                       (reading_df['Kind Score'] == kind_values['weak corroboration3'])]
-    corr = corr.sort_values(by='Total Score', ascending=False)
-    corr = corr.astype(str).replace('nan', '').reset_index()
-    corr['Paper ID'] = corr['Paper ID'].str.replace('[', '').str.replace(']','')
+    corr = corr.sort_values(by='Total Score', ascending=False).reset_index()
     df_biorecipe = violin_to_biorecipe(VIOLIN_reading_df=corr)
-    df_biorecipe.to_excel(f'{file_name}_corroborations.xlsx', index=False)
-    output_file = file_name + '_corroborations_score.xlsx'
+    df_biorecipe.to_csv(f'{file_name}_corroborations.csv', index=False)
+    output_file = file_name + '_corroborations_score.csv'
     corr = corr[['Evidence Score', 'Match Score', 'Kind Score', 'Epistemic Value', 'Total Score']]
-    corr.to_excel(output_file, index=False)
+    corr.to_csv(output_file, index=False)
 
     ## Extensions ##
     ext = reading_df[(reading_df['Kind Score'] == kind_values['hanging extension']) |
                      (reading_df['Kind Score'] == kind_values['full extension']) |
                      (reading_df['Kind Score'] == kind_values['internal extension']) |
                      (reading_df['Kind Score'] == kind_values['specification'])]
-    ext = ext.sort_values(by='Total Score', ascending=False)
-    ext = ext.astype(str).replace('nan', '').reset_index()
-    ext['Paper ID'] = ext['Paper ID'].str.replace('[', '').str.replace(']','')
+    ext = ext.sort_values(by='Total Score', ascending=False).reset_index()
     df_biorecipe = violin_to_biorecipe(VIOLIN_reading_df=ext)
-    df_biorecipe.to_excel(f'{file_name}_extensions.xlsx', index=False)
-    output_file = file_name + '_extensions_score.xlsx'
+    df_biorecipe.to_csv(f'{file_name}_extensions.csv', index=False)
+    output_file = file_name + '_extensions_score.csv'
     ext = ext[['Evidence Score', 'Match Score', 'Kind Score', 'Epistemic Value', 'Total Score']]
-    ext.to_excel(output_file, index=False)
+    ext.to_csv(output_file, index=False)
 
     ## Contradictions ##
     cont = reading_df[(reading_df['Kind Score'] == kind_values['dir contradiction']) |
                       (reading_df['Kind Score'] == kind_values['sign contradiction']) |
                       (reading_df['Kind Score'] == kind_values['att contradiction'])]
-    cont = cont.sort_values(by='Total Score', ascending=False)
-    cont = cont.astype(str).replace('nan', '').reset_index()
-    cont['Paper ID'] = cont['Paper ID'].str.replace('[', '').str.replace(']','')
+    cont = cont.sort_values(by='Total Score', ascending=False).reset_index()
     df_biorecipe = violin_to_biorecipe(VIOLIN_reading_df=cont)
-    df_biorecipe.to_excel(f'{file_name}_contradictions.xlsx', index=False)
-    output_file = file_name + '_contradictions_score.xlsx'
+    df_biorecipe.to_csv(f'{file_name}_contradictions.csv', index=False)
+    output_file = file_name + '_contradictions_score.csv'
     cont = cont[['Evidence Score', 'Match Score', 'Kind Score', 'Epistemic Value', 'Total Score']]
-    cont.to_excel(output_file, index=False)
+    cont.to_csv(output_file, index=False)
 
     ## Special Cases ##
     que = reading_df[(reading_df['Kind Score'] == kind_values['flagged1']) |
                      (reading_df['Kind Score'] == kind_values['flagged2']) |
                      (reading_df['Kind Score'] == kind_values['flagged3'])]
-    que = que.sort_values(by='Total Score', ascending=False)
-    que = que.astype(str).replace('nan', '').reset_index()
-    que['Paper ID'] = que['Paper ID'].str.replace('[', '').str.replace(']','')
+    que = que.sort_values(by='Total Score', ascending=False).reset_index()
     df_biorecipe = violin_to_biorecipe(VIOLIN_reading_df=que)
-    df_biorecipe.to_excel(f'{file_name}_flagged.xlsx', index=False)
-    output_file = file_name + '_flagged_score.xlsx'
+    df_biorecipe.to_csv(f'{file_name}_flagged.csv', index=False)
+    output_file = file_name + '_flagged_score.csv'
     cont = cont[['Evidence Score', 'Match Score', 'Kind Score', 'Epistemic Value', 'Total Score']]
-    cont.to_excel(output_file, index=False)
+    cont.to_csv(output_file, index=False)
     return

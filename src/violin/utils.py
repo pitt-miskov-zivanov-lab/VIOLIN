@@ -82,73 +82,20 @@ VIOLIN_MODEL = OrderedDict([("number_row", "#"),
                                   ])
 
 
-def get_model_template(optional_columns=[], reading=pd.DataFrame()):
-
-    """
-    This function ???
-
-    Parameters
-    ----------
-    ???
-
-    Returns
-    -------
-    ???
-
-    """
-
-    model_columns = [
-            'Variable',
-            '#',
-            'Element Name',
-            'Element IDs',
-            'Element Type',
-            'Positive',
-            'Negative',
-            'Scenario']
-
-    model_columns.extend(optional_columns)
-
-    model_df = pd.DataFrame(columns=model_columns)
-
-    if not reading.empty:
-        # add ontology terms from reading
-        elements = reading[
-                ['Element Name','Element ID']
-                ].rename(columns={
-                        'Element Name' : 'Name',
-                        'Element ID' : 'ID'
-                        }).drop_duplicates()
-        regulators = reading[
-                ['Regulator Name','Regulator ID']
-                ].rename(columns={
-                        'Regulator Name' : 'Name',
-                        'Regulator ID' : 'ID'
-                        }).drop_duplicates()
-        all_elements = elements.append(regulators).drop_duplicates()
-        model_df['Variable'] = all_elements['Name']
-        model_df['Element Name'] = all_elements['Name']
-        model_df['Element IDs'] = all_elements['ID']
-        model_df['#'] = model_df.reset_index().index
-        model_df['Scenario'] = 1
-
-    model_df.fillna('', inplace=True)
-
-    return model_df
-
-def get_model(model_file: str) -> pd.DataFrame:
+def get_model(model_file):
 
     """
     This function loads model into a DataFrame and standardize column names
 
     Parameters
     ----------
-    ???
+    model_file: str
+        The name of the model file
 
     Returns
     -------
-    ???
-
+    model: pd.DataFrame
+        A dataframe containing the model
     """
 
     global _VALID_CHARS
@@ -302,18 +249,19 @@ def get_model(model_file: str) -> pd.DataFrame:
     return model
 
 
-def format_variable_names(model: pd.DataFrame) -> pd.DataFrame:
+def format_variable_names(model: pd.DataFrame):
 
     """
     This function formats model variable names to make compatible with model checking
 
     Parameters
     ----------
-    ???
-
+    model: DataFrame
+        A dataframe of model file
     Returns
     -------
-    ???
+    model: DataFrame
+        model dataframe with standardized variable names
 
     """
 
@@ -356,11 +304,11 @@ def get_type(input_type):
 
     Parameters
     ----------
-    ???
-
+    input_type: str
+        A string of entity type
     Returns
     -------
-    ???
+    standard string to describe the type of entity
 
     """
 
@@ -377,136 +325,22 @@ def get_type(input_type):
     else:
         return 'other'
 
-def model_to_dict(model: pd.DataFrame):
-
-    """
-    This function converts model table to a dictionary
-
-    Parameters
-    ----------
-    ???
-
-    Returns
-    -------
-    ???
-
-    """
-    # convert dataframe to dict with variable name as the index
-    model_dict = model.to_dict(orient='index')
-
-    return model_dict
-
-
-def get_model_from_delphi(model_file: str) -> pd.DataFrame:
-
-    """
-    This function ???
-
-    Parameters
-    ----------
-    ???
-
-    Returns
-    -------
-    ???
-
-    """
-
-    global _IDX_COL
-
-    ##############       adding the spreadsheet column names to a dataframe        ############
-    column_names = [_IDX_COL,'Element Name', 'Element IDs', 'Element Type', 'Agent',
-                    'Patient', 'Value Judgment', 'Specificity', 'Location', 'Time Scale / Frequency',
-                    'Value: Activity / Amount ', 'Element NOTES', 'Variable', 'Positive',
-                    'Negative','Influence Set NOTES', 'Levels', 'Spontaneous Behavior',
-                    'Balancing Behavior', 'Update Group', 'Update Rate', 'Update Rank', 'Delay', 'Mechanism',
-                    'Weight', 'Regulator Level', 'Evidence', 'Initial 0']
-    df_model = pd.DataFrame(columns=column_names)
-
-    ##############     Reading the json as a dict    ############
-    with open(model_file) as json_file:
-        data = json.load(json_file)
-
-    json_data = pd.DataFrame.from_dict(data, orient='index').T
-
-    ############      creating a list of the variables and adding them to the dataframe    ############
-    variables_list = list()
-
-    for var in json_data['variables'][0]:
-        variables_list.append(var['name'])
-
-    df_model['Variable'] = variables_list
-    df_model[_IDX_COL] = [x+1 for x in range(len(variables_list))]
-
-    ############    Reading the edges     ############
-    positive_edges = {key: [] for key in variables_list}
-    negative_edges = {key: [] for key in variables_list}
-    evidence_for_edge = {key: [] for key in variables_list}
-
-    for edge in json_data['edge_data'][0]:
-        source = edge['source']
-        target = edge['target']
-
-        subj_polarities = list()
-        obj_polarities = list()
-        for evidence in edge['InfluenceStatements']:
-            subj_polarities.append(evidence['subj_delta']['polarity'])
-            obj_polarities.append(evidence['obj_delta']['polarity'])
-
-        # if number of 1s = number of -1s, choose the first polarity
-        subj_polarity = subj_polarities[0]
-        obj_polarity = obj_polarities[0]
-
-        # number of 1s != number of -1s, choose the most frequent polarity
-        if subj_polarities.count(1) != subj_polarities.count(-1):
-            subj_polarity = 1
-            if subj_polarities.count(1) < subj_polarities.count(-1):
-                subj_polarity = -1
-
-        if obj_polarities.count(1) != obj_polarities.count(-1):
-            obj_polarity = 1
-            if obj_polarities.count(1) < obj_polarities.count(-1):
-                obj_polarity = -1
-
-        if subj_polarity == 1 and obj_polarity == 1:
-            positive_edges[target].append(source)
-        elif subj_polarity == -1 and obj_polarity == 1:
-            positive_edges[target].append('!'+source)
-        elif subj_polarity == 1 and obj_polarity == -1:
-            negative_edges[target].append(source)
-        elif subj_polarity == -1 and obj_polarity == -1:
-            negative_edges[target].append('!'+source)
-
-        evidence = edge['InfluenceStatements'][0]['evidence'][0]['text']
-        evidence_for_edge[target].append(evidence)
-
-    df_model['Positive'] = [
-        ','.join(positive_edges[key]) for key in variables_list]
-    df_model['Negative'] = [
-        ','.join(negative_edges[key]) for key in variables_list]
-    df_model['Evidence'] = [
-        ','.join(evidence_for_edge[key]) for key in variables_list]
-    df_model['Initial 0'] = 1
-
-    df_model.fillna('',inplace=True)
-
-    return df_model
-
 
 def norm_model(model_file, save_dir):
 
     """
-    This function converts a BioRECIPE model to VIOLIN
+    This function converts a BioRECIPE model to VIOLIN, regulator lists are got from regulation rules
         # model_file: model filename
         # save_dir: the directory of VIOLIN format model
 
     Parameters
     ----------
-    ???
-
+    model_file: str
+        model filename
+    save_dir: str
+        directory of VIOLIN format model
     Returns
     -------
-    ???
 
     """
 
@@ -520,13 +354,12 @@ def norm_model(model_file, save_dir):
 
         if regulator and regulation:
             c+=1
-            if c > 1:
-                raise ValueError(
-                    "The regulation rule and list columns are both empty, please fill at least one column out"
-                )
-    model_df = model_df.fillna('nan').replace('nan', '')
+    if c > 1:
+        raise ValueError(
+            "The regulation rule and list columns are both empty, please fill at least one column out")
+    model_df = model_df.fillna('')
 
-    # Resgister Model columns
+    # Register Model columns
     VIOLIN_cols = list(VIOLIN_MODEL.values())
     VIOLIN_attr = list(VIOLIN_MODEL.keys())
     output_df = pd.DataFrame(columns=VIOLIN_cols)
@@ -535,16 +368,20 @@ def norm_model(model_file, save_dir):
     for row in range(len(model_df)):
         input_index = variable_index[row]
         for sign in ['Positive', 'Negative']:
-            if regulator and c <= 1:
-                if model_df.loc[input_index, f'{sign} Regulation Rule'] == '':
-                    model_df.loc[input_index, f'{sign} Regulator List'] = ''
-                else:
-                    model_df.loc[input_index, f'{sign} Regulator List'] = ','.join(list(get_element(model_df.loc[input_index, f'{sign} Regulation Rule'], 0)))
-            elif not regulator:
-                reg_list = model_df.loc[input_index, f'{sign} Regulator List'].split(',')
-                model_df.loc[input_index, f'{sign} Regulator List'] =','.join(list(reg_list))
-
-            else: pass
+            # if regulator and c <= 1:
+            #     if model_df.loc[input_index, f'{sign} Regulation Rule'] == '':
+            #         model_df.loc[input_index, f'{sign} Regulator List'] = ''
+            #     else:
+            #         model_df.loc[input_index, f'{sign} Regulator List'] = ','.join(list(get_element(model_df.loc[input_index, f'{sign} Regulation Rule'], 0)))
+            # elif not regulator:
+            #     reg_list = model_df.loc[input_index, f'{sign} Regulator List'].split(',')
+            #     model_df.loc[input_index, f'{sign} Regulator List'] =','.join(list(reg_list))
+            #
+            # else: pass
+            if model_df.loc[input_index, f'{sign} Regulation Rule'] == '':
+                model_df.loc[input_index, f'{sign} Regulator List'] = ''
+            else:
+                model_df.loc[input_index, f'{sign} Regulator List'] = ','.join(list(get_element(model_df.loc[input_index, f'{sign} Regulation Rule'], 0)))
 
         for key, value in BIORECIPE_MODEL.items():
             if value not in model_df:
@@ -566,15 +403,18 @@ def norm_model(model_file, save_dir):
 def get_element(reg_rule, layer):
 
     """
-    This function ???
+    This function parses the regulation rule and disentangle the symbol operators converting rule to a list of regulators
 
     Parameters
     ----------
-    ???
-
+    reg_rule: str
+        A BioRECIPE Regulation Rule
+    layer: str
+        counter for recursive time, the default is 0
     Returns
     -------
-    ???
+    regulator_list: list
+        A list of regulators
 
     """
 
@@ -678,15 +518,17 @@ def get_element(reg_rule, layer):
 def split_comma_out_parentheses(reg_rule):
 
     """
-    This function ???
+    This function split the parentheses by comma outside of parentheses. e.g. '(A,B),(C,B)' -> ['(A,B)','(C,B)']
 
     Parameters
     ----------
-    ???
+    reg_rule: str
+        A regulation rule
 
     Returns
     -------
-    ???
+    reg_list: list
+    A list of expressions that are separated by brackets
 
     """
 
