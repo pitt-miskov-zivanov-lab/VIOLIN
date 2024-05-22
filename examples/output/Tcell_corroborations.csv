@@ -9,6 +9,7 @@
 67,mtorc2,complex,q6r330,nan,nan,nan,nan,nan,il2_r,protein,p01589,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
 80,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
 81,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+82,pip3,protein,hmdb10148,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
 83,pip3,simple-chemical,hmdb10147,nan,nan,nan,nan,nan,pi3,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,1,1,11
 84,pip3,simple-chemical,hmdb10147,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,1,1,11
 93,pten,protein,p60484,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,1,1,11

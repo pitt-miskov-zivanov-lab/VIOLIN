@@ -6,4 +6,3 @@
 13,akt,family,p31749,nan,nan,nan,nan,nan,pdk1,protein,q15118,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,10,20,1,30
 15,akt,family,p31749,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,20,1,30
 62,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,mtorc2,complex,q6r328,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,20,1,30
-82,pip3,protein,hmdb10148,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,20,1,30
