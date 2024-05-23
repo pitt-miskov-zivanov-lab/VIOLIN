@@ -215,10 +215,18 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             flg1 = kind.count(kind_values['flagged1'])
             flg2 = kind.count(kind_values['flagged2'])
             flg3 = kind.count(kind_values['flagged3'])
-            flgds = np.array([flg1, flg2, flg3])
+            if 'flagged4' in kind_values:
+                flg4 = kind.count(kind_values['flagged4'])
+            else: pass
+            if 'flagged5' in kind_values:
+                flg5 = kind.count(kind_values['flagged5'])
+            else: pass
+            flgds = np.array([flg1, flg2, flg3, flg4, flg5]) if (flg4 and flg5) else np.array([flg1, flg2, flg3])
             mylabels = ["Flagged 1: "+str(flg1), "Flagged 2: "+str(flg2),
-                        "Flagged 3: "+str(flg3)]
-            mycolors = ['#AA5626','#C7652E','#F1C6A8']
+                        "Flagged 3: "+str(flg3), "Flagged 4: "+str(flg4), "Flagged 5: "+str(flg5)] if (flg4 and flg5) else \
+                        ["Flagged 1: " + str(flg1), "Flagged 2: " + str(flg2),
+                        "Flagged 3: " + str(flg3)]
+            mycolors = ['#AA5626','#C7652E','#F1C6A8', '#F5D4BE', '#FCF1EA'] if (flg4 and flg5) else ['#AA5626','#C7652E','#F1C6A8']
             plt.subplot(1, 4, 4)
             plt.pie(flgds,colors=mycolors)
             plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",

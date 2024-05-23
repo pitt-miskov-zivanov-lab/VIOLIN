@@ -91,7 +91,7 @@ nedd4,protein,,,,p46934,,,pten,protein,,,,p60484,,,negative,False,nan,,,,,,,,nan
 p53,protein,,,,p04637,,,pten,protein,,,,p60484,,,negative,False,nan,,,,,,,,nan,pmc4712330,1.0,100.0,40.0,1.0,140.0
 pi3k,protein,,,,p42336,,,pten,protein,,,,p60484,,,negative,False,"nan,nan",,,,,,,,"nan,nan","pmc4712330,pmc4496363",2.0,10.0,20.0,1.0,40.0
 ras,family,,,,pf00071,,,pten,protein,,,,p60484,,,negative,False,nan,,,,,,,,nan,pmc4712330,1.0,100.0,40.0,1.0,140.0
-tcr,protein,,,,p04234,,,pten,protein,,,,p60484,,,negative,False,nan,,,,,,,,nan,pmc3949578,1.0,10.0,10.0,1.0,20.0
+tcr,protein,,,,p04234,,,pten,protein,,,,p60484,,,negative,False,nan,,,,,,,,nan,pmc3949578,1.0,10.0,20.0,1.0,30.0
 pi3k,protein,,,,p42336,,,pten,protein,,,,p60484,,,positive,False,nan,,,,,,,,nan,pmc4712330,1.0,10.0,1.0,1.0,11.0
 mek1,protein,,,,q02750,,,pten,protein,,,,p60485,,,positive,False,nan,,,,,,,,nan,pmc4418530,1.0,100.0,40.0,1.0,140.0
 ck2,protein,,,,q53gl0,,,pten,protein,,,,p60486,,,negative,False,nan,,,,,,,,nan,pmc4418530,1.0,100.0,40.0,1.0,140.0
