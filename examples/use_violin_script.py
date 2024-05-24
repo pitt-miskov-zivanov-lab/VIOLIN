@@ -13,15 +13,14 @@ import tempfile
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '../src/')))
 
-from violin.in_out import input_biorecipes,input_reading,output, biorecipe_to_violin
+from violin.in_out import preprocessing_model,preprocessing_reading,output
 from violin.scoring import score_reading
 from violin.network import node_edge_list
 from violin.visualize_violin import visualize
-from violin.utils import *
 
 
 #Inputs: Model file, Reading File, Output Header, Classification, Filtering Option, Attributes
-def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100%'):
+def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend', filt_opt = '100%'):
     """
     This function runs VIOLIN via a terminal command
 
@@ -66,6 +65,13 @@ def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100
                         "target present" : 100,
                         "both present" : 10,
                         "neither present" : 0.1}
+        if approach in ['1', '2']:
+            pass
+        else:
+            kind_dict["flagged4"] = 20
+            kind_dict["flagged5"] = 20
+
+
     elif score == 'corroborate':
         kind_dict = {"strong corroboration" : 40,
                         "weak corroboration1" : 30,
@@ -85,6 +91,13 @@ def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100
                         "target present" : 1,
                         "both present" : 100,
                         "neither present" : 0.1}
+
+        if approach in ['1', '2']:
+            pass
+        else:
+            kind_dict["flagged4"] = 1
+            kind_dict["flagged5"] = 1
+
     elif score == 'extend subcategories':
         kind_dict = {"strong corroboration" : 2,
                     "weak corroboration1" : 1,
@@ -104,6 +117,13 @@ def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100
                         "target present" : 100,
                         "both present" : 10,
                         "neither present" : 0.1}
+
+        if approach in ['1', '2']:
+            pass
+        else:
+            kind_dict["flagged4"] = 23
+            kind_dict["flagged5"] = 24
+
     elif score == 'corroborate subcategories':
         kind_dict = {"strong corroboration" : 40,
                         "weak corroboration1" : 30,
@@ -123,23 +143,29 @@ def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100
                         "target present" : 1,
                         "both present" : 100,
                         "neither present" : 0.1}
+
+        if approach in ['1', '2']:
+            pass
+        else:
+            kind_dict["flagged4"] = 7
+            kind_dict["flagged5"] = 9
+
     else:
         raise ValueError('Unaccepted scoring option'+'\n'+
                          'options are: \'extend\', \'extend subcategories\', \'corroborate\', \'corroborate subcategories\'')
-    
-    model_tf = tempfile.NamedTemporaryFile(suffix='.xlsx')
-    reading_tf = tempfile.NamedTemporaryFile(suffix='.xlsx')
-    norm_model(model_file, model_tf)
-    reading_df = biorecipe_to_violin(lee_file)
-    reading_df.to_excel(reading_tf, index=False)
 
     # Import model and LEE set, using default input parameters
-    model_df = input_biorecipes(model_tf.name)
-    reading_df, reading_cols = input_reading(reading=reading_tf.name)
+    model_df = preprocessing_model(model_file)
+    reading_df = preprocessing_reading(reading=lee_file)
     graph = node_edge_list(model_df)
 
     #Scoring and Output
-    scored = score_reading(reading_df,model_df,graph,reading_cols,kind_values = kind_dict,match_values = match_dict)
+    scored = score_reading(reading_df,
+                           model_df,
+                           graph,
+                           kind_values = kind_dict,
+                           match_values = match_dict,
+                           classify_scheme = approach)
     output(scored,out_file,kind_values=kind_dict)
 
     #Visualization
@@ -161,14 +187,22 @@ def main():
     parser.add_argument('filter', type=str,
                         help='(optional) filtering value for visualization output')
 
-
+    parser.add_argument('approach', type=str, choices=['1', '2', '3'],
+                        help='(optional) classify schemes, default is 1')
     args = parser.parse_args()
 
     if (os.path.splitext(args.model)[1] in ['.txt','.csv','.tsv','.xlsx'] and os.path.splitext(args.reading)[1] in ['.txt','.csv','.tsv','.xlsx'] and type(args.output)==str):
         if args.filter == None:
-            use_violin(args.model,args.reading,args.output,args.score)
+            if args.approach == None:
+                use_violin(args.model,args.reading,args.output,args.score)
+            else:
+                use_violin(args.model,args.reading,args.output,args.approach,args.score)
         else:
-            use_violin(args.model,args.reading,args.output,args.score,args.filter)
+            if args.approach == None:
+                use_violin(args.model,args.reading,args.output,args.score,args.filter)
+            else:
+                use_violin(args.model,args.reading,args.output,args.approach,args.score,args.filter)
+
     else:
         raise ValueError('Unrecognized input format')
         # print('Unrecognized input format',os.path.splitext(args.reading)[1])

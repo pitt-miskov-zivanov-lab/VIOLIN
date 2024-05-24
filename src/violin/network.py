@@ -31,18 +31,18 @@ def node_edge_list(model_df):
     else: target = 'Element Name'
 
     #Subset of the model, just element and regulator columns
-    graph = model_df[[target,'Positive Regulators','Negative Regulators']].astype(str)
+    graph = model_df[[target,'Positive Regulator List','Negative Regulator List']].astype(str)
     #removes 'nan' placeholder
     graph = graph.replace('nan','')
 
     #remove excess punctuation from the regulator cells
-    graph['Positive Regulators'] = graph['Positive Regulators'].str.replace('[','').str.replace(']','').str.replace('\'','')
-    graph['Negative Regulators'] = graph['Negative Regulators'].str.replace('[','').str.replace(']','').str.replace('\'','')
+    graph['Positive Regulators List'] = graph['Positive Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
+    graph['Negative Regulator List'] = graph['Negative Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
     
     #combine regulators into one column, separated by '-' symbol
     #positiveRegulators_negativeRegulators
-    graph['Regulators'] = graph['Positive Regulators']+'/////'+graph['Negative Regulators']
-    graph = graph.drop(columns=['Positive Regulators','Negative Regulators'])
+    graph['Regulators'] = graph['Positive Regulator List']+'/////'+graph['Negative Regulator List']
+    graph = graph.drop(columns=['Positive Regulator List','Negative Regulator List'])
 
     #Split each row by '-' character
     #This allows us to assign weights so that we know the "sign" (positive/negative) of the regulator

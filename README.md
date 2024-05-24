@@ -18,16 +18,18 @@ VIOLIN (Validating Interactions Of Likely Importance to the Network) is a tool u
 - [Support](#Support)
 
 ## Functionality
-- Function1: ???
-- Function2: ???
+- Identification: identifying the importance of the interactions for a user-defined cellular model
+- Error Detection: finding the contradictions in interactions list
+- Scoring: showing the quality of the interactions for a model
 
 ## I/O
 
 ### Input/Output
-- `test_input` - ??? input files used in VIOLIN publication
-- `test_output` - ??? output files generated from files in test_input
-- `use_VIOLIN.ipynb` - ??? ipy notebook used to run VIOLIN
-- `use_violin_script.py` - ??? python script used to run VIOLIN at the command line
+- `test_input` - A model for classification, in BioRECIPE model format, check [example/input/modelA_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/ModelA_biorecipe.xlsx) 
+and an interactions list file from readings, in BioRECIPE reading format, check [example/output/RA2_0_1_1_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/RA2_0_1_1_reading_BioRECIPE.xlsx), other filename starting from `RA` can also be an input interactions list for VIOLIN.
+- `test_output` - [example/output/<interactions_filename>_<class>.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output), in BioRECIPE format, containing classified interactions (corroborations, contradictions, extensions, and flagged) and [example/output/<interactions_filename>_<class>_score.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output) (evidence score, match score, kind score, epistemic score and total score) 
+- `use_VIOLIN.ipynb` - [Jupyter notebook](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_VIOLIN.ipynb) used to run VIOLIN
+- `use_violin_script.py` - [python script](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_violin_script.py) used to run VIOLIN at the command line
 
 ### I/O Annotations
 
