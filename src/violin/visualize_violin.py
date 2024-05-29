@@ -65,11 +65,11 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         corroborations = kept[kept["Kind Score"].isin([kind_values['strong corroboration'],
                                                            kind_values['weak corroboration1'],
                                                            kind_values['weak corroboration2'],
-                                                           kind_values['weak corroboration3']])]
+                                                           kind_values['weak corroboration3'],
+                                                           kind_values['specification']])]
         extensions = kept[kept["Kind Score"].isin([kind_values['full extension'],
                                                     kind_values['hanging extension'],
-                                                    kind_values['internal extension'],
-                                                    kind_values['specification']])]
+                                                    kind_values['internal extension']])]
         contradictions = kept[kept["Kind Score"].isin([kind_values['dir contradiction'],
                                                         kind_values['sign contradiction'],
                                                         kind_values['att contradiction']])]
@@ -177,10 +177,11 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             weak_corr1 = kind.count(kind_values['weak corroboration1'])
             weak_corr2 = kind.count(kind_values['weak corroboration2'])
             weak_corr3 = kind.count(kind_values['weak corroboration3'])
-            corrs = np.array([strong_corr, weak_corr1, weak_corr2, weak_corr3])
+            spec = kind.count(kind_values['specification'])
+            corrs = np.array([strong_corr, weak_corr1, weak_corr2, weak_corr3, spec])
             mylabels = ["Strong Corroborations: "+str(strong_corr), "Weak Corroborations1: "+str(weak_corr1),
-                        "Weak Corroborations2: "+str(weak_corr2), "Weak Corroborations3: "+str(weak_corr3)]
-            mycolors = ['#235490','#2B65AD','#718EC5','#B0BEDA']
+                        "Weak Corroborations2: "+str(weak_corr2), "Weak Corroborations3: "+str(weak_corr3), "Specifications: "+str(spec)]
+            mycolors = ['#235490','#2B65AD','#718EC5','#B0BEDA', '#E7EFF9']
             plt.figure(figsize=(16, 4))
             plt.subplot(1, 4, 1)
             plt.pie(corrs,colors=mycolors)
@@ -190,11 +191,10 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             full_ext = kind.count(kind_values['full extension'])
             hang_ext = kind.count(kind_values['hanging extension'])
             int_ext = kind.count(kind_values['internal extension'])
-            spec = kind.count(kind_values['specification'])
-            exts = np.array([full_ext, hang_ext, int_ext, spec])
+            exts = np.array([full_ext, hang_ext, int_ext])
             mylabels = ["Full Extensions: "+str(full_ext), "Hanging Extensions: "+str(hang_ext),
-                        "Internal Extensions: "+str(int_ext), "Specifications: "+str(spec)]
-            mycolors = ['#24552D','#49A155','#7DBA84','#B6D5B8']
+                        "Internal Extensions: "+str(int_ext)]
+            mycolors = ['#24552D','#49A155','#7DBA84']
             plt.subplot(1, 4, 2)
             plt.pie(exts,colors=mycolors)
             plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
@@ -211,7 +211,7 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             plt.pie(conts,colors=mycolors)
             plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
-
+            flg4, flg5 = False, False
             flg1 = kind.count(kind_values['flagged1'])
             flg2 = kind.count(kind_values['flagged2'])
             flg3 = kind.count(kind_values['flagged3'])

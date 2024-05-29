@@ -42,17 +42,19 @@ def find_element(search_type, element_name, element_type, model_df):
         #indices of all instances of an element in the model
         indices = [i for i, x in enumerate(list(model_df['Element IDs'])) if element_name in x]
 
+    indices_list = []
     #searching for matching element type
     for idx in indices:
         #if type matches, keep that index
         if (model_df.loc[idx,"Element Type"] == element_type or 
             model_df.loc[idx,"Element Type"] in element_type or 
-            element_type in model_df.loc[idx,"Element Type"]): next
+            element_type in model_df.loc[idx,"Element Type"]):
+            indices_list.append(idx)
         #else if type does not match, remove that index
-        else: indices.remove(idx)
+        else: pass
     
     #If element has been found, return a list of its locations within the model
-    if len(indices) > 0: return indices
+    if len(indices_list) > 0: return indices_list
     #Value -1: means element not found
     else: return -1
 

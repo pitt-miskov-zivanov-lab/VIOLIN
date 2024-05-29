@@ -1,0 +1,10 @@
+Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+becn,gene,,,,q14457,,,becn,protein,,,,q14457,,,positive,i,,,,,,,nan,nan,nan,pmc12351,1,10,4,1,14
+becn,gene,,,,q14457,nucleus,go:0005634,becn,protein,,,,q14457,cytoplasm,go:0005737,positive,i,,,,,,,nan,nan,nan,pmc12350,1,10,4,1,14
+cdk4inhr,inhibitor,,,,cas 265312-55-8,,,cdk4,protein,,,,p78536,plasma membrane,go:0005886,negative,i,,,,,,,nan,nan,nan,pmc12349,1,10,3,1,13
+lactate,chemical,,,,hmdb00190,cytoplasm,go:0005737,autophagy,biological process,,,,go:0006914,cytoplasm,go:0006914,positive,i,,,,,,,nan,nan,nan,pmc12352,1,10,3,1,13
+src,protein,,,,p17252,cytoplasm,go:0005737,adam,protein,,,,p78536,cytoplasm,go:0005737,positive,i,,,,,,,nan,nan,nan,nan,1,10,3,1,13
+src,protein,,,,p17252,,,adam,protein,,,,p78536,,,positive,i,,,,,,,nan,nan,nan,pmc12345,1,10,3,1,13
+cdk4inhr,inhibitor,,,,cas 265312-55-8,,,cdk4,protein,,,,p78536,plasma membrane,go:0005886,negative,d,,,,,,,nan,nan,nan,pmc12348,1,10,2,1,12
+pkca,protein,,,,p17252,plasma membrane,go:0005886,adam,protein,,,,p78536,plasma membrane,go:0005886,positive,i,,,,,,,nan,nan,nan,pmc12345,1,10,2,1,12
+src,protein,,,,p12931,cytoplasm,go:0005737,adam,protein,,,,p78536,plasma membrane,go:0005886,positive,d,,,,,,,nan,nan,nan,pmc12345,1,10,2,1,12

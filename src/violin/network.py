@@ -35,8 +35,8 @@ def node_edge_list(model_df):
     #removes 'nan' placeholder
     graph = graph.replace('nan','')
 
-    #remove excess punctuation from the regulator cells
-    graph['Positive Regulators List'] = graph['Positive Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
+    # #remove excess punctuation from the regulator cells
+    graph['Positive Regulator List'] = graph['Positive Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
     graph['Negative Regulator List'] = graph['Negative Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
     
     #combine regulators into one column, separated by '-' symbol

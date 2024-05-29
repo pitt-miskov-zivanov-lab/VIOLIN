@@ -131,10 +131,12 @@ def kind_score(x,
     if 'Connection Type' in reading_df.columns: lee_cxn_type = reading_df.loc[x, 'Connection Type']
     else: lee_cxn_type = 'i'
 
+    reading_atts = [f'{entity} {atts}' for entity in ['Regulated', 'Regulator']
+                                            for atts in attributes]
     # Finding Lee other attributes
     if len(attributes) > 0:
         # Attributes for LEE index 'x'
-        reading_atts = [reading_df.loc[x, att] for att in atts_list]
+        reading_atts = [reading_df.loc[x, att] for att in reading_atts]
     else:
         reading_atts = []
 
@@ -174,7 +176,8 @@ def kind_score(x,
 
                     #Find MI connection type
                     if (reg_sign+' Connection Type List') in model_df.columns.values.tolist() and \
-                            str(model_df.loc[t_idx,reg_sign+' Connection Type List']).lower() not in ['', 'nan', 'NaN']:
+                            all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
+                                                        model_df.loc[t_idx, reg_sign+' Connection Type List'].split(',')):
                         #Connection type
                         mi_cxn_type = model_df.loc[t_idx,reg_sign+' Connection Type List'].split(",")[s_index]
                     else: mi_cxn_type = mi_cxn
@@ -222,7 +225,8 @@ def kind_score(x,
                         model_df.loc[s_idx, 'Variable'])
                     #Finding connection type
                     if (reg_sign+' Connection Type List') in model_df.columns.values.tolist() and \
-                            str(model_df.loc[t_idx,opp_sign+' Connection Type List']).lower() not in ['', 'nan', 'NaN']:
+                            all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
+                                                        model_df.loc[t_idx, opp_sign+' Connection Type List'].split(',')):
                         #Connection type
                         mi_cxn_type = model_df.loc[t_idx, opp_sign + ' Connection Type List'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
@@ -243,7 +247,8 @@ def kind_score(x,
                         model_df.loc[t_idx, 'Variable'])
                     # Finding connection type
                     if (reg_sign + ' Connection Type List') in model_df.columns.values.tolist() and \
-                            str(model_df.loc[s_idx, reg_sign + ' Connection Type List']).lower() not in ['', 'nan', 'NaN']:
+                            all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
+                                                        model_df.loc[s_idx, reg_sign+' Connection Type List'].split(',')):
                         # Connection type
                         mi_cxn_type = model_df.loc[s_idx, reg_sign + ' Connection Type List'].split(",")[reg_index]
                     else:
@@ -303,7 +308,8 @@ def kind_score(x,
                     reg_index = literal_eval(model_df.loc[s_idx,opp_sign+" Regulator List"]).index(model_df.loc[t_idx,'Variable'])
                     #Finding connection type
                     if (opp_sign+' Connection Type List') in model_df.columns.values.tolist()and \
-                            str(model_df.loc[s_idx,reg_sign+' Connection Type List']).lower() not in ['', 'nan', 'NaN']:
+                            all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
+                                                        model_df.loc[s_idx, opp_sign+' Connection Type List'].split(',')):
                         mi_cxn_type = model_df.loc[s_idx,opp_sign+' Connection Type List'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
 
@@ -334,7 +340,7 @@ def kind_score(x,
                     elif lee_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         #If the attributes are not contradictory - Flagged for manual review
-                        if compare_atts in [0,1,2]: kinds.append(kind_values['flagged1'])
+                        if compare_atts in [0, 1, 2]: kinds.append(kind_values['flagged1'])
                         #Else - Contradiction
                         else:
                             if classify_scheme in ['1', '2']: kinds.append(kind_values['dir contradiction'])
@@ -377,6 +383,7 @@ def kind_score(x,
         kind = kind_values['full extension']
     # Hanging Extension - One from reading not in model
     else: kind = kind_values['hanging extension']
+
     return kind
 
 

@@ -213,7 +213,8 @@ def output(reading_df, file_name, kind_values=kind_dict):
     corr = reading_df[(reading_df['Kind Score'] == kind_values['strong corroboration']) |
                       (reading_df['Kind Score'] == kind_values['weak corroboration1']) |
                       (reading_df['Kind Score'] == kind_values['weak corroboration2']) |
-                      (reading_df['Kind Score'] == kind_values['weak corroboration3'])]
+                      (reading_df['Kind Score'] == kind_values['weak corroboration3']) |
+                      (reading_df['Kind Score'] == kind_values['specification'])]
     corr = corr.sort_values(by='Total Score', ascending=False).reset_index()
     corr.to_csv(f'{file_name}_corroborations.csv', index=False)
     output_file = file_name + '_corroborations_score.csv'
@@ -223,8 +224,7 @@ def output(reading_df, file_name, kind_values=kind_dict):
     ## Extensions ##
     ext = reading_df[(reading_df['Kind Score'] == kind_values['hanging extension']) |
                      (reading_df['Kind Score'] == kind_values['full extension']) |
-                     (reading_df['Kind Score'] == kind_values['internal extension']) |
-                     (reading_df['Kind Score'] == kind_values['specification'])]
+                     (reading_df['Kind Score'] == kind_values['internal extension'])]
     ext = ext.sort_values(by='Total Score', ascending=False).reset_index()
     ext.to_csv(f'{file_name}_extensions.csv', index=False)
     output_file = file_name + '_extensions_score.csv'
