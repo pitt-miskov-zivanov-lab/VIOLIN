@@ -149,8 +149,11 @@ def kind_score(x,
     # Both regulator (source) and regulated (target) node found in the model
     if (source_name != -1 or source_id != -1) and (target_name != -1 or target_id != -1):
         # Find indices of regulator element (target) in model
+        #FIXME: TBD for order
         model_s_indices = source_name if source_name != -1 else source_id
         model_t_indices = target_name if target_name != -1 else target_id
+        # model_s_indices = source_id if source_id != -1 else source_name
+        # model_t_indices = target_id if target_id != -1 else target_name
 
         # Convert regulators into variable names (for path finding)
         model_s_vars = [model_df.loc[i, 'Variable'] for i in model_s_indices]
