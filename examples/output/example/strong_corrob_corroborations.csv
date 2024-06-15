@@ -1,0 +1,5 @@
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+0,fos,protein,,,,,,,ap1,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,c,pmc123,1,10,2,1,12
+1,foxp3,protein,,,,,,,il2,protein,,,,p60568,,,negative,i,,,,,,,nan,nan,d,pmc123,1,10,2,1,12
+2,pdk1,protein,,,,,,,akt,protein,,,,p31749,,,positive,d,,,,,,,nan,nan,a,pmc123,1,10,2,1,12
+3,tcr,protein,,,,,,,ca,chemical,,,,,,,positive,d,,,,,,,nan,nan,b,pmc123,1,10,2,1,12

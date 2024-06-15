@@ -1,0 +1,14 @@
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+105,da-raf1,protein,,,uniprot,p10398,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc2064279,pmc2064279,pmc2064279,pmc2064279,pmc2064279",5,10,5,1,55
+384,mek,family,,,be,mek,,,jak,protein,,,uaz,ua-bp-ggp-00072,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,10,5,1,25
+185,erk,family,,,be,erk,,,smad,family,,,be,smad,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,10,7,1,17
+101,da-raf1,protein,,,uniprot,p10398,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
+107,da-raf1,protein,,,uniprot,p10398,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
+180,erk,family,,,be,erk,,,mtorc1,protein,,,be,mtorc1,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+298,ki-ras,protein,,,uniprot,p01116,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+299,ki-ras,protein,,,uniprot,p01116,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+387,mek,family,,,be,mek,,,mtorc1,protein,,,be,mtorc1,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+535,pi3k,protein,,,be,pi3k,,,bcl-2,family,,,uniprot,p10415,,,positive,i,,,,,,,nan,nan,nan,pmc4067595,1,10,5,1,15
+569,pten,protein,,,uniprot,p60484,,,pi3k,protein,,,be,pi3k,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,10,5,1,15
+106,da-raf1,protein,,,uniprot,p10398,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,3,1,13
+381,mek,family,,,be,mek,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,10,3,1,13

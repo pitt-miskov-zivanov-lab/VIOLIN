@@ -9,15 +9,16 @@ import pandas as pd
 import os.path
 import numpy as np
 import warnings
-from formatting import add_regulator_names_id, evidence_score, get_element, format_variable_names
+from formatting import add_regulator_names_id, evidence_score, get_element, format_variable_names, wrap_list_to_str, get_listname
 from network import node_edge_list
 import warnings
+import re
 
 # Default Kind Score values
 kind_dict = {"strong corroboration": 2,
-             "weak corroboration1": 1,
-             "weak corroboration2": 1,
-             "weak corroboration3": 1,
+             "empty attribute": 1,
+             "indirect interaction": 1,
+             "path corroboration": 1,
              "hanging extension": 40,
              "full extension": 40,
              "internal extension": 40,
@@ -25,9 +26,9 @@ kind_dict = {"strong corroboration": 2,
              "dir contradiction": 10,
              "sign contradiction": 11,
              "att contradiction": 12,
-             "flagged1": 20,
-             "flagged2": 20,
-             "flagged3": 20}
+             "dir mismatch": 20,
+             "path mismatch": 20,
+             "self-regulation": 20}
 
 
 
@@ -79,36 +80,40 @@ def preprocessing_model(model, model_cols=model_columns):
     if {(set(model_cols).issubset(set(model_df.columns))) and
         (set(required_model).issubset(set(model_cols)))}:
 
-        # Check if the model has the regulator information
-        pos_regulator = all(x in ['', 'Nan', 'nan'] for x in model_df['Positive Regulator List'])
-        neg_regulator = all(x in ['', 'Nan', 'nan'] for x in model_df['Negative Regulator List'])
-        pos_regulation = all(x in ['', 'Nan', 'nan'] for x in model_df[f'Positive Regulation Rule'])
-        neg_regulation = all(x in ['', 'Nan', 'nan'] for x in model_df[f'Negative Regulation Rule'])
+    # FIXME: this block for getting list from regulation rule will be deprecated
 
-        if (pos_regulator and pos_regulation and neg_regulator and neg_regulation):
-            raise ValueError(
-                "The regulation rule and list columns are both empty, please fill at least one column out")
-        elif (not pos_regulator) or (not neg_regulator):
-            pass
-        # Get regulator list from regulation rule if regulator list is empty
-        else:
-            for row in range(len(model_df)):
-                index = model_index[row]
-                for sign in ['Positive', 'Negative']:
-                    if model_df.loc[index, f'{sign} Regulation Rule'] == '':
-                        model_df.loc[index, f'{sign} Regulator List'] = ''
-                    else:
-                        model_df.loc[index, f'{sign} Regulator List'] = ','.join(
-                            list(get_element(model_df.loc[index, f'{sign} Regulation Rule'], 0)))
+    #     # Check if the model has the regulator information
+    #     pos_regulator = all(x in ['', 'Nan', 'nan'] for x in model_df['Positive Regulator List'])
+    #     neg_regulator = all(x in ['', 'Nan', 'nan'] for x in model_df['Negative Regulator List'])
+    #     pos_regulation = all(x in ['', 'Nan', 'nan'] for x in model_df[f'Positive Regulation Rule'])
+    #     neg_regulation = all(x in ['', 'Nan', 'nan'] for x in model_df[f'Negative Regulation Rule'])
+    #
+    #     if (pos_regulator and pos_regulation and neg_regulator and neg_regulation):
+    #         raise ValueError(
+    #             "The regulation rule and list columns are both empty, please fill at least one column out")
+    #     elif (not pos_regulator) or (not neg_regulator):
+    #         pass
+    #     # Get regulator list from regulation rule if regulator list is empty
+    #     else:
+    #         for row in range(len(model_df)):
+    #             index = model_index[row]
+    #             for sign in ['Positive', 'Negative']:
+    #                 if model_df.loc[index, f'{sign} Regulation Rule'] == '':
+    #                     model_df.loc[index, f'{sign} Regulator List'] = ''
+    #                 else:
+    #                     model_df.loc[index, f'{sign} Regulator List'] = ','.join(
+    #                         list(get_element(model_df.loc[index, f'{sign} Regulation Rule'], 0)))
 
-        # Remove extraaneous whitespace
-        model_df = model_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+        # Create a column for list-name
+        model_df['Listname'] = [get_listname(idx, model_df) for idx in range(len(model_df))]
         # Covert regulator variable name lists to common names
         # and database identifiers
-
         new_model = add_regulator_names_id(model_df)
+        # Remove extraaneous whitespace
+        model_df = model_df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+
         # Convert all model text to lower-case
-        new_model = new_model.apply(lambda x: x.astype(str).str.lower())
+        new_model = model_df.apply(lambda x: x.astype(str).str.lower())
 
     else:
         raise ValueError("Either your file does not match the column names," +
@@ -148,6 +153,11 @@ def preprocessing_reading(reading, evidence_score_cols=evidence_score_def, atts=
     else: raise ValueError("The accepted file extensions are .txt, .csv, .xlsx, and .tsv")
     reading_df = reading_df.astype(str)
     for row in range(len(reading_df)):
+        reading_df.loc[row, 'Regulator Type'] = ''.join(re.findall(r'[A-z]+', reading_df.loc[row, 'Regulator Type'].lower())) \
+                                    if reading_df.loc[row, 'Regulator Type'] != 'nan' else reading_df.loc[row, 'Regulator Type']
+        reading_df.loc[row, 'Regulated Type'] = ''.join(re.findall(r'[A-z]+', reading_df.loc[row, 'Regulated Type'].lower())) \
+                                    if reading_df.loc[row, 'Regulated Type'] != 'nan' else reading_df.loc[row, 'Regulated Type']
+
         if reading_df.loc[row, 'Connection Type'].lower() in ['I', 'i', 'indirect', 'false']:
             reading_df.loc[row, 'Connection Type'] = 'i'
         elif reading_df.loc[row, 'Connection Type'].lower() in ['', 'nan', 'none']:
@@ -161,24 +171,6 @@ def preprocessing_reading(reading, evidence_score_cols=evidence_score_def, atts=
         new_reading = evidence_score(reading_df,evidence_score_cols)
     else: raise ValueError("The columns you chose for calculating the Evidence Score are not in youe LEE input file:"+str(evidence_score_cols))
     return new_reading
-
-def wrap_list_to_str(df, cols):
-    """
-    This function wraps the lists in the output dataframe to strings
-    Parameters
-    ----------
-    df: pd.DataFrame
-        output dataframe
-    cols: list
-        a list of columns name
-    Returns
-    -------
-    df: pd.DataFrame
-    """
-    for row in range(len(df)):
-        for col in cols:
-            df.loc[row, col] = ','.join(list(df.loc[row, col]))
-    return df
 
 def output(reading_df, file_name, kind_values=kind_dict):
     """
@@ -211,9 +203,9 @@ def output(reading_df, file_name, kind_values=kind_dict):
 
     ## Corroborations ##
     corr = reading_df[(reading_df['Kind Score'] == kind_values['strong corroboration']) |
-                      (reading_df['Kind Score'] == kind_values['weak corroboration1']) |
-                      (reading_df['Kind Score'] == kind_values['weak corroboration2']) |
-                      (reading_df['Kind Score'] == kind_values['weak corroboration3']) |
+                      (reading_df['Kind Score'] == kind_values['empty attribute']) |
+                      (reading_df['Kind Score'] == kind_values['indirect interaction']) |
+                      (reading_df['Kind Score'] == kind_values['path corroboration']) |
                       (reading_df['Kind Score'] == kind_values['specification'])]
     corr = corr.sort_values(by='Total Score', ascending=False).reset_index()
     corr.to_csv(f'{file_name}_corroborations.csv', index=False)
@@ -244,15 +236,15 @@ def output(reading_df, file_name, kind_values=kind_dict):
     ## Special Cases ##
     if ('flagged4' in kind_dict) and ('flagged5' in kind_dict):
 
-        que = reading_df[(reading_df['Kind Score'] == kind_values['flagged1']) |
-                        (reading_df['Kind Score'] == kind_values['flagged2']) |
-                        (reading_df['Kind Score'] == kind_values['flagged3']) |
+        que = reading_df[(reading_df['Kind Score'] == kind_values['dir mismatch']) |
+                        (reading_df['Kind Score'] == kind_values['path mismatch']) |
+                        (reading_df['Kind Score'] == kind_values['self-regulation']) |
                         (reading_df['Kind Score'] == kind_values['flagged4']) |
                         (reading_df['Kind Score'] == kind_values['flagged5'])]
     else:
-        que = reading_df[(reading_df['Kind Score'] == kind_values['flagged1']) |
-                        (reading_df['Kind Score'] == kind_values['flagged2']) |
-                        (reading_df['Kind Score'] == kind_values['flagged3'])]
+        que = reading_df[(reading_df['Kind Score'] == kind_values['dir mismatch']) |
+                        (reading_df['Kind Score'] == kind_values['path mismatch']) |
+                        (reading_df['Kind Score'] == kind_values['self-regulation'])]
 
     que = que.sort_values(by='Total Score', ascending=False).reset_index()
     que.to_csv(f'{file_name}_flagged.csv', index=False)
