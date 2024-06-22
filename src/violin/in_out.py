@@ -9,8 +9,8 @@ import pandas as pd
 import os.path
 import numpy as np
 import warnings
-from formatting import add_regulator_names_id, evidence_score, get_element, format_variable_names, wrap_list_to_str, get_listname
-from network import node_edge_list
+from src.violin.formatting import add_regulator_names_id, evidence_score, get_element, format_variable_names, wrap_list_to_str, get_listname
+from src.violin.network import node_edge_list
 import warnings
 import re
 
@@ -106,6 +106,8 @@ def preprocessing_model(model, model_cols=model_columns):
 
         # Create a column for list-name
         model_df['Listname'] = [get_listname(idx, model_df) for idx in range(len(model_df))]
+        # Normalize element type
+        model_df['Element Type'] = model_df['Element Type'].str.replace(' ', '')
         # Covert regulator variable name lists to common names
         # and database identifiers
         new_model = add_regulator_names_id(model_df)

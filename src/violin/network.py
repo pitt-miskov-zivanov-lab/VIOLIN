@@ -8,7 +8,7 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import pandas as pd
 import numpy as np
 import networkx as nx
-from numeric import get_attributes, compare
+from src.violin.numeric import get_attributes, compare
 
 def node_edge_list(model_df):
     """

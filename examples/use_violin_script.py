@@ -11,16 +11,22 @@ import os.path
 import sys
 import tempfile
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '../src/')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '/src/violin')))
 
-from violin.in_out import preprocessing_model,preprocessing_reading,output
-from violin.scoring import score_reading
-from violin.network import node_edge_list
-from violin.visualize_violin import visualize
+from src.violin.in_out import preprocessing_model, preprocessing_reading, output
+from src.violin.scoring import score_reading
+from src.violin.network import node_edge_list
+from src.violin.visualize_violin import visualize
 
+evidence_scoring_cols = ["Regulator Name", "Regulator Type", "Regulator Subtype", "Regulator HGNC Symbol", "Regulator Database", "Regulator ID", "Regulator Compartment", "Regulator Compartment ID",
+                        "Regulated Name", "Regulated Type", "Regulated Subtype", "Regulated HGNC Symbol", "Regulated Database", "Regulated ID", "Regulated Compartment", "Regulated Compartment ID",
+                        "Sign", "Connection Type", "Mechanism", "Site",
+                        "Cell Line", "Cell Type", "Tissue Type", "Organism"]
+
+attributes = ['Regulated Compartment ID', 'Regulator Compartment ID', 'Cell Line']
 
 #Inputs: Model file, Reading File, Output Header, Classification, Filtering Option, Attributes
-def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend', filt_opt = '100%'):
+def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend', filt_opt = '100%', plot=True):
     """
     This function runs VIOLIN via a terminal command
 
@@ -99,20 +105,20 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
             kind_dict["flagged5"] = 1
 
     elif score == 'extend subcategories':
-        kind_dict = {"strong corroboration" : 2,
-                    "weak corroboration1" : 1,
-                    "weak corroboration2" : 3,
-                    "weak corroboration3" : 5,
-                    "hanging extension" : 40,
-                    "full extension" : 41,
-                    "internal extension" : 42,
-                    "specification" : 30,
-                    "dir contradiction" : 10,
-                    "sign contradiction" : 11,
-                    "att contradiction" : 12,
-                    "flagged1" : 20,
-                    "flagged2" : 21,
-                    "flagged3" : 22}
+        kind_dict = {"strong corroboration": 2,
+                     "empty attribute": 1,
+                     "indirect interaction": 3,
+                     "path corroboration": 5,
+                     "specification": 7,
+                     "hanging extension": 40,
+                     "full extension": 39,
+                     "internal extension": 38,
+                     "dir contradiction": 11,
+                     "sign contradiction": 10,
+                     "att contradiction": 9,
+                     "dir mismatch": 20,
+                     "path mismatch": 19,
+                     "self-regulation": 18}
         match_dict = {"source present" : 1,
                         "target present" : 100,
                         "both present" : 10,
@@ -156,7 +162,7 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
 
     # Import model and LEE set, using default input parameters
     model_df = preprocessing_model(model_file)
-    reading_df = preprocessing_reading(reading=lee_file)
+    reading_df = preprocessing_reading(reading=lee_file,evidence_score_cols=evidence_scoring_cols, atts = attributes)
     graph = node_edge_list(model_df)
 
     #Scoring and Output
@@ -165,11 +171,15 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
                            graph,
                            kind_values = kind_dict,
                            match_values = match_dict,
+                           attributes=attributes,
                            classify_scheme = approach)
     output(scored,out_file,kind_values=kind_dict)
 
     #Visualization
-    visualize(match_dict, kind_dict, out_file+'_outputDF.csv', filter_opt=filt_opt)
+    if plot:
+        visualize(match_dict, kind_dict, out_file+'_outputDF.csv', filter_opt=filt_opt)
+    else:
+        pass
 
     return
 

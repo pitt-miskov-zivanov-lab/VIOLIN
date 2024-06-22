@@ -1,0 +1,26 @@
+level_0,index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+0,61,stat5,protein,,,,p42229,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+13,30,mkk7,protein,,,,o14733,,,jnk,protein,,,,p45983,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+23,69,tcr,protein,,,,p01850,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+22,65,tcr,protein,,,,p01850,,,ca,chemical,,,,,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+21,26,jak3,protein,,,,p52333,,,stat5,protein,,,,p42229,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+20,11,cd28,protein,,,,p10747,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+19,56,ras,protein,,,,p01116,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+18,53,pten,protein,,,,p60484,,,pten,protein,,,,p60484,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+17,40,nfat,proteinfamily,,,,q13469,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+16,62,stat5,protein,,,,p42229,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+15,24,il2r,protein,,,,p14784,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+14,54,raf,protein,,,,p04049,,,mek2,protein,,,,p36507,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+12,9,cd28,protein,,,,p10747,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+1,45,pdk1,protein,,,,q15118,,,akt,protein,,,,p31749,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+11,33,mtorc1,complex,,,,p42345,,,mtor,protein,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+10,42,nfat,proteinfamily,,,,q13469,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+9,2,akt,protein,,,,p31749,,,tsc,protein,,,,q92574,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+8,35,mtorc1,complex,,,,p42345,,,s6k1,protein,,,,q15418,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+7,1,akt,protein,,,,p31749,,,nfkappab,protein,,,,q04206,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+6,3,ap1,protein,,,,p05412,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+5,67,tcr,protein,,,,p01850,,,pkctheta,protein,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+4,60,smad3,protein,,,,p84022,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+3,21,il2,protein,,,,p60568,,,il2,protein,,,,p60568,extracellular,go:0005576,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+2,12,erk,protein,,,,p29323,,,fos,protein,,,,p01100,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+24,27,jnk,protein,,,,p45983,,,jun,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12

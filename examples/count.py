@@ -87,7 +87,7 @@ def merge_duplicates(reading_df, col_names):
 if __name__ == '__main__':
     scheme_file = 'v1'
     count = {}
-    reader = 'GPT'
+    reader = 'INDRA'
     model_A = preprocessing_model('input/models/SkMel133_biorecipe.xlsx')
     model_B = preprocessing_model('input/models/ModelB_discrete_biorecipe.xlsx')
 

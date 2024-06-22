@@ -1,7 +1,7 @@
 reading,connection,mechanism,phosphorylation,strong corr,weak corr1,weak corr2,weak corr3,Specification
-RA1,3,126,3,0,0,21,97,8
-RA2,0,12,0,0,0,2,9,1
-RA3,0,0,0,0,0,0,0,0
+RA1,3,132,3,0,16,13,102,1
+RA2,0,15,0,0,3,2,10,0
+RA3,0,1,0,0,0,0,1,0
 RA4,0,0,0,0,0,0,0,0
 RB1,0,0,0,0,0,0,0,0
 RB2,0,0,0,0,0,0,0,0

@@ -6,9 +6,9 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
-from numeric import get_attributes, find_element, compare
-from network import path_finding
-from formatting import get_listname
+from src.violin.numeric import get_attributes, find_element, compare
+from src.violin.network import path_finding
+from src.violin.formatting import get_listname
 
 kind_dict = {"strong corroboration" : 2, 
                 "empty attribute" : 1,
@@ -32,7 +32,7 @@ match_dict = {"source present" : 1,
 # Default attributes list is empty
 atts_list = []
 
-def match_score(x, reading_df, model_df, match_values = match_dict):
+def match_score(x, reading_df, model_df, embedding_match, match_values = match_dict):
     """
     This function calculates the Match Score for an interaction from the reading
 
@@ -60,25 +60,37 @@ def match_score(x, reading_df, model_df, match_values = match_dict):
     # Search for regulated from reading in model
     if (find_element("name",
                      reading_df.loc[x, 'Regulated Name'],
-                     reading_df.loc[x, 'Regulated Type'], model_df) != -1 or
+                     reading_df.loc[x, 'Regulated Type'],
+                     model_df,
+                     embedding_match) != -1 or
         find_element("hgnc",
                      reading_df.loc[x, 'Regulated HGNC Symbol'],
-                     reading_df.loc[x, 'Regulated Type'], model_df) != -1 or
+                     reading_df.loc[x, 'Regulated Type'],
+                     model_df,
+                     embedding_match) != -1 or
         find_element("id",
                      reading_df.loc[x, 'Regulated ID'],
-                     reading_df.loc[x, 'Regulated Type'], model_df) != -1 ):
+                     reading_df.loc[x, 'Regulated Type'],
+                     model_df,
+                     embedding_match) != -1 ):
         regulated = True
 
     # Search for regulator from reading in model
     if (find_element("name",
                      reading_df.loc[x, 'Regulator Name'],
-                     reading_df.loc[x, 'Regulator Type'], model_df) != -1 or
+                     reading_df.loc[x, 'Regulator Type'],
+                     model_df,
+                     embedding_match) != -1 or
         find_element("hgnc",
                      reading_df.loc[x, 'Regulator HGNC Symbol'],
-                     reading_df.loc[x, 'Regulator Type'], model_df) != -1 or
+                     reading_df.loc[x, 'Regulator Type'],
+                     model_df,
+                     embedding_match) != -1 or
         find_element("id",
                      reading_df.loc[x, 'Regulator ID'],
-                     reading_df.loc[x, 'Regulator Type'], model_df) != -1 ):
+                     reading_df.loc[x, 'Regulator Type'],
+                     model_df,
+                     embedding_match) != -1 ):
         regulator = True
 
     # Scoring definition
@@ -97,7 +109,9 @@ def match_score(x, reading_df, model_df, match_values = match_dict):
 def kind_score(x,
                model_df,
                reading_df,
-               graph, counter,
+               graph,
+               embedding_match,
+               counter,
                kind_values = kind_dict,
                attributes = atts_list,
                classify_scheme = '1',
@@ -177,28 +191,34 @@ def kind_score(x,
     source_name = find_element("name",
                                reading_df.loc[x, 'Regulator Name'],
                                reading_df.loc[x, 'Regulator Type'],
-                               model_df)
+                               model_df,
+                               embedding_match)
     source_hgnc = find_element("hgnc",
                                reading_df.loc[x, 'Regulator HGNC Symbol'],
                                reading_df.loc[x, 'Regulator Type'],
-                               model_df)
+                               model_df,
+                               embedding_match)
     source_id = find_element("id",
                              reading_df.loc[x, 'Regulator ID'],
                              reading_df.loc[x, 'Regulator Type'],
-                             model_df)
+                             model_df,
+                             embedding_match)
 
     target_name = find_element("name",
                                reading_df.loc[x, 'Regulated Name'],
                                reading_df.loc[x, 'Regulated Type'],
-                               model_df)
+                               model_df,
+                               embedding_match)
     target_hgnc = find_element("hgnc",
                                reading_df.loc[x, 'Regulated HGNC Symbol'],
                                reading_df.loc[x, 'Regulated Type'],
-                               model_df)
+                               model_df,
+                               embedding_match)
     target_id = find_element("id",
                              reading_df.loc[x, 'Regulated ID'],
                              reading_df.loc[x, 'Regulated Type'],
-                             model_df)
+                             model_df,
+                             embedding_match)
 
     # Both regulator (source) and regulated (target) node found in the model
     if (source_name != -1 or source_hgnc != -1 or source_id != -1) and \
@@ -258,12 +278,12 @@ def kind_score(x,
                         # Strong Corroboration - perfect match
                         if compare_atts == 0:
                             kinds.append(kind_values['strong corroboration'])
-                        # Specification - the LEE presents new information
-                        elif compare_atts == 1:
-                            kinds.append(kind_values['specification'])
                         # Weak corroboration - the LEE presents less information than the model interaction
-                        elif compare_atts == 2:
+                        elif compare_atts == 1:
                             kinds.append(kind_values['empty attribute'])
+                        # Specification - the LEE presents new information
+                        elif compare_atts == 2:
+                            kinds.append(kind_values['specification'])
                         # Contradiction - the LEE presents information that disputes the model interaction
                         elif compare_atts == 3:
                             kinds.append(kind_values['att contradiction'])
@@ -323,6 +343,7 @@ def kind_score(x,
                     model_reg_variable = model_df.loc[s_idx, reg_sign + ' Regulator List'].split(',')[reg_index]
                     #model_reg_element = list(model_df['Variable']).index(model_reg_variable)
                     # List of model attributes to compare to reading attributes
+
                     model_atts = get_attributes(s_idx, t_idx, reg_sign, model_df, attributes)
 
                     # LEE = "I" and MI = "I"
@@ -582,7 +603,8 @@ def epistemic_value(x,reading_df):
     return e_value
 
 
-def score_reading(reading_df, model_df, graph, counter=None,
+def score_reading(reading_df, model_df, graph,
+                  embedding_match=False, counter=None,
                   kind_values = kind_dict, match_values = match_dict,
                   attributes = atts_list, classify_scheme = '1', mi_cxn = 'd'):
     """
@@ -627,8 +649,8 @@ def score_reading(reading_df, model_df, graph, counter=None,
     print(reading_df.shape[0])
     #Calculate scores
     for x in range(reading_df.shape[0]):
-        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,match_values)
-        scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,counter,kind_values,attributes,classify_scheme,mi_cxn)
+        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,embedding_match, match_values)
+        scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,embedding_match, counter,kind_values,attributes,classify_scheme,mi_cxn)
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
         scored_reading_df.at[x,'Total Score'] =  ((scored_reading_df.at[x,'Evidence Score']*scored_reading_df.at[x,'Match Score'])+scored_reading_df.at[x,'Kind Score'])*scored_reading_df.at[x,'Epistemic Value']
 

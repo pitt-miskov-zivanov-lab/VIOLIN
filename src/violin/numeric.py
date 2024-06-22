@@ -6,8 +6,8 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
-from formatting import get_listname
-
+from src.violin.formatting import get_listname
+import requests
 def get_attributes(A_idx, B_idx, sign, model_df, attrs, path=False):
     """
     The function get the attributes of the interaction in model
@@ -27,7 +27,7 @@ def get_attributes(A_idx, B_idx, sign, model_df, attrs, path=False):
     if set(attrs).issubset({'Regulator Compartment', 'Regulator Compartment ID',
                             'Regulated Compartment', 'Regulated Compartment ID',
                             'Mechanism', 'Site',
-                            'Cell Line', 'Cell Type', 'Tissue', 'Organism',
+                            'Cell Line', 'Cell Type', 'Tissue Type', 'Organism',
                             }):
         pass
     else:
@@ -35,7 +35,7 @@ def get_attributes(A_idx, B_idx, sign, model_df, attrs, path=False):
                             'Regulator Compartment, Regulator Compartment ID,'
                             'Regulated Compartment, Regulated Compartment ID,'
                             'Mechanism, Site,'
-                            'Cell Line, Cell Type, Tissue, Organism')
+                            'Cell Line, Cell Type, Tissue Type, Organism')
 
     # For influence attributes
     if path:  # influence attributes will be empty if only path is found in model
@@ -47,16 +47,16 @@ def get_attributes(A_idx, B_idx, sign, model_df, attrs, path=False):
         for a in ['Mechanism', 'Site']:
             if a in attrs:
                 if model_df.at[A_idx, f'{sign} {a} List'] != 'nan' and \
-                        model_df.loc[A_idx, f'{sign} {a} List'].split(',').index(source_position) not in ['none',
+                        model_df.loc[A_idx, f'{sign} {a} List'].split(',')[source_position] not in ['none',
                                                                                                              'nan', '']:
-                    model_attrs[a] = model_df.loc[A_idx, f'{sign} {a} List'].split(',').index(source_position)
+                    model_attrs[a] = model_df.loc[A_idx, f'{sign} {a} List'].split(',')[source_position]
                 else:
                     pass
             else:
                 pass
 
     # For context attributes
-    for a in ['Cell Line', 'Cell Type', 'Tissue', 'Organism']:
+    for a in ['Cell Line', 'Cell Type', 'Tissue Type', 'Organism']:
         if a in attrs:
             if model_df.at[A_idx, a] not in ['none', 'nan', '']:
                 model_attrs[a] = model_df.at[A_idx, a]
@@ -84,7 +84,8 @@ def get_attributes(A_idx, B_idx, sign, model_df, attrs, path=False):
 def find_element(search_type,
                  element_name,
                  element_type,
-                 model_df):
+                 model_df,
+                 embedding_match):
     """
     This function finds the correct indices of an element within the model.
     Because elements can exists as multiple types (Protein, RNA, gene, etc.),
@@ -100,10 +101,6 @@ def find_element(search_type,
         The name (or ID) of the element being searched for
     element_type: str
         The type of element searched for ('protein', 'protein family', etc.)
-    element_subtype: str
-        The subtype of element searched for ('receptor', 'subunit')
-    elsment_location: str
-        The compartment ID of element searched for (such as the Gene Ontology of extracellular: GO:0005576)
     model_df: pd.DataFrame
         The model dataframe
 
@@ -184,7 +181,7 @@ def compare(model_atts, reading_atts):
 
         elif reading in ['Regulator Compartment', 'Regulator Compartment ID']:
 
-            if model_atts[model] == reading: s_location_atts.append(0)
+            if model_atts[model] == reading_atts[reading]: s_location_atts.append(0)
             elif (model_atts[model] == "nan") and (reading_atts[reading] == "nan"): s_location_atts.append(0)
             # Reading attribute is not available
             elif (model_atts[model] != "nan") and (reading_atts[reading] == "nan"): s_location_atts.append(1)
@@ -195,7 +192,7 @@ def compare(model_atts, reading_atts):
 
         # Check other attributes
         else:
-            if model_atts[model] == reading: compare_atts.append(0)
+            if model_atts[model] == reading_atts[reading]: compare_atts.append(0)
             elif (model_atts[model] == "nan") and (reading_atts[reading] == "nan"): compare_atts.append(0)
             #Reading attribute is not available
             elif (model_atts[model] != "nan") and (reading_atts[reading] == "nan"): compare_atts.append(1)
@@ -233,7 +230,7 @@ def compare(model_atts, reading_atts):
         value = 2
 
     #Contradiction - some or all of the attributes differ
-    elif 3 in compare_atts and len(set(compare_atts)) == 1:
+    elif 3 in compare_atts:
         value = 3
 
     #Specification - combination of perfect match, model contains more information, reading contains more information
