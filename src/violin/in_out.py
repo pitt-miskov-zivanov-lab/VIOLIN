@@ -9,8 +9,8 @@ import pandas as pd
 import os.path
 import numpy as np
 import warnings
-from src.violin.formatting import add_regulator_names_id, evidence_score, get_element, format_variable_names, wrap_list_to_str, get_listname
-from src.violin.network import node_edge_list
+from violin.formatting import add_regulator_names_id, evidence_score, get_element, format_variable_names, wrap_list_to_str, get_listname
+from violin.network import node_edge_list
 import warnings
 import re
 

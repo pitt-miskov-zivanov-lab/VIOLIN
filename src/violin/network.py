@@ -8,7 +8,7 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import pandas as pd
 import numpy as np
 import networkx as nx
-from src.violin.numeric import get_attributes, compare
+from violin.numeric import get_attributes, compare
 
 def node_edge_list(model_df):
     """
@@ -153,13 +153,13 @@ def path_finding(regulator,
                 if scheme in ['1', '3']:
                     kind = kind_values['path mismatch']
                 elif scheme == '2':
-                    kind = kind_values['att contradiction']
+                    kind = str(kind_values['att contradiction'])
             # Flagged - Regulation opposite sign as reading
             else:
                 if scheme in ['1', '3']:
                     kind = kind_values['path mismatch']
                 elif scheme == '2':
-                    kind = kind_values['sign contradiction']
+                    kind = str(kind_values['sign contradiction'])
 
         # If there is a path of the opposite direction - Flagged
         elif nx.has_path(graph, regulated, regulator) and len(
@@ -167,7 +167,7 @@ def path_finding(regulator,
             if scheme in ['1', '3']:
                 kind = kind_values['path mismatch']
             elif scheme == '2':
-                kind = kind_values['dir contradiction']
+                kind = str(kind_values['dir contradiction'])
 
         # If there is no path
         else:

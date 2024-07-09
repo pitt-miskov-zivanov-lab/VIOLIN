@@ -1,0 +1,48 @@
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+617,ras,family,,,pfam,pf00071,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc4254013,pmc2064279,pmc5432316,pmc5746140,pmc5908790",5,10,10,1,60
+108,da-raf1,protein,,,uniprot,p10398,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc2064279,pmc2064279,pmc2064279,pmc2064279",4,10,11,1,51
+488,p38 mapk,family,,,be,p38,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4783893,pmc4783893,pmc4783893",3,10,11,1,41
+631,ras,family,,,pfam,pf00071,,,smad,family,,,be,smad,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4440819,pmc4440819,pmc4440819",3,10,10,1,40
+627,ras,family,,,pfam,pf00071,,,raf,family,,,be,raf,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4067595,pmc4067595,pmc2064279",3,10,10,1,40
+354,mapk,family,,,be,erk,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5467491,pmc5467491,pmc5190119",3,10,10,1,40
+368,mdm2,protein,,,uniprot,q00987,,,p53,protein,,,uniprot,p04637,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,10,11,1,31
+183,erk,family,,,be,erk,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,10,10,1,30
+351,mapk,family,,,be,erk,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3809567,pmc5599027",2,10,10,1,30
+54,braf,protein,,,uniprot,p15056,,,mapk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3809567,pmc5599027",2,10,10,1,30
+176,erk,family,,,be,erk,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6006154,pmc6006154",2,10,10,1,30
+485,p38 mapk,family,,,be,p38,,,c-raf,protein,,,uniprot,p04049,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,10,11,1,21
+536,pi3k,protein,,,be,pi3k,,,egfr,protein,,,uniprot,p00533,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,11,1,21
+292,jnk,family,,,be,jnk,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5636874,1,10,11,1,21
+331,mammalian target of rapamycin,protein,,,uniprot,p42345,,,braf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,10,11,1,21
+358,mapk,family,,,be,erk,,,p38,family,,,be,p38,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,10,11,1,21
+60,braf,protein,,,uniprot,p15056,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5069826,1,10,11,1,21
+439,mtorc1,protein,,,be,mtorc1,,,sasp,protein,,,uniprot,p10599,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,11,1,21
+157,er,protein,,,uniprot,p03372,,,sasp,protein,,,uniprot,p10599,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,11,1,21
+600,raf-1,protein,,,uniprot,p04049,,,mapk3,protein,,,uniprot,p27361,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+596,raf-1,protein,,,uniprot,p04049,,,map2k1,protein,,,uniprot,q02750,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+597,raf-1,protein,,,uniprot,p04049,,,map2k2,protein,,,uniprot,p36507,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+598,raf-1,protein,,,uniprot,p04049,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+599,raf-1,protein,,,uniprot,p04049,,,mapk1,protein,,,uniprot,p28482,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+602,raf-1,protein,,,uniprot,p04049,,,mek2,protein,,,uniprot,p36507,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+601,raf-1,protein,,,uniprot,p04049,,,mek1,protein,,,uniprot,q02750,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+593,raf-1,protein,,,uniprot,p04049,,,erk1,protein,,,uniprot,p27361,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+611,ras,family,,,pfam,pf00071,,,akt,family,,,be,akt,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,10,1,20
+621,ras,family,,,pfam,pf00071,,,map,protein,,,uniprot,p12872,,,negative,i,,,,,,,nan,nan,nan,pmc5432316,1,10,10,1,20
+626,ras,family,,,pfam,pf00071,,,pi3k,protein,,,be,pi3k,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,10,10,1,20
+59,braf,protein,,,uniprot,p15056,,,raf,family,,,be,raf,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,10,10,1,20
+594,raf-1,protein,,,uniprot,p04049,,,erk2,protein,,,uniprot,p28482,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+182,erk,family,,,be,erk,,,raf,family,,,be,raf,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,10,1,20
+591,raf,family,,,be,raf,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5746140,1,10,10,1,20
+104,da-raf1,protein,,,uniprot,p10398,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,10,1,20
+179,erk,family,,,be,erk,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,10,1,20
+388,mek,family,,,be,mek,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc2911390,1,10,10,1,20
+386,mek,family,,,be,mek,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,10,1,20
+380,mek,family,,,be,mek,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,10,10,1,20
+56,braf,protein,,,uniprot,p15056,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc4846800,1,10,10,1,20
+363,mapk,family,,,be,erk,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,10,10,1,20
+362,mapk,family,,,be,erk,,,raf-1,protein,,,uniprot,p04049,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
+361,mapk,family,,,be,erk,,,raf,family,,,be,raf,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,10,10,1,20
+356,mapk,family,,,be,erk,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,10,10,1,20
+178,erk,family,,,be,erk,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc4846800,1,10,10,1,20
+184,erk,family,,,be,erk,,,rb,protein,,,uniprot,p06400,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,10,1,20
+369,mek,family,,,be,mek,,,ampk,protein,,,be,ampk,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,10,1,20

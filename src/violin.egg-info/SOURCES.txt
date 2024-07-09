@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+src/violin/formatting.py
+src/violin/in_out.py
+src/violin/network.py
+src/violin/numeric.py
+src/violin/scoring.py
+src/violin/visualize_violin.py
+src/violin.egg-info/PKG-INFO
+src/violin.egg-info/SOURCES.txt
+src/violin.egg-info/dependency_links.txt
+src/violin.egg-info/not-zip-safe
+src/violin.egg-info/top_level.txt

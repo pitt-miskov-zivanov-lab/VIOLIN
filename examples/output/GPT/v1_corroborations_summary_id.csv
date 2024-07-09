@@ -1,9 +1,9 @@
 reading,connection,mechanism,phosphorylation,strong corr,weak corr1,weak corr2,weak corr3,Specification
-RA2,16,39,11,0,11,1,14,14
-RA3,4,10,2,0,4,0,6,0
+RA2,16,39,11,0,1,1,19,19
+RA3,4,10,2,0,0,0,6,4
 RA4,0,0,0,0,0,0,0,0
-RB1,8,34,5,0,8,7,21,0
-RB2,1,13,1,0,1,1,11,0
-RB3,0,5,1,0,1,0,5,0
+RB1,8,34,5,0,0,7,21,8
+RB2,1,13,1,0,0,1,11,1
+RB3,0,5,1,0,0,0,5,1
 RB_star_1,0,0,0,0,0,0,0,0
 RB_star_2,0,1,0,0,0,0,1,0

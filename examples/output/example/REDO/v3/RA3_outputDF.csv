@@ -1,0 +1,799 @@
+Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+fty720,simplechemical,,,,107969,,,pp2a,protein,,,uniprot,p67775,,,positive,i,,,,,,,"nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan","pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491",8,100,40,1,840
+map4k4,protein,,,,o95819,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan","pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491,pmc5467491",8,100,40,1,840
+belinostat,simplechemical,,,,6918638,,,mapk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","pmc5537703,pmc5537703,pmc5537703,pmc5537703,pmc5537703,pmc5537703",6,100,40,1,640
+tgf-β,family,,,,uaz00333,,,smad,family,,,be,smad,,,positive,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819",5,100,40,1,540
+rerg,protein,,,,q96a58,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc5410235,pmc5410235,pmc5410235,pmc5410235,pmc5410235",5,100,40,1,540
+map4k4,protein,,,,o95819,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5467491,pmc5467491,pmc5467491,pmc5467491",4,100,40,1,440
+rerg,protein,,,,q96a58,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5410235,pmc5410235,pmc5410235,pmc5410235",4,100,40,1,440
+map4k4,protein,,,,o95819,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5467491,pmc5467491,pmc5467491,pmc5467491",4,100,40,1,440
+ppar,protein,,,,q07869,,,mapk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5190119,pmc5190119,pmc5190119,pmc5190119",4,100,40,1,440
+ptprs,protein,,,,q13332,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc6006154,pmc6006154,pmc6006154,pmc6006154",4,100,40,1,440
+autophagy,bioprocess,,,,go:0006914,,,ampk,protein,,,be,ampk,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,100,40,1,340
+pd0325901,simplechemical,,,,9826528,,,ampk,protein,,,be,ampk,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,100,40,1,340
+u0126,simplechemical,,,,3006531,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4440819,pmc5372348,pmc5372348",3,100,40,1,340
+tgf-β1,protein,,,,uaz02902,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4440819,pmc4440819,pmc4440819",3,100,40,1,340
+rdm1,protein,,,,q8ng50,,,raf,family,,,be,raf,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc6396142,pmc6396142,pmc6396142",3,100,40,1,340
+sirt1,protein,,,,q96eb6,,,mapk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5372348,pmc5372348",2,100,40,1,240
+fgf2,protein,,,,p09038,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,100,40,1,240
+pbx3,protein,,,,p40426,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5609034,pmc5609034",2,100,40,1,240
+ppar,protein,,,,q07869,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,100,40,1,240
+bet,protein,,,,q8nft8,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5908790,pmc5908790",2,100,40,1,240
+sa,simplechemical,,,,7009579,,,p38 mapk,family,,,be,p38,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4783893,pmc4783893",2,100,40,1,240
+crebbp,protein,,,,q92793,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5395114,pmc5395114",2,100,40,1,240
+fgf2,protein,,,,p09038,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,100,40,1,240
+jip1,protein,,,,q9uqf2,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5636874,pmc5636874",2,100,40,1,240
+nm23,protein,,,,p15531,,,rac1,protein,,,uniprot,p63000,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4020307,pmc4020307",2,100,40,1,240
+sb203580,simplechemical,,,,176155,,,p38mapk,family,,,be,p38,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5372348,pmc5372348",2,100,40,1,240
+tgf-β1,protein,,,,uaz02902,,,mek,family,,,be,mek,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,100,40,1,240
+"egfr
+        
+          epidermal growth factor receptor",protein,,,,uaz12897,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+neurofibromin,protein,,,,p21359,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6194127,pmc6194127",2,100,40,1,240
+oa,simplechemical,,,,4628,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+sfl1,protein,,,,p20134,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4618523,pmc4618523",2,100,40,1,240
+nf1,protein,,,,p21359,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4846800,pmc4846800",2,100,40,1,240
+guanine,simplechemical,,,,764,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,100,40,1,240
+mm-151,protein,,,,uaz12741,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4695180,pmc4695180",2,100,40,1,240
+mm-327,protein,,,,uaz12749,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4695180,pmc4695180",2,100,40,1,240
+gabpa,protein,,,,q06546,,,tert,protein,,,uniprot,o14746,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5288173,pmc5288173",2,100,40,1,240
+letrozole,simplechemical,,,,3902,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5958651,pmc5958651",2,100,40,1,240
+ppar,protein,,,,q07869,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,100,40,1,240
+mek inhibitor,simplechemical,,,,uaz00032,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+nm23-h1,protein,,,,p15531,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4020307,pmc4020307",2,100,40,1,240
+pp2a inhibitor,simplechemical,,,,uaz12906,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+ksr,protein,,,,q8ivt5,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4020307,pmc4020307",2,100,40,1,240
+e3 ubiquitin ligase,family,,,,pf12483,,,p53,protein,,,uniprot,p04637,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,100,40,1,240
+cisplatin,simplechemical,,,,441203,,,mapk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,100,40,1,240
+ksr,protein,,,,q8ivt5,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4020307,pmc4020307",2,100,40,1,240
+da-raf,protein,,,,uaz12716,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,100,40,1,240
+encorafenib,protein,,,,uaz13263,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6472057,pmc6472057",2,100,40,1,240
+ppar,protein,,,,q07869,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,100,40,1,240
+map4k4,protein,,,,o95819,,,egf,protein,,,uniprot,p01133,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+map4k4,protein,,,,o95819,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+nras,protein,,,,p01111,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4695180,pmc4695180",2,100,40,1,240
+map4k4,protein,,,,o95819,,,p38,family,,,be,p38,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+map4k4,protein,,,,o95819,,,mek,family,,,be,mek,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,100,40,1,240
+pd0325901,simplechemical,,,,9826528,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5723691,pmc5723691",2,100,40,1,240
+pd0325901,simplechemical,,,,9826528,,,mek,family,,,be,mek,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5723691,pmc5723691",2,100,40,1,240
+ptprs,protein,,,,q13332,,,akt,family,,,be,akt,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6006154,pmc6006154",2,100,40,1,240
+rgz,protein,,,,uaz13401,,,mapk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,100,40,1,240
+rdm1,protein,,,,q8ng50,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6396142,pmc6396142",2,100,40,1,240
+sodium,simplechemical,,,,923,,,ki-ras,protein,,,uniprot,p01116,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+smad7,protein,,,,o15105,,,smad,family,,,be,smad,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+ets1,protein,,,,p14921,,,tert,protein,,,uniprot,o14746,,,positive,i,,,,,,,nan,nan,nan,pmc5288173,1,100,40,1,140
+fgf2,protein,,,,p09038,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+erk1/2,family,,,,erk,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+fak,protein,,,,q05397,,,map,protein,,,uniprot,p12872,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,100,40,1,140
+erk1/2,family,,,,erk,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+fak,protein,,,,q05397,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,100,40,1,140
+fgf1,protein,,,,p05230,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+ppar,protein,,,,q07869,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+erk inhibitor,simplechemical,,,,uaz00224,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+mir-382-5p,protein,,,,uaz12803,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5410235,1,100,40,1,140
+egfr-ras-erk,protein,,,,uaz12631,,,kras,protein,,,uniprot,p01116,,,positive,i,,,,,,,nan,nan,nan,pmc5127645,1,100,40,1,140
+emt,protein,,,,o75751,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+tf,protein,,,,p02787,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+raf265,protein,,,,uaz00112,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+raf265,protein,,,,uaz00112,,,raf,family,,,be,raf,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+tcf7l2,protein,,,,q9nqb0,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5755028,1,100,40,1,140
+ksr,protein,,,,q8ivt5,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+rapamycin,simplechemical,,,,5284616,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+mir-382-5p,protein,,,,uaz12803,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5410235,1,100,40,1,140
+mir-382-5p,protein,,,,uaz12803,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5410235,1,100,40,1,140
+mir-382-5p,protein,,,,uaz12803,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5410235,1,100,40,1,140
+sos,family,,,,sos,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc3498325,1,100,40,1,140
+mir-320,protein,,,,uaz12995,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,100,40,1,140
+mir-320,protein,,,,uaz12995,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,100,40,1,140
+mir-181a,protein,,,,uaz11673,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+mir-181a,protein,,,,uaz11673,,,mapk1,protein,,,uniprot,p28482,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+sp600125,simplechemical,,,,8515,,,p38mapk,family,,,be,p38,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+sp600125,simplechemical,,,,8515,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+sos,family,,,,sos,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc6356706,1,100,40,1,140
+mir-181a,protein,,,,uaz11673,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+mir-181a,protein,,,,uaz11673,,,bcl2,protein,,,uniprot,p10415,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+erk inhibitor,simplechemical,,,,uaz00224,,,ampk,protein,,,be,ampk,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+fibroblast growth factor 2,protein,,,,p09038,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+gsk525762,protein,,,,uaz13465,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+mek inhibitors,simplechemical,,,,uaz00058,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+hepatocyte growth factor,protein,,,,p14210,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+i-bet151,simplechemical,,,,52912189,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+ier3,protein,,,,p46695,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc2911390,1,100,40,1,140
+sb202190,simplechemical,,,,5353940,,,c-raf,protein,,,uniprot,p04049,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,100,40,1,140
+il-1,family,,,,pf00340,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+il-1,family,,,,pf00340,,,p38mapk,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+il-1β,protein,,,,uaz00382,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+mapkapk-2,protein,,,,p49137,,,p38 mapk,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,100,40,1,140
+sa,simplechemical,,,,7009579,,,caspase-7,protein,,,uniprot,p55210,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,100,40,1,140
+rdm1,protein,,,,q8ng50,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,100,40,1,140
+rtks,protein,,,,uaz00105,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+rtks,protein,,,,uaz00105,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+jip1,protein,,,,q9uqf2,,,tnf,protein,,,uniprot,p01375,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,100,40,1,140
+jip1-phosphatase,protein,,,,uaz13059,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,100,40,1,140
+rdm1,protein,,,,q8ng50,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,100,40,1,140
+ko,simplechemical,,,,25113109,,,egfr,protein,,,uniprot,p00533,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+lamp1,protein,,,,p11279,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+ksr1,protein,,,,q8ivt5,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+ksr,protein,,,,q8ivt5,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+ksr,protein,,,,q8ivt5,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+ksr,protein,,,,q8ivt5,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+rgs19,protein,,,,p49795,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+sb203580,simplechemical,,,,176155,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+hdac inhibitors,simplechemical,,,,uaz03116,,,p53,protein,,,uniprot,p04637,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+fos,family,,,,fos_family,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc2911390,1,100,40,1,140
+scf,protein,,,,p21583,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5958651,1,100,40,1,140
+foxo3,protein,,,,o43524,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5755028,1,100,40,1,140
+ras-erk,protein,,,,uaz09690,,,mtorc1,protein,,,be,mtorc1,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+sirt1,protein,,,,q96eb6,,,p38mapk,family,,,be,p38,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+gc1q ligand,protein,,,,uaz12886,,,integrin,protein,,,uniprot,p08648,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,100,40,1,140
+sirt1,protein,,,,q96eb6,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+sirt1,protein,,,,q96eb6,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+gef,protein,,,,q9nr83,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+sirt1,protein,,,,q96eb6,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+geranylgeranyltransferase,protein,,,,uaz12675,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc4067595,1,100,40,1,140
+gm,simplechemical,,,,188959,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5824365,1,100,40,1,140
+gna11,protein,,,,p29992,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+gnaq,protein,,,,p50148,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+ras/raf/mek/erk,protein,,,,uaz00068,,,ifn,family,,,be,interferon,,,negative,i,,,,,,,nan,nan,nan,pmc4535867,1,100,40,1,140
+gsk525762,protein,,,,uaz13465,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+gtpase activating proteins,protein,,,,uaz12558,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,100,40,1,140
+siah,protein,,,,uaz13439,,,egfr,protein,,,uniprot,p00533,,,negative,i,,,,,,,nan,nan,nan,pmc5049993,1,100,40,1,140
+h-ras mutants,protein,,,,uaz12608,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,100,40,1,140
+selumetinib,simplechemical,,,,10127622,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+selumetinib,simplechemical,,,,10127622,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+hdac inhibitor,simplechemical,,,,uaz03103,,,ki-ras,protein,,,uniprot,p01116,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+selumetinib,simplechemical,,,,10127622,,,braf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+tgf- β,protein,,,,uaz00333,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+stearic acid,simplechemical,,,,5281,,,p38 mapk,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,100,40,1,140
+cdk4,protein,,,,p11802,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+cdk4,protein,,,,p11802,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+p600125,protein,,,,uaz12921,,,jnk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,100,40,1,140
+ptpn11,protein,,,,q06124,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5886052,1,100,40,1,140
+ptprj,protein,,,,q12913,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+braf inhibitors,simplechemical,,,,uaz00044,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,100,40,1,140
+braf inhibitors,simplechemical,,,,uaz00044,,,raf,family,,,be,raf,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+ptprs,protein,,,,q13332,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+butyrate,simplechemical,,,,264,,,ki-ras,protein,,,uniprot,p01116,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+u0126,simplechemical,,,,3006531,,,becn1,protein,,,uniprot,q14457,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,100,40,1,140
+transcription,bioprocess,,,,go:0006351,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,100,40,1,140
+camp,protein,,,,p49913,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,100,40,1,140
+trametinib,simplechemical,,,,11707110,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+trametinib,simplechemical,,,,11707110,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+tpy,simplechemical,,,,71728353,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,100,40,1,140
+nst,protein,,,,q9br01,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5049993,1,100,40,1,140
+tgn-020,protein,,,,uaz13145,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6113736,1,100,40,1,140
+nras,protein,,,,p01111,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5069826,1,100,40,1,140
+ptprs,protein,,,,q13332,,,braf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+cell death,bioprocess,,,,go:0008219,,,p38 mapk,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,100,40,1,140
+ptprs,protein,,,,q13332,,,egfr,protein,,,uniprot,p00533,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+tlr4,protein,,,,o00206,,,p38 mapk,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+tlr4,protein,,,,o00206,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+ptprs,protein,,,,q13332,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+tlr4,protein,,,,o00206,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+np,protein,,,,o60259,,,mapk1,protein,,,uniprot,p28482,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+tlr4,protein,,,,o00206,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+np,protein,,,,o60259,,,kras,protein,,,uniprot,p01116,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,100,40,1,140
+nm23-h2,protein,,,,p22392,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+da-raf,protein,,,,uaz12716,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+bet,protein,,,,q8nft8,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+bet,protein,,,,q8nft8,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+page4,protein,,,,o60829,,,ar,protein,,,uniprot,p10275,,,negative,i,,,,,,,nan,nan,nan,pmc6339303,1,100,40,1,140
+bet,protein,,,,q8nft8,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+afatinib,simplechemical,,,,10184653,,,egfr,protein,,,uniprot,p00533,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,100,40,1,140
+afatinib,simplechemical,,,,10184653,,,her2,protein,,,uniprot,p04626,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,100,40,1,140
+ppar,protein,,,,q07869,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+akt inhibitors,simplechemical,,,,uaz00097,,,bcl-2,family,,,uniprot,p10415,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,100,40,1,140
+plx4032,protein,,,,uaz00175,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+piggybac,protein,,,,uaz08961,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5755028,1,100,40,1,140
+pd0325901,simplechemical,,,,9826528,,,stat3,protein,,,uniprot,p40763,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,100,40,1,140
+vemurafenib,simplechemical,,,,42611257,,,raf,family,,,be,raf,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+vemurafenib,simplechemical,,,,42611257,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc4695180,1,100,40,1,140
+pd0325901,simplechemical,,,,9826528,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+apoptosis,bioprocess,,,,go:0006915,,,p38,family,,,be,p38,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+pd0325901,simplechemical,,,,9826528,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,100,40,1,140
+pd0325901,simplechemical,,,,9826528,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+pd0325901,simplechemical,,,,9826528,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+ppar,protein,,,,q07869,,,p38,family,,,be,p38,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+ppar,protein,,,,q07869,,,p38 mapk,family,,,be,p38,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+az628,protein,,,,uaz00070,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+pd0325901,simplechemical,,,,9826528,,,ampk,protein,,,be,ampk,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,100,40,1,140
+ppar,protein,,,,q07869,,,p38 mapk,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+pd,simplechemical,,,,7079450,,,jun,protein,,,uniprot,p05412,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,100,40,1,140
+pd,simplechemical,,,,7079450,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5824365,1,100,40,1,140
+pd,simplechemical,,,,7079450,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,100,40,1,140
+pbx3,protein,,,,p40426,,,raf-1,protein,,,uniprot,p04049,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,100,40,1,140
+pbx3,protein,,,,p40426,,,ert,protein,,,uniprot,p78545,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,100,40,1,140
+pam,protein,,,,o75592,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5069826,1,100,40,1,140
+ptp,protein,,,,p05451,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+ptpn1,protein,,,,p18031,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,100,40,1,140
+nm23-h1,protein,,,,p15531,,,mapk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+ksr,protein,,,,q8ivt5,,,raf,family,,,be,raf,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+tgf- β,protein,,,,uaz00333,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+da-raf1,protein,,,,uaz12725,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+tgf-β,family,,,,uaz00333,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+dabrafenib,simplechemical,,,,44462760,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+ncoa3,protein,,,,q9y6q9,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc5755028,1,100,40,1,140
+dusp6,protein,,,,q16828,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,100,40,1,140
+ptprs,protein,,,,q13332,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+ptps,protein,,,,q03393,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+dexamethasone,simplechemical,,,,5743,,,bcl-2,family,,,uniprot,p10415,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,100,40,1,140
+dc,protein,,,,uaz01319,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,100,40,1,140
+ndpks,protein,,,,uaz12654,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+ndpks,protein,,,,uaz12654,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+tgf-β1,protein,,,,uaz02902,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+differentiation,bioprocess,,,,go:0030154,,,jun,protein,,,uniprot,p05412,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,100,40,1,140
+dep-1,protein,,,,q12913,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,100,40,1,140
+dusp6,protein,,,,q16828,,,braf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,100,40,1,140
+tgf- β,protein,,,,uaz00333,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+tgf- β,protein,,,,uaz00333,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+dusp5,protein,,,,q16690,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,100,40,1,140
+dabrafenib,simplechemical,,,,44462760,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,100,40,1,140
+daraf gene,protein,,,,uaz12760,,,da-raf1,protein,,,uniprot,p10398,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,100,40,1,140
+tgf-β1,protein,,,,uaz02902,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+e3 ubiquitin ligase,family,,,,pf12483,,,smad,family,,,be,smad,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+da-raf1,protein,,,,uaz12725,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+nm23-h1,protein,,,,p15531,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,100,40,1,140
+tgf-β,family,,,,uaz00333,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,100,40,1,140
+mts-stat3-s/d,protein,,,,uaz12585,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,100,40,1,140
+dusp5,protein,,,,q16690,,,braf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,100,40,1,140
+myd88,protein,,,,q99836,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,100,40,1,140
+mek,family,,,,mek,,,stat3,protein,,,uniprot,p40763,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5537703,pmc5537703,pmc5537703,pmc5537703",4,10,38,1,78
+da-raf1,protein,,,,p10398,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc2064279,pmc2064279,pmc2064279,pmc2064279,pmc2064279",5,10,19,1,69
+p38 mapk,family,,,,p38,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4783893,pmc4783893,pmc4783893",3,10,38,1,68
+mapk,family,,,,erk,,,stat3,protein,,,uniprot,p40763,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,10,38,1,58
+ras,family,,,,pf00071,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc4254013,pmc2064279,pmc5432316,pmc5746140,pmc5908790",5,10,5,1,55
+da-raf1,protein,,,,p10398,,,ras,family,,,pfam,pf00071,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc2064279,pmc2064279,pmc2064279,pmc2064279",4,10,11,1,51
+erk,family,,,,erk,,,lactate,simplechemical,,,hmdb,hmdb00190,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,38,1,48
+ras,family,,,,pf00071,,,tgf-β1,protein,,,uaz,uaz02902,,,positive,i,,,,,,,"nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan","pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819",8,1,40,1,48
+er,protein,,,,p03372,,,sasp,protein,,,uniprot,p10599,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,38,1,48
+mek,family,,,,mek,,,lactate,simplechemical,,,hmdb,hmdb00190,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,38,1,48
+stat3,protein,,,,p40763,,,lactate,simplechemical,,,hmdb,hmdb00190,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,10,38,1,48
+p38 mapk,family,,,,p38,,,c-raf,protein,,,uniprot,p04049,,,negative,i,,,,,,,nan,nan,nan,pmc4783893,1,10,38,1,48
+erk,family,,,,erk,,,differentiation,bioprocess,,,go,go:0030154,,,negative,i,,,,,,,"nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","pmc2064279,pmc5824365,pmc5824365,pmc5824365,pmc5824365,pmc5824365",6,1,40,1,46
+ras,family,,,,pf00071,,,ksr,protein,,,uniprot,q8ivt5,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc4020307,pmc4020307,pmc4020307,pmc4020307",4,1,40,1,44
+mapk,family,,,,erk,,,cisplatin,simplechemical,,,pubchem,441203,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5537703,pmc5537703,pmc5537703,pmc5537703",4,1,40,1,44
+erk,family,,,,erk,,,emt,protein,,,uniprot,o75751,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc4440819,pmc4440819,pmc4440819,pmc4440819",4,1,40,1,44
+ras,family,,,,pf00071,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4440819,pmc5017527,pmc5017527",3,1,40,1,43
+erk,family,,,,erk,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4846800,pmc5190119,pmc5190119",3,1,40,1,43
+mek,family,,,,mek,,,autophagy,bioprocess,,,go,go:0006914,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,1,40,1,43
+erk,family,,,,erk,,,autophagy,bioprocess,,,go,go:0006914,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,1,40,1,43
+mapk,family,,,,erk,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5729429,pmc5190119",2,1,40,1,42
+mapk,family,,,,erk,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5833015,pmc5190119",2,1,40,1,42
+mek,family,,,,mek,,,autophagy,bioprocess,,,go,go:0006914,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5723691,pmc5723691",2,1,40,1,42
+ras,family,,,,pf00071,,,emt,protein,,,uniprot,o75751,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,1,40,1,42
+mek1,protein,,,,q02750,,,fig,protein,,,uniprot,q9hd26,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,1,40,1,42
+jnk,family,,,,jnk,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,1,40,1,42
+p38 mapk,family,,,,p38,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4783893,pmc4783893",2,1,40,1,42
+p38,family,,,,p38,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,1,40,1,42
+map,protein,,,,p12872,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,1,40,1,42
+mek1,protein,,,,q02750,,,α,simplechemical,,,uaz,uaz00180,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,1,40,1,42
+da-raf1,protein,,,,p10398,,,differentiation,bioprocess,,,go,go:0030154,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc2064279,pmc2064279",2,1,40,1,42
+erk2,protein,,,,p28482,,,map4k4,protein,,,uniprot,o95819,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,1,40,1,42
+emt,protein,,,,o75751,,,tgf-β1,protein,,,uaz,uaz02902,,,positive,i,,,,,,,"nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan","pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819,pmc4440819",27,0.1,39,1,41.7
+mapk,family,,,,erk,,,hipk1,protein,,,uniprot,q86z02,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,1,40,1,41
+mtorc1,protein,,,,mtorc1,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+mtor,protein,,,,p42345,,,ps727,protein,,,uaz,uaz12592,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+mtor,protein,,,,p42345,,,autophagy,bioprocess,,,go,go:0006914,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+pi3k,protein,,,,pi3k,,,src,family,,,be,src,,,positive,i,,,,,,,nan,nan,nan,pmc5833015,1,1,40,1,41
+pi3k,protein,,,,pi3k,,,mdm2-p53 axis,protein,,,uaz,uaz12668,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,1,40,1,41
+pi3k,protein,,,,pi3k,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+raf,family,,,,raf,,,mek1/2,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc4067595,1,1,40,1,41
+pi3k,protein,,,,pi3k,,,angiogenesis,bioprocess,,,go,go:0001525,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+mapk,family,,,,erk,,,cell proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,1,40,1,41
+mammalian target of rapamycin,protein,,,,p42345,,,gnaq,protein,,,uniprot,p50148,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,1,40,1,41
+raf-1,protein,,,,p04049,,,extracellular signal-regulated kinases,protein,,,uaz,uaz08123,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,1,40,1,41
+mapk,family,,,,erk,,,mm,simplechemical,,,pubchem,6993082,,,positive,i,,,,,,,nan,nan,nan,pmc4695180,1,1,40,1,41
+p38 mapk,family,,,,p38,,,mek1/2,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc4783893,1,1,40,1,41
+mapk,family,,,,erk,,,pbx3,protein,,,uniprot,p40426,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,1,40,1,41
+ras,family,,,,pf00071,,,mek-erk,protein,,,uaz,uaz06367,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+mek,family,,,,mek,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+ras,family,,,,pf00071,,,gdp,simplechemical,,,pubchem,8977,,,positive,i,,,,,,,nan,nan,nan,pmc5467702,1,1,40,1,41
+raf,family,,,,raf,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+mek,family,,,,mek,,,fig,protein,,,uniprot,q9hd26,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+mek,family,,,,mek,,,impact,protein,,,uniprot,q9p2x3,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,1,40,1,41
+mtorc1,protein,,,,mtorc1,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+ras,family,,,,pf00071,,,metastasis,bioprocess,,,mesh,d009362,,,positive,i,,,,,,,nan,nan,nan,pmc5049993,1,1,40,1,41
+p38,family,,,,p38,,,injury,bioprocess,,,go,go:0090303,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,1,40,1,41
+ras,family,,,,pf00071,,,muv,protein,,,uaz,uaz12652,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,1,40,1,41
+mek,family,,,,mek,,,tgf-β1,protein,,,uaz,uaz02902,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+ras,family,,,,pf00071,,,phosphoinositol-3-kinase,protein,,,uaz,uaz09993,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+ras,family,,,,pf00071,,,ras/raf/mek/erk,protein,,,uaz,uaz00068,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+ras,family,,,,pf00071,,,ral,protein,,,uniprot,p11233,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+mek1,protein,,,,q02750,,,meks,protein,,,uaz,uaz08530,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,1,40,1,41
+p38,family,,,,p38,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,1,40,1,41
+mek,family,,,,mek,,,emt,protein,,,uniprot,o75751,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+ras,family,,,,pf00071,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5127645,1,1,40,1,41
+mek,family,,,,mek,,,cell viability,bioprocess,,,mesh,d002470,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+mapk,family,,,,erk,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,1,40,1,41
+ras,family,,,,pf00071,,,differentiation,bioprocess,,,go,go:0030154,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+mapk,family,,,,erk,,,tumor microenvironment,bioprocess,,,mesh,d059016,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+mapk1,protein,,,,p28482,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,1,40,1,41
+ras,family,,,,pf00071,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+p38mapk,family,,,,p38,,,gfap,protein,,,uniprot,p14136,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,1,40,1,41
+ras,family,,,,pf00071,,,raf-mek-erk,protein,,,uaz,uaz00085,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+p38 mapk,family,,,,p38,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,1,40,1,41
+p38 mapk,family,,,,p38,,,extracellular signal-regulated kinases 1 and 2,protein,,,uaz,uaz09159,,,negative,i,,,,,,,nan,nan,nan,pmc4783893,1,1,40,1,41
+p38 mapk,family,,,,p38,,,erk1/2,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4783893,1,1,40,1,41
+mek,family,,,,mek,,,differentiation,bioprocess,,,go,go:0030154,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,1,40,1,41
+mek,family,,,,mek,,,dusp5,protein,,,uniprot,q16690,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,1,40,1,41
+p38 mapk,family,,,,p38,,,drg,protein,,,uniprot,q86yr7,,,positive,i,,,,,,,nan,nan,nan,pmc6113736,1,1,40,1,41
+mek,family,,,,mek,,,dusp6,protein,,,uniprot,q16828,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,1,40,1,41
+mtorc1,protein,,,,mtorc1,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+integrin,protein,,,,p08648,,,hras,protein,,,uniprot,p01112,,,negative,i,,,,,,,nan,nan,nan,pmc5432316,1,1,40,1,41
+kras,protein,,,,p01116,,,tcf7l2,protein,,,uniprot,q9nqb0,,,negative,i,,,,,,,nan,nan,nan,pmc5755028,1,1,40,1,41
+vegf,protein,,,,p15692,,,infiltration,bioprocess,,,mesh,d009361,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+tp53,protein,,,,p04637,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc4494777,1,1,40,1,41
+braf,protein,,,,p15056,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,1,40,1,41
+braf,protein,,,,p15056,,,necrosis,bioprocess,,,mesh,d009336,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+braf,protein,,,,p15056,,,mm,simplechemical,,,pubchem,6993082,,,positive,i,,,,,,,nan,nan,nan,pmc4695180,1,1,40,1,41
+braf,protein,,,,p15056,,,mda,simplechemical,,,pubchem,10964,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+smad,family,,,,smad,,,tgf-β,family,,,uaz,uaz00333,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+smad,family,,,,smad,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+braf,protein,,,,p15056,,,dcs,simplechemical,,,pubchem,6234,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+braf,protein,,,,p15056,,,cell proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,1,40,1,41
+braf,protein,,,,p15056,,,braf inhibitors,simplechemical,,,uaz,uaz00044,,,positive,i,,,,,,,nan,nan,nan,pmc6395334,1,1,40,1,41
+braf,protein,,,,p15056,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+glucose,simplechemical,,,,hmdb06564,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,1,40,1,41
+egfr,protein,,,,p00533,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,1,40,1,41
+ifn,family,,,,interferon,,,innate immune response,bioprocess,,,go,go:0045087,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,1,40,1,41
+bcl2,family,,,,p10415,,,cell death,bioprocess,,,go,go:0008219,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,1,40,1,41
+b-raf,protein,,,,p15056,,,ksr2,protein,,,uniprot,q6vab6,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,1,40,1,41
+vegf,protein,,,,p15692,,,adhesion,bioprocess,,,go,go:0007155,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+erk,family,,,,erk,,,ubiquitin,protein,,,uniprot,p0cg47,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,1,40,1,41
+erk,family,,,,erk,,,tgf-β,family,,,uaz,uaz00333,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,1,40,1,41
+stat3,protein,,,,p40763,,,atp,simplechemical,,,pubchem,5957,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+daraf1,protein,,,,p10398,,,brdu,simplechemical,,,pubchem,6035,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,1,40,1,41
+tert,protein,,,,o14746,,,transcription,bioprocess,,,go,go:0006351,,,negative,i,,,,,,,nan,nan,nan,pmc5288173,1,1,40,1,41
+er,protein,,,,p03372,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+daraf1,protein,,,,p10398,,,tnt,protein,,,uniprot,p13805,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,1,40,1,41
+daraf1,protein,,,,p10398,,,myhc,protein,,,uaz,uaz12755,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,1,40,1,41
+erk,family,,,,erk,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,1,40,1,41
+erk,family,,,,erk,,,autophagy,bioprocess,,,go,go:0006914,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+erk,family,,,,erk,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,1,40,1,41
+erk,family,,,,erk,,,cell survival,bioprocess,,,mesh,d002470,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,1,40,1,41
+stat3,protein,,,,p40763,,,transport,bioprocess,,,go,go:0006810,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,1,40,1,41
+erk,family,,,,erk,,,cell viability,bioprocess,,,mesh,d002470,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+erk,family,,,,erk,,,crc,protein,,,uniprot,q8l925,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,1,40,1,41
+erk,family,,,,erk,,,fate,protein,,,uniprot,q969f0,,,positive,i,,,,,,,nan,nan,nan,pmc5824365,1,1,40,1,41
+erk,family,,,,erk,,,fig,protein,,,uniprot,q9hd26,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+erk,family,,,,erk,,,gfap,protein,,,uniprot,p14136,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,1,40,1,41
+erk,family,,,,erk,,,injury,bioprocess,,,go,go:0090303,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,1,40,1,41
+erk,family,,,,erk,,,iqgap,protein,,,uaz,uaz12794,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,1,40,1,41
+vegf,protein,,,,p15692,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+egf,protein,,,,p01133,,,egfr/ras/erk,protein,,,uaz,uaz12631,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,1,40,1,41
+jnk,family,,,,jnk,,,cell death,bioprocess,,,go,go:0008219,,,negative,i,,,,,,,nan,nan,nan,pmc5636874,1,1,40,1,41
+kras,protein,,,,p01116,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,1,40,1,41
+jnk,family,,,,jnk,,,signal transduction,bioprocess,,,go,go:0007165,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,1,40,1,41
+jnk,family,,,,jnk,,,jnk mapk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5636874,1,1,40,1,41
+ampk,protein,,,,ampk,,,senescence,bioprocess,,,mesh,d000375,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+kras,protein,,,,p01116,,,foxo3,protein,,,uniprot,o43524,,,negative,i,,,,,,,nan,nan,nan,pmc5755028,1,1,40,1,41
+vegfr-2,protein,,,,p35968,,,infiltration,bioprocess,,,mesh,d009361,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+vegfr-2,protein,,,,p35968,,,adhesion,bioprocess,,,go,go:0007155,,,negative,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+jnk,family,,,,jnk,,,injury,bioprocess,,,go,go:0090303,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,1,40,1,41
+jnk,family,,,,jnk,,,gfap,protein,,,uniprot,p14136,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,1,40,1,41
+akt,family,,,,akt,,,stress-activated protein kinases,protein,,,uaz,uaz08752,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,1,40,1,41
+kras,protein,,,,p01116,,,mek-erk,protein,,,uaz,uaz06367,,,positive,i,,,,,,,nan,nan,nan,pmc4695180,1,1,40,1,41
+jnk,family,,,,jnk,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,1,40,1,41
+kras,protein,,,,p01116,,,ncoa3,protein,,,uniprot,q9y6q9,,,negative,i,,,,,,,nan,nan,nan,pmc5755028,1,1,40,1,41
+kras,protein,,,,p01116,,,cell proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5467702,1,1,40,1,41
+ampk,protein,,,,ampk,,,fig,protein,,,uniprot,q9hd26,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+kras,protein,,,,p01116,,,bp,simplechemical,,,pubchem,2336,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,1,40,1,41
+jnk,family,,,,jnk,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,1,40,1,41
+jun,protein,,,,p05412,,,differentiation,bioprocess,,,go,go:0030154,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,1,40,1,41
+akt,family,,,,akt,,,selumetinib,simplechemical,,,pubchem,10127622,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,1,40,1,41
+vegf,protein,,,,p15692,,,necrosis,bioprocess,,,mesh,d009336,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,1,40,1,41
+jnk,family,,,,jnk,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,1,40,1,41
+ampk,protein,,,,ampk,,,eras,protein,,,uniprot,q7z444,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,1,40,1,41
+kras,protein,,,,p01116,,,cell death,bioprocess,,,go,go:0008219,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,1,40,1,41
+ppar,protein,,,,q07869,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,"nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan,nan","pmc5190119,pmc5190119,pmc5190119,pmc5190119,pmc5190119,pmc5190119,pmc5190119",7,0.1,39,1,39.7
+ppar,protein,,,,q07869,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","pmc5190119,pmc5190119,pmc5190119,pmc5190119,pmc5190119,pmc5190119",6,0.1,39,1,39.6
+belinostat,simplechemical,,,,6918638,,,sos,family,,,be,sos,,,negative,i,,,,,,,"nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","nan,nan,nan,nan,nan,nan","pmc5537703,pmc5537703,pmc5537703,pmc5537703,pmc5537703,pmc5537703",6,0.1,39,1,39.6
+apoptosis,bioprocess,,,,go:0006915,,,fa,family,,,pfam,pf08736,,,positive,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc4783893,pmc4783893,pmc4783893,pmc4783893,pmc4783893",5,0.1,39,1,39.5
+mir-382-5p,protein,,,,uaz12803,,,cell viability,bioprocess,,,mesh,d002470,,,positive,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc5410235,pmc5410235,pmc5410235,pmc5410235,pmc5410235",5,0.1,39,1,39.5
+rdm1,protein,,,,q8ng50,,,nb,family,,,pfam,pf04159,,,positive,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","pmc6396142,pmc6396142,pmc6396142,pmc6396142,pmc6396142",5,0.1,39,1,39.5
+ptpn1,protein,,,,p18031,,,cell death,bioprocess,,,go,go:0008219,,,negative,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5636874,pmc5636874,pmc5636874,pmc5636874",4,0.1,39,1,39.4
+apoptosis,bioprocess,,,,go:0006915,,,sa,simplechemical,,,pubchem,7009579,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc4783893,pmc4783893,pmc4783893,pmc4783893",4,0.1,39,1,39.4
+letrozole,simplechemical,,,,3902,,,gc-1 spg,protein,,,uaz,uaz13480,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5958651,pmc5958651,pmc5958651,pmc5958651",4,0.1,39,1,39.4
+letrozole,simplechemical,,,,3902,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan,nan,nan","nan,nan,nan,nan","nan,nan,nan,nan","pmc5958651,pmc5958651,pmc5958651,pmc5958651",4,0.1,39,1,39.4
+tlr4,protein,,,,o00206,,,lps,simplechemical,,,pubchem,53481793,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5190119,pmc5190119,pmc5190119",3,0.1,39,1,39.3
+tgf-β1,protein,,,,uaz02902,,,α,simplechemical,,,uaz,uaz00180,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4440819,pmc4440819,pmc4440819",3,0.1,39,1,39.3
+mir-320,protein,,,,uaz12995,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5609034,pmc5609034,pmc5609034",3,0.1,39,1,39.3
+tlr4,protein,,,,o00206,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5190119,pmc5190119,pmc5190119",3,0.1,39,1,39.3
+tlr4,protein,,,,o00206,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5190119,pmc5190119,pmc5190119",3,0.1,39,1,39.3
+ros,simplechemical,,,,chebi:26523,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc6339303,pmc6339303,pmc6339303",3,0.1,39,1,39.3
+rerg,protein,,,,q96a58,,,cell viability,bioprocess,,,mesh,d002470,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5410235,pmc5410235,pmc5410235",3,0.1,39,1,39.3
+eras,protein,,,,q7z444,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,0.1,39,1,39.3
+dcs,simplechemical,,,,6234,,,tnf-α,protein,,,uaz,uaz00284,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc3809567,pmc3809567,pmc3809567",3,0.1,39,1,39.3
+pd0325901,simplechemical,,,,9826528,,,autophagy,bioprocess,,,go,go:0006914,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,0.1,39,1,39.3
+autophagy,bioprocess,,,,go:0006914,,,senescence,bioprocess,,,mesh,d000375,,,negative,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5723691,pmc5723691,pmc5723691",3,0.1,39,1,39.3
+rdm1,protein,,,,q8ng50,,,cell proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc6396142,pmc6396142,pmc6396142",3,0.1,39,1,39.3
+dcs,simplechemical,,,,6234,,,il-12,family,,,be,il12,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3809567,pmc3809567",2,0.1,39,1,39.2
+ppar,protein,,,,q07869,,,cell growth,bioprocess,,,go,go:0016049,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,0.1,39,1,39.2
+dusp5,protein,,,,q16690,,,cell growth,bioprocess,,,go,go:0016049,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5599027,pmc5599027",2,0.1,39,1,39.2
+dusp6,protein,,,,q16828,,,cell growth,bioprocess,,,go,go:0016049,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5599027,pmc5599027",2,0.1,39,1,39.2
+myd88,protein,,,,q99836,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,0.1,39,1,39.2
+dusp6,protein,,,,q16828,,,invasion,bioprocess,,,mesh,d009361,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5599027,pmc5599027",2,0.1,39,1,39.2
+ppar,protein,,,,q07869,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,0.1,39,1,39.2
+pd0325901,simplechemical,,,,9826528,,,eras,protein,,,uniprot,q7z444,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5723691,pmc5723691",2,0.1,39,1,39.2
+cell death,bioprocess,,,,go:0008219,,,belinostat,simplechemical,,,pubchem,6918638,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+nf1,protein,,,,p21359,,,mpd,protein,,,uniprot,p53602,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4067595,pmc4067595",2,0.1,39,1,39.2
+plx4720,simplechemical,,,,24180719,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6472057,pmc6472057",2,0.1,39,1,39.2
+pd0325901,simplechemical,,,,9826528,,,autophagy,bioprocess,,,go,go:0006914,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5723691,pmc5723691",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,cisplatin,simplechemical,,,pubchem,441203,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,cisplatin,simplechemical,,,pubchem,441203,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+apoptosis,bioprocess,,,,go:0006915,,,rgz,protein,,,uaz,uaz13401,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,0.1,39,1,39.2
+pd,simplechemical,,,,7079450,,,cell viability,bioprocess,,,mesh,d002470,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5824365,pmc5723691",2,0.1,39,1,39.2
+pd,simplechemical,,,,7079450,,,cd34,protein,,,uniprot,p28906,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5824365,pmc5824365",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,fbxo3,protein,,,uniprot,q9uk99,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,fbxw10,protein,,,uniprot,q5xx13,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+pbx3,protein,,,,p40426,,,invasion,bioprocess,,,mesh,d009361,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5609034,pmc5609034",2,0.1,39,1,39.2
+ppar,protein,,,,q07869,,,tlr4,protein,,,uniprot,o00206,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,0.1,39,1,39.2
+parp,family,,,,parp,,,belinostat,simplechemical,,,pubchem,6918638,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,proteasome,protein,,,be,proteasome,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,ubiquitin,protein,,,uniprot,p0cg47,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+bim,protein,,,,o43521,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+apoptosis,bioprocess,,,,go:0006915,,,belinostat,simplechemical,,,pubchem,6918638,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+apoptosis,bioprocess,,,,go:0006915,,,tf-np-mir-181a,protein,,,uaz,uaz13419,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5312311,pmc5312311",2,0.1,39,1,39.2
+cellular senescence,bioprocess,,,,d000375,,,hdaci,protein,,,uaz,uaz12872,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5723691,pmc5723691",2,0.1,39,1,39.2
+cisplatin,simplechemical,,,,441203,,,sos,family,,,be,sos,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+crebbp,protein,,,,q92793,,,ras/raf/mek/erk,protein,,,uaz,uaz00068,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5395114,pmc5395114",2,0.1,39,1,39.2
+α,simplechemical,,,,uaz00180,,,cell adhesion,bioprocess,,,go,go:0007155,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5432316,pmc5432316",2,0.1,39,1,39.2
+tgf-β1,protein,,,,uaz02902,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,0.1,39,1,39.2
+belinostat,simplechemical,,,,6918638,,,f‐box proteins,protein,,,uaz,uaz12931,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+α,simplechemical,,,,uaz00180,,,tgf- β 1,protein,,,uaz,uaz02902,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,0.1,39,1,39.2
+irinotecan,simplechemical,,,,60838,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5729429,pmc5729429",2,0.1,39,1,39.2
+rdm1,protein,,,,q8ng50,,,extracellular signal‐regulated kinase,protein,,,uaz,uaz08652,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6396142,pmc6396142",2,0.1,39,1,39.2
+sa,simplechemical,,,,7009579,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4783893,pmc4783893",2,0.1,39,1,39.2
+rdm1,protein,,,,q8ng50,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6396142,pmc6396142",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,metastasis,bioprocess,,,mesh,d009362,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+gabpa,protein,,,,q06546,,,transcription,bioprocess,,,go,go:0006351,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5288173,pmc5288173",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+flt3,protein,,,,p36888,,,ras/raf/erk,protein,,,uaz,uaz13089,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5017527,pmc5017527",2,0.1,39,1,39.2
+smurf1,protein,,,,q9hce7,,,tgf‐β,protein,,,uaz,uaz12950,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,metastasis,bioprocess,,,mesh,d009362,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+fas,protein,,,,p25445,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4783893,pmc4783893",2,0.1,39,1,39.2
+fbxo3,protein,,,,q9uk99,,,cell viability,bioprocess,,,mesh,d002470,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+fbxw10,protein,,,,q5xx13,,,cell viability,bioprocess,,,mesh,d002470,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+fgf2,protein,,,,p09038,,,emt,protein,,,uniprot,o75751,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,0.1,39,1,39.2
+rdm1,protein,,,,q8ng50,,,cell cycle,bioprocess,,,go,go:0007049,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6396142,pmc6396142",2,0.1,39,1,39.2
+fgf2,protein,,,,p09038,,,α,simplechemical,,,uaz,uaz00180,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,0.1,39,1,39.2
+"egfr
+        
+          epidermal growth factor receptor",protein,,,,uaz12897,,,"pp2a
+        
+          protein phosphatase 2",protein,,,uaz,uaz12902,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+histone,family,,,,histone,,,sos,family,,,be,sos,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+hdac1,protein,,,,q13547,,,mitosis,bioprocess,,,go,go:0007067,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,inflammation,bioprocess,,,go,go:0006954,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+"egfr
+        
+          epidermal growth factor receptor",protein,,,,uaz12897,,,tma,simplechemical,,,pubchem,1146,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+rgz,protein,,,,uaz13401,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5190119,pmc5190119",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,cell proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,fig,protein,,,uniprot,q9hd26,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+fgf2,protein,,,,p09038,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,0.1,39,1,39.2
+mir-382-5p,protein,,,,uaz12803,,,invasion,bioprocess,,,mesh,d009361,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5410235,pmc5410235",2,0.1,39,1,39.2
+ros,simplechemical,,,,chebi:26523,,,dna damage,bioprocess,,,mesh,d004249,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6339303,pmc6339303",2,0.1,39,1,39.2
+mir-320,protein,,,,uaz12995,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5609034,pmc5609034",2,0.1,39,1,39.2
+map4k4,protein,,,,o95819,,,mek inhibitor,simplechemical,,,uaz,uaz00032,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5467491,pmc5467491",2,0.1,39,1,39.2
+rdm1,protein,,,,q8ng50,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+ppar,protein,,,,q07869,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+sa,simplechemical,,,,7009579,,,parp,family,,,be,parp,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,0.1,39,1,39.1
+scf,protein,,,,p21583,,,cell cycle,bioprocess,,,go,go:0007049,,,positive,i,,,,,,,nan,nan,nan,pmc5958651,1,0.1,39,1,39.1
+sfl1,protein,,,,p20134,,,flo11,family,,,pfam,pf10182,,,negative,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+sa,simplechemical,,,,7009579,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,0.1,39,1,39.1
+rasip1,protein,,,,q5u651,,,mapk-luciferase reporter,protein,,,uaz,uaz12575,,,positive,i,,,,,,,nan,nan,nan,pmc3498325,1,0.1,39,1,39.1
+rdm1,protein,,,,q8ng50,,,cell cycle,bioprocess,,,go,go:0007049,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+siah,protein,,,,uaz13439,,,fig,protein,,,uniprot,q9hd26,,,negative,i,,,,,,,nan,nan,nan,pmc5049993,1,0.1,39,1,39.1
+sa,simplechemical,,,,7009579,,,caspases,family,,,be,caspase,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,0.1,39,1,39.1
+selumetinib,simplechemical,,,,10127622,,,gnaq,protein,,,uniprot,p50148,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,0.1,39,1,39.1
+raf-mek-erk,protein,,,,uaz00085,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+rxr,family,,,,rxr,,,α,simplechemical,,,uaz,uaz00180,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+rxr,family,,,,rxr,,,p-p38,protein,,,uniprot,p68347,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+α,simplechemical,,,,uaz00180,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+result,simplechemical,,,,4594,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,0.1,39,1,39.1
+rerg,protein,,,,q96a58,,,mir-382-5p,protein,,,uaz,uaz12803,,,negative,i,,,,,,,nan,nan,nan,pmc5410235,1,0.1,39,1,39.1
+rgz,protein,,,,uaz13401,,,tlr4,protein,,,uniprot,o00206,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+α,simplechemical,,,,uaz00180,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+zt-12-037-01,protein,,,,uaz13277,,,cell proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+ppar,protein,,,,q07869,,,p-erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+zt-12-037-01,protein,,,,uaz13277,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+ppar,protein,,,,q07869,,,p-jnk,protein,,,uniprot,p92208,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+ppar,protein,,,,q07869,,,p-p38,protein,,,uniprot,p68347,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+ros,simplechemical,,,,chebi:26523,,,page4,protein,,,uniprot,o60829,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+rdm1,protein,,,,q8ng50,,,nb,family,,,pfam,pf04159,,,negative,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+ros,simplechemical,,,,chebi:26523,,,ptps,protein,,,uniprot,q03393,,,negative,i,,,,,,,nan,nan,nan,pmc5636874,1,0.1,39,1,39.1
+ppar,protein,,,,q07869,,,α,simplechemical,,,uaz,uaz00180,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+rxr,family,,,,rxr,,,p-erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+rxr,family,,,,rxr,,,p-jnk,protein,,,uniprot,p92208,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+rdm1,protein,,,,q8ng50,,,cell proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+signalling pathway,bioprocess,,,,go:0007165,,,differentiation,bioprocess,,,go,go:0030154,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,0.1,39,1,39.1
+ptpn1,protein,,,,p18031,,,jnk mapk,family,,,be,jnk,,,negative,i,,,,,,,nan,nan,nan,pmc5636874,1,0.1,39,1,39.1
+proteasome,protein,,,,proteasome,,,ksr,protein,,,uniprot,q8ivt5,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+ptc,protein,,,,p00740,,,dusp5,protein,,,uniprot,q16690,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+ptprs,protein,,,,q13332,,,localization,bioprocess,,,go,go:0051179,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+sodium,simplechemical,,,,923,,,eras,protein,,,uniprot,q7z444,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+sos,family,,,,sos,,,gtpase,protein,,,uaz,uaz09284,,,positive,i,,,,,,,nan,nan,nan,pmc6356706,1,0.1,39,1,39.1
+tlr4,protein,,,,o00206,,,adhesion,bioprocess,,,go,go:0007155,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+sprouty,family,,,,pf05210,,,emt,protein,,,uniprot,o75751,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+tgf-β1,protein,,,,uaz02902,,,smad ras,family,,,uaz,uaz12723,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+ptprs,protein,,,,q13332,,,p-akt,family,,,be,akt,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+ptprs,protein,,,,q13332,,,p-erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+ptprs,protein,,,,q13332,,,p-mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+src,family,,,,src,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5833015,1,0.1,39,1,39.1
+ptprs,protein,,,,q13332,,,phosphatase,family,,,pfam,pf15698,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+tgf-β1,protein,,,,uaz02902,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+ralgds,protein,,,,q12967,,,ral,protein,,,uniprot,p11233,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+ral,protein,,,,p11233,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+ral,protein,,,,p11233,,,angiogenesis,bioprocess,,,go,go:0001525,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+stearic acid,simplechemical,,,,5281,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,0.1,39,1,39.1
+testosterone,simplechemical,,,,6013,,,aromatase,protein,,,uniprot,p11511,,,positive,i,,,,,,,nan,nan,nan,pmc5958651,1,0.1,39,1,39.1
+tgf- β 1,protein,,,,uaz02902,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+rgz,protein,,,,uaz13401,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+tf-np-mir-181a,protein,,,,uaz13419,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+raf-mek-erk,protein,,,,uaz00085,,,angiogenesis,bioprocess,,,go,go:0001525,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+ptprs,protein,,,,q13332,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+tlr4,protein,,,,o00206,,,death,family,,,pfam,pf00531,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+sodium,simplechemical,,,,923,,,cellular senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,pycard,protein,,,uniprot,q9ulz3,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,0.1,39,1,39.1
+ptc,protein,,,,p00740,,,dusp6,protein,,,uniprot,q16828,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+ras-erk1/2,protein,,,,uaz08051,,,lid symptoms,protein,,,uaz,uaz13179,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+sirt1,protein,,,,q96eb6,,,injury,bioprocess,,,go,go:0090303,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+ras-erk1/2,protein,,,,uaz08051,,,lid onset,protein,,,uaz,uaz13178,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+ucb‐mncs,protein,,,,uaz13046,,,cd34,protein,,,uniprot,p28906,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,α,simplechemical,,,uaz,uaz00180,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+sirt1,protein,,,,q96eb6,,,ras/erk1/2,protein,,,uaz,uaz08051,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+ras inhibitors,simplechemical,,,,uaz09282,,,pet,family,,,pfam,pf06297,,,negative,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+ras inhibitors,simplechemical,,,,uaz09282,,,nf1,protein,,,uniprot,p21359,,,negative,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+smad2/3,family,,,,smad2_3,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+tlr4,protein,,,,o00206,,,metastasis,bioprocess,,,mesh,d009362,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,nb,family,,,pfam,pf04159,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+smad2/3,family,,,,smad2_3,,,tgf-β1,protein,,,uaz,uaz02902,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,irf7,protein,,,uniprot,q92985,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,gbp2b,protein,,,uniprot,p32455,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,gbp-1,protein,,,uniprot,p32455,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,cell growth,bioprocess,,,go,go:0016049,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,cd24a,protein,,,uniprot,p25063,,,positive,i,,,,,,,nan,nan,nan,pmc4535867,1,0.1,39,1,39.1
+u0126,simplechemical,,,,3006531,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+tnf-α,protein,,,,uaz00284,,,dcs,simplechemical,,,pubchem,6234,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,0.1,39,1,39.1
+tf-np-mir-181a,protein,,,,uaz13419,,,p-mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+acid,simplechemical,,,,444212,,,ptprs,protein,,,uniprot,q13332,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+ppar,protein,,,,q07869,,,erk mapk,family,,,uaz,uaz09130,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+gw9662,protein,,,,uaz13402,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+gfap,protein,,,,p14136,,,il-1,family,,,pfam,pf00340,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+genomic instability,bioprocess,,,,d042822,,,senescence,bioprocess,,,mesh,d000375,,,positive,i,,,,,,,nan,nan,nan,pmc4494777,1,0.1,39,1,39.1
+gef,protein,,,,q9nr83,,,n-ras,protein,,,uniprot,p01111,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+gef,protein,,,,q9nr83,,,"h-, k-,",protein,,,uaz,uaz12609,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+gc1q ligand,protein,,,,uaz12886,,,α,simplechemical,,,uaz,uaz00180,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,0.1,39,1,39.1
+gc1q domain,protein,,,,uaz12880,,,α,simplechemical,,,uaz,uaz00180,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,0.1,39,1,39.1
+gc1q domain,protein,,,,uaz12880,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,0.1,39,1,39.1
+gaps,protein,,,,uaz12670,,,gtpase,protein,,,uaz,uaz09284,,,positive,i,,,,,,,nan,nan,nan,pmc5467702,1,0.1,39,1,39.1
+flo8,protein,,,,a6zr64,,,xv-1 loci,protein,,,uaz,uaz13207,,,positive,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+flo8,protein,,,,a6zr64,,,xiii,protein,,,uaz,uaz13209,,,positive,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+fig,protein,,,,q9hd26,,,α,simplechemical,,,uaz,uaz00180,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+fibroblast growth factor 2,protein,,,,p09038,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+fas,protein,,,,p25445,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,0.1,39,1,39.1
+extracellular signal-regulated kinase,family,,,,erk,,,step,protein,,,uniprot,p54829,,,positive,i,,,,,,,nan,nan,nan,pmc6356706,1,0.1,39,1,39.1
+erki,protein,,,,uaz12842,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+erk5,protein,,,,q13164,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+erk1/2,family,,,,erk,,,nras,protein,,,uniprot,p01111,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,0.1,39,1,39.1
+erk1/2,family,,,,erk,,,cell survival,bioprocess,,,mesh,d002470,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+erk inhibitor,simplechemical,,,,uaz00224,,,autophagy,bioprocess,,,go,go:0006914,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+eras,protein,,,,q7z444,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+eras,protein,,,,q7z444,,,autophagy,bioprocess,,,go,go:0006914,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+endocytosis,bioprocess,,,,go:0006897,,,dynamin,family,,,be,dnm,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+endocytosis,bioprocess,,,,go:0006897,,,dynamin,family,,,be,dnm,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+gsk525762,protein,,,,uaz13465,,,erk1/2,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,0.1,39,1,39.1
+h-rasv12,protein,,,,uaz12591,,,mek-erk,protein,,,uaz,uaz06367,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+ko,simplechemical,,,,25113109,,,p-mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+h-rasv12/40c,protein,,,,uaz12603,,,pi3k-akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,0.1,39,1,39.1
+jnk mapk,family,,,,jnk,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,0.1,39,1,39.1
+jip1,protein,,,,q9uqf2,,,signal transduction,bioprocess,,,go,go:0007165,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,0.1,39,1,39.1
+iraδ2933,protein,,,,uaz13211,,,sfl1,protein,,,uniprot,p20134,,,negative,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+ira2δ2933,protein,,,,uaz13202,,,xv-1 loci,protein,,,uaz,uaz13207,,,positive,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+post nst,protein,,,,uaz13445,,,fig,protein,,,uniprot,q9hd26,,,negative,i,,,,,,,nan,nan,nan,pmc5049993,1,0.1,39,1,39.1
+interleukin-6,gene,,,,p05231,,,"mitogen-activated protein
+kinase",family,,,uaz,uaz13146,,,negative,i,,,,,,,nan,nan,nan,pmc6113736,1,0.1,39,1,39.1
+interleukin-1β,gene,,,,uaz00388,,,"mitogen-activated protein
+kinase",family,,,uaz,uaz13146,,,negative,i,,,,,,,nan,nan,nan,pmc6113736,1,0.1,39,1,39.1
+injury,bioprocess,,,,go:0090303,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+inflammatory response,bioprocess,,,,go:0006954,,,lps,simplechemical,,,pubchem,53481793,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+inflammatory response,bioprocess,,,,go:0006954,,,angiotensinii,protein,,,uniprot,p01019,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+inflammation,bioprocess,,,,go:0006954,,,injury,bioprocess,,,go,go:0090303,,,positive,i,,,,,,,nan,nan,nan,pmc6113736,1,0.1,39,1,39.1
+il-1β,protein,,,,uaz00382,,,sirt1,protein,,,uniprot,q96eb6,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+il-1β,protein,,,,uaz00382,,,injury,bioprocess,,,go,go:0090303,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+il-12,family,,,,il12,,,dcs,simplechemical,,,pubchem,6234,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,0.1,39,1,39.1
+il-1,family,,,,pf00340,,,injury,bioprocess,,,go,go:0090303,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+hrasgtp,protein,,,,uaz12879,,,perk1/2,protein,,,uniprot,q9zue0,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,0.1,39,1,39.1
+hrasgtp,protein,,,,uaz12879,,,cell proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5432316,1,0.1,39,1,39.1
+histone deacetylase inhibitors,simplechemical,,,,uaz12014,,,mitf,protein,,,uniprot,o75030,,,positive,i,,,,,,,nan,nan,nan,pmc4179759,1,0.1,39,1,39.1
+hdac inhibitors,simplechemical,,,,uaz03116,,,cellular senescence,bioprocess,,,mesh,d000375,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+hdac inhibitors,simplechemical,,,,uaz03116,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+hdac inhibitor,simplechemical,,,,uaz03103,,,eras,protein,,,uniprot,q7z444,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+hdac inhibitor,simplechemical,,,,uaz03103,,,cellular senescence,bioprocess,,,mesh,d000375,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+hcpt,protein,,,,uaz13083,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5729429,1,0.1,39,1,39.1
+emt,protein,,,,o75751,,,tgf-β1,protein,,,uaz,uaz02902,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+emt,protein,,,,o75751,,,tgf- β 1,protein,,,uaz,uaz02902,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+emilin1,protein,,,,q9y6c2,,,cell growth,bioprocess,,,go,go:0016049,,,negative,i,,,,,,,nan,nan,nan,pmc5432316,1,0.1,39,1,39.1
+egfr-mek-erk,protein,,,,uaz12846,,,cell death,bioprocess,,,go,go:0008219,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+cas9,protein,,,,j3f2b0,,,bp,simplechemical,,,pubchem,2336,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+camp,protein,,,,p49913,,,differentiation,bioprocess,,,go,go:0030154,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,0.1,39,1,39.1
+c/ebpα,protein,,,,uaz13428,,,transcription,bioprocess,,,go,go:0006351,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+c-src,protein,,,,uaz09887,,,src,family,,,be,src,,,negative,i,,,,,,,nan,nan,nan,pmc5833015,1,0.1,39,1,39.1
+butyrate,simplechemical,,,,264,,,eras,protein,,,uniprot,q7z444,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+butyrate,simplechemical,,,,264,,,cellular senescence,bioprocess,,,mesh,d000375,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+braf inhibitors,simplechemical,,,,uaz00044,,,braf-craf dimers,protein,,,uaz,uaz13315,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+braf inhibitor,simplechemical,,,,uaz00036,,,receptor,protein,,,uaz,uaz00331,,,positive,i,,,,,,,nan,nan,nan,pmc6395334,1,0.1,39,1,39.1
+bet inhibitors,simplechemical,,,,uaz13466,,,bet,protein,,,uniprot,q8nft8,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,0.1,39,1,39.1
+bet,protein,,,,q8nft8,,,impact,protein,,,uniprot,q9p2x3,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,0.1,39,1,39.1
+azd8055,simplechemical,,,,25262965,,,nb,family,,,pfam,pf04159,,,negative,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+azd8055,simplechemical,,,,25262965,,,cell growth,bioprocess,,,go,go:0016049,,,negative,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+aromatase inhibitors,simplechemical,,,,uaz06688,,,testosterone,simplechemical,,,pubchem,6013,,,positive,i,,,,,,,nan,nan,nan,pmc5958651,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,selumetinib,simplechemical,,,pubchem,10127622,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,mir-320,protein,,,uaz,uaz12995,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,mek inhibitor,simplechemical,,,uaz,uaz00032,,,negative,i,,,,,,,nan,nan,nan,pmc4846800,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,gc,protein,,,uniprot,p02774,,,positive,i,,,,,,,nan,nan,nan,pmc5395114,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5729429,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,cell cycle,bioprocess,,,go,go:0007049,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+apoptosis,bioprocess,,,,go:0006915,,,bax,protein,,,uniprot,q07812,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+akt inhibitors,simplechemical,,,,uaz00097,,,mdm2-p53 axis,protein,,,uaz,uaz12668,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,0.1,39,1,39.1
+afatinib,simplechemical,,,,10184653,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+cd34,protein,,,,p28906,,,cell proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5824365,1,0.1,39,1,39.1
+cd8,family,,,,cd8,,,infiltration,bioprocess,,,mesh,d009361,,,positive,i,,,,,,,nan,nan,nan,pmc3809567,1,0.1,39,1,39.1
+cell cycle,bioprocess,,,,go:0007049,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+dabrafenib,simplechemical,,,,44462760,,,p27,protein,,,uniprot,p40305,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+egfr-mek-erk,protein,,,,uaz12846,,,cell cycle,bioprocess,,,go,go:0007049,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+dusp6,protein,,,,q16828,,,cell migration,bioprocess,,,go,go:0016477,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+dusp5,protein,,,,q16690,,,invasion,bioprocess,,,mesh,d009361,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+dusp5,protein,,,,q16690,,,erks,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+dusp5,protein,,,,q16690,,,cell migration,bioprocess,,,go,go:0016477,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+dna damage response,bioprocess,,,,go:0000077,,,dna repair,bioprocess,,,go,go:0006281,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+differentiation,bioprocess,,,,go:0030154,,,cell cycle,bioprocess,,,go,go:0007049,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,0.1,39,1,39.1
+dexamethasone,simplechemical,,,,5743,,,mdm2-p53 axis,protein,,,uaz,uaz12668,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,0.1,39,1,39.1
+ddr,family,,,,pf08841,,,dna repair,bioprocess,,,go,go:0006281,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+daraf sirnas,protein,,,,uaz12711,,,α,simplechemical,,,uaz,uaz00180,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+dabrafenib,simplechemical,,,,44462760,,,cyclin-dependent kinase inhibitor,family,,,be,cdkn,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,0.1,39,1,39.1
+cell cycle,bioprocess,,,,go:0007049,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+da-raf,protein,,,,uaz12716,,,tgf-β1,protein,,,uaz,uaz02902,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+da-raf,protein,,,,uaz12716,,,emt,protein,,,uniprot,o75751,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+cpt,family,,,,pf07931,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5729429,1,0.1,39,1,39.1
+clk2,protein,,,,p49760,,,page4,protein,,,uniprot,o60829,,,negative,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+cellular senescence,bioprocess,,,,d000375,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+cellular senescence,bioprocess,,,,d000375,,,eras,protein,,,uniprot,q7z444,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+cellular senescence,bioprocess,,,,d000375,,,death,family,,,pfam,pf00531,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+cell migration,bioprocess,,,,go:0016477,,,endocytosis,bioprocess,,,go,go:0006897,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+cell death,bioprocess,,,,go:0008219,,,sa,simplechemical,,,pubchem,7009579,,,positive,i,,,,,,,nan,nan,nan,pmc4783893,1,0.1,39,1,39.1
+cell death,bioprocess,,,,go:0008219,,,ros,simplechemical,,,chebi,chebi:26523,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+ko,simplechemical,,,,25113109,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,0.1,39,1,39.1
+ira2δ2933,protein,,,,uaz13202,,,xiii,protein,,,uaz,uaz13209,,,positive,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+mm,simplechemical,,,,6993082,,,mek-erk,protein,,,uaz,uaz06367,,,positive,i,,,,,,,nan,nan,nan,pmc4695180,1,0.1,39,1,39.1
+neurofibromin,protein,,,,p21359,,,gα,family,,,uaz,uaz00699,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+np,protein,,,,o60259,,,nras,protein,,,uniprot,p01111,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+np,protein,,,,o60259,,,cci,protein,,,uniprot,p32954,,,positive,i,,,,,,,nan,nan,nan,pmc6113736,1,0.1,39,1,39.1
+nmda receptor,protein,,,,uaz00512,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+nm23,protein,,,,p15531,,,mitogen activated protein kinase,family,,,be,mapk,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+nm23,protein,,,,p15531,,,metastasis,bioprocess,,,mesh,d009362,,,negative,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+ngf,protein,,,,p01138,,,differentiation,bioprocess,,,go,go:0030154,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,0.1,39,1,39.1
+nf1,protein,,,,p21359,,,neurofibromin,protein,,,uniprot,p21359,,,negative,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+neuropilin 1,protein,,,,o14786,,,angiogenesis,bioprocess,,,go,go:0001525,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+neurofibromin,protein,,,,p21359,,,olf,family,,,pfam,pf02191,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+navitoclax,protein,,,,uaz12848,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+nras,protein,,,,p01111,,,pi3-kinase,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,0.1,39,1,39.1
+myogenin,protein,,,,p15173,,,differentiation,bioprocess,,,go,go:0030154,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,0.1,39,1,39.1
+myd88,protein,,,,q99836,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+"mss11
+ by",protein,,,,uaz13222,,,xv-1 loci,protein,,,uaz,uaz13207,,,positive,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+"mss11
+ by",protein,,,,uaz13222,,,xiii,protein,,,uaz,uaz13209,,,positive,i,,,,,,,nan,nan,nan,pmc4618523,1,0.1,39,1,39.1
+ksr,protein,,,,q8ivt5,,,proteasome,protein,,,be,proteasome,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+mitogen-activated protein kinase,family,,,,mapk,,,cell proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+mir-382-5p mimics,protein,,,,uaz12804,,,luciferase,protein,,,uniprot,p08659,,,negative,i,,,,,,,nan,nan,nan,pmc5410235,1,0.1,39,1,39.1
+mir-382-5p,protein,,,,uaz12803,,,rerg,protein,,,uniprot,q96a58,,,negative,i,,,,,,,nan,nan,nan,pmc5410235,1,0.1,39,1,39.1
+mir-382-5p,protein,,,,uaz12803,,,metastasis,bioprocess,,,mesh,d009362,,,positive,i,,,,,,,nan,nan,nan,pmc5410235,1,0.1,39,1,39.1
+nras,protein,,,,p01111,,,mek-erk,protein,,,uaz,uaz06367,,,positive,i,,,,,,,nan,nan,nan,pmc4695180,1,0.1,39,1,39.1
+nras,protein,,,,p01111,,,proliferation,bioprocess,,,go,go:0008283,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+mir-382-5p,protein,,,,uaz12803,,,apoptosis,bioprocess,,,go,go:0006915,,,negative,i,,,,,,,nan,nan,nan,pmc5410235,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,ros,simplechemical,,,chebi,chebi:26523,,,negative,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+pi3k inhibitor,simplechemical,,,,uaz00073,,,fgf2,protein,,,uniprot,p09038,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+phosphatidylinositol 3-kinase,protein,,,,pi3k,,,tgf-β1,protein,,,uaz,uaz02902,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+peroxisome proliferator-activated receptor γ,protein,,,,uaz13400,,,transcription,bioprocess,,,go,go:0006351,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+pd0325901,simplechemical,,,,9826528,,,eras,protein,,,uniprot,q7z444,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+pd0325901,simplechemical,,,,9826528,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+pd,simplechemical,,,,7079450,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5824365,1,0.1,39,1,39.1
+pd,simplechemical,,,,7079450,,,differentiation,bioprocess,,,go,go:0030154,,,positive,i,,,,,,,nan,nan,nan,pmc5824365,1,0.1,39,1,39.1
+pbx3,protein,,,,p40426,,,metastasis,bioprocess,,,mesh,d009362,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+pbx3,protein,,,,p40426,,,cell growth,bioprocess,,,go,go:0016049,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,pca,simplechemical,,,pubchem,7097402,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+p-erk,family,,,,erk,,,gfap,protein,,,uniprot,p14136,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,pca,simplechemical,,,pubchem,7097402,,,negative,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,fig,protein,,,uniprot,q9hd26,,,negative,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,dna damage,bioprocess,,,mesh,d004249,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,cell survival,bioprocess,,,mesh,d002470,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+page4,protein,,,,o60829,,,cell death,bioprocess,,,go,go:0008219,,,positive,i,,,,,,,nan,nan,nan,pmc6339303,1,0.1,39,1,39.1
+p-p38,protein,,,,p68347,,,gfap,protein,,,uniprot,p14136,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+p-jnk,protein,,,,p92208,,,gfap,protein,,,uniprot,p14136,,,negative,i,,,,,,,nan,nan,nan,pmc5372348,1,0.1,39,1,39.1
+p-erk,family,,,,erk,,,lps,simplechemical,,,pubchem,53481793,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,0.1,39,1,39.1
+mir-382-5p,protein,,,,uaz12803,,,cell migration,bioprocess,,,go,go:0016477,,,positive,i,,,,,,,nan,nan,nan,pmc5410235,1,0.1,39,1,39.1
+mek inhibitor,simplechemical,,,,uaz00032,,,nb,family,,,pfam,pf04159,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+mir-320,protein,,,,uaz12995,,,pbx3,protein,,,uniprot,p40426,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+mir-181,family,,,,uaz13430,,,cd34,protein,,,uniprot,p28906,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+l-dopa,simplechemical,,,,6047,,,erk1/2,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+lenalidomide,simplechemical,,,,216326,,,c/ebpα,protein,,,uaz,uaz13428,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+let-60,protein,,,,p22981,,,muv,protein,,,uaz,uaz12652,,,positive,i,,,,,,,nan,nan,nan,pmc4020307,1,0.1,39,1,39.1
+light,protein,,,,o43557,,,navitoclax,protein,,,uaz,uaz12848,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+ly294002,simplechemical,,,,3973,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+ly294002,simplechemical,,,,3973,,,fgf2,protein,,,uniprot,p09038,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,0.1,39,1,39.1
+mek inhibitor,simplechemical,,,,uaz00032,,,cell growth,bioprocess,,,go,go:0016049,,,positive,i,,,,,,,nan,nan,nan,pmc6396142,1,0.1,39,1,39.1
+adenylyl cyclase,family,,,,adcy,,,l-dopa,simplechemical,,,pubchem,6047,,,positive,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+mek-erk,protein,,,,uaz06367,,,dusp5,protein,,,uniprot,q16690,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+mir-320,protein,,,,uaz12995,,,cell growth,bioprocess,,,go,go:0016049,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+mek-erk inhibitors,simplechemical,,,,uaz12590,,,cell death,bioprocess,,,go,go:0008219,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,0.1,39,1,39.1
+meki,protein,,,,uaz12656,,,proliferation,bioprocess,,,go,go:0008283,,,negative,i,,,,,,,nan,nan,nan,pmc5127645,1,0.1,39,1,39.1
+mglur5,protein,,,,p41594,,,erk1/2,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6194127,1,0.1,39,1,39.1
+mir-181,family,,,,uaz13430,,,apoptosis,bioprocess,,,go,go:0006915,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+mek-erk,protein,,,,uaz06367,,,dusp6,protein,,,uniprot,q16828,,,positive,i,,,,,,,nan,nan,nan,pmc5599027,1,0.1,39,1,39.1
+mir-181,family,,,,uaz13430,,,differentiation,bioprocess,,,go,go:0030154,,,positive,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+mir-320,protein,,,,uaz12995,,,cell cycle,bioprocess,,,go,go:0007049,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,0.1,39,1,39.1
+mir-181a,protein,,,,uaz11673,,,nras,protein,,,uniprot,p01111,,,negative,i,,,,,,,nan,nan,nan,pmc5312311,1,0.1,39,1,39.1
+mek,family,,,,mek,,,jak,protein,,,uaz,ua-bp-ggp-00072,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,10,19,1,39
+ras,family,,,,pf00071,,,kras,protein,,,uniprot,p01116,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5395114,pmc5908790",2,10,18,1,38
+ras,family,,,,pf00071,,,smad,family,,,be,smad,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4440819,pmc4440819,pmc4440819",3,10,5,1,35
+mapk,family,,,,erk,,,erk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc5467491,pmc5467491,pmc5190119",3,10,5,1,35
+ras,family,,,,pf00071,,,raf,family,,,be,raf,,,positive,i,,,,,,,"nan,nan,nan","nan,nan,nan","nan,nan,nan","pmc4067595,pmc4067595,pmc2064279",3,10,1,1,31
+mek,family,,,,mek,,,da-raf1,protein,,,uniprot,p10398,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,20,1,30
+da-raf1,protein,,,,p10398,,,akt,family,,,be,akt,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,19,1,29
+da-raf1,protein,,,,p10398,,,pi3k,protein,,,be,pi3k,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,19,1,29
+mek,family,,,,mek,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5908790,1,10,19,1,29
+mtorc1,protein,,,,mtorc1,,,sasp,protein,,,uniprot,p10599,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
+mek,family,,,,mek,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
+erk,family,,,,erk,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
+pten,protein,,,,p60484,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,10,19,1,29
+ki-ras,protein,,,,p01116,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
+pi3k,protein,,,,pi3k,,,bcl-2,family,,,uniprot,p10415,,,negative,i,,,,,,,nan,nan,nan,pmc4067595,1,10,19,1,29
+ki-ras,protein,,,,p01116,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
+kras,protein,,,,p01116,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5755028,1,10,18,1,28
+da-raf1,protein,,,,p10398,,,b-raf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,18,1,28
+da-raf1,protein,,,,p10398,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc2064279,1,10,16,1,26
+erk,family,,,,erk,,,kras,protein,,,uniprot,p01116,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6006154,pmc6006154",2,10,5,1,25
+erk,family,,,,erk,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc4440819",2,10,5,1,25
+mapk,family,,,,erk,,,braf,protein,,,uniprot,p15056,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3809567,pmc5599027",2,10,5,1,25
+braf,protein,,,,p15056,,,mapk,family,,,be,erk,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3809567,pmc5599027",2,10,5,1,25
+mek,family,,,,mek,,,b-raf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,11,1,21
+braf,protein,,,,p15056,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5069826,1,10,11,1,21
+mdm2,protein,,,,q00987,,,p53,protein,,,uniprot,p04637,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc5537703,pmc5537703",2,10,1,1,21
+erk,family,,,,erk,,,rb,protein,,,uniprot,p06400,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
+erk,family,,,,erk,,,smad,family,,,be,smad,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,10,5,1,15
+mapk,family,,,,erk,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,10,5,1,15
+braf,protein,,,,p15056,,,raf,family,,,be,raf,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,10,5,1,15
+ras,family,,,,pf00071,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
+erk,family,,,,erk,,,raf,family,,,be,raf,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
+mammalian target of rapamycin,protein,,,,p42345,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,10,5,1,15
+mapk,family,,,,erk,,,raf,family,,,be,raf,,,positive,i,,,,,,,nan,nan,nan,pmc6472057,1,10,5,1,15
+pi3k,protein,,,,pi3k,,,egfr,protein,,,uniprot,p00533,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+ras,family,,,,pf00071,,,map,protein,,,uniprot,p12872,,,positive,i,,,,,,,nan,nan,nan,pmc5432316,1,10,5,1,15
+mapk,family,,,,erk,,,raf-1,protein,,,uniprot,p04049,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+da-raf1,protein,,,,p10398,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
+raf-1,protein,,,,p04049,,,mapk3,protein,,,uniprot,p27361,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+raf-1,protein,,,,p04049,,,mapk1,protein,,,uniprot,p28482,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+raf-1,protein,,,,p04049,,,mapk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+raf-1,protein,,,,p04049,,,erk2,protein,,,uniprot,p28482,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+raf-1,protein,,,,p04049,,,erk1,protein,,,uniprot,p27361,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+raf,family,,,,raf,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5746140,1,10,5,1,15
+ras,family,,,,pf00071,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,10,5,1,15
+erk,family,,,,erk,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,10,5,1,15
+erk,family,,,,erk,,,mtorc1,protein,,,be,mtorc1,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+mek,family,,,,mek,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc2911390,1,10,5,1,15
+mek,family,,,,mek,,,mtorc1,protein,,,be,mtorc1,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+mek,family,,,,mek,,,ampk,protein,,,be,ampk,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
+mapk,family,,,,erk,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,10,5,1,15
+braf,protein,,,,p15056,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc4846800,1,10,3,1,13
+raf-1,protein,,,,p04049,,,map2k1,protein,,,uniprot,q02750,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+raf-1,protein,,,,p04049,,,map2k2,protein,,,uniprot,p36507,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+raf-1,protein,,,,p04049,,,mek1,protein,,,uniprot,q02750,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+raf-1,protein,,,,p04049,,,mek2,protein,,,uniprot,p36507,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+mek,family,,,,mek,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc6006154,1,10,3,1,13
+mapk,family,,,,erk,,,p38,family,,,be,p38,,,positive,i,,,,,,,nan,nan,nan,pmc5190119,1,10,1,1,11
+jnk,family,,,,jnk,,,jnk,family,,,be,jnk,,,positive,i,,,,,,,nan,nan,nan,pmc5636874,1,10,1,1,11

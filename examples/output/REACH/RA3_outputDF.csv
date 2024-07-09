@@ -786,7 +786,6 @@ raf-1,protein,,,uniprot,p04049,,,mek1,protein,,,uniprot,q02750,,,negative,i,,,,,
 raf-1,protein,,,uniprot,p04049,,,map2k1,protein,,,uniprot,q02750,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
 raf-1,protein,,,uniprot,p04049,,,mek2,protein,,,uniprot,p36507,,,negative,i,,,,,,,nan,nan,nan,pmc5609034,1,10,10,1,20
 mek,family,,,be,mek,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc6006154,1,10,10,1,20
-erk,family,,,be,erk,,,smad,family,,,be,smad,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,10,7,1,17
 da-raf1,protein,,,uniprot,p10398,,,akt,family,,,be,akt,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,5,1,15
 pten,protein,,,uniprot,p60484,,,pi3k,protein,,,be,pi3k,,,negative,i,,,,,,,nan,nan,nan,pmc3843736,1,10,5,1,15
 erk,family,,,be,erk,,,mtorc1,protein,,,be,mtorc1,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
@@ -797,3 +796,4 @@ ki-ras,protein,,,uniprot,p01116,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan
 ki-ras,protein,,,uniprot,p01116,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc5723691,1,10,5,1,15
 mek,family,,,be,mek,,,erk,family,,,be,erk,,,positive,i,,,,,,,nan,nan,nan,pmc5908790,1,10,3,1,13
 da-raf1,protein,,,uniprot,p10398,,,mek,family,,,be,mek,,,positive,i,,,,,,,nan,nan,nan,pmc2064279,1,10,3,1,13
+erk,family,,,be,erk,,,smad,family,,,be,smad,,,negative,i,,,,,,,nan,nan,nan,pmc4440819,1,10,1,1,11

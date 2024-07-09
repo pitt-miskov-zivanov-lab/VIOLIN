@@ -1,0 +1,84 @@
+Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+pten,protein,,,,p60484,,,foxp3,protein,,,uniprot,b7zlg1,,,positive,i,none,,,mesh:d015496 ++++ cl:cl:0000084,,,nan,nan,"furthermore , treatment of itk deficient cd4 cells with pten specific shrna reduced the generation of foxp3 cells , supporting the idea that altered pten expression contributes to rather than results from the increased generation of foxp3 cells .",pmc3949578,1,10,11,1,21
+pten,protein,,,,p60484,,,foxp3,protein,,,uniprot,b7zlg1,,,positive,i,none,,cellosaurus:cvcl_7904,cl:cl:0000084,,uberon:uberon:0002391 ++++ uberon:uberon:0002106,nan,nan,"despite severe autoimmune diseases , pten foxp3-cre mice had increased percentage and numbers of foxp3 t cells in the spleen and lymph nodes ( fig. 2c , supplementary fig. 2f ) .",pmc4297581,1,10,11,1,21
+pten,protein,,,,p60484,other,sl-0162 ++++ uniprot:sl-0039,pip3,chemical,,,chebi,chebi:60169,other,sl-0162 ++++ uniprot:sl-0039,positive,i,amount,,,,,,nan,nan,"among the mutants , pten -gfp induced the strongest decrease in pip3 levels , consistent with the effect of phospho-akt .",pmc5491373,1,10,10,1,20
+mtor,protein,,,,p42345,,,foxp3,protein,,,uniprot,b7zlg1,,,negative,i,none,,,cl:cl:0000084,,,nan,nan,"consistent with these in vivo findings , more recent in vitro studies have suggested a mechanism by which extensive tcr stimulation is detrimental for the generation of induced t reg cells ; constitutive or prolonged signaling through the akt ‚äì pi3k ‚äì mtor pathway , which is downstream of the tcr , antagonizes the induction of foxp3 ( haxhinasto et al ., 2008 ; sauer et al ., 2008 ) .",pmc2916126,1,10,10,1,20
+pten,protein,,,,p60484.t,,,pten,protein,,,uniprot,p60484,,,negative,i,transcription,,cellosaurus:cvcl_0022,,,,nan,nan,"first , expression of normal pten effectively repressed motility of pten expressing u87mg cells , but had no effect on cocultured non-pten-expressing u87mg cells .",pmc5725211,1,10,10,1,20
+pten,protein,,,,p60484.t,,,pten,protein,,,uniprot,p60484,,,negative,i,transcription,,cellosaurus:cvcl_1559,cl:cl:0001064,,uberon:uberon:0000479,nan,nan,"because h358on cells retain endogenous pten expression before inoculation into mice ( fig. 1 ) , the decreased expression of pten observed in cancer cells indicates that persistent tissue hypoxia might modulate pten expression in vivo .",pmc4836157,1,10,10,1,20
+pten,protein,,,,p60484,,,pten,protein,,,uniprot,p60484,,,negative,i,none,,,cl:cl:0000825,,uberon:uberon:2000106,nan,nan,"moreover , missense mutations in the phosphatase domain of pten œ≤ ( g275e , analogous to pten ( g129e ) ) and ( c270s , analogous to pten ( c124s ) ) both eliminated the lipid phosphatase activity of the protein ( supplementary fig. 6b ) .",pmc5376652,1,10,10,1,20
+pten,protein,,,,p60484,,,pten,protein,,,uniprot,p60484,,,negative,i,methylation,,,,,,nan,nan,"in line with this , we also checked the combined effect ( double hit ) of pten methylation and loh in pten loss .",pmc6485588,1,10,10,1,20
+pten,protein,,,,p60484,other,sl-0008 ++++ uniprot:sl-0286 ++++ uniprot:sl-0291 ++++ uniprot:sl-0288,pip3,chemical,,,chebi,chebi:60169,other,sl-0008 ++++ uniprot:sl-0286 ++++ uniprot:sl-0291 ++++ uniprot:sl-0288,positive,i,none,,,cl:cl:0000540,,,nan,nan,"this is usually regarded as a sequestration of pten away from these sites in order to allow a steep pip3 gradient to be formed and maintained , particularly during cell migration .",pmc3978343,1,10,10,1,20
+pten,protein,,,,p60484,,,pten,protein,,,uniprot,p60484,,,negative,i,ubiquitination,,,,,,nan,nan,we found that opening the protein conformation in pten increased pten ubiquitination over that of pten ( figure 6c ) .,pmc5491373,1,10,10,1,20
+pip3,chemical,,,,chebi:60169,other,sl-0118 ++++ uniprot:sl-0039 ++++ uniprot:sl-0022 ++++ uniprot:sl-0498,protein kinase b,protein,,,uniprot,p31749,other,sl-0118 ++++ uniprot:sl-0039 ++++ uniprot:sl-0022 ++++ uniprot:sl-0498,positive,i,none,,,,,,nan,nan,"insulin and igf1 ( insulin like growth factor 1 ) indirectly induce mtorc1 activity by stimulating class 1 pi3k ( phosphoinositol 3-kinase ) production of pip3 ( ptdins ( 3,4,5 ) p3 ) , which induces akt kinase ( protein kinase b ) at the plasma membrane , which in turn activates mtorc1 by inhibiting tsc ( tuberous sclerosis complex ) proteins 1/2 , thereby relieving their repression of rheb [ 28 ] .",pmc4182068,1,10,5,1,15
+pip3,chemical,,,,hmdb10147,,,pdk1,protein,,,,q15118,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pkctheta,protein,,,,hmdb10147,,,tak1,protein,,,,o43318,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pi3k,protein,,,,p42336,,,pip3,chemical,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pi3k,protein,,,,p42336,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pten,protein,,,,p60484,,,pip3,chemical,,,,hmdb10147,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pten,protein,,,,p60484,,,pten,protein,,,,p60484,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pi3k,protein,,,,p42336,,,mtorc2,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pdk1,protein,,,,q15118,,,akt,protein,,,,p31749,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfkappab,protein,,,,q04206,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfkappab,protein,,,,q04206,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pkctheta,protein,,,,hmdb10147,,,nfkappab,protein,,,,q04206,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+akt,protein,,,,p31749,,,akt,protein,,,,p31749,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfat,proteinfamily,,,,q13469,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+stat5,protein,,,,p42229,,,stat5,protein,,,,p42229,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tgfbeta,protein,,,,p01137,,,smad3,protein,,,,p84022,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,pten,protein,,,,p60484,,,negative,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,pkctheta,protein,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,ca,chemical,,,,,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tak1,protein,,,,o43318,,,mkk7,protein,,,,o14733,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+stat5,protein,,,,p42229,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+raf,protein,,,,p04049,,,mek2,protein,,,,p36507,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+stat5,protein,,,,p42229,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+smad3,protein,,,,p84022,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+s6k1,protein,,,,q15418,,,ps6,protein,,,,p62753,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+s6k1,protein,,,,q15418,,,mtorc2,complex,,,,p42345,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+rheb,protein,,,,q15382,,,mtorc1,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ras,protein,,,,p01116,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ras,protein,,,,p01116,,,raf,protein,,,,p04049,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfat,proteinfamily,,,,q13469,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfat,proteinfamily,,,,q13469,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+akt,protein,,,,p31749,,,nfkappab,protein,,,,q04206,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,pkctheta,protein,,,,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,jak3,protein,,,,p52333,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,il2,protein,,,,p60568,extracellular,go:0005576,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+foxp3,protein,,,,q9bzs1,,,pten,protein,,,,p60484,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+foxp3,protein,,,,q9bzs1,,,il2,protein,,,,p60568,,,negative,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+foxp3,protein,,,,q9bzs1,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+fos,protein,,,,p01100,,,ap1,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+erk,protein,,,,p29323,,,fos,protein,,,,p01100,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd28,protein,,,,p10747,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd28,protein,,,,p10747,,,pkctheta,protein,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd28,protein,,,,p10747,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd25,protein,,,,p01589,,,il2r,protein,,,,p14784,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd132,protein,,,,p31785,,,il2r,protein,,,,p14784,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd122,protein,,,,p14784,,,il2r,protein,,,,p14784,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ca,chemical,,,,,,,nfat,proteinfamily,,,,q13469,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ap1,protein,,,,p05412,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ap1,protein,,,,p05412,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+akt,protein,,,,p31749,,,tsc,protein,,,,q92574,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,,,il2,protein,,,,p60568,extracellular,go:0005576,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtor,protein,,,,p42345,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,mtorc2,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,mtor,protein,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,akt,protein,,,,p31749,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,s6k1,protein,,,,q15418,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,mtorc1,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,mtor,protein,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,mtor,protein,,,,p42345,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mkk7,protein,,,,o14733,,,jnk,protein,,,,p45983,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mek2,protein,,,,p36507,,,erk,protein,,,,p29323,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+jun,protein,,,,p05412,,,ap1,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+jnk,protein,,,,p45983,,,jun,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+jak3,protein,,,,p52333,,,stat5,protein,,,,p42229,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2r,protein,,,,p14784,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2r,protein,,,,p14784,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2r,protein,,,,p14784,,,jak3,protein,,,,p52333,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tsc,protein,,,,q92574,,,rheb,protein,,,,q15382,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12

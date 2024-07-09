@@ -6,10 +6,11 @@ import os
 from ast import literal_eval
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src/violin/')))
-from numeric import find_element
-from in_out import preprocessing_model
+from violin.numeric import find_element
+from violin.in_out import preprocessing_model
 
 FILES_TEST = ["RB1"]
+
 FILES = ["RA1",
          "RA2",
          "RA3",
@@ -19,6 +20,36 @@ FILES = ["RA1",
          "RB3",
          "RB_star_1",
          "RB_star_2"]
+
+# FILES = ["RA1",
+#          "RA2",
+#          "RA3",
+#          "RA4",
+#          "RB1",
+#          "RB2",
+#          "RB3",
+#          "RB_star_1",
+#          "RB_star_2",
+#          "RA2_0_1",
+#          "RA2_0_1_1",
+#          "RB2_1",
+#          "RB2_0_1"]
+
+# TEST_FILES = ["translated_ModelB_discrete",
+#               "translated_SkeMel133",
+#               "translated_SkeMel133_biorecipe_combined_10contradictions",
+#               "translated_ModelB_discrete_biorecipe_combined_10contradictions",
+#               "translated_SkeMel133_biorecipe_combined_10randoms",
+#               "translated_ModelB_discrete_biorecipe_combined_10randoms"]
+
+TEST_FILES = ["RA2",
+              "RA21",
+              "RA2_0_1",
+              "RA2_0_1_1",
+              "RB2",
+              "RB21",
+              "RB2_0_1"
+              ]
 
 kind_dict_a = {"strong corroboration" : 2,
                 "empty attribute" : 1,
@@ -35,22 +66,22 @@ kind_dict_a = {"strong corroboration" : 2,
                 "path mismatch" : 19,
                 "self-regulation" : 18}
 
-kind_dict_b = {"strong corroboration" : 1,
-                "empty attribute" : 2,
+kind_dict_b = {"strong corroboration" : 2,
+                "empty attribute" : 1,
                 "indirect interaction" : 3,
-                "path corroboration" : 4,
+                "path corroboration" : 5,
+                "specification" : 7,
                 "hanging extension" : 40,
                 "full extension" : 39,
                 "internal extension" : 38,
-                "specification" : 37,
-                "dir contradiction" : 10,
-                "sign contradiction" : 9,
-                "att contradiction" : 8,
+                "dir contradiction" : 11,
+                "sign contradiction" : 10,
+                "att contradiction" : 9,
                 "dir mismatch" : 20,
                 "path mismatch" : 19,
                 "self-regulation" : 18,
-                "flagged4" : 17,
-                "flagged5" : 16}
+                "flagged4":17,
+                "flagged5":16}
 
 
 def merge_duplicates(reading_df, col_names):
@@ -85,24 +116,26 @@ def merge_duplicates(reading_df, col_names):
     return counted_reading
 
 if __name__ == '__main__':
-    scheme_file = 'v1'
+    scheme_file = 'v2'
     count = {}
-    reader = 'INDRA'
+    folder = 'output'
+    reader = 'INDRA/v2'
     model_A = preprocessing_model('input/models/SkMel133_biorecipe.xlsx')
     model_B = preprocessing_model('input/models/ModelB_discrete_biorecipe.xlsx')
 
     filenames = [file for file in glob.glob(scheme_file + '/*.csv') if re.match(r'^((?!score).)*$', file)]
-    if reader == 'GPT' or reader == 'LLAMA':
+    if 'GPT' in reader or 'LLAMA' in reader:
         FILES = FILES[1:]
+    #for f in TEST_FILES:
     for f in FILES:
         print(f)
-        if re.search(r'^RA', f):
+        if re.search(r'^RA', f) or re.search(r'SkeMel133', f):
             model_df = model_A
         else:
             model_df = model_B
 
         for c_ in ['corroborations', 'contradictions', 'flagged', 'extensions']:
-            file = f'output/{reader}/{f}_{c_}.csv'
+            file = f'{folder}/{reader}/{f}_{c_}.csv'
             out_name = f
 
             df = pd.read_csv(file, index_col=None).fillna('nan').astype(str)
@@ -224,6 +257,7 @@ if __name__ == '__main__':
     for _ in ['corroborations', 'contradictions', 'flagged', 'extensions']:
 
         dict_ = {}
+        #dict_['reading'] = TEST_FILES
         dict_['reading'] = FILES
         for key, value in count[_].items():
             if key == 'reading':
@@ -233,6 +267,6 @@ if __name__ == '__main__':
 
         count_df = pd.DataFrame(dict_)
 
-        count_df.to_csv(f'output/{reader}/{scheme_file}_{_}_summary_id.csv', index=False)
+        count_df.to_csv(f'{folder}/{reader}/{scheme_file}_{_}_summary_id.csv', index=False)
 
 

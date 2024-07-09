@@ -1,0 +1,21 @@
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+156,tcr,protein,,,,p04234,,,pi3k,protein,,,be,p42336,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3949578,pmc3949578",2,10,2,1,22
+25,cd28,protein,,,,p10747,,,mtorc2,complex,,,,q6r328,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+119,pi3k,protein,,,,p42336,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,nan,nan,nan,pmc4712330,1,10,5,1,15
+152,tcr,protein,,,,p04234,,,cd25,protein,,,uniprot,p01589,,,positive,i,,,,,,,nan,nan,nan,pmc3949578,1,10,5,1,15
+149,tcr,protein,,,,p01850,,,mtorc2,complex,,,,q6r327,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+129,pten,protein,,,,p60484,,,pi3k,protein,,,be,p42336,,,negative,i,,,,,,,nan,nan,nan,pmc4712330,1,10,5,1,15
+120,pip3,protein,,,,hmdb10147,,,akt,protein,,,,p31749,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+116,pi3k,protein,,,,p42336,,,pip3,protein,,,,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+66,il2r,protein,,,,a2n4p8,,,stat,protein,,,uniprot,p35610,,,positive,i,,,,,,,nan,nan,nan,pmc3375464,1,10,5,1,15
+64,il2_r,protein,,,,p01589,,,mtorc2,complex,,,,q6r330,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+63,il2_ex,protein,,,,p60568,,,mtorc2,complex,,,,q6r329,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+94,mtorc2,complex,,,,q6r328,,,mtorc2,complex,,,,q6r327,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,3,1,13
+111,pi3,protein,,,,p42336,,,pip3,simplechemical,,,hmdb,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,pmc4487994,1,10,3,1,13
+117,pi3k,protein,,,,p42336,,,pip3,simplechemical,,,hmdb,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,pmc4487994,1,10,3,1,13
+93,mtorc2,complex,,,,q6r327,,,akt,protein,,,,p31750,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,3,1,13
+65,il2r,protein,,,,a2n4p8,,,jak,protein,,,uaz,ua-bp-ggp-00072,,,positive,i,,,,,,,nan,nan,nan,pmc3375464,1,10,3,1,13
+150,tcr,protein,,,,p01850,,,pip3,protein,,,,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,3,1,13
+26,cd28,protein,,,,p10747,,,pi3k,protein,,,be,p42336,,,positive,i,,,,,,,nan,nan,nan,pmc3949578,1,10,2,1,12
+62,il2,protein,,,,p60568,,,pi3k,protein,,,be,p42336,,,positive,i,,,,,,,nan,nan,nan,pmc3949578,1,10,2,1,12
+157,tcr,protein,,,,p04234,,,pten,protein,,,uniprot,p60484,,,negative,i,,,,,,,nan,nan,nan,pmc3949578,1,10,2,1,12

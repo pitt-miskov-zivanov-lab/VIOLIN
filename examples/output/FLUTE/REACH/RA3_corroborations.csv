@@ -1,0 +1,11 @@
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+21,mammalian target of rapamycin,protein,,,,p42345,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc4179759,1,10,5,1,15
+34,raf-1,protein,,,,p04049,,,erk1,protein,,,uniprot,p27361,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+35,raf-1,protein,,,,p04049,,,erk2,protein,,,uniprot,p28482,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+38,raf-1,protein,,,,p04049,,,mapk1,protein,,,uniprot,p28482,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+39,raf-1,protein,,,,p04049,,,mapk3,protein,,,uniprot,p27361,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,5,1,15
+36,raf-1,protein,,,,p04049,,,map2k1,protein,,,uniprot,q02750,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+37,raf-1,protein,,,,p04049,,,map2k2,protein,,,uniprot,p36507,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+40,raf-1,protein,,,,p04049,,,mek1,protein,,,uniprot,q02750,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+41,raf-1,protein,,,,p04049,,,mek2,protein,,,uniprot,p36507,,,positive,i,,,,,,,nan,nan,nan,pmc5609034,1,10,3,1,13
+24,mdm2,protein,,,,q00987,,,p53,protein,,,uniprot,p04637,,,negative,i,,,,,,,nan,nan,nan,pmc5537703,1,10,1,1,11

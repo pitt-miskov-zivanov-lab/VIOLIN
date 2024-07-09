@@ -6,8 +6,10 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
-from src.violin.formatting import get_listname
+from violin.formatting import get_listname
 import requests
+
+
 def get_attributes(A_idx, B_idx, sign, model_df, attrs, path=False):
     """
     The function get the attributes of the interaction in model

@@ -6,9 +6,9 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
-from src.violin.numeric import get_attributes, find_element, compare
-from src.violin.network import path_finding
-from src.violin.formatting import get_listname
+from violin.numeric import get_attributes, find_element, compare
+from violin.network import path_finding
+from violin.formatting import get_listname
 
 kind_dict = {"strong corroboration" : 2, 
                 "empty attribute" : 1,
@@ -458,13 +458,22 @@ def kind_score(x,
                         model_s_indices[kinds.index(kind) % len(model_s_indices)])
                     )
 
-                elif kind in [kind_values['dir contradiction'],
+                elif int(kind) in [kind_values['dir contradiction'],
                             kind_values['sign contradiction'],
                             kind_values['att contradiction']]:
-                    counter['contradiction'].append('{}+{}'.format(
+                    if classify_scheme == '2':
+                        if type(kind) == str:
+                            kind = int(kind)
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
                         model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                        model_s_indices[kinds.index(kind) % len(model_s_indices)])
-                    )
+                            model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                        )
+                    else:
+                        counter['contradiction'].append('{}+{}'.format(
+                            model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                            model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                        )
                 else:
                     pass
 
@@ -515,37 +524,69 @@ def kind_score(x,
                 )
 
         # Contradiction
-        elif kind_values['dir contradiction'] in kinds:
+        elif kind_values['dir contradiction'] in kinds or str(kind_values['dir contradiction']) in kinds:
             kind = kind_values['dir contradiction']
             if counter is None:
                 pass
             # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
             else:
-                counter['contradiction'].append('{}+{}'.format(
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
-                )
-        elif kind_values['sign contradiction'] in kinds:
+                if classify_scheme == '2':
+                    kind_value = [x for x in kinds if
+                                   x in [kind_values['dir contradiction'], str(kind_values['dir contradiction'])]]
+                    for _ in kind_value:
+                        if type(_) == str:
+                            pass
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                                model_t_indices[kinds.index(_) // len(model_s_indices)],
+                                model_s_indices[kinds.index(_) % len(model_s_indices)]))
+                            break
+                else:
+                    counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]))
+
+        elif kind_values['sign contradiction'] in kinds or str(kind_values['sign contradiction']) in kinds:
             kind = kind_values['sign contradiction']
             if counter is None:
                 pass
             # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
             else:
-                counter['contradiction'].append('{}+{}'.format(
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
-                )
-        elif kind_values['att contradiction'] in kinds:
+                if classify_scheme == '2':
+                    kind_value = [x for x in kinds if
+                                   x in [kind_values['sign contradiction'], str(kind_values['sign contradiction'])]]
+                    for _ in kind_value:
+                        if type(_) == str:
+                            pass
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                                model_t_indices[kinds.index(_) // len(model_s_indices)],
+                                model_s_indices[kinds.index(_) % len(model_s_indices)]))
+                            break
+                else:
+                    counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]))
+        elif kind_values['att contradiction'] in kinds or str(kind_values['att contradiction']) in kinds:
             kind = kind_values['att contradiction']
             if counter is None:
                 pass
             # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
             else:
-                counter['contradiction'].append('{}+{}'.format(
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
-                )
-
+                if classify_scheme == '2':
+                    kind_value = [x for x in kinds if x in [kind_values['att contradiction'], str(kind_values['att contradiction'])]]
+                    for _ in kind_value:
+                        if type(_) == str:
+                            pass
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                                model_t_indices[kinds.index(_) // len(model_s_indices)],
+                                model_s_indices[kinds.index(_) % len(model_s_indices)]))
+                            break
+                else:
+                    counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]))
         # Extensions
         elif kind_values['hanging extension'] in kinds:
             kind = kind_values['hanging extension']

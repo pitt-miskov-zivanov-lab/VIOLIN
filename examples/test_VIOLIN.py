@@ -4,12 +4,6 @@ import pandas as pd
 import os
 import sys
 
-# sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src/violin/')))
-# from in_out import preprocessing_model, preprocessing_reading, output
-# from scoring import score_reading
-# from network import node_edge_list
-# from visualize_violin import visualize
-
 from use_violin_script import use_violin
 
 kind_dict = {"strong corroboration" : 2,

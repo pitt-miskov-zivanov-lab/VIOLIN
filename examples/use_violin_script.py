@@ -13,10 +13,10 @@ import tempfile
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '/src/violin')))
 
-from src.violin.in_out import preprocessing_model, preprocessing_reading, output
-from src.violin.scoring import score_reading
-from src.violin.network import node_edge_list
-from src.violin.visualize_violin import visualize
+from violin.in_out import preprocessing_model, preprocessing_reading, output
+from violin.scoring import score_reading
+from violin.network import node_edge_list
+from violin.visualize_violin import visualize
 
 evidence_scoring_cols = ["Regulator Name", "Regulator Type", "Regulator Subtype", "Regulator HGNC Symbol", "Regulator Database", "Regulator ID", "Regulator Compartment", "Regulator Compartment ID",
                         "Regulated Name", "Regulated Type", "Regulated Subtype", "Regulated HGNC Symbol", "Regulated Database", "Regulated ID", "Regulated Compartment", "Regulated Compartment ID",
@@ -53,20 +53,20 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
     """
     # Defining the scoring scheme
     if score == 'extend':
-        kind_dict = {"strong corroboration" : 2,
-                    "weak corroboration1" : 1,
-                    "weak corroboration2" : 1,
-                    "weak corroboration3" : 1,
-                    "hanging extension" : 40,
-                    "full extension" : 40,
-                    "internal extension" : 40,
-                    "specification" : 30,
-                    "dir contradiction" : 10,
-                    "sign contradiction" : 10,
-                    "att contradiction" : 10,
-                    "flagged1" : 20,
-                    "flagged2" : 20,
-                    "flagged3" : 20}
+        kind_dict = {"strong corroboration": 2,
+                     "empty attribute": 1,
+                     "indirect interaction": 3,
+                     "path corroboration": 5,
+                     "specification": 7,
+                     "hanging extension": 40,
+                     "full extension": 39,
+                     "internal extension": 38,
+                     "dir contradiction": 11,
+                     "sign contradiction": 10,
+                     "att contradiction": 9,
+                     "dir mismatch": 20,
+                     "path mismatch": 19,
+                     "self-regulation": 18}
         match_dict = {"source present" : 1,
                         "target present" : 100,
                         "both present" : 10,
@@ -79,20 +79,20 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
 
 
     elif score == 'corroborate':
-        kind_dict = {"strong corroboration" : 40,
-                        "weak corroboration1" : 30,
-                        "weak corroboration2" : 30,
-                        "weak corroboration3" : 30,
-                        "hanging extension" : 1,
-                        "full extension" : 1,
-                        "internal extension" : 10,
-                        "specification" : 10,
-                        "dir contradiction" : 20,
-                        "sign contradiction" : 20,
-                        "att contradiction" : 20,
-                        "flagged1" : 1,
-                        "flagged2" : 1,
-                        "flagged3" : 1}
+        kind_dict = {"strong corroboration": 2,
+                     "empty attribute": 1,
+                     "indirect interaction": 3,
+                     "path corroboration": 5,
+                     "specification": 7,
+                     "hanging extension": 40,
+                     "full extension": 39,
+                     "internal extension": 38,
+                     "dir contradiction": 11,
+                     "sign contradiction": 10,
+                     "att contradiction": 9,
+                     "dir mismatch": 20,
+                     "path mismatch": 19,
+                     "self-regulation": 18}
         match_dict = {"source present" : 1,
                         "target present" : 1,
                         "both present" : 100,
