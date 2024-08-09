@@ -1,4 +1,17 @@
 index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
-284,pten,protein,,,,p60484,,,pip3,chemical,,,chebi,chebi:60169,,,negative,d,dephosphorylation,,,cl:cl:0000236 ++++ cl:cl:0000807 ++++ cl:cl:0000084,,uberon:uberon:0000105,nan,nan,"importantly , the phosphatase and tensin homolog ( pten ) tumor suppressor negatively regulates pi3k/akt/mtor signaling by dephosphorylating pip3 . ++++ importantly , the phosphatase and tensin homolog ( pten ) tumor suppressor negatively regulates pi3k/akt/mtor signaling by dephosphorylating pip3 .",pmc5618553,1,10,7,1,17
-98,il-2,protein,,,,p60568,,,foxp3,protein,,,uniprot,b7zlg1,,,positive,i,transcription,,,cl:cl:0000084 ++++ cl:cl:0000899 ++++ mesh:d015496,,,nan,nan,"furthermore , although il-2 and the downstream activation of stat5 are required to induce the expression of foxp3 by t cells , il-2 can interfere with the differentiation of th17 cells through the activation of stat5 ( boyman and sprent , 2012 ) .",pmc3949578,1,10,5,1,15
-255,pten,protein,,,,p60484,,,cd25,protein,,,uniprot,p01589,,,negative,i,transcription,,cellosaurus:cvcl_7904,cl:cl:0000084 ++++ cl:cl:0000844,,,nan,nan,"compared with pten foxp3-cre t cells with increased cellularity but diminished cd25 expression , t cells in pten rictor foxp3-cre mice exhibited normal abundance and cd25 expression ( fig. 7c ) .",pmc4297581,1,10,5,1,15
+46,cd28,protein,,,,p10747,,,mtorc2,complex,,,,q6r328,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+124,il2_ex,protein,,,,p60568,,,mtorc2,complex,,,,q6r329,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+125,il2_r,protein,,,,p01589,,,mtorc2,complex,,,,q6r330,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+151,mtor,protein,,,,p42345,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,nan,nan,nan,pmcpmc3949578,1,10,5,1,15
+186,pi3k,protein,,,,pi3k,,,il_2,protein,,,uniprot,p60568,,,positive,i,,,,,,,nan,nan,nan,pmcpmc3949578,1,10,5,1,15
+191,pi3k,protein,,,,pi3k,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,nan,nan,nan,pmcpmc5986278,1,10,5,1,15
+193,pi3k,protein,,,,pi3k,,,tsc1,protein,,,uniprot,q92574,,,negative,i,,,,,,,nan,nan,nan,pmcpmc4297581,1,10,5,1,15
+199,pip3,protein,,,,hmdb10147,,,akt,protein,,,,p31749,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+222,pten,protein,,,,p60484,,,mtorc2,complex,,,,q6r327,,,negative,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+253,tcr,protein,,,,p01850,,,mtorc2,complex,,,,q6r327,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,5,1,15
+258,tcr,protein,,,,p04234,,,mtor,protein,,,uniprot,p42345,,,positive,i,,,,,,,nan,nan,nan,pmcpmc3949578,1,10,5,1,15
+160,mtorc2,complex,,,,q6r327,,,akt,protein,,,,p31750,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,3,1,13
+161,mtorc2,complex,,,,q6r328,,,mtorc2,complex,,,,q6r327,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,3,1,13
+254,tcr,protein,,,,p01850,,,pip3,protein,,,,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,3,1,13
+97,foxp3,protein,,,,b7zlg1,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,nan,nan,nan,pmcpmc4297581,1,10,2,1,12
+129,il_2,protein,,,,p60568,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmcpmc3949578,1,10,1,1,11

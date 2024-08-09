@@ -1,7 +1,17 @@
 index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+102,da-raf1,protein,,,,p10398,,,erk,family,,,be,erk,,,negative,i,,,,,,,"nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,nan,nan,nan,nan","nan,pmc6113736,pmc6395334,pmc6194127,pmc6194127",5,10,19,1,69
+381,mek,family,,,,mek,,,jak,protein,,,uaz,ua-bp-ggp-00072,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc6396142,pmc6472057",2,10,19,1,39
+615,ras,family,,,,pf00071,,,kras,protein,,,uniprot,p01116,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4440819,pmc5636874",2,10,18,1,38
+369,mek,family,,,,mek,,,b-raf,protein,,,uniprot,p15056,,,positive,i,,,,,,,nan,nan,nan,pmc4440819,1,10,20,1,30
+371,mek,family,,,,mek,,,da-raf1,protein,,,uniprot,p10398,,,negative,i,,,,,,,nan,nan,nan,pmc6113736,1,10,20,1,30
 99,da-raf1,protein,,,,p10398,,,akt,family,,,be,akt,,,negative,i,,,,,,,nan,nan,nan,pmc6113736,1,10,19,1,29
 105,da-raf1,protein,,,,p10398,,,pi3k,protein,,,be,pi3k,,,negative,i,,,,,,,nan,nan,nan,nan,1,10,19,1,29
-328,mammalian target of rapamycin,protein,,,,p42345,,,braf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
+176,erk,family,,,,erk,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,10,19,1,29
+295,ki-ras,protein,,,,p01116,,,erk,family,,,be,erk,,,negative,i,,,,,,,nan,nan,nan,pmc4783893,1,10,19,1,29
+296,ki-ras,protein,,,,p01116,,,mek,family,,,be,mek,,,negative,i,,,,,,,nan,nan,nan,pmc4783893,1,10,19,1,29
+383,mek,family,,,,mek,,,mtorc1,protein,,,be,mtorc1,,,negative,i,,,,,,,nan,nan,nan,pmc5190119,1,10,19,1,29
+434,mtorc1,protein,,,,mtorc1,,,sasp,protein,,,uniprot,p10599,,,positive,i,,,,,,,nan,nan,nan,pmc5467491,1,10,19,1,29
 531,pi3k,protein,,,,pi3k,,,bcl-2,family,,,uniprot,p10415,,,negative,i,,,,,,,nan,nan,nan,pmc5723691,1,10,19,1,29
 565,pten,protein,,,,p60484,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmc3843736,1,10,19,1,29
 100,da-raf1,protein,,,,p10398,,,b-raf,protein,,,uniprot,p15056,,,negative,i,,,,,,,nan,nan,nan,pmc6194127,1,10,18,1,28
+307,kras,protein,,,,p01116,,,ras,family,,,pfam,pf00071,,,positive,i,,,,,,,nan,nan,nan,pmc5372348,1,10,18,1,28

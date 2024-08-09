@@ -21,19 +21,19 @@ FILES = ["RA1",
          "RB_star_1",
          "RB_star_2"]
 
-# FILES = ["RA1",
-#          "RA2",
-#          "RA3",
-#          "RA4",
-#          "RB1",
-#          "RB2",
-#          "RB3",
-#          "RB_star_1",
-#          "RB_star_2",
-#          "RA2_0_1",
-#          "RA2_0_1_1",
-#          "RB2_1",
-#          "RB2_0_1"]
+FILES = ["RA1",
+         "RA2",
+         "RA3",
+         "RA4",
+         "RB1",
+         "RB2",
+         "RB3",
+         "RB_star_1",
+         "RB_star_2",
+         "RA2_0_1",
+         "RA2_0_1_1",
+         "RB2_1",
+         "RB2_0_1"]
 
 # TEST_FILES = ["translated_ModelB_discrete",
 #               "translated_SkeMel133",
@@ -116,10 +116,10 @@ def merge_duplicates(reading_df, col_names):
     return counted_reading
 
 if __name__ == '__main__':
-    scheme_file = 'v2'
+    scheme_file = 'v1'
     count = {}
     folder = 'output'
-    reader = 'INDRA/v2'
+    reader = 'example'
     model_A = preprocessing_model('input/models/SkMel133_biorecipe.xlsx')
     model_B = preprocessing_model('input/models/ModelB_discrete_biorecipe.xlsx')
 
