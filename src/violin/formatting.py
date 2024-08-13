@@ -26,6 +26,71 @@ _VAR_COL = 'Variable'
 _IDX_COL = '#'
 required_model = ['Element Name','Element Type','Element IDs','Variable','Positive Regulator List', 'Negative Regulator List']
 
+type_abbr_dict = {
+             'proteinfamily': 'pf',
+             'proteincomplex': 'pf',
+             'protein': 'pn',
+             'chemical': 'che',
+             'chemicalfamily': 'cf',
+             'gene': 'gene',
+             'rna': 'rna',
+             'mutation': 'mut',
+             'biologicalprocess': 'bp'
+}
+
+subtype_abbr_dict = {
+                "enzyme":"enz",
+                "transporter":"tsp",
+                "transcription-factor":"tsf",
+                "transcription-repressor":"tsr",
+                "transducer":"tsd",
+                "kinase":"kin",
+                "interferon":"ifn",
+                "interleukin":"ilk",
+                "subunit":"sub",
+                "cytokine":"cyt",
+                "tyrosine":"tyr",
+                "receptor":"rec",
+                "caspase":"cas",
+                "phosphatase":"pho",
+                "adaptor":'ada',
+                "peptidase":"pep",
+                "cyclin":"cyc",
+                "growth-factor":"gwf",
+                "binding":"bin",
+                "molecule":"mol",
+                "oncogene":"onc",
+                "proto-oncogene":"pnc",
+                "suppressor":"sup",
+                "tumor":"tum",
+                "signaling":"sig",
+                "biological":"bio",
+                "process":"prc",
+                "protein":"prt",
+                "redox":"red",
+                "metallopeptidase":"mtp",
+                "nonhistone":"nhs",
+                "nucleoprotein":"ncp",
+                "hormone":"hor",
+                "ligase":'lgs',
+                "ligand":"lgd",
+                "regulator":"reg",
+                "ubiquitin-protein":"ubp",
+                "catalytic":"cat",
+                "gtpase":"gtp",
+                "reverse":"rvs",
+                "transcriptase":"tst",
+                "dehydrogenase":"dhy",
+                "hydrogenase":"hyd",
+                "peroxidase":"pox",
+                "oxidase":"oxi",
+                "glycoprotein":"glp",
+                "necrosis-factor":"nec",
+                "apoptosis":"apo",
+                "active":"act"
+}
+
+
 def evidence_score(reading_df, col_names):
     """
     This function merges duplicate interactions and calculates evidence score of each LEE
@@ -80,6 +145,8 @@ def add_regulator_names_id(model_df):
     #Also adds new columns for the positive and negative regulator names and IDs
     col_headers = list(model_df.columns)
     model_df = model_df[col_headers]
+    reg_col_list = ['Positive Regulator List', 'Negative Regulator List']
+    model_df[reg_col_list] = model_df[reg_col_list].apply(lambda x: x.astype(str).str.lower())
     #Columns for positive
     model_df['Positive Names'] = pd.Series().astype(object)
     model_df['Positive IDs'] = pd.Series().astype(object)
@@ -94,7 +161,7 @@ def add_regulator_names_id(model_df):
                 model_df.at[y,sign+' IDs'] = "nan"
 
             else:
-                reg_name = model_df[sign+' Regulator List'][y].split(',')
+                reg_name = model_df[sign+" Regulator List"][y].split(",")
                 if '' in reg_name: reg_name.remove('')
                 reg_id = []
                 reg_var = reg_name.copy()
@@ -102,7 +169,7 @@ def add_regulator_names_id(model_df):
 
                 #find index for regulator in variable column, and copy the Element Name and IDs to the new columns
                 for element in reg_name:
-                    idx = list(model_df['Variable']).index(element)
+                    idx = list(model_df['Listname']).index(element)
                     reg_name[reg_name.index(element)] = model_df['Element Name'][idx]
                     #idx = list(model_df["Element Name"]).index(element)
                     #Since there are multiple IDs for each element, need to keep track of which
@@ -337,6 +404,81 @@ def split_comma_out_parentheses(reg_rule):
             start = index+1
     return reg_list
 
+
+def wrap_list_to_str(df, cols):
+    """
+    This function wraps the lists in the output dataframe to strings
+    Parameters
+    ----------
+    df: pd.DataFrame
+        output dataframe
+    cols: list
+        a list of columns name
+    Returns
+    -------
+    df: pd.DataFrame
+    """
+    for row in range(len(df)):
+        for col in cols:
+            df.loc[row, col] = ','.join(list(df.loc[row, col]))
+    return df
+
+
+def get_listname(idx, model_df):
+    """
+        Create the list-names by element attributes
+    Parameters
+    ----------
+    idx: int
+        the index of element
+    model_df: pd.DataFrame
+        the model table
+    Returns
+    -------
+    listname: str
+        formatted name for regulator list column
+    """
+    ele_col_list = ['Element Name', 'Element Type', 'Element Subtype', 'Compartment ID']
+    model_df[ele_col_list] = model_df[ele_col_list].apply(lambda x: x.astype(str).str.lower())
+    if str(model_df.loc[idx, 'Element Type']).replace(' ', '') not in type_abbr_dict:
+        ele_type = model_df.loc[idx, 'Element Type'].replace(' ', '')
+    else:
+        ele_type = type_abbr_dict[model_df.loc[idx, 'Element Type'].replace(' ', '')]
+    listname = '{}_{}_{}_{}'.format(
+        model_df.loc[idx, 'Element Name'],
+        ele_type,
+        get_subtype_abbr(model_df.loc[idx, 'Element Subtype']),
+        model_df.loc[idx, 'Compartment ID'].replace(':', '')
+    )
+    return listname
+
+
+def get_subtype_abbr(subtype):
+    """
+
+    Parameters
+    ----------
+    subtype: str
+        The subtype of the element
+    Returns
+    -------
+    abbr: str
+        The abbreviation of the first subtype
+    """
+    list_ = []
+    # Only get first subtype (TBD for the other subtypes)
+    subtype = subtype.split(',')[0]
+    if subtype not in ['', 'nan']:
+        for x in [subname for subname in subtype.replace('(', ' ').replace(')', ' ').split(' ') if
+                  subname not in ['', ' ']]:
+            if x.lower() not in subtype_abbr_dict.keys():
+                list_.append(x.strip())
+            else:
+                list_.append(subtype_abbr_dict[x.lower().strip()])
+        abbr = ''.join(list_)
+    else:
+        abbr = 'nan'
+    return abbr
 
 #TODO: implement with functionality and integrate with BioRECIPE
 # def convert_to_biorecipes(model, att_list = [], separate = True):

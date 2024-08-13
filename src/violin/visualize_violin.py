@@ -63,9 +63,9 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
     if '_outputDF' in file_name:
         # Separating output my category
         corroborations = kept[kept["Kind Score"].isin([kind_values['strong corroboration'],
-                                                           kind_values['weak corroboration1'],
-                                                           kind_values['weak corroboration2'],
-                                                           kind_values['weak corroboration3'],
+                                                           kind_values['empty attribute'],
+                                                           kind_values['indirect interaction'],
+                                                           kind_values['path corroboration'],
                                                            kind_values['specification']])]
         extensions = kept[kept["Kind Score"].isin([kind_values['full extension'],
                                                     kind_values['hanging extension'],
@@ -73,9 +73,9 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         contradictions = kept[kept["Kind Score"].isin([kind_values['dir contradiction'],
                                                         kind_values['sign contradiction'],
                                                         kind_values['att contradiction']])]
-        flagged = kept[kept["Kind Score"].isin([kind_values['flagged1'],
-                                                    kind_values['flagged2'],
-                                                    kind_values['flagged3']])]
+        flagged = kept[kept["Kind Score"].isin([kind_values['dir mismatch'],
+                                                    kind_values['path mismatch'],
+                                                    kind_values['self-regulation']])]
 
         plt.figure(figsize=(12, 6))
         # Plot main category distribution
@@ -174,18 +174,21 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             kind = list(kept['Kind Score'])
 
             strong_corr = kind.count(kind_values['strong corroboration'])
-            weak_corr1 = kind.count(kind_values['weak corroboration1'])
-            weak_corr2 = kind.count(kind_values['weak corroboration2'])
-            weak_corr3 = kind.count(kind_values['weak corroboration3'])
+            weak_corr1 = kind.count(kind_values['empty attribute'])
+            weak_corr2 = kind.count(kind_values['indirect interaction'])
+            weak_corr3 = kind.count(kind_values['path corroboration'])
             spec = kind.count(kind_values['specification'])
             corrs = np.array([strong_corr, weak_corr1, weak_corr2, weak_corr3, spec])
-            mylabels = ["Strong Corroborations: "+str(strong_corr), "Weak Corroborations1: "+str(weak_corr1),
-                        "Weak Corroborations2: "+str(weak_corr2), "Weak Corroborations3: "+str(weak_corr3), "Specifications: "+str(spec)]
+            mylabels = ["Strong Corroborations: "+str(strong_corr), "empty attribute: "+str(weak_corr1),
+                        "indirect interactions: "+str(weak_corr2), "path corroborations: "+str(weak_corr3), "Specifications: "+str(spec)]
             mycolors = ['#235490','#2B65AD','#718EC5','#B0BEDA', '#E7EFF9']
             plt.figure(figsize=(16, 4))
             plt.subplot(1, 4, 1)
-            plt.pie(corrs,colors=mycolors)
-            plt.legend(labels=mylabels,bbox_to_anchor=(0.2,0), loc="lower center",
+            if all(x == 0 for x in corrs):
+                pass
+            else:
+                plt.pie(corrs,colors=mycolors)
+                plt.legend(labels=mylabels,bbox_to_anchor=(0.2,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
 
             full_ext = kind.count(kind_values['full extension'])
@@ -196,8 +199,11 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                         "Internal Extensions: "+str(int_ext)]
             mycolors = ['#24552D','#49A155','#7DBA84']
             plt.subplot(1, 4, 2)
-            plt.pie(exts,colors=mycolors)
-            plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
+            if all(x == 0 for x in exts):
+                pass
+            else:
+                plt.pie(exts,colors=mycolors)
+                plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
 
             dir_cont = kind.count(kind_values['dir contradiction'])
@@ -208,13 +214,16 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                         "Attribute Contradictions: "+str(att_cont)]
             mycolors = ['#BE9735','#E2B441','#F9E6A9']
             plt.subplot(1, 4, 3)
-            plt.pie(conts,colors=mycolors)
-            plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
+            if all(x == 0 for x in conts):
+                pass
+            else:
+                plt.pie(conts,colors=mycolors)
+                plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
             flg4, flg5 = False, False
-            flg1 = kind.count(kind_values['flagged1'])
-            flg2 = kind.count(kind_values['flagged2'])
-            flg3 = kind.count(kind_values['flagged3'])
+            flg1 = kind.count(kind_values['dir mismatch'])
+            flg2 = kind.count(kind_values['path mismatch'])
+            flg3 = kind.count(kind_values['self-regulation'])
             if 'flagged4' in kind_values:
                 flg4 = kind.count(kind_values['flagged4'])
             else: pass
@@ -222,14 +231,17 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                 flg5 = kind.count(kind_values['flagged5'])
             else: pass
             flgds = np.array([flg1, flg2, flg3, flg4, flg5]) if (flg4 and flg5) else np.array([flg1, flg2, flg3])
-            mylabels = ["Flagged 1: "+str(flg1), "Flagged 2: "+str(flg2),
-                        "Flagged 3: "+str(flg3), "Flagged 4: "+str(flg4), "Flagged 5: "+str(flg5)] if (flg4 and flg5) else \
-                        ["Flagged 1: " + str(flg1), "Flagged 2: " + str(flg2),
-                        "Flagged 3: " + str(flg3)]
+            mylabels = ["dir mismatch: "+str(flg1), "path mismatch: "+str(flg2),
+                        "self-regulation: "+str(flg3), "Flagged 4: "+str(flg4), "Flagged 5: "+str(flg5)] if (flg4 and flg5) else \
+                        ["dir mismatch: " + str(flg1), "path mismatch: " + str(flg2),
+                        "self-regulation: " + str(flg3)]
             mycolors = ['#AA5626','#C7652E','#F1C6A8', '#F5D4BE', '#FCF1EA'] if (flg4 and flg5) else ['#AA5626','#C7652E','#F1C6A8']
             plt.subplot(1, 4, 4)
-            plt.pie(flgds,colors=mycolors)
-            plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
+            if all(x == 0 for x in flgds):
+                pass
+            else:
+                plt.pie(flgds,colors=mycolors)
+                plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
             #plt.savefig('Subcategory_Overview.png',bbox_inches = "tight",dpi=200)
             plt.close
@@ -293,13 +305,13 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         plt.subplot(2, 2, 4)
         #Pie Chart
         kind = list(kept['Kind Score'])
-        cats = {'corroborations':['strong corroboration', 'weak corroboration1', 'weak corroboration2', 'weak corroboration3'],
+        cats = {'corroborations':['strong corroboration', 'empty attribute', 'indirect interaction', 'path corroboration'],
                 'corroborations colors':['#235490','#2B65AD','#718EC5','#B0BEDA'],
                 'extensions':['full extension', 'hanging extension', 'internal extension', 'specification'],
                 'extensions colors': ['#24552D','#49A155','#7DBA84','#B6D5B8'],
                 'contradictions':['dir contradiction', 'sign contradiction', 'att contradiction','none'],
                 'contradictions colors':['#BE9735','#E2B441','#F9E6A9','none'],
-                'flagged':['flagged1', 'flagged2', 'flagged3', 'none'],
+                'flagged':['dir mismatch', 'path mismatch', 'self-regulation', 'none'],
                 'flagged colors':['#AA5626','#C7652E','#F1C6A8','none']}
         cat_df = pd.DataFrame(cats)
         #1: Get subcategory names
@@ -318,14 +330,20 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                 mylabels += [x+": "+str(kind.count(kind_values[x]))]
                 counts += [kind.count(kind_values[x])]
             numbs = np.array(counts)
-            plt.pie(numbs,colors=mycolors)
-            plt.legend(labels=mylabels,bbox_to_anchor=(1,0.25), loc="lower right",
+            if all(x ==0 for x in numbs):
+                pass
+            else:
+                plt.pie(numbs,colors=mycolors)
+                plt.legend(labels=mylabels,bbox_to_anchor=(1,0.25), loc="lower right",
                     bbox_transform=plt.gcf().transFigure)
         else:
             mylabels = [category]
             counts = [output.shape[0]]
             numbs = np.array(counts)
-            plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
-        #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
-        plt.close
+            if all(x==0 for x in numbs):
+                pass
+            else:
+                plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
+                #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
+                plt.close
     return

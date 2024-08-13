@@ -6,15 +6,14 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
-from ast import literal_eval
-
-from numeric import find_element, compare
-from network import path_finding
+from violin.numeric import get_attributes, find_element, compare
+from violin.network import path_finding
+from violin.formatting import get_listname
 
 kind_dict = {"strong corroboration" : 2, 
-                "weak corroboration1" : 1,
-                "weak corroboration2" : 1,
-                "weak corroboration3" : 1,
+                "empty attribute" : 1,
+                "indirect interaction" : 1,
+                "path corroboration" : 1,
                 "hanging extension" : 40, 
                 "full extension" : 40, 
                 "internal extension" : 40, 
@@ -22,15 +21,18 @@ kind_dict = {"strong corroboration" : 2,
                 "dir contradiction" : 10,
                 "sign contradiction" : 10,
                 "att contradiction" : 10,
-                "flagged1" : 20,
-                "flagged2" : 20,
-                "flagged3" : 20}
+                "dir mismatch" : 20,
+                "path mismatch" : 20,
+                "self-regulation" : 20}
 match_dict = {"source present" : 1, 
                 "target present" : 100, 
                 "both present" : 10, 
                 "neither present" : 0.1}
+
+# Default attributes list is empty
 atts_list = []
-def match_score(x, reading_df, model_df, match_values = match_dict):
+
+def match_score(x, reading_df, model_df, embedding_match, match_values = match_dict):
     """
     This function calculates the Match Score for an interaction from the reading
 
@@ -56,13 +58,39 @@ def match_score(x, reading_df, model_df, match_values = match_dict):
     reg_sign = reading_df.loc[x, 'Sign']
 
     # Search for regulated from reading in model
-    if (find_element("name", reading_df.loc[x, 'Regulated Name'], reading_df.loc[x, 'Regulated Type'], model_df) != -1 or \
-            find_element("id", reading_df.loc[x, 'Regulated ID'], reading_df.loc[x, 'Regulated Type'], model_df) != -1 ):
+    if (find_element("name",
+                     reading_df.loc[x, 'Regulated Name'],
+                     reading_df.loc[x, 'Regulated Type'],
+                     model_df,
+                     embedding_match) != -1 or
+        find_element("hgnc",
+                     reading_df.loc[x, 'Regulated HGNC Symbol'],
+                     reading_df.loc[x, 'Regulated Type'],
+                     model_df,
+                     embedding_match) != -1 or
+        find_element("id",
+                     reading_df.loc[x, 'Regulated ID'],
+                     reading_df.loc[x, 'Regulated Type'],
+                     model_df,
+                     embedding_match) != -1 ):
         regulated = True
 
     # Search for regulator from reading in model
-    if (find_element("name", reading_df.loc[x, 'Regulator Name'], reading_df.loc[x, 'Regulator Type'], model_df) != -1 or \
-            find_element("id", reading_df.loc[x, 'Regulator ID'], reading_df.loc[x, 'Regulator Type'], model_df) != -1 ):
+    if (find_element("name",
+                     reading_df.loc[x, 'Regulator Name'],
+                     reading_df.loc[x, 'Regulator Type'],
+                     model_df,
+                     embedding_match) != -1 or
+        find_element("hgnc",
+                     reading_df.loc[x, 'Regulator HGNC Symbol'],
+                     reading_df.loc[x, 'Regulator Type'],
+                     model_df,
+                     embedding_match) != -1 or
+        find_element("id",
+                     reading_df.loc[x, 'Regulator ID'],
+                     reading_df.loc[x, 'Regulator Type'],
+                     model_df,
+                     embedding_match) != -1 ):
         regulator = True
 
     # Scoring definition
@@ -82,6 +110,8 @@ def kind_score(x,
                model_df,
                reading_df,
                graph,
+               embedding_match,
+               counter,
                kind_values = kind_dict,
                attributes = atts_list,
                classify_scheme = '1',
@@ -99,6 +129,9 @@ def kind_score(x,
         The reading dataframe
     graph : nx.DiGraph
         directed graph of the model,used when function calls path_finding module
+    counter: dict
+        A dictionary to record the interactions that are identified as corroborated or contradicted interaction in model
+        default value is None
     kind_values : dict
         Dictionary assigning Kind Score values
         Default values found in kind_dict
@@ -119,8 +152,8 @@ def kind_score(x,
         Kind Score score value
     """
 
-    ###Finding LEE attributes###
-    #Finding LEE regulator sign
+    ### Finding LEE attributes ###
+    # Finding LEE regulator sign
     signs = ['Negative', 'Positive']
     if reading_df.loc[x, 'Sign'].lower() in ['activate', 'positive', 'increase']: reg_sign = 'Positive'
     else: reg_sign = 'Negative'
@@ -131,63 +164,112 @@ def kind_score(x,
     if 'Connection Type' in reading_df.columns: lee_cxn_type = reading_df.loc[x, 'Connection Type']
     else: lee_cxn_type = 'i'
 
-    reading_atts = [f'{entity} {atts}' for entity in ['Regulated', 'Regulator']
-                                            for atts in attributes]
+    # Add full location information, if user want to compare location of the element
+    if 'Regulated Compartment' in attributes and 'Regulated Compartment ID' not in attributes:
+        attributes.insert(attributes.index('Regulated Compartment') + 1, 'Regulated Compartment ID')
+    elif 'Regulated Compartment ID' in attributes and 'Regulated Compartment' not in attributes:
+        attributes.insert(attributes.index('Regulated Compartment ID'), 'Regulated Compartment')
+
+    if 'Regulator Compartment' in attributes and 'Regulator Compartment ID' not in attributes:
+        attributes.insert(attributes.index('Regulator Compartment') + 1, 'Regulator Compartment ID')
+    elif 'Regulator Compartment ID' in attributes and 'Regulator Compartment' not in attributes:
+        attributes.insert(attributes.index('Regulator Compartment ID'), 'Regulator Compartment')
+    else:
+        pass
+
+    # Create list for attributes (i.e., location attributes, context attributes, influence attributes)
+    reading_atts = attributes
+
     # Finding Lee other attributes
     if len(attributes) > 0:
         # Attributes for LEE index 'x'
-        reading_atts = [reading_df.loc[x, att] for att in reading_atts]
+        reading_atts = {att: reading_df.loc[x, att] for att in reading_atts}
     else:
-        reading_atts = []
+        reading_atts = {}
 
-    ###Comparing to model###
-    source_name = find_element("name", reading_df.loc[x, 'Regulator Name'], reading_df.loc[x, 'Regulator Type'], model_df)
-    source_id = find_element("id", reading_df.loc[x, 'Regulator ID'], reading_df.loc[x, 'Regulator Type'], model_df)
-    target_name = find_element("name", reading_df.loc[x, 'Regulated Name'], reading_df.loc[x, 'Regulated Type'], model_df)
-    target_id = find_element("id", reading_df.loc[x, 'Regulated ID'], reading_df.loc[x, 'Regulated Type'], model_df)
+    # Comparing to model
+    source_name = find_element("name",
+                               reading_df.loc[x, 'Regulator Name'],
+                               reading_df.loc[x, 'Regulator Type'],
+                               model_df,
+                               embedding_match)
+    source_hgnc = find_element("hgnc",
+                               reading_df.loc[x, 'Regulator HGNC Symbol'],
+                               reading_df.loc[x, 'Regulator Type'],
+                               model_df,
+                               embedding_match)
+    source_id = find_element("id",
+                             reading_df.loc[x, 'Regulator ID'],
+                             reading_df.loc[x, 'Regulator Type'],
+                             model_df,
+                             embedding_match)
+
+    target_name = find_element("name",
+                               reading_df.loc[x, 'Regulated Name'],
+                               reading_df.loc[x, 'Regulated Type'],
+                               model_df,
+                               embedding_match)
+    target_hgnc = find_element("hgnc",
+                               reading_df.loc[x, 'Regulated HGNC Symbol'],
+                               reading_df.loc[x, 'Regulated Type'],
+                               model_df,
+                               embedding_match)
+    target_id = find_element("id",
+                             reading_df.loc[x, 'Regulated ID'],
+                             reading_df.loc[x, 'Regulated Type'],
+                             model_df,
+                             embedding_match)
 
     # Both regulator (source) and regulated (target) node found in the model
-    if (source_name != -1 or source_id != -1) and (target_name != -1 or target_id != -1):
+    if (source_name != -1 or source_hgnc != -1 or source_id != -1) and \
+            (target_name != -1 or target_hgnc != -1 or target_id != -1):
         # Find indices of regulator element (target) in model
         #FIXME: TBD for order
-        model_s_indices = source_name if source_name != -1 else source_id
-        model_t_indices = target_name if target_name != -1 else target_id
-        # model_s_indices = source_id if source_id != -1 else source_name
-        # model_t_indices = target_id if target_id != -1 else target_name
+        # Priority: HGNC > Name > ID
+        if source_hgnc != -1: model_s_indices = source_hgnc
+        elif source_name != -1: model_s_indices = source_name
+        else: model_s_indices = source_id
 
-        # Convert regulators into variable names (for path finding)
-        model_s_vars = [model_df.loc[i, 'Variable'] for i in model_s_indices]
+        if target_hgnc != -1: model_t_indices = target_hgnc
+        elif target_name != -1: model_t_indices = target_name
+        else: model_t_indices = target_id
 
         kinds = []
 
         # Loop over each instance of the target and source in the model (since the same element may exist multiple status
         for t_idx in model_t_indices:
             # Regulator list in model
-            model_s_list = model_df.loc[t_idx, reg_sign+' Regulator List']
+            model_s_list = model_df.loc[t_idx, reg_sign+' Regulator List']  \
+                if model_df.loc[t_idx, reg_sign+' Regulator List'] != 'nan' else 'nan'
             # Regulator list of opposite sign
-            model_s_opp = model_df.loc[t_idx, opp_sign+' Regulator List']
+            model_s_opp = model_df.loc[t_idx, opp_sign+' Regulator List'] \
+                if model_df.loc[t_idx, opp_sign+' Regulator List'] != 'nan' else 'nan'
 
             for s_idx in model_s_indices:
 
-                # MI with match direction, match sign
-                if str(model_s_list) != "nan" and model_df.loc[s_idx, 'Variable'] in literal_eval(model_s_list):
-                    #Index of regulator name within regulator list
-                    s_index = literal_eval(model_s_list).index(model_df.loc[s_idx,'Variable'])
-                    #Finding index MI regulator variable
-                    model_s_variable = literal_eval(model_df.loc[t_idx,reg_sign+' Regulator List'])[s_index]
-                    model_s_element = list(model_df['Variable']).index(model_s_variable)
+                source_listname = model_df.loc[s_idx, 'Listname']
 
-                    #Find MI connection type
+                target_listname = model_df.loc[t_idx, 'Listname']
+
+                # MI with match direction, match sign
+                if str(model_s_list) != "nan" and source_listname in model_s_list.split(','):
+                    # Index of regulator name within regulator list
+                    s_index = model_s_list.split(',').index(source_listname)
+                    # Finding index MI regulator variable
+                    model_s_variable = model_df.loc[t_idx,reg_sign+' Regulator List'].split(',')[s_index]
+                    #model_s_element = list(model_df['Variable']).index(model_s_variable)
+
+                    # Find MI connection type
                     if (reg_sign+' Connection Type List') in model_df.columns.values.tolist() and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
                                                         model_df.loc[t_idx, reg_sign+' Connection Type List'].split(',')):
-                        #Connection type
+                        # Connection type
                         mi_cxn_type = model_df.loc[t_idx,reg_sign+' Connection Type List'].split(",")[s_index]
                     else: mi_cxn_type = mi_cxn
 
                     # List of model attributes to compare to reading attributes
-                    model_atts = [model_df.loc[t_idx, att] for att in attributes] + [model_df.loc[model_s_element, att]
-                                                                                    for att in attributes]
+                    model_atts = get_attributes(t_idx, s_idx, reg_sign, model_df, attributes)
+
 
                     # If LEE ="I" and MI = "I" or LEE = "D" and MI = "D": check attributes
                     if (lee_cxn_type == "i" and mi_cxn_type == "i") or (lee_cxn_type == "d" and mi_cxn_type != "i"):
@@ -196,44 +278,44 @@ def kind_score(x,
                         # Strong Corroboration - perfect match
                         if compare_atts == 0:
                             kinds.append(kind_values['strong corroboration'])
-                        # Specification - the LEE presents new information
-                        elif compare_atts == 1:
-                            kinds.append(kind_values['specification'])
                         # Weak corroboration - the LEE presents less information than the model interaction
+                        elif compare_atts == 1:
+                            kinds.append(kind_values['empty attribute'])
+                        # Specification - the LEE presents new information
                         elif compare_atts == 2:
-                            kinds.append(kind_values['weak corroboration1'])
+                            kinds.append(kind_values['specification'])
                         # Contradiction - the LEE presents information that disputes the model interaction
                         elif compare_atts == 3:
                             kinds.append(kind_values['att contradiction'])
 
-                    #If LEE = "D" and MI = "I"
+                    # If LEE = "D" and MI = "I"
                     elif lee_cxn_type == "d" and mi_cxn_type == "i":
                         compare_atts = compare(model_atts, reading_atts)
-                        #If attributes are non-contradictory: LEE is a specification
+                        # If attributes are non-contradictory: LEE is a specification
                         if compare_atts in [0,1,2]: kinds.append(kind_values['specification'])
-                        #Else: LEE is a contradiction
+                        # Else: LEE is a contradiction
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
-                    #If LEE ="I" and MI = "D":
+                    # If LEE ="I" and MI = "D":
                     elif lee_cxn_type == "i" and mi_cxn_type == "d":
                         compare_atts = compare(model_atts, reading_atts)
                         #If attributes are non-contradictory: LEE is a weak corroboration
-                        if compare_atts in [0,1,2]: kinds.append(kind_values['weak corroboration2'])
+                        if compare_atts in [0,1,2]: kinds.append(kind_values['indirect interaction'])
                         #Else: LEE is a contradiction
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
                 # MI with Matched direction, Mismatched sign
-                elif str(model_s_opp) != "nan" and model_df.loc[s_idx,'Variable'] in literal_eval(model_s_opp):
-                    reg_index = literal_eval(model_df.loc[t_idx, opp_sign + " Regulator List"]).index(
-                        model_df.loc[s_idx, 'Variable'])
-                    #Finding connection type
+                elif str(model_s_opp) != "nan" and source_listname in model_s_opp.split(','):
+                    reg_index = model_df.loc[t_idx, opp_sign + " Regulator List"].split(',').index(
+                        source_listname)
+                    # Finding connection type
                     if (reg_sign+' Connection Type List') in model_df.columns.values.tolist() and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
                                                         model_df.loc[t_idx, opp_sign+' Connection Type List'].split(',')):
                         #Connection type
                         mi_cxn_type = model_df.loc[t_idx, opp_sign + ' Connection Type List'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
-                    #If LEE = "I" and MI = "D"
+                    # If LEE = "I" and MI = "D"
                     if lee_cxn_type == "i" and mi_cxn_type != "i":
                         if classify_scheme in ['1', '2']:
                             kinds.append(kind_values['sign contradiction'])
@@ -244,10 +326,10 @@ def kind_score(x,
                         kinds.append(kind_values['sign contradiction'])
 
                 # MI with Mismatched direction, Matched sign
-                elif (model_df.loc[s_idx, reg_sign + " Regulator List"] != "nan" and model_df.loc[
-                    t_idx, 'Variable'] in literal_eval(model_df.loc[s_idx, reg_sign + " Regulator List"])):
-                    reg_index = literal_eval(model_df.loc[s_idx, reg_sign + " Regulator List"]).index(
-                        model_df.loc[t_idx, 'Variable'])
+                elif (model_df.loc[s_idx, reg_sign + " Regulator List"] != "nan" and target_listname
+                      in model_df.loc[s_idx, reg_sign + " Regulator List"].split(',')):
+                    reg_index = model_df.loc[s_idx, reg_sign + " Regulator List"].split(',').index(
+                        target_listname)
                     # Finding connection type
                     if (reg_sign + ' Connection Type List') in model_df.columns.values.tolist() and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
@@ -258,11 +340,11 @@ def kind_score(x,
                         mi_cxn_type = mi_cxn
 
                     # Finding index MI regulator variable
-                    model_reg_variable = literal_eval(model_df.loc[s_idx, reg_sign + ' Regulator List'])[reg_index]
-                    model_reg_element = list(model_df['Variable']).index(model_reg_variable)
+                    model_reg_variable = model_df.loc[s_idx, reg_sign + ' Regulator List'].split(',')[reg_index]
+                    #model_reg_element = list(model_df['Variable']).index(model_reg_variable)
                     # List of model attributes to compare to reading attributes
-                    model_atts = [model_df.loc[s_idx, att] for att in attributes] + [model_df.loc[model_reg_element, att]
-                                                                                    for att in attributes]
+
+                    model_atts = get_attributes(s_idx, t_idx, reg_sign, model_df, attributes)
 
                     # LEE = "I" and MI = "I"
                     if lee_cxn_type == "i" and mi_cxn_type == "i":
@@ -274,7 +356,7 @@ def kind_score(x,
                         if classify_scheme in ['1', '2']:
                             # If the attributes are not contradictory - Flagged for manual review
                             if compare_atts in [0, 1, 2]:
-                                kinds.append(kind_values['flagged1'])
+                                kinds.append(kind_values['dir mismatch'])
                             # Else - Contradiction
                             else:
                                 kinds.append(kind_values['dir contradiction'])
@@ -289,7 +371,7 @@ def kind_score(x,
                         if classify_scheme in ['1', '2']:
                             # If the attributes are not contradictory - Flagged for manual review
                             if compare_atts in [0, 1, 2]:
-                                kinds.append(kind_values['flagged1'])
+                                kinds.append(kind_values['dir mismatch'])
                             # Else - Contradiction
                             else:
                                 kinds.append(kind_values['dir contradiction'])
@@ -306,9 +388,9 @@ def kind_score(x,
                         kinds.append(kind_values['dir contradiction'])
 
                 #MI with Mismatched direction, Mismatched sign
-                elif (model_df.loc[s_idx,opp_sign+" Regulator List"] != "nan" and model_df.loc[
-                    t_idx,'Variable'] in literal_eval(model_df.loc[s_idx,opp_sign+" Regulator List"])):
-                    reg_index = literal_eval(model_df.loc[s_idx,opp_sign+" Regulator List"]).index(model_df.loc[t_idx,'Variable'])
+                elif (model_df.loc[s_idx,opp_sign+" Regulator List"] != "nan" and target_listname in
+                      model_df.loc[s_idx,opp_sign+" Regulator List"].split(',')):
+                    reg_index = model_df.loc[s_idx,opp_sign+" Regulator List"].split(',').index(target_listname)
                     #Finding connection type
                     if (opp_sign+' Connection Type List') in model_df.columns.values.tolist()and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
@@ -317,24 +399,24 @@ def kind_score(x,
                     else: mi_cxn_type = mi_cxn
 
                     #Finding index MI regulator variable
-                    model_reg_variable = literal_eval(model_df.loc[s_idx,opp_sign+' Regulator List'])[reg_index]
-                    model_reg_element = list(model_df['Variable']).index(model_reg_variable)
+                    model_reg_variable = model_df.loc[s_idx,opp_sign+' Regulator List'].split(',')[reg_index]
+                    #model_reg_element = list(model_df['Variable']).index(model_reg_variable)
 
                     #List of model attributes to compare to reading attributes
-                    model_atts = [model_df.loc[s_idx,att] for att in attributes]+[model_df.loc[model_reg_element,att] for att in attributes]
+                    model_atts = get_attributes(s_idx, t_idx, opp_sign, model_df, attributes)
 
                     # LEE = "D" and MI = "D"
                     if lee_cxn_type == "d" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             #If the attributes are not contradictory - Flagged for manual review
-                            if compare_atts in [0,1,2]: kinds.append(kind_values['flagged1'])
+                            if compare_atts in [0,1,2]: kinds.append(kind_values['dir mismatch'])
                             #Else - Contradiction
                             else: kinds.append(kind_values['dir contradiction'])
 
                         elif classify_scheme == '3':
                             if compare_atts in [0,1,2]: kinds.append(kind_values['dir contradiction'])
-                            else: kinds.append(kind_values['flagged1'])
+                            else: kinds.append(kind_values['dir mismatch'])
                         else:
                             raise ValueError('Enter a right scheme (1, 2, or 3).')
                     # LEE = "D" and MI = "i"
@@ -343,7 +425,7 @@ def kind_score(x,
                     elif lee_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         #If the attributes are not contradictory - Flagged for manual review
-                        if compare_atts in [0, 1, 2]: kinds.append(kind_values['flagged1'])
+                        if compare_atts in [0, 1, 2]: kinds.append(kind_values['dir mismatch'])
                         #Else - Contradiction
                         else:
                             if classify_scheme in ['1', '2']: kinds.append(kind_values['dir contradiction'])
@@ -353,36 +435,184 @@ def kind_score(x,
                     # LEE = "D" and MI = "D"
                     elif lee_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
 
-                #If model does not contain interaction - check for path
                 else:
-                    kinds.append(path_finding(model_df.loc[s_idx,'Variable'],model_df.loc[t_idx,'Variable'],reg_sign,model_df,graph,kind_values,lee_cxn_type,reading_atts,attributes,classify_scheme))
+                    # If there is a self-regulation (regulator is both target and source)
+                    if t_idx == s_idx:
+                        kind = kind_values['self-regulation']
+                    # If model does not contain interaction - check for path
+                    else:
+                        kinds.append(path_finding(source_listname,target_listname,reg_sign,model_df,graph,kind_values,lee_cxn_type,reading_atts,attributes,classify_scheme))
 
-        if len(kinds) == 1: kind = kinds[0]
-        #Strong Corroboration
-        elif kind_values['strong corroboration'] in kinds: kind = kind_values['strong corroboration']
-        #Weak Corroboration
-        elif kind_values['weak corroboration1'] in kinds: kind = kind_values['weak corroboration1']
-        elif kind_values['weak corroboration2'] in kinds: kind = kind_values['weak corroboration2']
-        elif kind_values['weak corroboration3'] in kinds: kind = kind_values['weak corroboration3']
-        #Contradiction
-        elif kind_values['dir contradiction'] in kinds: kind = kind_values['dir contradiction']
-        elif kind_values['sign contradiction'] in kinds: kind = kind_values['sign contradiction']
-        elif kind_values['att contradiction'] in kinds: kind = kind_values['att contradiction']
-        #Extensions
-        elif kind_values['hanging extension'] in kinds: kind = kind_values['hanging extension']
-        elif kind_values['internal extension'] in kinds: kind = kind_values['internal extension']
-        elif kind_values['full extension'] in kinds: kind = kind_values['full extension']
-        elif kind_values['specification'] in kinds: kind = kind_values['specification']
-        #Flagged
-        elif kind_values['flagged1'] in kinds: kind = kind_values['flagged1']
-        elif kind_values['flagged2'] in kinds: kind = kind_values['flagged2']
-        elif kind_values['flagged3'] in kinds: kind = kind_values['flagged3']
-        elif kind_values['flagged4'] in kinds: kind = kind_values['flagged4']
-        elif kind_values['flagged5'] in kinds: kind = kind_values['flagged5']
+        if len(kinds) == 1:
+            kind = kinds[0]
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                if kind in [kind_values['strong corroboration'],
+                            kind_values['empty attribute'],
+                            kind_values['indirect interaction'],
+                            kind_values['specification']]:
+                    counter['corroboration'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                    )
+
+                elif int(kind) in [kind_values['dir contradiction'],
+                            kind_values['sign contradiction'],
+                            kind_values['att contradiction']]:
+                    if classify_scheme == '2':
+                        if type(kind) == str:
+                            kind = int(kind)
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                            model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                        )
+                    else:
+                        counter['contradiction'].append('{}+{}'.format(
+                            model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                            model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                        )
+                else:
+                    pass
+
+        # Strong Corroboration
+        elif kind_values['strong corroboration'] in kinds:
+            kind = kind_values['strong corroboration']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                counter['corroboration'].append('{}+{}'.format(
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                )
+
+        # Weak Corroboration
+        elif kind_values['empty attribute'] in kinds:
+            kind = kind_values['empty attribute']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                counter['corroboration'].append('{}+{}'.format(
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                )
+        elif kind_values['indirect interaction'] in kinds:
+            kind = kind_values['indirect interaction']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                counter['corroboration'].append('{}+{}'.format(
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                )
+        elif kind_values['path corroboration'] in kinds:
+            kind = kind_values['path corroboration']
+        elif kind_values['specification'] in kinds:
+            kind = kind_values['specification']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                counter['corroboration'].append('{}+{}'.format(
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)])
+                )
+
+        # Contradiction
+        elif kind_values['dir contradiction'] in kinds or str(kind_values['dir contradiction']) in kinds:
+            kind = kind_values['dir contradiction']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                if classify_scheme == '2':
+                    kind_value = [x for x in kinds if
+                                   x in [kind_values['dir contradiction'], str(kind_values['dir contradiction'])]]
+                    for _ in kind_value:
+                        if type(_) == str:
+                            pass
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                                model_t_indices[kinds.index(_) // len(model_s_indices)],
+                                model_s_indices[kinds.index(_) % len(model_s_indices)]))
+                            break
+                else:
+                    counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]))
+
+        elif kind_values['sign contradiction'] in kinds or str(kind_values['sign contradiction']) in kinds:
+            kind = kind_values['sign contradiction']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                if classify_scheme == '2':
+                    kind_value = [x for x in kinds if
+                                   x in [kind_values['sign contradiction'], str(kind_values['sign contradiction'])]]
+                    for _ in kind_value:
+                        if type(_) == str:
+                            pass
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                                model_t_indices[kinds.index(_) // len(model_s_indices)],
+                                model_s_indices[kinds.index(_) % len(model_s_indices)]))
+                            break
+                else:
+                    counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]))
+        elif kind_values['att contradiction'] in kinds or str(kind_values['att contradiction']) in kinds:
+            kind = kind_values['att contradiction']
+            if counter is None:
+                pass
+            # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
+            else:
+                if classify_scheme == '2':
+                    kind_value = [x for x in kinds if x in [kind_values['att contradiction'], str(kind_values['att contradiction'])]]
+                    for _ in kind_value:
+                        if type(_) == str:
+                            pass
+                        else:
+                            counter['contradiction'].append('{}+{}'.format(
+                                model_t_indices[kinds.index(_) // len(model_s_indices)],
+                                model_s_indices[kinds.index(_) % len(model_s_indices)]))
+                            break
+                else:
+                    counter['contradiction'].append('{}+{}'.format(
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]))
+        # Extensions
+        elif kind_values['hanging extension'] in kinds:
+            kind = kind_values['hanging extension']
+        elif kind_values['internal extension'] in kinds:
+            kind = kind_values['internal extension']
+        elif kind_values['full extension'] in kinds:
+            kind = kind_values['full extension']
+
+        # Flagged
+        elif kind_values['dir mismatch'] in kinds:
+            kind = kind_values['dir mismatch']
+        elif kind_values['path mismatch'] in kinds:
+            kind = kind_values['path mismatch']
+        elif kind_values['self-regulation'] in kinds:
+            kind = kind_values['self-regulation']
+        # check if the classify scheme is version 3
+        elif 'flagged4' in kind_values:
+            if kind_values['flagged4'] in kinds:
+                kind = kind_values['flagged4']
+        elif 'flagged5' in kind_values:
+            if kind_values['flagged5'] in kinds:
+                kind = kind_values['flagged5']
         else: pass
 
     # Both Extension - Both nodes from reading not in model
-    elif (source_id == -1 and source_name == -1) and (target_id == -1 and target_name == -1):
+    elif (source_id == -1 and source_name == -1 and source_hgnc == -1) and (target_id == -1 and target_name == -1 and target_hgnc == -1):
         kind = kind_values['full extension']
     # Hanging Extension - One from reading not in model
     else: kind = kind_values['hanging extension']
@@ -415,6 +645,7 @@ def epistemic_value(x,reading_df):
 
 
 def score_reading(reading_df, model_df, graph,
+                  embedding_match=False, counter=None,
                   kind_values = kind_dict, match_values = match_dict,
                   attributes = atts_list, classify_scheme = '1', mi_cxn = 'd'):
     """
@@ -429,6 +660,9 @@ def score_reading(reading_df, model_df, graph,
         The model dataframe
     graph : nx.DiGraph
         directed graph of the model, necessary for calling kind_score module
+    counter: dict
+        A dictionary for counting the corrobrated and contradicted interaction
+        defulat value is None
     kind_values : dict
         Dictionary assigning Kind Score values
         Default values found in kind_dict
@@ -456,8 +690,8 @@ def score_reading(reading_df, model_df, graph,
     print(reading_df.shape[0])
     #Calculate scores
     for x in range(reading_df.shape[0]):
-        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,match_values)
-        scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,kind_values,attributes,classify_scheme,mi_cxn)
+        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,embedding_match, match_values)
+        scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,embedding_match, counter,kind_values,attributes,classify_scheme,mi_cxn)
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
         scored_reading_df.at[x,'Total Score'] =  ((scored_reading_df.at[x,'Evidence Score']*scored_reading_df.at[x,'Match Score'])+scored_reading_df.at[x,'Kind Score'])*scored_reading_df.at[x,'Epistemic Value']
 

@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: violin
+Version: 1.0
+Summary: VIOLIN (Validating Interactions Of Likely Importance to the Network) is a tool used to automatically classify and judge literature-extracted interactions curated from machine readers by comparing them to existing models. This comparison can help identify key interactions for model extension.
+Author: Casey Hansen
+Author-email: Casey Hansen <casey.e.hansen@gmail.com>
+Project-URL: Homepage, https://github.com/pitt-miskov-zivanov-lab/VIOLIN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
 # VIOLIN
 [![Documentation Status](https://readthedocs.org/projects/melody-violin/badge/?version=latest)](https://melody-violin.readthedocs.io/en/latest/?badge=latest)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
@@ -13,7 +27,6 @@ VIOLIN (Validating Interactions Of Likely Importance to the Network) is a tool u
 - [Online Tutorial](#Online-Tutorial)
 - [Offline Installation](#Offline-Installation)
 - [Package Structure](#Package-Structure)
-- [Reproducibility](#Reproducibility)
 - [Citation](#Citation)
 - [Funding](#Funding)
 - [Support](#Support)
@@ -26,8 +39,9 @@ VIOLIN (Validating Interactions Of Likely Importance to the Network) is a tool u
 ## I/O
 
 ### Input/Output
-- `exmaple/input` - [folder](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input) containing model files and automatically retrieved interactions lists.
-- `example/output` - [example/output/<interactions_filename>_<class>.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output), in BioRECIPE format, containing classified interactions (corroborations, contradictions, extensions, and flagged) and [example/output/<interactions_filename>_<class>_score.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output) (evidence score, match score, kind score, epistemic score and total score) 
+- `test_input` - A model for classification, in BioRECIPE model format, check [example/input/modelA_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/ModelA_biorecipe.xlsx) 
+and an interactions list file from readings, in BioRECIPE reading format, check [example/output/RA2_0_1_1_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/RA2_0_1_1_reading_BioRECIPE.xlsx), other filename starting from `RA` can also be an input interactions list for VIOLIN.
+- `test_output` - [example/output/<interactions_filename>_<class>.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output), in BioRECIPE format, containing classified interactions (corroborations, contradictions, extensions, and flagged) and [example/output/<interactions_filename>_<class>_score.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output) (evidence score, match score, kind score, epistemic score and total score) 
 - `use_VIOLIN.ipynb` - [Jupyter notebook](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_VIOLIN.ipynb) used to run VIOLIN
 - `use_violin_script.py` - [python script](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_violin_script.py) used to run VIOLIN at the command line
 
@@ -59,6 +73,9 @@ Run the demonstrated example; or alternatively upload user-customized input file
 
 #### This interactive jupyter notebook walks you though all of the code and functions to:
 
+1. ???.
+2. ???.
+3. ???.
 
 ## Offline Installation
 
@@ -80,38 +97,22 @@ Run the demonstrated example; or alternatively upload user-customized input file
 
 - [`setup.py`](setup.py): python file that help set up python dependencies installation
 - [`src/violin/`](src/violin/): directory that includes core python VIOLIN files
-  - [`src/violin/formatting.py`](src/violin/formatting.py): functions of preprocessing strings in tabular input;
-  - [`src/violin/in_out.py`](src/violin/in_out.py): functions of reading interactions list and model file and writing VIOLIN outputs;
-  - [`src/violin/network.py`](src/violin/in_out.py): functions of creating model network and finding paths between nodes;
-  - [`src/violin/scoring.py`](src/violin/in_out.py): implementation of decision tree for classification;
-  - [`src/violin/visualize_violin.py`](src/violin/in_out.py): functions of visualizing classifying results;
-  - 
+  - [`src/violin/formatting.py`](src/violin/formatting.py): functions of xxx;
+  - [`src/violin/in_out.py`](src/violin/in_out.py): functions of xxx;
+  - ???
 - [`examples/`](examples/): directory that includes tutorial notebook and example inputs and outputs
 - [`environment.yml`](environment.yml): environment file, required by [Binder](https://mybinder.readthedocs.io/en/latest/using/config_files.html#environment-yml-install-a-conda-environment)
 - [`docs/`](docs/): containing files supporting the repo's host on [Read the Docs](https://melody-violin.readthedocs.io)
 - [`LICENSE.txt`](LICENSE.txt): MIT License
 - [`README.md`](README.md): this is me!
 
-## Reproducibility
-The data and code for running experiments and creating figures in paper can be found in `data.zip`. The code is tested by `example/test` and `example/test_VIOLIN`.
-
-
 ## Citation
 
-```bibtex
-@article{luo2024context,
-  title={Context-driven interaction retrieval and classification for modeling, curation, and reuse},
-  author={Luo, Haomiao and Hansen, Casey and Telmer, Cheryl A and Tang, Difei and Arazkhani, Niloofar and Zhou, Gaoxiang and Spirtes, Peter and Miskov-Zivanov, Natasa},
-  journal={bioRxiv},
-  pages={2024--07},
-  year={2024},
-  publisher={Cold Spring Harbor Laboratory}
-}
-```
+_???_
 
 ## Funding
 
-This work was funded in part by DARPA Big Mechanism award, AIMCancer (W911NF-17-1-0135) and in part by the NSF EAGER award CCF-2324742.
+This work was funded in part by DARPA Big Mechanism award, AIMCancer (W911NF-17-1-0135); and in part by the University of Pittsburgh, Swanson School of Engineering.
 
 ## Support
 Feel free to reach out via email nmzivanov@pitt.edu for additional support if you run into any error.
