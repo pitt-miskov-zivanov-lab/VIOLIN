@@ -22,7 +22,8 @@ setup(
         'networkx',
         'numpy',
         'pandas>=1.5.3',
-        'tornado' # to not interfere with jupyter
+        'tornado', # to not interfere with jupyter
+        'httplib2',
     ],
     zip_safe=False # install as directory
     )

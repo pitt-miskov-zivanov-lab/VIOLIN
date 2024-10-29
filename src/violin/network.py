@@ -10,6 +10,7 @@ import numpy as np
 import networkx as nx
 from violin.numeric import get_attributes, compare
 
+
 def node_edge_list(model_df):
     """
     This function converts the model from the BioRECIPES format into a node-edge list for use with NetworkX
@@ -25,45 +26,54 @@ def node_edge_list(model_df):
         A directed graph representation of the model
     """
 
-    #If elements are defined by variables, use the variable names. Else, use the common names
-    if 'Listname' in model_df.columns and not model_df['Listname'].empty: target = 'Listname'
-    elif 'Variable' in model_df.columns and not model_df['Variable'].empty: target = 'Variable'
-    else: target = 'Element Name'
+    # If elements are defined by variables, use the variable names. Else, use the common names
+    if 'Listname' in model_df.columns and not model_df['Listname'].empty:
+        target = 'Listname'
+    elif 'Variable' in model_df.columns and not model_df['Variable'].empty:
+        target = 'Variable'
+    else:
+        target = 'Element Name'
 
-    #Subset of the model, just element and regulator columns
-    graph = model_df[[target,'Positive Regulator List','Negative Regulator List']].astype(str)
-    #removes 'nan' placeholder
-    graph = graph.replace('nan','')
+    # Subset of the model, just element and regulator columns
+    graph = model_df[[target, 'Positive Regulator List', 'Negative Regulator List']].astype(str)
+    # removes 'nan' placeholder
+    graph = graph.replace('nan', '')
 
     # #remove excess punctuation from the regulator cells
-    graph['Positive Regulator List'] = graph['Positive Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
-    graph['Negative Regulator List'] = graph['Negative Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
-    
-    #combine regulators into one column, separated by '-' symbol
-    #positiveRegulators_negativeRegulators
-    graph['Regulators'] = graph['Positive Regulator List']+'/////'+graph['Negative Regulator List']
-    graph = graph.drop(columns=['Positive Regulator List','Negative Regulator List'])
+    graph['Positive Regulator List'] = (graph['Positive Regulator List'].str.replace('[', '').
+                                        str.replace(']', '').str.replace('\'', ''))
+    graph['Negative Regulator List'] = (graph['Negative Regulator List'].str.replace('[', '').
+                                        str.replace(']', '').str.replace('\'', ''))
 
-    #Split each row by '-' character
-    #This allows us to assign weights so that we know the "sign" (positive/negative) of the regulator
-    #Even rows are positive regulators, odd rows are negative regulators
-    graph = graph.set_index([target]).stack().str.split('/////', expand=True).stack().unstack(-2).reset_index(-1, drop=True).reset_index()
-    #Assign 'weights' to edge defined edge, 0 for positive regulators, 1 for negative regulators
+    # combine regulators into one column, separated by '-' symbol
+    # positiveRegulators_negativeRegulators
+    graph['Regulators'] = graph['Positive Regulator List'] + '/////' + graph['Negative Regulator List']
+    graph = graph.drop(columns=['Positive Regulator List', 'Negative Regulator List'])
+
+    # Split each row by '-' character
+    # This allows us to assign weights so that we know the "sign" (positive/negative) of the regulator
+    # Even rows are positive regulators, odd rows are negative regulators
+    graph = (graph.set_index([target]).stack().str.split('/////', expand=True).stack().
+             unstack(-2).reset_index(-1, drop=True).reset_index())
+    # Assign 'weights' to edge defined edge, 0 for positive regulators, 1 for negative regulators
     for y in range(graph.shape[0]):
-        if y%2 == 0: graph.at[y,'weight'] = 0
-        else: graph.at[y,'weight'] = 1
-    
-    #Remove rows without a regulator node (housekeeping)
+        if y % 2 == 0:
+            graph.at[y, 'weight'] = 0
+        else:
+            graph.at[y, 'weight'] = 1
+
+    # Remove rows without a regulator node (housekeeping)
     graph = graph.replace(r'^\s*$', np.nan, regex=True).dropna()
-    graph = graph.set_index([target,'weight']).stack().str.split(',', expand=True).stack().unstack(-2).reset_index(-1, drop=True).reset_index()
-    #Remove any lingering whitespace
+    graph = (graph.set_index([target, 'weight']).stack().str.split(',', expand=True).stack().
+             unstack(-2).reset_index(-1, drop=True).reset_index())
+    # Remove any lingering whitespace
     graph['Regulators'] = graph['Regulators'].str.strip()
     graph[target] = graph[target].str.strip()
-    #Output edgelist
+    # Output edgelist
     # graph.to_csv(r'/NodeEdgeList.csv')
-    #Create NetworkX directed graph
-    node_edge_list = nx.from_pandas_edgelist(graph,'Regulators',target,'weight',create_using=nx.DiGraph())
-    return node_edge_list
+    # Create NetworkX directed graph
+    node_edge_list_ = nx.from_pandas_edgelist(graph, 'Regulators', target, 'weight', create_using=nx.DiGraph())
+    return node_edge_list_
 
 
 def path_finding(regulator,
@@ -96,6 +106,10 @@ def path_finding(regulator,
         Dictionary containing the numerical values for the Kind Score classifications
     reading_cxn_type : str
         Connection Type of interaction from reading - 'i' for indirect, 'd' for direct
+    reading_atts: dict
+        attributes from interaction, where keys are attributes names and values are attributes values
+    attributes: list
+        attributes list for reading file
     scheme: str
         The scheme of classification, i.e. '1', '2', or '3'
     Returns
@@ -130,6 +144,7 @@ def path_finding(regulator,
             s_idx = list(model_df['Listname']).index(regulator)
             t_idx = list(model_df['Listname']).index(regulated)
             # No need to assign value to `sign` since no influence attributes need to compare
+            # sign is ambiguous in path
             model_atts = get_attributes(s_idx, t_idx, sign, model_df, attributes, path=True)
             compare_atts = compare(model_atts, reading_atts)
 

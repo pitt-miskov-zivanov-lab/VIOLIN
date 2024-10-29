@@ -184,11 +184,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             mycolors = ['#235490','#2B65AD','#718EC5','#B0BEDA', '#E7EFF9']
             plt.figure(figsize=(16, 4))
             plt.subplot(1, 4, 1)
-            if all(x == 0 for x in corrs):
-                pass
-            else:
-                plt.pie(corrs,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.2,0), loc="lower center",
+            plt.pie(corrs,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.2,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
 
             full_ext = kind.count(kind_values['full extension'])
@@ -199,11 +196,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                         "Internal Extensions: "+str(int_ext)]
             mycolors = ['#24552D','#49A155','#7DBA84']
             plt.subplot(1, 4, 2)
-            if all(x == 0 for x in exts):
-                pass
-            else:
-                plt.pie(exts,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
+            plt.pie(exts,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
 
             dir_cont = kind.count(kind_values['dir contradiction'])
@@ -214,11 +208,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                         "Attribute Contradictions: "+str(att_cont)]
             mycolors = ['#BE9735','#E2B441','#F9E6A9']
             plt.subplot(1, 4, 3)
-            if all(x == 0 for x in conts):
-                pass
-            else:
-                plt.pie(conts,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
+            plt.pie(conts,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
             flg4, flg5 = False, False
             flg1 = kind.count(kind_values['dir mismatch'])
@@ -237,11 +228,8 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                         "self-regulation: " + str(flg3)]
             mycolors = ['#AA5626','#C7652E','#F1C6A8', '#F5D4BE', '#FCF1EA'] if (flg4 and flg5) else ['#AA5626','#C7652E','#F1C6A8']
             plt.subplot(1, 4, 4)
-            if all(x == 0 for x in flgds):
-                pass
-            else:
-                plt.pie(flgds,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
+            plt.pie(flgds,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
             #plt.savefig('Subcategory_Overview.png',bbox_inches = "tight",dpi=200)
             plt.close
@@ -330,20 +318,14 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                 mylabels += [x+": "+str(kind.count(kind_values[x]))]
                 counts += [kind.count(kind_values[x])]
             numbs = np.array(counts)
-            if all(x ==0 for x in numbs):
-                pass
-            else:
-                plt.pie(numbs,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(1,0.25), loc="lower right",
+            plt.pie(numbs,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(1,0.25), loc="lower right",
                     bbox_transform=plt.gcf().transFigure)
         else:
             mylabels = [category]
             counts = [output.shape[0]]
             numbs = np.array(counts)
-            if all(x==0 for x in numbs):
-                pass
-            else:
-                plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
-                #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
-                plt.close
+            plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
+        #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
+        plt.close
     return

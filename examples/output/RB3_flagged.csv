@@ -1,1 +1,10 @@
-index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Unnamed: 0,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+20,apoptosis,bioprocess,,,,go:0006915,,,ampk,protein,,,be,ampk,,,negative,i,,,,,,,nan,nan,nan,pmcpmc5618553,1,10,19,1,29
+25,apoptosis,bioprocess,,,,go:0006915,,,pi3k,protein,,,be,pi3k,,,negative,i,,,,,,,nan,nan,nan,pmcpmc5986278,1,10,19,1,29
+144,mek1,protein,,,,q02750,,,pten,protein,,,,p60485,,,positive,i,,,,,,,nan,nan,nan,pmc4418530,1,10,19,1,29
+191,pi3k,protein,,,,pi3k,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,nan,nan,nan,pmcpmc5986278,1,10,19,1,29
+193,pi3k,protein,,,,pi3k,,,tsc1,protein,,,uniprot,q92574,,,negative,i,,,,,,,nan,nan,nan,pmcpmc4297581,1,10,19,1,29
+213,proliferation,bioprocess,,,,go:0008283,,,pi3k,protein,,,be,pi3k,,,positive,i,,,,,,,nan,nan,nan,pmcpmc5986278,1,10,19,1,29
+214,proliferation,bioprocess,,,,go:0008283,,,pi3k,protein,,,uaz,uaz02107,,,positive,i,,,,,,,nan,nan,nan,pmcpmc5765289,1,10,19,1,29
+216,proliferation,bioprocess,,,,go:0008283,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,nan,nan,nan,pmcpmc4297581,1,10,19,1,29
+223,pten,protein,,,,p60484,,,pten,protein,,,uniprot,p60484,,,negative,i,,,,,,,nan,nan,nan,pmcpmc4297581,1,10,18,1,28
