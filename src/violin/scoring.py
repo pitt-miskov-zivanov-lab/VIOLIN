@@ -198,10 +198,12 @@ def kind_score(x,
                                reading_df.loc[x, 'Regulator HGNC Symbol'],
                                reading_df.loc[x, 'Regulator Type'],
                                model_df)
+
     source_name = find_element("name",
                                reading_df.loc[x, 'Regulator Name'],
                                reading_df.loc[x, 'Regulator Type'],
                                model_df)
+
     source_id = find_element("id",
                              reading_df.loc[x, 'Regulator ID'],
                              reading_df.loc[x, 'Regulator Type'],

@@ -293,38 +293,51 @@ def get_type(input_type):
         elif input_type in CANONICAL_RNA:
             return 'rna'
     else:
-        return 'other'
+        return input_type
 
 
-def get_hgnc_symbol(hgnc_id, url='https://rest.genenames.org/fetch/hgnc_id'):
-    response, content = h.request(
-        url + f'/{hgnc_id}',
-        'GET',
-        '',
-        headers
-    )
-    print(hgnc_id)
-    data = json.loads(content)
-    status_code = False
-    i = 0
-    symbol = ''
-    while status_code is not True and i < 10:
-        try:
-            i += 1
-            response, content = h.request(
-                url + f'/{hgnc_id}',
-                'GET',
-                '',
-                headers)
-
-            if response['status'] == '200':
-                symbol = data['response']['docs'][0]['symbol']
-                status_code = True
-            else:
-                pass
-        except Exception as e:
-            print(e)
-            time.sleep(1)
+def get_hgnc_symbol(hgnc_id, hgnc_dict=None, url='https://rest.genenames.org/fetch/hgnc_id'):
+    if hgnc_dict==None:
+        hgnc_dict = {}
+    else: 
+        pass
+    # Check if we can find the number
+    if '.' in hgnc_id:
+        hgnc_id = hgnc_id.split('.')[0]
+        pass
+    elif bool(re.fullmatch(r'd+', hgnc_id)):
+        pass
+    else: 
+        raise NotImplementedError(f"Cannot handle {hgnc_id}...")
+    if hgnc_id in hgnc_dict.keys():
+        symbol = hgnc_dict[hgnc_id]
+    else:
+        response, content = h.request(
+            url + f'/{hgnc_id}',
+            'GET',
+            '',
+            headers
+        )
+        data = json.loads(content)
+        status_code = False; i = 0; symbol = ''
+        while status_code != True and i < 10:
+            try:
+                i += 1
+                response, content = h.request(
+                    url + f'/{hgnc_id}',
+                    'GET',
+                    '',
+                    headers)
+    
+                if response['status'] == '200':
+                    symbol = data['response']['docs'][0]['symbol']
+                    hgnc_dict[hgnc_id] = symbol
+                    status_code = True
+                else:
+                    pass
+            except Exception as e:
+                print(e)
+                time.sleep(1)
 
     return symbol
 

@@ -7,7 +7,6 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 
 import pandas as pd
 
-
 def get_attributes(A_idx, B_idx, sign, model_df, attrs: list, path=False):
     """
     The function get the attributes of the interaction in model
@@ -144,7 +143,8 @@ def find_element(search_type,
 
     # Searching for matching element type
     for idx in indices:
-        if model_df.loc[idx, "Element Type"] == element_type:
+        # if model_df.loc[idx, "Element Type"] == element_type:
+        if model_df.loc[idx, "Element Type"] in element_type or element_type in model_df.loc[idx, "Element Type"]:
             indices_list.append(idx)
 
     # If element has been found, return a list of its locations within the model

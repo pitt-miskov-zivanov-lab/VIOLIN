@@ -9,6 +9,10 @@ import os.path
 import warnings
 
 import pandas as pd
+import re
+
+from violin.formatting import get_hgnc_symbol
+import json
 
 from violin.formatting import (
     evidence_score, get_type,
@@ -58,6 +62,7 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
 def preprocessing_model(model):
     """
     This function check if your model is correct or necessary columns are missing or not
+
     Parameters
     ----------
     model : str
@@ -89,7 +94,8 @@ def preprocessing_model(model):
         (set(REQUIRED_MODEL).issubset(set(model_cols)))}:
 
         # Create a column for list-name
-        model_df['Listname'] = [get_listname(idx, model_df) for idx in range(len(model_df))]
+        # model_df['Listname'] = [get_listname(idx, model_df) for idx in range(len(model_df))]
+        model_df['Listname'] = model_df['Element Name'].to_list()
         # Normalize element type
         model_df['Element Type'] = model_df['Element Type'].str.replace(' ', '')
         # Covert regulator variable name lists to common names
@@ -152,10 +158,31 @@ def preprocessing_reading(reading, evidence_score_cols=None, atts=None):
     read_func = read_functions[reading_ext]
     kwargs = {'sep': '\t'} if reading_ext in ['.txt', '.tsv'] else {}
     reading_df = read_func(reading, index_col=None, **kwargs).fillna('nan')
-
     reading_df = reading_df.astype(str)
+    reading_df = reading_df.applymap(lambda x: x.lower() if isinstance(x, str) else x)
+
+    with open('hgnc_symbol_dict.json', 'r') as f:
+        hgnc_dict = json.load(f)
 
     for row in range(len(reading_df)):
+
+        if bool(re.fullmatch(r'[0-9\.]+', reading_df.loc[row, 'Regulator HGNC Symbol'])):
+            try:
+                reading_df.loc[row, 'Regulator HGNC Symbol'] = get_hgnc_symbol(reading_df.loc[row, 'Regulator HGNC Symbol'], hgnc_dict=hgnc_dict)
+            except Exception as e:
+                print(e)
+        else:
+            pass
+
+
+        if bool(re.fullmatch(r'[0-9\.]+', reading_df.loc[row, 'Regulator HGNC Symbol'])):
+            try:
+                reading_df.loc[row, 'Regulated HGNC Symbol'] = get_hgnc_symbol(reading_df.loc[row, 'Regulated HGNC Symbol'], hgnc_dict=hgnc_dict)
+            except Exception as e:
+                print(e)
+                pass                 
+        else:
+            pass
 
         if reading_df.loc[row, 'Connection Type'].lower() in ['I', 'i', 'indirect', 'false']:
             reading_df.loc[row, 'Connection Type'] = 'i'
@@ -164,6 +191,9 @@ def preprocessing_reading(reading, evidence_score_cols=None, atts=None):
             warnings.warn(f'Connection type does not exist in row {row}, saving as indirect connection type.')
         else:
             reading_df.loc[row, 'Connection Type'] = 'd'
+    
+    with open('hgnc_symbol_dict.json', 'w') as f:
+        json.dump(hgnc_dict, f, indent=4)
 
     reading_df['Regulator Type'] = reading_df['Regulator Type'].apply(lambda x: get_type(x.lower()))  # normalize type
     reading_df['Regulated Type'] = reading_df['Regulated Type'].apply(lambda x: get_type(x.lower()))  # normalize type
