@@ -10,6 +10,7 @@ Welcome to VIOLIN's documentation!
 
 **VIOLIN (Versatile Interaction Organizing to Leverage Information in Networks)** is a tool that can automatically classify large sets of interactions such as those retrieved from literature by machine readers. These interactions are clasified with respect to another interaction set or a mechanistic model network.
 
+|
 VIOLIN Objectives
 -----------------
 
@@ -20,14 +21,12 @@ VIOLIN Objectives
 3. To carry out 1. and 2. on large amounts of information very quickly
 
 |
-|
 VIOLIN Workflow
 ------------------
 
 .. image:: figures/VIOLIN_workflow_2025.png
    :align: center
 
-|
 |
 VIOLIN judges whether the new interactions support or further enrich the information in the model (*corroborations*), thereby verifying and curating the model. VIOLIN identifies gaps and issues in the knowledge, published information, and models (*contradictions*) and indicates that the newly obtained information requires further investigation (*flagged*). VIOLIN also provides new interactions for extending the models (*extensions*).
 
@@ -42,21 +41,6 @@ Finally, VIOLIN performs the comparison and classification of large new interact
    :caption: Contents
 
    legal
-   installation
-   files
-   in_out
-   formatting
-   numeric
-   network
-   scoring
-   utils
-   visualization
    tutorials
 
 
-
-
-Indices
--------
-
-* :ref:`genindex`
