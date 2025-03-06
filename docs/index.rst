@@ -29,7 +29,7 @@ Finally, VIOLIN performs the comparison and classification of large new interact
 VIOLIN Methodology
 ------------------
 
-.. image:: figures/VIOLIN_diagram.png
+.. image:: figures/VIOLIN_workflow_2025.png
    :scale: 40 %
    :align: center
 
