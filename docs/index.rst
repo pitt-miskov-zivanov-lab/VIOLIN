@@ -35,12 +35,12 @@ Further, VIOLIN has the capability to identify and search through paths within a
 Finally, VIOLIN performs the comparison and classification of large new interaction lists within a given context at least three orders of magnitude faster than a human, thus enabling reliable high throughput modeling and curation tasks that would not be feasible otherwise.
 
 
-
+|
 .. toctree::
    :maxdepth: 1
    :caption: Contents
 
-   legal
+  
    tutorials
 
 
