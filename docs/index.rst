@@ -8,26 +8,23 @@ Welcome to VIOLIN's documentation!
     :target: https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb
 
 
-*VIOLIN (Validating Interactions Of Likely Importance to the Network)*
-is a tool used to automatically classify and judge literature-extracted
-interactions curated from machine readers by comparing them to existing models.
-This comparison can help identify key interactions for model extension.
-
-As part of this comparison, VIOLIN assigns multiple numerical values to
-each literature extracted event (LEE) representing the LEEs relationship to the model.
-These individual scores cumulate into a Total Score, which can be used to quickly
-judge how relevant and useful the LEE is to a given model.
+**VIOLIN (Versatile Interaction Organizing to Leverage Information in Networks)** is a tool that can automatically classify large sets of interactions such as those retrieved from literature by machine readers. These interactions are clasified with respect to another interaction set or a mechanistic model network.
 
 VIOLIN Objectives
 -----------------
 
-1. To classify reading output, specifically with respect to finding the
-most useful information for modeling
+1. To classify interaction lists, specifically with respect to finding the most useful information for modeling
 
-2. To compare information from the literature to an existing model using multiple metrics
-at varying levels of detail
+2. To compare information from the literature to an existing model using multiple metrics and varying levels of detail
 
-3. To carry out 1. and 2. on incredibly large amounts of machine reading output very quickly
+3. To carry out 1. and 2. on large amounts of information very quickly
+
+VIOLIN judges whether the new interactions support or further enrich the information in the model (*corroborations*), thereby verifying and curating the model. VIOLIN identifies gaps and issues in the knowledge, published information, and models (*contradictions*) and indicates that the newly obtained information requires further investigation (*flagged*). VIOLIN also provides new interactions for extending the models (*extensions*).
+
+Further, VIOLIN has the capability to identify and search through paths within a model when comparing to new interaction lists, identifying new potential feedback and feed-forward loops. 
+
+Finally, VIOLIN performs the comparison and classification of large new interaction lists within a given context at least three orders of magnitude faster than a human, thus enabling reliable high throughput modeling and curation tasks that would not be feasible otherwise.
+
 
 VIOLIN Methodology
 ------------------
@@ -36,18 +33,7 @@ VIOLIN Methodology
    :scale: 40 %
    :align: center
 
-VIOLIN takes spreadsheets of formatted machine reading output and static models
-as input and outputs the scored LEEs, separating them by their primary
-classification: Corroboration, Contradiction, Extension, or Flagged.
 
-Each biological interaction can be defined by a *source* node, and *target* node,
-and a connecting *edge* between them. There may also be additional *attributes* that
-present additional details. VIOLIN takes advantage of this definiton when making
-its judgements.
-
-.. image:: figures/ToyExample.png
-   :scale: 50 %
-   :align: center
 
 
 
