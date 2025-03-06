@@ -40,7 +40,10 @@ Finally, VIOLIN performs the comparison and classification of large new interact
    :maxdepth: 1
    :caption: Contents
 
-  
+   installation
    tutorials
+   citation
+   acknowledgments
+   license
 
 
