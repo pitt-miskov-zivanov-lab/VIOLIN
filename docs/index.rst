@@ -19,7 +19,8 @@ VIOLIN Objectives
 
 3. To carry out 1. and 2. on large amounts of information very quickly
 
-
+|
+|
 VIOLIN Workflow
 ------------------
 
