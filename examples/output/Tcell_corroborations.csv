@@ -1,0 +1,14 @@
+,Element Name,Element Type,Element ID,Location,Location ID,Cell Line,Cell Type,Organism,Positive Reg Name,Positive Reg Type,Positive Reg ID,Positive Reg Location,Positive Reg Location ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Negative Reg Location,Negative Reg Location ID,Connection Type,Database Name,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+18,akt,protein,p31749,nan,nan,nan,nan,nan,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+19,akt,protein,p31750,nan,nan,nan,nan,nan,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+20,cd25,protein,p01589,nan,nan,nan,nan,nan,tcr,protein,p04234,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,10,1,1,11
+63,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,protein,p31749,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+64,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+65,mtorc2,complex,q6r328,nan,nan,nan,nan,nan,cd28,protein,p10747,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+66,mtorc2,complex,q6r329,nan,nan,nan,nan,nan,il2_ex,protein,p60568,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+67,mtorc2,complex,q6r330,nan,nan,nan,nan,nan,il2_r,protein,p01589,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+80,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+81,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+83,pip3,simple-chemical,hmdb10147,nan,nan,nan,nan,nan,pi3,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,1,1,11
+84,pip3,simple-chemical,hmdb10147,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,1,1,11
+93,pten,protein,p60484,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,1,1,11

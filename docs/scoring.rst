@@ -1,3 +1,5 @@
+.. _scoring:
+
 Scoring (:py:mod:`violin.scoring`)
 ==================================
 

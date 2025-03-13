@@ -1,0 +1,9 @@
+,Element Name,Element Type,Element ID,Location,Location ID,Cell Line,Cell Type,Organism,Positive Reg Name,Positive Reg Type,Positive Reg ID,Positive Reg Location,Positive Reg Location ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Negative Reg Location,Negative Reg Location ID,Connection Type,Database Name,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+14,akt,family,p31749,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,"['nan', 'nan', 'nan', 'nan']","['nan', 'nan', 'nan', 'nan']","['pmc4712330', 'pmc4496363', 'pmc4496363', 'pmc4496363']","['nan', 'nan', 'nan', 'nan']",4,10,20,1,60
+90,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc4712330', 'pmc4496363']","['nan', 'nan']",2,10,20,1,40
+7,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pi,protein,p42336,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,20,1,30
+8,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,20,1,30
+13,akt,family,p31749,nan,nan,nan,nan,nan,pdk1,protein,q15118,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,10,20,1,30
+15,akt,family,p31749,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,20,1,30
+62,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,mtorc2,complex,q6r328,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,20,1,30
+82,pip3,protein,hmdb10148,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,20,1,30

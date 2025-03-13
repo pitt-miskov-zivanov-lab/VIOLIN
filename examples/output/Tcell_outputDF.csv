@@ -1,0 +1,103 @@
+,Element Name,Element Type,Element ID,Location,Location ID,Cell Line,Cell Type,Organism,Positive Reg Name,Positive Reg Type,Positive Reg ID,Positive Reg Location,Positive Reg Location ID,Negative Reg Name,Negative Reg Type,Negative Reg ID,Negative Reg Location,Negative Reg Location ID,Connection Type,Database Name,Mechanism,Paper ID,Evidence,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+10,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,tbk1,protein,q9uhd2,nan,nan,i,"['nan', 'nan', 'nan', 'nan']","['nan', 'nan', 'nan', 'nan']","['pmc4302769', 'pmc4302769', 'pmc4302769', 'pmc4302769']","['nan', 'nan', 'nan', 'nan']",4,100,40,1,440
+9,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,ship1,protein,q92835,nan,nan,i,"['nan', 'nan', 'nan']","['nan', 'nan', 'nan']","['pmc4487994', 'pmc4487994', 'pmc4487994']","['nan', 'nan', 'nan']",3,100,40,1,340
+5,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,mek1,protein,q02750,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc3625979', 'pmc3625979']","['nan', 'nan']",2,100,40,1,240
+16,akt,family,p31749,nan,nan,nan,nan,nan,tbk1,protein,q9uhd2,nan,nan,nan,nan,nan,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc4302769', 'pmc4302769']","['nan', 'nan']",2,100,40,1,240
+0,akt,family,p31749,nan,nan,nan,nan,nan,chk1,protein,o14757,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3375464'],['nan'],1,100,40,1,140
+61,mek2,protein,p36507,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,iqgap1,protein,p46940,nan,nan,i,['nan'],['nan'],['pmc3625979'],['nan'],1,100,40,1,140
+91,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,ras,family,pf00071,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,100,40,1,140
+87,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,ck2,protein,ck2,nan,nan,i,['nan'],['nan'],['pmc4496363'],['nan'],1,100,40,1,140
+94,pten,protein,p60485,nan,nan,nan,nan,nan,mek1,protein,q02750,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,100,40,1,140
+95,pten,protein,p60486,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,ck2,protein,q53gl0,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,100,40,1,140
+96,pten,protein,p60487,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nedd4,protein,p46934,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,100,40,1,140
+17,akt,family,p31749,nan,nan,nan,nan,nan,tgfbeta,family,p01137,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc2275380'],['nan'],1,100,40,1,140
+86,pten,protein,p60484,nan,nan,nan,nan,nan,mek,family,mek,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3625979'],['nan'],1,100,40,1,140
+12,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,til,protein,q15399,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,100,40,1,140
+88,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nedd4,protein,p46934,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,100,40,1,140
+79,pi,protein,p42336,nan,nan,nan,nan,nan,ship,protein,q92835,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,100,40,1,140
+44,foxo1,protein,q12778,nan,nan,nan,nan,nan,tbk1,protein,q9uhd2,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4302769'],['nan'],1,100,40,1,140
+6,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pd1,protein,p18621,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,100,40,1,140
+4,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,ctla4,protein,p16410,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,100,40,1,140
+1,akt,family,p31749,nan,nan,nan,nan,nan,ck2,protein,uaz00325,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,100,40,1,140
+2,akt,family,p31749,nan,nan,nan,nan,nan,ifngamma,protein,p01579,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,100,40,1,140
+89,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,p53,protein,p04637,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,100,40,1,140
+14,akt,family,p31749,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,"['nan', 'nan', 'nan', 'nan']","['nan', 'nan', 'nan', 'nan']","['pmc4712330', 'pmc4496363', 'pmc4496363', 'pmc4496363']","['nan', 'nan', 'nan', 'nan']",4,10,20,1,60
+43,foxo1,protein,q12778,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc4302769', 'pmc4302769']","['nan', 'nan']",2,10,40,1,60
+85,pten,protein,p60484,nan,nan,nan,nan,nan,foxo1,protein,q12778,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,40,1,50
+11,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,tcr,protein,p04234,nan,nan,i,['nan'],['nan'],['pmc4302769'],['nan'],1,10,40,1,50
+3,akt,family,p31749,nan,nan,nan,nan,nan,mtor,protein,p42345,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,40,1,50
+98,tbk1,protein,q9uhd2,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc4302769', 'pmc4302769']","['nan', 'nan']",2,1,40,1,42
+53,itk,protein,q08881,nan,nan,nan,nan,nan,foxp3,protein,q9bzs1,nan,nan,nan,nan,nan,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc3949578', 'pmc3949578']","['nan', 'nan']",2,1,40,1,42
+25,cd4,protein,p01730,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,protein,p31749,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,1,40,1,41
+24,cd4,protein,p01730,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,i,['nan'],['nan'],['pmc2275380'],['nan'],1,1,40,1,41
+59,mek1,protein,q02750,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,i,['nan'],['nan'],['pmc3625979'],['nan'],1,1,40,1,41
+58,magi1,protein,q6p9h4,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,i,['nan'],['nan'],['pmc3625979'],['nan'],1,1,40,1,41
+57,itk,protein,q08881,nan,nan,nan,nan,nan,tcr,protein,p04234,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,1,40,1,41
+56,itk,protein,q08881,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,1,40,1,41
+55,itk,protein,q08881,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,protein,p31749,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,1,40,1,41
+54,itk,protein,q08881,nan,nan,nan,nan,nan,il2,protein,p60568,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,1,40,1,41
+50,hsc,protein,p19526,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3375464'],['nan'],1,1,40,1,41
+49,gpr83,protein,q9nym4,nan,nan,nan,nan,nan,foxp3,protein,q9bzs1,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc2275380'],['nan'],1,1,40,1,41
+69,nedd4,protein,p46934,nan,nan,nan,nan,nan,tcr,protein,p04235,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,1,40,1,41
+45,foxo3,protein,o43524,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,i,['nan'],['nan'],['pmc4496363'],['nan'],1,1,40,1,41
+99,tbk1,protein,q9uhd2,nan,nan,nan,nan,nan,mtorc1,protein,q8n122,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4302769'],['nan'],1,1,40,1,41
+75,pak1,protein,q13153,nan,nan,nan,nan,nan,mtorc1,protein,q8n122,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,1,40,1,41
+74,pak1,protein,q13153,nan,nan,nan,nan,nan,mtor,protein,p42345,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,1,40,1,41
+28,cd4,protein,p01730,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,tcr,protein,p04234,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,1,40,1,41
+77,pak1,protein,q13153,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,1,40,1,41
+34,cd8,family,cd8,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3375464'],['nan'],1,1,40,1,41
+76,pak1,protein,q13153,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,mtor,protein,p42345,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,1,40,1,41
+41,ctrl,protein,p40313,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,family,p31749,nan,nan,i,['nan'],['nan'],['pmc2275380'],['nan'],1,1,40,1,41
+60,mek1,protein,q02750,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,1,40,1,41
+39,ck2,protein,q53gl0,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,1,40,1,41
+40,ctla4,protein,p16410,nan,nan,nan,nan,nan,foxp3,protein,q9bzs1,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc2275380'],['nan'],1,1,40,1,41
+21,cd3,protein,cd3,nan,nan,nan,nan,nan,bcl2,protein,p10415,nan,nan,nan,nan,nan,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc5193405', 'pmc5193405']","['nan', 'nan']",2,0.1,40,1,40.2
+73,pak1,protein,q13153,nan,nan,nan,nan,nan,erk,family,p29323,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+68,myc,protein,p01106,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,itk,protein,q08881,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,0.1,40,1,40.1
+70,p38,family,p38,nan,nan,nan,nan,nan,cd5,protein,p06127,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+71,pak1,protein,q13153,nan,nan,nan,nan,nan,bam32,protein,q9un19,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+78,pak1,protein,q13153,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,sipak1,protein,uaz03324,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+97,s5b,protein,uaz02655,nan,nan,nan,nan,nan,erk,family,p29323,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3625979'],['nan'],1,0.1,40,1,40.1
+100,th17,protein,uaz02468,nan,nan,nan,nan,nan,itk,protein,q08881,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,0.1,40,1,40.1
+72,pak1,protein,q13153,nan,nan,nan,nan,nan,bim,protein,o43521,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+51,il17a,protein,q16552,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,cd4,protein,p01730,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,0.1,40,1,40.1
+101,treg,protein,uaz02439,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pdl1,protein,q9nzq7,nan,nan,i,['nan'],['nan'],['pmc4669187'],['nan'],1,0.1,40,1,40.1
+29,cd4,protein,p01730,nan,nan,nan,nan,nan,tbk1,protein,q9uhd2,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4302769'],['nan'],1,0.1,40,1,40.1
+27,cd4,protein,p01730,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,tbk1,protein,q9uhd2,nan,nan,i,['nan'],['nan'],['pmc4302769'],['nan'],1,0.1,40,1,40.1
+26,cd4,protein,p01730,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,itk,protein,q08881,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,0.1,40,1,40.1
+23,cd4,protein,p01730,nan,nan,nan,nan,nan,itk,protein,q08881,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,0.1,40,1,40.1
+22,cd4,protein,p01730,nan,nan,nan,nan,nan,bcl2l11,gene,o43521,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+31,cd5,protein,p06127,nan,nan,nan,nan,nan,p38,family,p38,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+32,cd69,protein,q07108,nan,nan,nan,nan,nan,sp,protein,q03403,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+33,cd8,family,cd8,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pdl1,protein,q9nzq7,nan,nan,i,['nan'],['nan'],['pmc4669187'],['nan'],1,0.1,40,1,40.1
+35,cdc37,protein,q16543,nan,nan,nan,nan,nan,ck2,protein,q53gl0,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+36,cdc37,protein,q16543,nan,nan,nan,nan,nan,ck2,protein,uaz00325,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+37,ck2,protein,q53gl0,nan,nan,nan,nan,nan,cd5,protein,p06127,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+38,ck2,protein,q53gl0,nan,nan,nan,nan,nan,erk,family,p29323,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+42,fas,protein,p25445,nan,nan,nan,nan,nan,fasl,protein,p48023,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+46,foxo3,protein,uaz03334,nan,nan,nan,nan,nan,foxo3,protein,o43524,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,0.1,40,1,40.1
+47,foxo3a,protein,o43524,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,foxo,family,foxo,nan,nan,i,['nan'],['nan'],['pmc3375464'],['nan'],1,0.1,40,1,40.1
+48,gp120,protein,q14624,nan,nan,nan,nan,nan,pdl1,protein,q9nzq7,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4669187'],['nan'],1,0.1,40,1,40.1
+52,il17a,protein,q16552,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,hif1alpha,protein,q16665,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,0.1,40,1,40.1
+30,cd4,protein,uaz00341,nan,nan,nan,nan,nan,ck2,protein,q53gl0,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc5193405'],['nan'],1,0.1,40,1,40.1
+90,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,i,"['nan', 'nan']","['nan', 'nan']","['pmc4712330', 'pmc4496363']","['nan', 'nan']",2,10,20,1,40
+15,akt,family,p31749,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,20,1,30
+13,akt,family,p31749,nan,nan,nan,nan,nan,pdk1,protein,q15118,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4550078'],['nan'],1,10,20,1,30
+8,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,20,1,30
+7,akt,family,p31749,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pi,protein,p42336,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,20,1,30
+62,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,mtorc2,complex,q6r328,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,20,1,30
+82,pip3,protein,hmdb10148,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,pten,protein,p60484,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,20,1,30
+92,pten,protein,p60484,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,tcr,protein,p04234,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,10,10,1,20
+84,pip3,simple-chemical,hmdb10147,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,1,1,11
+83,pip3,simple-chemical,hmdb10147,nan,nan,nan,nan,nan,pi3,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4487994'],['nan'],1,10,1,1,11
+63,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,akt,protein,p31749,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+81,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+80,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+93,pten,protein,p60484,nan,nan,nan,nan,nan,pi3k,protein,p42336,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4712330'],['nan'],1,10,1,1,11
+20,cd25,protein,p01589,nan,nan,nan,nan,nan,tcr,protein,p04234,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc3949578'],['nan'],1,10,1,1,11
+19,akt,protein,p31750,nan,nan,nan,nan,nan,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+18,akt,protein,p31749,nan,nan,nan,nan,nan,pip3,protein,hmdb10147,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+67,mtorc2,complex,q6r330,nan,nan,nan,nan,nan,il2_r,protein,p01589,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+66,mtorc2,complex,q6r329,nan,nan,nan,nan,nan,il2_ex,protein,p60568,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+65,mtorc2,complex,q6r328,nan,nan,nan,nan,nan,cd28,protein,p10747,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11
+64,mtorc2,complex,q6r327,nan,nan,nan,nan,nan,tcr,protein,p01850,nan,nan,nan,nan,nan,nan,nan,i,['nan'],['nan'],['pmc4418530'],['nan'],1,10,1,1,11

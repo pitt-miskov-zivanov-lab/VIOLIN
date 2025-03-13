@@ -11,22 +11,17 @@ import os.path
 import sys
 import tempfile
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '/src/violin')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '../src/')))
 
-from violin.in_out import preprocessing_model, preprocessing_reading, output
+from violin.in_out import input_biorecipes,input_reading,output, biorecipe_to_violin
 from violin.scoring import score_reading
 from violin.network import node_edge_list
 from violin.visualize_violin import visualize
+from violin.utils import *
 
-evidence_scoring_cols = ["Regulator Name", "Regulator Type", "Regulator Subtype", "Regulator HGNC Symbol", "Regulator Database", "Regulator ID", "Regulator Compartment", "Regulator Compartment ID",
-                        "Regulated Name", "Regulated Type", "Regulated Subtype", "Regulated HGNC Symbol", "Regulated Database", "Regulated ID", "Regulated Compartment", "Regulated Compartment ID",
-                        "Sign", "Connection Type", "Mechanism", "Site",
-                        "Cell Line", "Cell Type", "Tissue Type", "Organism"]
-
-attributes = ['Regulated Compartment ID', 'Regulator Compartment ID', 'Cell Line']
 
 #Inputs: Model file, Reading File, Output Header, Classification, Filtering Option, Attributes
-def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend', filt_opt = '100%', plot=True):
+def use_violin(model_file, lee_file, out_file, score = 'extend', filt_opt = '100%'):
     """
     This function runs VIOLIN via a terminal command
 
@@ -53,83 +48,62 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
     """
     # Defining the scoring scheme
     if score == 'extend':
-        kind_dict = {"strong corroboration": 2,
-                     "empty attribute": 1,
-                     "indirect interaction": 3,
-                     "path corroboration": 5,
-                     "specification": 7,
-                     "hanging extension": 40,
-                     "full extension": 39,
-                     "internal extension": 38,
-                     "dir contradiction": 11,
-                     "sign contradiction": 10,
-                     "att contradiction": 9,
-                     "dir mismatch": 20,
-                     "path mismatch": 19,
-                     "self-regulation": 18}
+        kind_dict = {"strong corroboration" : 2,
+                    "weak corroboration1" : 1,
+                    "weak corroboration2" : 1,
+                    "weak corroboration3" : 1,
+                    "hanging extension" : 40,
+                    "full extension" : 40,
+                    "internal extension" : 40,
+                    "specification" : 30,
+                    "dir contradiction" : 10,
+                    "sign contradiction" : 10,
+                    "att contradiction" : 10,
+                    "flagged1" : 20,
+                    "flagged2" : 20,
+                    "flagged3" : 20}
         match_dict = {"source present" : 1,
                         "target present" : 100,
                         "both present" : 10,
                         "neither present" : 0.1}
-        if approach in ['1', '2']:
-            pass
-        else:
-            kind_dict["flagged4"] = 20
-            kind_dict["flagged5"] = 20
-
-
     elif score == 'corroborate':
-        kind_dict = {"strong corroboration": 2,
-                     "empty attribute": 1,
-                     "indirect interaction": 3,
-                     "path corroboration": 5,
-                     "specification": 7,
-                     "hanging extension": 40,
-                     "full extension": 39,
-                     "internal extension": 38,
-                     "dir contradiction": 11,
-                     "sign contradiction": 10,
-                     "att contradiction": 9,
-                     "dir mismatch": 20,
-                     "path mismatch": 19,
-                     "self-regulation": 18}
+        kind_dict = {"strong corroboration" : 40,
+                        "weak corroboration1" : 30,
+                        "weak corroboration2" : 30,
+                        "weak corroboration3" : 30,
+                        "hanging extension" : 1,
+                        "full extension" : 1,
+                        "internal extension" : 10,
+                        "specification" : 10,
+                        "dir contradiction" : 20,
+                        "sign contradiction" : 20,
+                        "att contradiction" : 20,
+                        "flagged1" : 1,
+                        "flagged2" : 1,
+                        "flagged3" : 1}
         match_dict = {"source present" : 1,
                         "target present" : 1,
                         "both present" : 100,
                         "neither present" : 0.1}
-
-        if approach in ['1', '2']:
-            pass
-        else:
-            kind_dict["flagged4"] = 1
-            kind_dict["flagged5"] = 1
-
     elif score == 'extend subcategories':
-        kind_dict = {"strong corroboration": 2,
-                     "empty attribute": 1,
-                     "indirect interaction": 3,
-                     "path corroboration": 5,
-                     "specification": 7,
-                     "hanging extension": 40,
-                     "full extension": 39,
-                     "internal extension": 38,
-                     "dir contradiction": 11,
-                     "sign contradiction": 10,
-                     "att contradiction": 9,
-                     "dir mismatch": 20,
-                     "path mismatch": 19,
-                     "self-regulation": 18}
+        kind_dict = {"strong corroboration" : 2,
+                    "weak corroboration1" : 1,
+                    "weak corroboration2" : 3,
+                    "weak corroboration3" : 5,
+                    "hanging extension" : 40,
+                    "full extension" : 41,
+                    "internal extension" : 42,
+                    "specification" : 30,
+                    "dir contradiction" : 10,
+                    "sign contradiction" : 11,
+                    "att contradiction" : 12,
+                    "flagged1" : 20,
+                    "flagged2" : 21,
+                    "flagged3" : 22}
         match_dict = {"source present" : 1,
                         "target present" : 100,
                         "both present" : 10,
                         "neither present" : 0.1}
-
-        if approach in ['1', '2']:
-            pass
-        else:
-            kind_dict["flagged4"] = 23
-            kind_dict["flagged5"] = 24
-
     elif score == 'corroborate subcategories':
         kind_dict = {"strong corroboration" : 40,
                         "weak corroboration1" : 30,
@@ -149,37 +123,27 @@ def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend',
                         "target present" : 1,
                         "both present" : 100,
                         "neither present" : 0.1}
-
-        if approach in ['1', '2']:
-            pass
-        else:
-            kind_dict["flagged4"] = 7
-            kind_dict["flagged5"] = 9
-
     else:
         raise ValueError('Unaccepted scoring option'+'\n'+
                          'options are: \'extend\', \'extend subcategories\', \'corroborate\', \'corroborate subcategories\'')
+    
+    model_tf = tempfile.NamedTemporaryFile(suffix='.xlsx')
+    reading_tf = tempfile.NamedTemporaryFile(suffix='.xlsx')
+    norm_model(model_file, model_tf)
+    reading_df = biorecipe_to_violin(lee_file)
+    reading_df.to_excel(reading_tf, index=False)
 
     # Import model and LEE set, using default input parameters
-    model_df = preprocessing_model(model_file)
-    reading_df = preprocessing_reading(reading=lee_file,evidence_score_cols=evidence_scoring_cols, atts = attributes)
+    model_df = input_biorecipes(model_tf.name)
+    reading_df, reading_cols = input_reading(reading=reading_tf.name)
     graph = node_edge_list(model_df)
 
     #Scoring and Output
-    scored = score_reading(reading_df,
-                           model_df,
-                           graph,
-                           kind_values = kind_dict,
-                           match_values = match_dict,
-                           attributes=attributes,
-                           classify_scheme = approach)
+    scored = score_reading(reading_df,model_df,graph,reading_cols,kind_values = kind_dict,match_values = match_dict)
     output(scored,out_file,kind_values=kind_dict)
 
     #Visualization
-    if plot:
-        visualize(match_dict, kind_dict, out_file+'_outputDF.csv', filter_opt=filt_opt)
-    else:
-        pass
+    visualize(match_dict, kind_dict, out_file+'_outputDF.csv', filter_opt=filt_opt)
 
     return
 
@@ -197,22 +161,14 @@ def main():
     parser.add_argument('filter', type=str,
                         help='(optional) filtering value for visualization output')
 
-    parser.add_argument('approach', type=str, choices=['1', '2', '3'],
-                        help='(optional) classify schemes, default is 1')
+
     args = parser.parse_args()
 
     if (os.path.splitext(args.model)[1] in ['.txt','.csv','.tsv','.xlsx'] and os.path.splitext(args.reading)[1] in ['.txt','.csv','.tsv','.xlsx'] and type(args.output)==str):
         if args.filter == None:
-            if args.approach == None:
-                use_violin(args.model,args.reading,args.output,args.score)
-            else:
-                use_violin(args.model,args.reading,args.output,args.approach,args.score)
+            use_violin(args.model,args.reading,args.output,args.score)
         else:
-            if args.approach == None:
-                use_violin(args.model,args.reading,args.output,args.score,args.filter)
-            else:
-                use_violin(args.model,args.reading,args.output,args.approach,args.score,args.filter)
-
+            use_violin(args.model,args.reading,args.output,args.score,args.filter)
     else:
         raise ValueError('Unrecognized input format')
         # print('Unrecognized input format',os.path.splitext(args.reading)[1])

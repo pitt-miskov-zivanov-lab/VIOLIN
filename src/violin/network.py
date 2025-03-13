@@ -8,7 +8,8 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import pandas as pd
 import numpy as np
 import networkx as nx
-from violin.numeric import get_attributes, compare
+from numeric import compare
+
 
 def node_edge_list(model_df):
     """
@@ -26,23 +27,22 @@ def node_edge_list(model_df):
     """
 
     #If elements are defined by variables, use the variable names. Else, use the common names
-    if 'Listname' in model_df.columns and not model_df['Listname'].empty: target = 'Listname'
-    elif 'Variable' in model_df.columns and not model_df['Variable'].empty: target = 'Variable'
+    if 'Variable' in model_df.columns and not model_df['Variable'].empty: target = 'Variable'
     else: target = 'Element Name'
 
     #Subset of the model, just element and regulator columns
-    graph = model_df[[target,'Positive Regulator List','Negative Regulator List']].astype(str)
+    graph = model_df[[target,'Positive Regulators','Negative Regulators']].astype(str)
     #removes 'nan' placeholder
     graph = graph.replace('nan','')
 
-    # #remove excess punctuation from the regulator cells
-    graph['Positive Regulator List'] = graph['Positive Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
-    graph['Negative Regulator List'] = graph['Negative Regulator List'].str.replace('[','').str.replace(']','').str.replace('\'','')
+    #remove excess punctuation from the regulator cells
+    graph['Positive Regulators'] = graph['Positive Regulators'].str.replace('[','').str.replace(']','').str.replace('\'','')
+    graph['Negative Regulators'] = graph['Negative Regulators'].str.replace('[','').str.replace(']','').str.replace('\'','')
     
     #combine regulators into one column, separated by '-' symbol
     #positiveRegulators_negativeRegulators
-    graph['Regulators'] = graph['Positive Regulator List']+'/////'+graph['Negative Regulator List']
-    graph = graph.drop(columns=['Positive Regulator List','Negative Regulator List'])
+    graph['Regulators'] = graph['Positive Regulators']+'/////'+graph['Negative Regulators']
+    graph = graph.drop(columns=['Positive Regulators','Negative Regulators'])
 
     #Split each row by '-' character
     #This allows us to assign weights so that we know the "sign" (positive/negative) of the regulator
@@ -66,16 +66,7 @@ def node_edge_list(model_df):
     return node_edge_list
 
 
-def path_finding(regulator,
-                 regulated,
-                 sign,
-                 model_df,
-                 graph,
-                 kind_values,
-                 reading_cxn_type,
-                 reading_atts,
-                 attributes,
-                 scheme='1'):
+def path_finding(regulator,regulated,sign,model_df,graph,kind_values,reading_cxn_type,reading_atts,attributes):
     """
     This function searches for a path between the reading regulator and regulated in the model,
     and calculates the kind score based on the results
@@ -96,83 +87,60 @@ def path_finding(regulator,
         Dictionary containing the numerical values for the Kind Score classifications
     reading_cxn_type : str
         Connection Type of interaction from reading - 'i' for indirect, 'd' for direct
-    scheme: str
-        The scheme of classification, i.e. '1', '2', or '3'
+
     Returns
     -------
     kind : int
         Kind Score value for the interaction
     """
 
-    # Sign of regulator; assigned same numbering as node_edge_list() function
-    # negativeRegulators = 1; positiveRegulators = 0
-    if sign == 'Negative':
-        sign = 1
-    else:
-        sign = 0
+    #Sign of regulator; assigned same numbering as node_edge_list() function
+    #negativeRegulators = 1; positiveRegulators = 0
+    if sign == 'Negative': sign = 1
+    else: sign = 0
+    
 
-    # Have to make sure regulator and regulated are in the directed graph representation of the model
-    # Some nodes may be in the model, but aren't regulated/regulators anywhere
-    if (regulator in graph) and (regulated in graph):
-        # If there is a path of the same direction and LEE = D: internal extension
-        if nx.has_path(graph, regulator, regulated) and len(
-                nx.shortest_path(graph, source=regulator, target=regulated)) > 1 and reading_cxn_type == "d":
-            if scheme in ['1', '3']:
-                kind = kind_values['internal extension']
-            elif scheme == '2':
-                kind = kind_values['path mismatch']
-            else:
-                raise ValueError('Enter a right scheme (1, 2, 3).')
-        # If there is a path of the same direction and LEE = I: check sign and attributes
-        elif nx.has_path(graph, regulator, regulated) and len(
-                nx.shortest_path(graph, source=regulator, target=regulated)) > 1 and reading_cxn_type == "i":
-            # Finding atts of beginning and end of path
-            s_idx = list(model_df['Listname']).index(regulator)
-            t_idx = list(model_df['Listname']).index(regulated)
-            # No need to assign value to `sign` since no influence attributes need to compare
-            model_atts = get_attributes(s_idx, t_idx, sign, model_df, attributes, path=True)
+    #Have to make sure regulator and regulated are in the directed graph representation of the model
+    #Some nodes may be in the model, but aren't regulated/regulators anywhere
+    if regulator in graph and regulated in graph:
+        #If there is a path of the same direction and LEE = D: internal extension
+        if nx.has_path(graph,regulator,regulated) and len(nx.shortest_path(graph,source=regulator,target=regulated))>1 and reading_cxn_type == "d": kind = kind_values['internal extension']
+        #If there is a path of the same direction and LEE = I: check sign and attributes
+        elif nx.has_path(graph,regulator,regulated) and len(nx.shortest_path(graph,source=regulator,target=regulated))>1 and reading_cxn_type == "i": 
+            #Finding atts of beginning and end of path
+            s_idx = list(model_df['Variable']).index(regulator)
+            t_idx = list(model_df['Variable']).index(regulated)
+            model_atts = [model_df.at[t_idx,att] for att in attributes]+[model_df.at[s_idx,att] for att in attributes]
             compare_atts = compare(model_atts, reading_atts)
 
-            # Finding Path sign
-            # path list
-            path = nx.shortest_path(graph, source=regulator, target=regulated, weight='weight')
-            # Check path sign
+            #Finding Path sign
+            #path list
+            path = nx.shortest_path(graph,source=regulator,target=regulated,weight='weight')
+            #Check path sign
             path_wgt = 0
             idx = 0
-            # Sum the edge weights to determine the overall effect
-            while idx < len(path) - 1:
-                path_wgt += graph[path[idx]][path[idx + 1]]['weight']
+            #Sum the edge weights to determine the overall effect
+            while idx < len(path)-1:
+                path_wgt += graph[path[idx]][path[idx+1]]['weight']
                 idx += 1
             # if %2 = 0, then positive regulation, if %2 = 1, then negative regulation
-            # Weak corroboration - regulation matches reading
-            if path_wgt % 2 == sign and compare_atts in [0, 1, 2]:
-                kind = kind_values[('path corroboration'
-                                    '')]
-            # Flagged - Regulation same sign, but contradictory attributes
-            elif path_wgt % 2 == sign and compare_atts == 3:
-                if scheme in ['1', '3']:
-                    kind = kind_values['path mismatch']
-                elif scheme == '2':
-                    kind = str(kind_values['att contradiction'])
+            # Weak corroboration - regulation matches reading 
+            if path_wgt%2 == sign and compare_atts in [0,1,2]: kind = kind_values['weak corroboration3']
+            #Flagged - Regulation same sign, but contradictory attributes
+            elif path_wgt%2 == sign and compare_atts == 3: kind = kind_values['flagged2']
             # Flagged - Regulation opposite sign as reading
-            else:
-                if scheme in ['1', '3']:
-                    kind = kind_values['path mismatch']
-                elif scheme == '2':
-                    kind = str(kind_values['sign contradiction'])
+            else: kind = kind_values['flagged2']
 
-        # If there is a path of the opposite direction - Flagged
-        elif nx.has_path(graph, regulated, regulator) and len(
-                nx.shortest_path(graph, source=regulated, target=regulator)) > 1:
-            if scheme in ['1', '3']:
-                kind = kind_values['path mismatch']
-            elif scheme == '2':
-                kind = str(kind_values['dir contradiction'])
+        #If there is a path of the opposite direction - Flagged
+        elif nx.has_path(graph,regulated,regulator) and len(nx.shortest_path(graph,source=regulated,target=regulator))>1:
+            kind = kind_values['flagged2']
+        
+        #If there is a self regulation (regulator is both target and source)
+        elif nx.has_path(graph,regulator,regulated) and len(nx.shortest_path(graph,source=regulator,target=regulated))==1: 
+            kind = kind_values['flagged3']
 
-        # If there is no path
-        else:
-            kind = kind_values['internal extension']
-    else:
-        kind = kind_values['internal extension']
+        #If there is no path
+        else: kind = kind_values['internal extension']
+    else: kind = kind_values['internal extension']
 
     return kind
