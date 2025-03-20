@@ -6,7 +6,7 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
-from typing import List
+from typing import Union, List
 
 
 def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:

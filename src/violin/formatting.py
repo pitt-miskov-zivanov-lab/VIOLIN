@@ -5,7 +5,7 @@ Handles the model and reading formatting functions for VIOLIN
 Created November 2019 - Casey Hansen MeLoDy Lab
 Updated May 2024 - Haomiao Luo
 """
-from typing import Union
+from typing import Union, List
 import logging
 import re
 import httplib2 as http
@@ -509,18 +509,21 @@ def wrap_list_to_str(df: pd.DataFrame, cols: list) -> pd.DataFrame:
 
 def get_listname(idx: int, model_df: pd.DataFrame) -> str:
     """
-        Create the list-names by element attributes
+    Create the list-names by element attributes
+
     Parameters
     ----------
     idx: int
         the index of element
     model_df: pd.DataFrame
         the model table
+
     Returns
     -------
     listname: str
         formatted name for regulator list column
     """
+
     ele_col_list = ['Element Name', 'Element Type', 'Element Subtype', 'Compartment ID']
     model_df[ele_col_list] = model_df[ele_col_list].apply(lambda x: x.astype(str).str.lower())
     if str(model_df.loc[idx, 'Element Type']).replace(' ', '') not in TYPE_ABBR_DICT:
