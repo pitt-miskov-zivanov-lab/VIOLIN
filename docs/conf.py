@@ -15,8 +15,8 @@ import sys
 import sphinx_rtd_theme
 import sphinx_copybutton
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'src', 'violin')))
-sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, 'examples')))
+sys.path.insert(0, os.path.abspath('../src'))
+sys.path.insert(0, os.path.abspath('../examples'))
 
 # -- Project information -----------------------------------------------------
 
