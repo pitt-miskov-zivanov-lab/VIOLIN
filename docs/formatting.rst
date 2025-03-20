@@ -15,17 +15,12 @@ reading output which are not in the BioRECIPES or REACH format (respectively).
 Functions
 ---------
 
-.. currentmodule:: formatting
-.. autofunction:: evidence_score
+.. autofunction:: violin.formatting.evidence_score
 
-.. currentmodule:: formatting
-.. autofunction:: add_regulator_names_id
+.. autofunction:: violin.formatting.add_regulator_names_id
 
-.. currentmodule:: formatting
-.. autofunction:: convert_to_biorecipes
+.. autofunction:: violin.formatting.get_listname
 
-.. currentmodule:: formatting
-.. autofunction:: convert_reading
 
 
 Dependencies

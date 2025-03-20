@@ -6,11 +6,13 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
+from typing import List
 
 
 def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:
     """
     The function get the attributes of the interaction in model
+
     Parameters
     ----------
     A_idx: int
@@ -95,7 +97,7 @@ def find_element(search_type: str,
                  element_name: str,
                  element_type: str,
                  model_df: pd.DataFrame,
-                 id_db: str=None ) -> list | int:
+                 id_db: str=None ) -> Union[List, int]:
     """
     This function finds the correct indices of an element within the model.
     Because elements can exist as multiple types (protein, RNA, gene, etc.),

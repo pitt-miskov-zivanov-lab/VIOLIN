@@ -19,11 +19,11 @@ Both functions return numerical values to represent the outcome of the function.
 Functions
 ---------
 
-.. currentmodule:: numeric
-.. autofunction:: find_element
+.. autofunction:: violin.numeric.get_attributes
 
-.. currentmodule:: numeric
-.. autofunction:: compare
+.. autofunction:: violin.numeric.find_element
+
+.. autofunction:: violin.numeric.compare
 
 
 Dependencies

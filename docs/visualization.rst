@@ -20,8 +20,7 @@ on how to use the VIOLIN output. Visualization can be filtered by three possible
 Functions
 ---------
 
-.. currentmodule:: visualize_violin
-.. autofunction:: visualize
+.. autofunction:: violin.visualize_violin.visualize
 
 
 

@@ -116,17 +116,13 @@ The total score (S\ :sub:`T`\) is calculated by
 Functions
 ---------
 
-.. currentmodule:: scoring
-.. autofunction:: match_score
+.. autofunction:: violin.scoring.match_score
 
-.. currentmodule:: scoring
-.. autofunction:: kind_score
+.. autofunction:: violin.scoring.kind_score
 
-.. currentmodule:: scoring
-.. autofunction:: epistemic_value
+.. autofunction:: violin.scoring.epistemic_value
 
-.. currentmodule:: scoring
-.. autofunction:: score_reading
+.. autofunction:: violin.scoring.score_reading
 
 
 Dependencies

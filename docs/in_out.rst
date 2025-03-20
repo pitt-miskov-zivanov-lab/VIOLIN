@@ -8,14 +8,11 @@ For more information on the types of accepted inputs, see :doc:`files`.
 Functions
 ---------
 
-.. currentmodule:: in_out
-.. autofunction:: input_biorecipes
+.. autofunction:: violin.in_out.preprocessing_model
 
-.. currentmodule:: in_out
-.. autofunction:: input_reading
+.. autofunction:: violin.in_out.preprocessing_reading
 
-.. currentmodule:: in_out
-.. autofunction:: output
+.. autofunction:: violin.in_out.output
 
 
 Dependencies
