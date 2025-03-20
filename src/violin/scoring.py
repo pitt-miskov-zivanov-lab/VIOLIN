@@ -1,4 +1,4 @@
-iisiis"""
+"""
 scoring.py
 
 Handles the Match Score, Kind Score, and Epistemic Value functions for VIOLIN
