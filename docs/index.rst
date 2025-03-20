@@ -44,6 +44,7 @@ Finally, VIOLIN performs the comparison and classification of large new interact
    tutorials
    formatting
    in_out
+   network
    numeric
    scoring
    visualize_violin
