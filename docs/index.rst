@@ -42,6 +42,11 @@ Finally, VIOLIN performs the comparison and classification of large new interact
 
    installation
    tutorials
+   formatting
+   in_out
+   numeric
+   scoring
+   visualize_violin
    citation
    acknowledgments
    license
