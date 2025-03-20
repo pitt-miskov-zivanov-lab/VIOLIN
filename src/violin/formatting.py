@@ -124,19 +124,19 @@ SUBTYPE_ABBR_DICT = {
 
 def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
     """
-    This function merges duplicate interactions and calculates evidence score of each interaction
+    This function merges duplicate interactions and calculates evidence score of each interaction.
 
     Parameters
     ----------
     reading_df : pd.DataFrame
-        A dataframe of the machine reading output within BioRECIPE
+        A dataframe of the interaction list with BioRECIPE format.
     col_names: list
-        A list of column headings used to determine if interactions are identical
+        A list of column headings used to determine if interactions are identical.
 
     Returns
     -------
     counted_reading : pd.DataFrame
-        A new dataframe with the evidence count and PMCID list for each interaction
+        A new dataframe with the evidence count and PMCID list for each interaction.
     """
 
     # Convert reading to lower case, to prevent issues with case difference
@@ -158,19 +158,19 @@ def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
 
 def add_regulator_names_id(model_df: pd.DataFrame) -> pd.DataFrame:
     """
-    This function converts the model regulator lists from BioRECIPE variables to the common element names and database
-    identifiers
+    This function converts the model regulator lists from 'variables' to the common element names and database
+    identifiers.
 
     Parameters
     ----------
     model_df : pd.DataFrame
-        The model dataframe (in BioRECIPE format)
+        The model dataframe (in BioRECIPE format).
 
     Returns
     -------
     model_df : pd.DataFrame
         A new dataframe with added columns containing the positive and negative regulators listed
-        by their Element Names and IDs
+        by their Element Names and IDs.
     """
     # removes the initial values from the model dataframe, as they're not needed
     # Also adds new columns for the positive and negative regulator names and IDs
@@ -216,16 +216,17 @@ def add_regulator_names_id(model_df: pd.DataFrame) -> pd.DataFrame:
 
 def format_variable_names(model: pd.DataFrame) -> pd.DataFrame:
     """
-    This function formats model variable names to make compatible with model checking
+    This function formats model variable names to make them compatible with model checking.
 
     Parameters
     ----------
     model: pd.DataFrame
-        A dataframe of model file
+        A dataframe of model file.
+
     Returns
     -------
     model: pd.DataFrame
-        model dataframe with standardized variable names
+        A model dataframe with standardized variable names.
 
     """
 
@@ -264,15 +265,16 @@ def format_variable_names(model: pd.DataFrame) -> pd.DataFrame:
 
 def get_type(input_type: str) -> str:
     """
-    This function standardizes element types
+    This function standardizes element types.
 
     Parameters
     ----------
     input_type: str
-        An entity type
+        An type of an element.
+
     Returns
     -------
-    standard string to describe the type of entity
+    A standardized type to describe the type of element.
 
     """
 
@@ -302,13 +304,13 @@ def get_hgnc_symbol(hgnc_id: str, url: str='https://rest.genenames.org/fetch/hgn
     Parameters
     ----------
     hgnc_id: str
-        A string of the hgnc identifier to search
+        A string of the hgnc identifier to search.
     url: str
-        The url of HUGO Gene Nomenclature Committee
+        The url of HUGO Gene Nomenclature Committee.
     Returns
     -------
     hgnc_symbol:
-        The string of hgnc symbol
+        The string of hgnc symbol.
     """
     response, content = h.request(
         url + f'/{hgnc_id}',
@@ -345,14 +347,16 @@ def get_hgnc_symbol(hgnc_id: str, url: str='https://rest.genenames.org/fetch/hgn
 def get_element(reg_rule: Union[str, list], layer: int) -> list:
     """
     This function parses the regulation rule and disentangle the symbol operators
-    converting rule to a list of regulators
+    converting rule to a list of regulators.
 
     Parameters
     ----------
     reg_rule: str, list
-        A BioRECIPE Regulation Rule
+        A regulation rule. for further info of regulation rule, please check:
+        https://melody-biorecipe.readthedocs.io/en/latest/model_representation.html.
     layer: int
-        counter for recursive time, the default is 0
+        a counter for recursive time, the default is 0.
+
     Returns
     -------
     regulator_list: list
@@ -458,17 +462,17 @@ def get_element(reg_rule: Union[str, list], layer: int) -> list:
 
 def split_comma_out_parentheses(reg_rule: str) -> list:
     """
-    This function split the parentheses by comma outside of parentheses. e.g. '(A,B),(C,B)' -> ['(A,B)','(C,B)']
+    This function split the parentheses by comma outside of parentheses. e.g. '(A,B),(C,B)' -> ['(A,B)','(C,B)'].
 
     Parameters
     ----------
     reg_rule: str
-        A regulation rule
+        A regulation rule.
 
     Returns
     -------
     reg_list: list
-        A list of expressions that are separated by brackets
+        A list of expressions that are separated by brackets.
 
     """
 
@@ -490,17 +494,20 @@ def split_comma_out_parentheses(reg_rule: str) -> list:
 
 def wrap_list_to_str(df: pd.DataFrame, cols: list) -> pd.DataFrame:
     """
-    This function wraps the lists in the output dataframe to strings
+    This function wraps the lists in the output dataframe to strings.
+
     Parameters
     ----------
     df: pd.DataFrame
-        output dataframe
+        A output of dataframe.
     cols: list
-        a list of columns name
+        A list of columns name.
+
     Returns
     -------
     df: pd.DataFrame
     """
+
     for row in range(len(df)):
         for col in cols:
             df.loc[row, col] = ','.join(list(df.loc[row, col]))
@@ -509,19 +516,25 @@ def wrap_list_to_str(df: pd.DataFrame, cols: list) -> pd.DataFrame:
 
 def get_listname(idx: int, model_df: pd.DataFrame) -> str:
     """
-    Create the list-names by element attributes
+    Create the listnames by element attributes.
+    This function generates unique identifiers for elements in the model network using the rules:
+        - listname: {element_name}_{element_type}_{element_subtype}_{compartment_ID}
+        - For the elements have multiple types and subtypes, the identifier only include the first entry.
+        - If any attribute is empty, it is replaced with 'nan' in the list name.
+
+    These unique identifiers are then used by VIOLIN for further manipulation of the network information.
 
     Parameters
     ----------
     idx: int
-        the index of element
+        the row index of element in the model file.
     model_df: pd.DataFrame
-        the model table
+        A dataframe of a model.
 
     Returns
     -------
     listname: str
-        formatted name for regulator list column
+        A formatted name for regulator list column.
     """
 
     ele_col_list = ['Element Name', 'Element Type', 'Element Subtype', 'Compartment ID']
@@ -541,15 +554,17 @@ def get_listname(idx: int, model_df: pd.DataFrame) -> str:
 
 def get_subtype_abbr(subtype: str) -> str:
     """
+    A function to encode the subtype into a identifier pattern in a listname of an element.
 
     Parameters
     ----------
     subtype: str
-        The subtype of the element
+        A subtype of the element.
+
     Returns
     -------
     abbr: str
-        The abbreviation of the first subtype
+        A abbreviation of the first subtype.
     """
     list_ = []
     # FIXME: Only get first subtype (TBD for the other subtypes)

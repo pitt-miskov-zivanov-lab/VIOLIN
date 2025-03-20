@@ -30,7 +30,7 @@ VIOLIN Workflow
 |
 VIOLIN judges whether the new interactions support or further enrich the information in the model (*corroborations*), thereby verifying and curating the model. VIOLIN identifies gaps and issues in the knowledge, published information, and models (*contradictions*) and indicates that the newly obtained information requires further investigation (*flagged*). VIOLIN also provides new interactions for extending the models (*extensions*).
 
-Further, VIOLIN has the capability to identify and search through paths within a model when comparing to new interaction lists, identifying new potential feedback and feed-forward loops. 
+Further, VIOLIN has the capability to identify and search through paths within a model when comparing to new interaction lists, identifying new potential feedback and feed-forward loops.
 
 Finally, VIOLIN performs the comparison and classification of large new interaction lists within a given context at least three orders of magnitude faster than a human, thus enabling reliable high throughput modeling and curation tasks that would not be feasible otherwise.
 
@@ -42,14 +42,7 @@ Finally, VIOLIN performs the comparison and classification of large new interact
 
    installation
    tutorials
-   formatting
-   in_out
-   network
-   numeric
-   scoring
-   visualize_violin
+   function_reference
    citation
    acknowledgments
    license
-
-

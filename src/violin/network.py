@@ -13,17 +13,18 @@ from violin.numeric import get_attributes, compare
 
 def node_edge_list(model_df: pd.DataFrame) -> nx.DiGraph:
     """
-    This function converts the model from the BioRECIPES format into a node-edge list for use with NetworkX
+    This function converts a model from the BioRECIPE format into a node-edge list for use with NetworkX.
+    The converted network is a directed graph.
 
     Parameters
     ----------
     model_df : pd.DataFrame
-        The model dataframe, must be in BioRECIPES format
+        A model dataframe, must be in BioRECIPE format.
 
     Returns
     -------
     node_edge_list : nx.DiGraph
-        A directed graph representation of the model
+        A directed graph representation of the model.
     """
 
     # If elements are defined by variables, use the variable names. Else, use the common names
@@ -87,35 +88,36 @@ def path_finding(regulator: str,
                  attributes: list,
                  scheme='1') -> Union[str, int]:
     """
-    This function searches for a path between the reading regulator and regulated in the model,
-    and calculates the kind score based on the results
+    This function searches for a path in the model, where the source and target are the identifier of the matched elements,
+    and calculates the kind score based on the results.
 
     Parameters
     ----------
     regulator : str
-        Element variable name of the regulator node
+        An identifier of the source node.
     regulated : str
-        Element variable name of the regulated node
+        An identifier of the target node.
     sign : str
-        Sign of regulated node
+        A sign of interaction from the Interaction Set (IS). available options: ['positive', 'negative'].
     model_df : pd.DataFrame
         Model dataframe
     graph : nx.DiGraph
-        Model edgelist to create network for finding paths between elements
+        Model edgelist to create network for finding paths between elements.
     kind_values : dict
-        Dictionary containing the numerical values for the Kind Score classifications
+        Dictionary containing the numerical values for the Kind Score classifications.
     reading_cxn_type : str
-        Connection Type of interaction from reading - 'i' for indirect, 'd' for direct
+        Connection Type of interaction from reading - 'i' for indirect, 'd' for direct.
     reading_atts: dict
-        attributes from interaction, where keys are attributes names and values are attributes values
+        attributes from interaction, where keys are attributes names and values are attributes values.
     attributes: list
-        attributes list for reading file
+        attributes list for reading file.
     scheme: str
-        The scheme of classification, i.e. '1', '2', or '3'
+        The scheme of classification, i.e. '1', '2', or '3'.
+        
     Returns
     -------
     kind : int
-        Kind Score value for the interaction
+        Kind Score value for the interaction.
     """
 
     # Sign of regulator; assigned same numbering as node_edge_list() function

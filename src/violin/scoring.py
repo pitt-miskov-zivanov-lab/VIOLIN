@@ -1,4 +1,4 @@
-"""
+iisiis"""
 scoring.py
 
 Handles the Match Score, Kind Score, and Epistemic Value functions for VIOLIN
@@ -69,12 +69,12 @@ atts_list = []
 
 def match_score(x:int, reading_df: pd.DataFrame, model_df: pd.DataFrame, match_values: dict=None) -> int:
     """
-    This function calculates the Match Score for an interaction from the reading
+    This function calculates the Match Score for an interaction from the reading.
 
     Parameters
     ----------
     x : int
-        The line of the reading dataframe with the interaction to be scored
+        A row index of the dataframe of Interaction set (IS) to be scored
     reading_df : pd.DataFrame
         The reading dataframe
     model_df : pd.DataFrame
@@ -152,39 +152,41 @@ def kind_score(x: int,
                classify_scheme: str='1',
                mi_cxn: str='d') -> int:
     """
-    This function calculates the Kind Score for an interaction in the reading
+    This function calculates the Kind Score for an interaction in the Interactions Set (IS).
+    The kind score will be used to represent the subcategories.
+    For further details, please find out in: https://www.biorxiv.org/content/10.1101/2024.07.21.604448v1.
 
     Parameters
     ----------
     x : int
-        The line of the reading dataframe with the interaction to be scored
+        The row index for an interaction in IS.
     model_df: pd.DataFrame
         The model dataframe
     reading_df : pd.DataFrame
-        The reading dataframe
+        The reading dataframe.
     graph : nx.DiGraph
-        directed graph of the model,used when function calls path_finding module
+        A directed graph of the model,used when function calls path_finding module.
     counter: dict
-        A dictionary to record the interactions that are identified as corroborated or contradicted interaction in model
-        default value is None
+        A dictionary to record the interactions that are identified as corroborated or contradicted interaction in model.
+        Default value is None.
     kind_values : dict
-        Dictionary assigning Kind Score values
-        Default values found in KIND_DICT_A and KIND_DICT_B
+        Dictionary assigning Kind Score values.
+        Default values found in KIND_DICT_A and KIND_DICT_B.
     attributes : list
-        List of attributes compared between the model and the machine reading output
-        Default is None
+        A list of attributes compared between the model and the machine reading output.
+        Default is None.
     classify_scheme: str
-        The scheme of the classification ('1', '2', and '3')
-        Default is '1'
+        The scheme of the classification ('1', '2', and '3').
+        Default is '1'.
     mi_cxn : str
-        What connection type should be assigned to model interactions if not available
-        Accepted values are "d" (direct) or "i" (indirect)
-        Deafult is "d"
+        What connection type should be assigned to model interactions if not available.
+        Accepted values are "d" (direct) or "i" (indirect).
+        Deafult is "d".
 
     Returns
     -------
     kind : int
-        Kind Score, score value
+        Kind Score, score value.
     """
     # Initialize the parameters
     global MATCH_DICT
@@ -205,17 +207,17 @@ def kind_score(x: int,
 
     assert (mi_cxn in ['d', 'i'])
 
-    ### Finding interaction of literature (IOL) attributes ###
-    # Finding IOL regulator sign
+    ### Finding interaction in Interactions Set (iIS) attributes ###
+    # Finding iIS regulator sign
     signs = ['Negative', 'Positive']
     if reading_df.loc[x, 'Sign'].lower() in ['activate', 'positive', 'increase']: reg_sign = 'Positive'
     else: reg_sign = 'Negative'
     signs.remove(reg_sign)
     opp_sign = signs[0]
 
-    # Finding IOL Connection Type (if not in iol input, default to indirect, 'i')
-    if 'Connection Type' in reading_df.columns: iol_cxn_type = reading_df.loc[x, 'Connection Type']
-    else: iol_cxn_type = 'i'
+    # Finding iIS Connection Type (if not in iIS input, default to indirect, 'i')
+    if 'Connection Type' in reading_df.columns: iis_cxn_type = reading_df.loc[x, 'Connection Type']
+    else: iis_cxn_type = 'i'
 
     # Add full location information, if user want to compare location of the element
     if 'Regulated Compartment' in attributes and 'Regulated Compartment ID' not in attributes:
@@ -235,9 +237,9 @@ def kind_score(x: int,
     # Create list for attributes (i.e., location attributes, context attributes, influence attributes)
     reading_atts = attributes
 
-    # Finding iol other attributes
+    # Finding iIS other attributes
     if len(attributes) > 0:
-        # Attributes for IOL index 'x'
+        # Attributes for iIS index 'x'
         reading_atts = {att: reading_df.loc[x, att] for att in reading_atts}
     else:
         reading_atts = {}
@@ -322,37 +324,37 @@ def kind_score(x: int,
                     model_atts = get_attributes(t_idx, s_idx, reg_sign, model_df, attributes)
 
 
-                    # If IOL ="I" and MI = "I" or IOL = "D" and MI = "D": check attributes
-                    if (iol_cxn_type == "i" and mi_cxn_type == "i") or (iol_cxn_type == "d" and mi_cxn_type != "i"):
+                    # If iIS ="I" and MI = "I" or iIS = "D" and MI = "D": check attributes
+                    if (iis_cxn_type == "i" and mi_cxn_type == "i") or (iis_cxn_type == "d" and mi_cxn_type != "i"):
 
                         compare_atts = compare(model_atts, reading_atts)
                         # Strong Corroboration - perfect match
                         if compare_atts == 0:
                             kinds.append(kind_values['strong corroboration'])
-                        # Weak corroboration - the IOL presents less information than the model interaction
+                        # Weak corroboration - the iIS presents less information than the model interaction
                         elif compare_atts == 1:
                             kinds.append(kind_values['empty attribute'])
-                        # Specification - the IOL presents new information
+                        # Specification - the iIS presents new information
                         elif compare_atts == 2:
                             kinds.append(kind_values['specification'])
-                        # Contradiction - the IOL presents information that disputes the model interaction
+                        # Contradiction - the iIS presents information that disputes the model interaction
                         elif compare_atts == 3:
                             kinds.append(kind_values['att contradiction'])
 
-                    # If IOL = "D" and MI = "I"
-                    elif iol_cxn_type == "d" and mi_cxn_type == "i":
+                    # If iIS = "D" and MI = "I"
+                    elif iis_cxn_type == "d" and mi_cxn_type == "i":
                         compare_atts = compare(model_atts, reading_atts)
-                        # If attributes are non-contradictory: IOL is a specification
+                        # If attributes are non-contradictory: iIS is a specification
                         if compare_atts in [0,1,2]: kinds.append(kind_values['specification'])
-                        # Else: IOL is a contradiction
+                        # Else: iIS is a contradiction
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
-                    # If IOL ="I" and MI = "D":
-                    elif iol_cxn_type == "i" and mi_cxn_type == "d":
+                    # If iIS ="I" and MI = "D":
+                    elif iis_cxn_type == "i" and mi_cxn_type == "d":
                         compare_atts = compare(model_atts, reading_atts)
-                        #If attributes are non-contradictory: IOL is a weak corroboration
+                        #If attributes are non-contradictory: iIS is a weak corroboration
                         if compare_atts in [0,1,2]: kinds.append(kind_values['indirect interaction'])
-                        #Else: IOL is a contradiction
+                        #Else: iIS is a contradiction
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
                 # MI with Matched direction, Mismatched sign
@@ -366,8 +368,8 @@ def kind_score(x: int,
                         #Connection type
                         mi_cxn_type = model_df.loc[t_idx, opp_sign + ' Connection Type List'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
-                    # If IOL = "I" and MI = "D"
-                    if iol_cxn_type == "i" and mi_cxn_type != "i":
+                    # If iIS = "I" and MI = "D"
+                    if iis_cxn_type == "i" and mi_cxn_type != "i":
                         if classify_scheme in ['1', '2']:
                             kinds.append(kind_values['sign contradiction'])
 
@@ -375,7 +377,7 @@ def kind_score(x: int,
                             kinds.append(kind_values['flagged5'])
 
                     else:
-                        #IOL is a Sign Contradiction, regardless of connection type
+                        #iIS is a Sign Contradiction, regardless of connection type
                         kinds.append(kind_values['sign contradiction'])
 
                 # MI with Mismatched direction, Matched sign
@@ -399,12 +401,12 @@ def kind_score(x: int,
 
                     model_atts = get_attributes(s_idx, t_idx, reg_sign, model_df, attributes)
 
-                    # IOL = "I" and MI = "I"
-                    if iol_cxn_type == "i" and mi_cxn_type == "i":
+                    # iIS = "I" and MI = "I"
+                    if iis_cxn_type == "i" and mi_cxn_type == "i":
                         kinds.append(kind_values['dir contradiction'])
 
-                    # IOL = "D" and MI = "D"
-                    elif iol_cxn_type == "d" and mi_cxn_type != "i":
+                    # iIS = "D" and MI = "D"
+                    elif iis_cxn_type == "d" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             # If the attributes are not contradictory - Flagged for manual review
@@ -420,8 +422,8 @@ def kind_score(x: int,
                         else:
                             raise ValueError('Enter a right scheme number (1, 2, or 3).')
 
-                    # IOL = "I" and MI = "D"
-                    elif iol_cxn_type == "i" and mi_cxn_type != "i":
+                    # iIS = "I" and MI = "D"
+                    elif iis_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             # If the attributes are not contradictory - Flagged for manual review
@@ -441,8 +443,8 @@ def kind_score(x: int,
                         else:
                             raise ValueError('Enter a right scheme number (1, 2, or 3).')
 
-                    # IOL = "D" and MI = "I"
-                    elif iol_cxn_type == "d" and mi_cxn_type == "i":
+                    # iIS = "D" and MI = "I"
+                    elif iis_cxn_type == "d" and mi_cxn_type == "i":
                         kinds.append(kind_values['dir contradiction'])
 
                 #MI with Mismatched direction, Mismatched sign
@@ -463,8 +465,8 @@ def kind_score(x: int,
                     #List of model attributes to compare to reading attributes
                     model_atts = get_attributes(s_idx, t_idx, opp_sign, model_df, attributes)
 
-                    # IOL = "D" and MI = "D"
-                    if iol_cxn_type == "d" and mi_cxn_type != "i":
+                    # iIS = "D" and MI = "D"
+                    if iis_cxn_type == "d" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             #If the attributes are not contradictory - Flagged for manual review
@@ -483,10 +485,10 @@ def kind_score(x: int,
 
                         else:
                             raise ValueError('Enter a right scheme (1, 2, or 3).')
-                    # IOL = "D" and MI = "i"
-                    elif iol_cxn_type == "d" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
-                    # IOL = "i" and MI = "D"
-                    elif iol_cxn_type == "i" and mi_cxn_type != "i":
+                    # iIS = "D" and MI = "i"
+                    elif iis_cxn_type == "d" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
+                    # iIS = "i" and MI = "D"
+                    elif iis_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         #If the attributes are not contradictory - Flagged for manual review
                         if compare_atts in [0, 1, 2]: kinds.append(kind_values['dir mismatch'])
@@ -499,8 +501,8 @@ def kind_score(x: int,
                             elif classify_scheme == '3':
                                 kinds.append(kind_values['flagged5'])
 
-                    # IOL = "i" and MI = "i"
-                    elif iol_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
+                    # iIS = "i" and MI = "i"
+                    elif iis_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
 
                 else:
                     # If there is a self-regulation (regulator is both target and source)
@@ -508,7 +510,7 @@ def kind_score(x: int,
                         kind = kind_values['self-regulation']
                     # If model does not contain interaction - check for path
                     else:
-                        kinds.append(path_finding(source_listname,target_listname,reg_sign,model_df,graph,kind_values,iol_cxn_type,reading_atts,attributes,classify_scheme))
+                        kinds.append(path_finding(source_listname,target_listname,reg_sign,model_df,graph,kind_values,iis_cxn_type,reading_atts,attributes,classify_scheme))
 
 
         if len(kinds) == 1:
@@ -690,19 +692,19 @@ def kind_score(x: int,
 
 def epistemic_value(x: int,reading_df: pd.DataFrame) -> float:
     """
-    Finds the epistemic value of the interactions of literature (IOL) (when available)
+    Finds the epistemic value of the interactions in Interaction Set (IS) (when available).
 
     Parameters
     ----------
     x : int
-        The line of the reading dataframe with the interaction to be scored
+        The row index for an interaction in IS.
     reading_df : pd.DataFrame
-        The reading dataframe
+        An IS dataframe.
 
     Returns
     -------
     e_value : float
-        The Epistemic Value; if there is no Epistemic Value available for the reading, default is 1 for all IOLs
+        The Epistemic Value; if there is no Epistemic Value available for the reading, default is 1 for all interactions in IS.
     """
 
     if 'Epistemic Value' in reading_df.columns:
@@ -722,36 +724,37 @@ def score_reading(reading_df: pd.DataFrame,
                 classify_scheme: str='1',
                 mi_cxn: str='d') -> pd.DataFrame:
     """
-    Creates new columns for the Match Score, Kind Score, Epistemic Value, and Total Score.
-    Calls scoring functions and stores the values in the approriate column.
+    This function creates new columns for the Match Score, Kind Score, Epistemic Value, and Total Score.
+    it calls scoring functions and stores the values in the approriate column.
 
     Parameters
     ----------
     reading_df : pd.DataFrame
-        The reading dataframe
+        The reading dataframe.
     model_df : pd.DataFrame
-        The model dataframe
+        The model dataframe.
     graph : nx.DiGraph
-        directed graph of the model, necessary for calling kind_score module
+        directed graph of the model, necessary for calling kind_score module.
     counter: dict
-        A dictionary for counting the corrobrated and contradicted interaction
-        defulat value is None and ignore the counting step
+        A dictionary for counting the corrobrated and contradicted interaction.
+        defulat value is None and ignore the counting step.
     kind_values : dict
-        Dictionary assigning Kind Score values
-        Default values found in KIND_DICT_A and KIND_DICT_B
+        Dictionary assigning Kind Score values.
+        Default values found in KIND_DICT_A and KIND_DICT_B.
     match_values : dict
-        Dictionary assigning Match Score values
-        Default values found in MATCH_DICT
+        Dictionary assigning Match Score values.
+        Default values found in MATCH_DICT.
     attributes : list
-        List of attributes compared between the model and the machine reading output
-        Default is None
+        List of attributes compared between the model and the machine reading output.
+        Default is None.
     classify_scheme: str
-        The scheme of the classification
-        Default value is '1'
+        The scheme of the classification.
+        Default value is '1'.
+
     Returns
     -------
     scored = reading_df : pd.DataFrame
-        reading dataframe with added scores
+        reading dataframe with added scores.
     """
     assert (classify_scheme in ['1', '2', '3'])
     assert (mi_cxn in ['d', 'i'])

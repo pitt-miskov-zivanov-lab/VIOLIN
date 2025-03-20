@@ -11,26 +11,30 @@ from typing import Union, List
 
 def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:
     """
-    The function get the attributes of the interaction in model
+    The function get the attributes of the interaction in model, available attributes includes
+    [Regulator Compartment, Regulator Compartment ID, Regulated Compartment, Regulated Compartment ID,
+    Mechansim, Site, Cell Line, Cell Type, Tissue Type, Organism]. If Regulator Compartment is selected,
+    Regulator Compartment ID will also be selected.
 
     Parameters
     ----------
     A_idx: int
-        A row index of element A in the input model dataframe
+        A row index of element A in the input model dataframe.
     B_idx: int
-        A row index of element B in the input model dataframe
+        A row index of element B in the input model dataframe.
     sign: str
-        A sign of the interaction, available options: 'positive' or 'negative'
+        A sign of the interaction, available options: 'positive' or 'negative'.
     model_df: pd.DataFrame
-        A DataFrame of a model with BioRECIPE format
+        A DataFrame of a model with BioRECIPE format.
     attrs: list
-        attributes list for reading file
+        An attributes list for interactions file.
     path: bool
-        An indicator if it is path interaction. Attributes will be empty if only path is found in model
+        An indicator if it is path interaction. Attributes will be empty if only path is found in model.
 
     Returns
     -------
     model_atts: dict
+        An dict of attributes for a model interaction.
     """
     model_attrs = {attr: x for attr, x in zip(attrs, ['nan'] * len(attrs))}
     # Check if user input redundant attributes
@@ -103,25 +107,25 @@ def find_element(search_type: str,
     Because elements can exist as multiple types (protein, RNA, gene, etc.),
     this function checks the element name/ID along with the element type.
     Function may return a list, if a given element of a specific type
-    exists with varying attributes (such as different locations)
+    exists with varying attributes (such as different locations).
 
     Parameters
     ----------
     search_type : str
-        An identifier of the element, available options are 'hgnc', 'name', and 'id'
+        An identifier of the element, available options are 'hgnc', 'name', and 'id'.
     element_name: str
-        A name (or ID) of the element being searched for
+        A name (or ID) of the element being searched for.
     element_type: str
         A type of element ('protein', 'protein family', etc.)
     model_df: pd.DataFrame
-        A model dataframe within BioRECIPE format
+        A model dataframe within BioRECIPE format.
     id_db: str
-        provide id's database
+        A database name for provided identifier.
 
     Returns
     -------
     location : list|int
-        All row indices of the model spreadsheet in which the element is found (returns -1 if not found)
+        All row indices of the model spreadsheet in which the element is found (returns -1 if not found).
     """
 
     # Searching for element by HGNC symbol
@@ -168,14 +172,14 @@ def compare(model_atts: dict, reading_atts: dict) -> int:
     Parameters
     ----------
     model_atts : dict
-        A dictionary of attributes from the model interaction
+        A dictionary of attributes for a model interaction.
     reading_atts : dict
-        A dictionary of attributes from the literature extracted event
+        A dictionary of attributes for an event from a literactions list.
 
     Returns
     -------
     value : int
-        Numerical representation of comparison outcome
+        The numerical representation of comparison outcome.
     """
 
     # First, individually compare each attribute between the machine reading output and model

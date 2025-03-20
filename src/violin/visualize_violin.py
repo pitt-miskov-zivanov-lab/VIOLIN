@@ -12,10 +12,10 @@ import numpy as np
 
 from violin.scoring import KIND_DICT_A, KIND_DICT_B, MATCH_DICT
 
-def visualize (file_name: str, 
-            filter_opt: str='100%', 
-            match_values: dict=None, 
-            kind_values: dict=None, 
+def visualize (file_name: str,
+            filter_opt: str='100%',
+            match_values: dict=None,
+            kind_values: dict=None,
             classify_scheme: str='1') -> None:
     """
     This creates graphs of the VIOLIN output:
@@ -25,24 +25,24 @@ def visualize (file_name: str,
     Parameters
     ----------
     match_values : dict
-        Dictionary assigning Match Score Values
+        Dictionary assigning Match Score Values.
     kind_values : dict
-        Dictionary assigning Kind Score values
+        Dictionary assigning Kind Score values.
     file_name : string
         VIOLIN output to be visualized. Can be specific classification,
-        or choosing 'TotalOutput' file will visualize all VIOLIN output
+        or choosing 'TotalOutput' file will visualize all VIOLIN output.
     filter_opt : str
         How much VIOLIN output should be visualized. Can be filtered
         by top % of total score, evidence score (Se) threshold, or
         total score (St) threshold
         Accepted options are 'X%','Se>Y', or 'St>Z',
-        where X, Y, and Z, are values
-        Default is '100%' (Total Output)
+        where X, Y, and Z, are values.
+        Default is '100%' (Total Output).
     """
     assert (classify_scheme in ['1', '2', '3'])
     if match_values is None:
         match_values = MATCH_DICT
-    
+
     if kind_values is None:
         if classify_scheme in ['1', '2']:
             kind_values = KIND_DICT_A

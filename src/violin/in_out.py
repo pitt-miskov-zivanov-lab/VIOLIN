@@ -93,15 +93,20 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
 
 def preprocessing_model(model: str) -> pd.DataFrame:
     """
-    This function check if the model is correct or necessary columns are missing or not
+    This function check if the model is correct or necessary columns are missing.
+
+    This function could receive .text, .csv, .xlsx, .tsv file. The string in file will be convert into lower case.
+    Additionally, A 'Listname' column will be created as the unique identifier for every element for further indexing.
+
     Parameters
     ----------
     model : str
-        model filename
+        A name of file which includes an executable BioRECIPE model.
+
     Returns
     -------
     new_model : pd.DataFrame
-        Formatted model dataframe
+        A Formatted model dataframe.
     """
     # Upload the model and reading files as dataframes based on the file extension
     global MODEL_COLUMNS
@@ -149,23 +154,23 @@ def preprocessing_reading(reading: str,
                         evidence_score_cols: dict = None,
                         atts: list = None) -> pd.DataFrame:
     """
-    This function import the reading file and check if the reading format is correct
+    This function import the reading file and check if the reading format is correct.
 
     Parameters
     ----------
     reading : str
-        Directory and filename of the machine reading spreadsheet output, in BioRECIPE format
+        Directory and filename of the machine reading spreadsheet output, in BioRECIPE format.
         Accepted file: .txt, .csv, .tsv, .xlsx
     evidence_score_cols : list
-        A list of column headings used to identify identical interactions
+        A list of column headings used to identify identical interactions.
     atts : list
-        A list of additional attributes which are available in interactions set
+        A list of additional attributes which are available in interactions set.
         Default is none
 
     Returns
     -------
     new_reading : pd.dataframe
-        formatted reading dataframe, including evidence count and list of PMCIDs
+        A formatted reading dataframe, including evidence count and list of PMCIDs.
     """
     # Upload the model and reading files as dataframes based on the file extension
     # initialize default values in function
@@ -219,19 +224,20 @@ def preprocessing_reading(reading: str,
 def output(reading_df: pd.DataFrame, file_name:str, classify_scheme: str='1', kind_values:dict=None) -> None:
     """
     This function outputs the classified reading interactions.
-    The output filenames are composed with {filename}_{category}.csv.
+    The output filenames are composed with {file_name_suffix}_{category}.csv.
 
     Parameters
     ----------
     reading_df : pd.dataframe
-        the scored reading dataframe
+        A classified dataframe of a interactions set.
     file_name : str
-        Directory and filename of the output suffix
+        A suffix of output filename.
     classify_scheme: str
         Scheme approach to classify, available options are '1', '2', and '3'.
     kind_values : dict
-        Dictionary containing the numerical values for the Kind Score classifications
-        Default values are found in KIND_DICT
+        A dictionary containing the numerical values for the Kind Score classifications.
+        Default values are found in KIND_DICT.
+
     Returns
     -------
     """
