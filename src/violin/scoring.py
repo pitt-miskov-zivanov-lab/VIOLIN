@@ -6,25 +6,59 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import pandas as pd
+import networkx as nx
 from violin.numeric import get_attributes, find_element, compare
 from violin.network import path_finding
-from violin.formatting import get_listname
 
-kind_dict = {"strong corroboration" : 2, 
+# Default kind score dict - categories
+# KIND_DICT = {"strong corroboration" : 2,
+#                 "empty attribute" : 1,
+#                 "indirect interaction" : 1,
+#                 "path corroboration" : 1,
+#                 "hanging extension" : 40, 
+#                 "full extension" : 40, 
+#                 "internal extension" : 40, 
+#                 "specification" : 30, 
+#                 "dir contradiction" : 10,
+#                 "sign contradiction" : 10,
+#                 "att contradiction" : 10,
+#                 "dir mismatch" : 20,
+#                 "path mismatch" : 20,
+#                 "self-regulation" : 20}
+
+KIND_DICT_A = {"strong corroboration" : 2, 
                 "empty attribute" : 1,
-                "indirect interaction" : 1,
-                "path corroboration" : 1,
+                "indirect interaction" : 3,
+                "path corroboration" : 5,
+                "specification" : 7,
                 "hanging extension" : 40, 
-                "full extension" : 40, 
-                "internal extension" : 40, 
-                "specification" : 30, 
-                "dir contradiction" : 10,
-                "sign contradiction" : 10,
-                "att contradiction" : 10,
+                "full extension" : 39, 
+                "internal extension" : 38,  
+                "dir contradiction" : 11,
+                "sign contradiction" : 10, 
+                "att contradiction" : 9,
                 "dir mismatch" : 20,
-                "path mismatch" : 20,
-                "self-regulation" : 20}
-match_dict = {"source present" : 1, 
+                "path mismatch" : 19,
+                "self-regulation" : 18}
+
+KIND_DICT_B = {"strong corroboration" : 2, 
+                "empty attribute" : 1,
+                "indirect interaction" : 3,
+                "path corroboration" : 5,
+                "specification" : 7,
+                "hanging extension" : 40, 
+                "full extension" : 39, 
+                "internal extension" : 38,  
+                "dir contradiction" : 11,
+                "sign contradiction" : 10, 
+                "att contradiction" : 9,
+                "dir mismatch" : 20,
+                "path mismatch" : 19,
+                "self-regulation" : 18,
+                "flagged4" : 17,
+                "flagged5" : 16}
+
+MATCH_DICT = {"source present" : 1,
                 "target present" : 100, 
                 "both present" : 10, 
                 "neither present" : 0.1}
@@ -32,7 +66,8 @@ match_dict = {"source present" : 1,
 # Default attributes list is empty
 atts_list = []
 
-def match_score(x, reading_df, model_df, embedding_match, match_values = match_dict):
+
+def match_score(x:int, reading_df: pd.DataFrame, model_df: pd.DataFrame, match_values: dict=None) -> int:
     """
     This function calculates the Match Score for an interaction from the reading
 
@@ -46,51 +81,52 @@ def match_score(x, reading_df, model_df, embedding_match, match_values = match_d
         The model dataframe
     match_values : dict
         Dictionary assigning Match Score values
-        Default values found in match_dict
+        Default values found in MATCH_DICT
 
     Returns
     -------
     match : int
         Match Score value
     """
+    global MATCH_DICT
     regulated = False
     regulator = False
+
     reg_sign = reading_df.loc[x, 'Sign']
+
+    if match_values is None:
+        match_values = MATCH_DICT
 
     # Search for regulated from reading in model
     if (find_element("name",
                      reading_df.loc[x, 'Regulated Name'],
                      reading_df.loc[x, 'Regulated Type'],
-                     model_df,
-                     embedding_match) != -1 or
+                     model_df) != -1 or
         find_element("hgnc",
                      reading_df.loc[x, 'Regulated HGNC Symbol'],
                      reading_df.loc[x, 'Regulated Type'],
-                     model_df,
-                     embedding_match) != -1 or
+                     model_df) != -1 or
         find_element("id",
                      reading_df.loc[x, 'Regulated ID'],
                      reading_df.loc[x, 'Regulated Type'],
                      model_df,
-                     embedding_match) != -1 ):
+                     reading_df.loc[x, 'Regulated Database']) != -1 ):
         regulated = True
 
     # Search for regulator from reading in model
     if (find_element("name",
                      reading_df.loc[x, 'Regulator Name'],
                      reading_df.loc[x, 'Regulator Type'],
-                     model_df,
-                     embedding_match) != -1 or
+                     model_df) != -1 or
         find_element("hgnc",
                      reading_df.loc[x, 'Regulator HGNC Symbol'],
                      reading_df.loc[x, 'Regulator Type'],
-                     model_df,
-                     embedding_match) != -1 or
+                     model_df) != -1 or
         find_element("id",
                      reading_df.loc[x, 'Regulator ID'],
                      reading_df.loc[x, 'Regulator Type'],
                      model_df,
-                     embedding_match) != -1 ):
+                     reading_df.loc[x, 'Regulator Database']) != -1 ):
         regulator = True
 
     # Scoring definition
@@ -106,16 +142,15 @@ def match_score(x, reading_df, model_df, embedding_match, match_values = match_d
     return match
 
 
-def kind_score(x,
-               model_df,
-               reading_df,
-               graph,
-               embedding_match,
-               counter,
-               kind_values = kind_dict,
-               attributes = atts_list,
-               classify_scheme = '1',
-               mi_cxn = 'd'):
+def kind_score(x: int,
+               model_df: pd.DataFrame,
+               reading_df: pd.DataFrame,
+               graph: nx.DiGraph,
+               counter: dict,
+               kind_values: dict=None,
+               attributes: list=None,
+               classify_scheme: str='1',
+               mi_cxn: str='d') -> int:
     """
     This function calculates the Kind Score for an interaction in the reading
 
@@ -134,7 +169,7 @@ def kind_score(x,
         default value is None
     kind_values : dict
         Dictionary assigning Kind Score values
-        Default values found in kind_dict
+        Default values found in KIND_DICT_A and KIND_DICT_B. 
     attributes : list
         List of attributes compared between the model and the machine reading output
         Default is None
@@ -149,26 +184,46 @@ def kind_score(x,
     Returns
     -------
     kind : int
-        Kind Score score value
+        Kind Score, score value
     """
+    # Initialize the parameters
+    global MATCH_DICT
 
-    ### Finding LEE attributes ###
-    # Finding LEE regulator sign
+    assert (classify_scheme in ['1', '2', '3'])
+
+    if kind_values is None:
+        if classify_scheme in ['1', '2']:
+            kind_values = KIND_DICT_A
+
+        elif classify_scheme == '3':
+            kind_values = KIND_DICT_B
+    else:
+        pass
+
+    if attributes is None:
+        match_score = []
+
+    assert (mi_cxn in ['d', 'i'])
+
+    ### Finding interaction of literature (IOL) attributes ###
+    # Finding IOL regulator sign
     signs = ['Negative', 'Positive']
     if reading_df.loc[x, 'Sign'].lower() in ['activate', 'positive', 'increase']: reg_sign = 'Positive'
     else: reg_sign = 'Negative'
     signs.remove(reg_sign)
     opp_sign = signs[0]
 
-    # Finding LEE Connection Type (if not in lee input, default to indirect, 'i')
-    if 'Connection Type' in reading_df.columns: lee_cxn_type = reading_df.loc[x, 'Connection Type']
-    else: lee_cxn_type = 'i'
+    # Finding IOL Connection Type (if not in iol input, default to indirect, 'i')
+    if 'Connection Type' in reading_df.columns: iol_cxn_type = reading_df.loc[x, 'Connection Type']
+    else: iol_cxn_type = 'i'
 
     # Add full location information, if user want to compare location of the element
     if 'Regulated Compartment' in attributes and 'Regulated Compartment ID' not in attributes:
         attributes.insert(attributes.index('Regulated Compartment') + 1, 'Regulated Compartment ID')
     elif 'Regulated Compartment ID' in attributes and 'Regulated Compartment' not in attributes:
         attributes.insert(attributes.index('Regulated Compartment ID'), 'Regulated Compartment')
+    else:
+        pass
 
     if 'Regulator Compartment' in attributes and 'Regulator Compartment ID' not in attributes:
         attributes.insert(attributes.index('Regulator Compartment') + 1, 'Regulator Compartment ID')
@@ -180,52 +235,48 @@ def kind_score(x,
     # Create list for attributes (i.e., location attributes, context attributes, influence attributes)
     reading_atts = attributes
 
-    # Finding Lee other attributes
+    # Finding iol other attributes
     if len(attributes) > 0:
-        # Attributes for LEE index 'x'
+        # Attributes for IOL index 'x'
         reading_atts = {att: reading_df.loc[x, att] for att in reading_atts}
     else:
         reading_atts = {}
 
     # Comparing to model
-    source_name = find_element("name",
-                               reading_df.loc[x, 'Regulator Name'],
-                               reading_df.loc[x, 'Regulator Type'],
-                               model_df,
-                               embedding_match)
     source_hgnc = find_element("hgnc",
                                reading_df.loc[x, 'Regulator HGNC Symbol'],
                                reading_df.loc[x, 'Regulator Type'],
-                               model_df,
-                               embedding_match)
+                               model_df)
+    source_name = find_element("name",
+                               reading_df.loc[x, 'Regulator Name'],
+                               reading_df.loc[x, 'Regulator Type'],
+                               model_df)
     source_id = find_element("id",
                              reading_df.loc[x, 'Regulator ID'],
                              reading_df.loc[x, 'Regulator Type'],
                              model_df,
-                             embedding_match)
+                             reading_df.loc[x, 'Regulator Database'])
 
-    target_name = find_element("name",
-                               reading_df.loc[x, 'Regulated Name'],
-                               reading_df.loc[x, 'Regulated Type'],
-                               model_df,
-                               embedding_match)
     target_hgnc = find_element("hgnc",
                                reading_df.loc[x, 'Regulated HGNC Symbol'],
                                reading_df.loc[x, 'Regulated Type'],
-                               model_df,
-                               embedding_match)
+                               model_df)
+    target_name = find_element("name",
+                               reading_df.loc[x, 'Regulated Name'],
+                               reading_df.loc[x, 'Regulated Type'],
+                               model_df)
     target_id = find_element("id",
                              reading_df.loc[x, 'Regulated ID'],
                              reading_df.loc[x, 'Regulated Type'],
                              model_df,
-                             embedding_match)
+                             reading_df.loc[x, 'Regulated Database'])
 
     # Both regulator (source) and regulated (target) node found in the model
     if (source_name != -1 or source_hgnc != -1 or source_id != -1) and \
             (target_name != -1 or target_hgnc != -1 or target_id != -1):
         # Find indices of regulator element (target) in model
         #FIXME: TBD for order
-        # Priority: HGNC > Name > ID
+        # Privilege: HGNC > Name > ID
         if source_hgnc != -1: model_s_indices = source_hgnc
         elif source_name != -1: model_s_indices = source_name
         else: model_s_indices = source_id
@@ -271,37 +322,37 @@ def kind_score(x,
                     model_atts = get_attributes(t_idx, s_idx, reg_sign, model_df, attributes)
 
 
-                    # If LEE ="I" and MI = "I" or LEE = "D" and MI = "D": check attributes
-                    if (lee_cxn_type == "i" and mi_cxn_type == "i") or (lee_cxn_type == "d" and mi_cxn_type != "i"):
+                    # If IOL ="I" and MI = "I" or IOL = "D" and MI = "D": check attributes
+                    if (iol_cxn_type == "i" and mi_cxn_type == "i") or (iol_cxn_type == "d" and mi_cxn_type != "i"):
 
                         compare_atts = compare(model_atts, reading_atts)
                         # Strong Corroboration - perfect match
                         if compare_atts == 0:
                             kinds.append(kind_values['strong corroboration'])
-                        # Weak corroboration - the LEE presents less information than the model interaction
+                        # Weak corroboration - the IOL presents less information than the model interaction
                         elif compare_atts == 1:
                             kinds.append(kind_values['empty attribute'])
-                        # Specification - the LEE presents new information
+                        # Specification - the IOL presents new information
                         elif compare_atts == 2:
                             kinds.append(kind_values['specification'])
-                        # Contradiction - the LEE presents information that disputes the model interaction
+                        # Contradiction - the IOL presents information that disputes the model interaction
                         elif compare_atts == 3:
                             kinds.append(kind_values['att contradiction'])
 
-                    # If LEE = "D" and MI = "I"
-                    elif lee_cxn_type == "d" and mi_cxn_type == "i":
+                    # If IOL = "D" and MI = "I"
+                    elif iol_cxn_type == "d" and mi_cxn_type == "i":
                         compare_atts = compare(model_atts, reading_atts)
-                        # If attributes are non-contradictory: LEE is a specification
+                        # If attributes are non-contradictory: IOL is a specification
                         if compare_atts in [0,1,2]: kinds.append(kind_values['specification'])
-                        # Else: LEE is a contradiction
+                        # Else: IOL is a contradiction
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
-                    # If LEE ="I" and MI = "D":
-                    elif lee_cxn_type == "i" and mi_cxn_type == "d":
+                    # If IOL ="I" and MI = "D":
+                    elif iol_cxn_type == "i" and mi_cxn_type == "d":
                         compare_atts = compare(model_atts, reading_atts)
-                        #If attributes are non-contradictory: LEE is a weak corroboration
+                        #If attributes are non-contradictory: IOL is a weak corroboration
                         if compare_atts in [0,1,2]: kinds.append(kind_values['indirect interaction'])
-                        #Else: LEE is a contradiction
+                        #Else: IOL is a contradiction
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
                 # MI with Matched direction, Mismatched sign
@@ -315,14 +366,16 @@ def kind_score(x,
                         #Connection type
                         mi_cxn_type = model_df.loc[t_idx, opp_sign + ' Connection Type List'].split(",")[reg_index]
                     else: mi_cxn_type = mi_cxn
-                    # If LEE = "I" and MI = "D"
-                    if lee_cxn_type == "i" and mi_cxn_type != "i":
+                    # If IOL = "I" and MI = "D"
+                    if iol_cxn_type == "i" and mi_cxn_type != "i":
                         if classify_scheme in ['1', '2']:
                             kinds.append(kind_values['sign contradiction'])
+
                         elif classify_scheme == '3':
                             kinds.append(kind_values['flagged5'])
+
                     else:
-                        #LEE is a Sign Contradiction, regardless of connection type
+                        #IOL is a Sign Contradiction, regardless of connection type
                         kinds.append(kind_values['sign contradiction'])
 
                 # MI with Mismatched direction, Matched sign
@@ -346,45 +399,50 @@ def kind_score(x,
 
                     model_atts = get_attributes(s_idx, t_idx, reg_sign, model_df, attributes)
 
-                    # LEE = "I" and MI = "I"
-                    if lee_cxn_type == "i" and mi_cxn_type == "i":
+                    # IOL = "I" and MI = "I"
+                    if iol_cxn_type == "i" and mi_cxn_type == "i":
                         kinds.append(kind_values['dir contradiction'])
 
-                    # LEE = "D" and MI = "D"
-                    elif lee_cxn_type == "d" and mi_cxn_type != "i":
+                    # IOL = "D" and MI = "D"
+                    elif iol_cxn_type == "d" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             # If the attributes are not contradictory - Flagged for manual review
                             if compare_atts in [0, 1, 2]:
                                 kinds.append(kind_values['dir mismatch'])
+
                             # Else - Contradiction
                             else:
                                 kinds.append(kind_values['dir contradiction'])
                         elif classify_scheme == '3':
                             kinds.append(kind_values['dir contradiction'])
+
                         else:
                             raise ValueError('Enter a right scheme number (1, 2, or 3).')
 
-                    # LEE = "I" and MI = "D"
-                    elif lee_cxn_type == "i" and mi_cxn_type != "i":
+                    # IOL = "I" and MI = "D"
+                    elif iol_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             # If the attributes are not contradictory - Flagged for manual review
                             if compare_atts in [0, 1, 2]:
                                 kinds.append(kind_values['dir mismatch'])
+
                             # Else - Contradiction
                             else:
                                 kinds.append(kind_values['dir contradiction'])
                         elif classify_scheme == '3':
                             if compare_atts in [0, 1, 2]:
                                 kinds.append(kind_values['dir contradiction'])
+
                             else:
                                 kinds.append(kind_values['flagged4'])
+
                         else:
                             raise ValueError('Enter a right scheme number (1, 2, or 3).')
 
-                    # LEE = "D" and MI = "I"
-                    elif lee_cxn_type == "d" and mi_cxn_type == "i":
+                    # IOL = "D" and MI = "I"
+                    elif iol_cxn_type == "d" and mi_cxn_type == "i":
                         kinds.append(kind_values['dir contradiction'])
 
                 #MI with Mismatched direction, Mismatched sign
@@ -405,35 +463,44 @@ def kind_score(x,
                     #List of model attributes to compare to reading attributes
                     model_atts = get_attributes(s_idx, t_idx, opp_sign, model_df, attributes)
 
-                    # LEE = "D" and MI = "D"
-                    if lee_cxn_type == "d" and mi_cxn_type != "i":
+                    # IOL = "D" and MI = "D"
+                    if iol_cxn_type == "d" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         if classify_scheme in ['1', '2']:
                             #If the attributes are not contradictory - Flagged for manual review
-                            if compare_atts in [0,1,2]: kinds.append(kind_values['dir mismatch'])
+                            if compare_atts in [0,1,2]:
+                                kinds.append(kind_values['dir mismatch'])
+
                             #Else - Contradiction
                             else: kinds.append(kind_values['dir contradiction'])
 
                         elif classify_scheme == '3':
-                            if compare_atts in [0,1,2]: kinds.append(kind_values['dir contradiction'])
-                            else: kinds.append(kind_values['dir mismatch'])
+                            if compare_atts in [0,1,2]:
+                                kinds.append(kind_values['dir contradiction'])
+
+                            else:
+                                kinds.append(kind_values['dir mismatch'])
+
                         else:
                             raise ValueError('Enter a right scheme (1, 2, or 3).')
-                    # LEE = "D" and MI = "i"
-                    elif lee_cxn_type == "d" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
-                    # LEE = "i" and MI = "D"
-                    elif lee_cxn_type == "i" and mi_cxn_type != "i":
+                    # IOL = "D" and MI = "i"
+                    elif iol_cxn_type == "d" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
+                    # IOL = "i" and MI = "D"
+                    elif iol_cxn_type == "i" and mi_cxn_type != "i":
                         compare_atts = compare(model_atts, reading_atts)
                         #If the attributes are not contradictory - Flagged for manual review
                         if compare_atts in [0, 1, 2]: kinds.append(kind_values['dir mismatch'])
                         #Else - Contradiction
                         else:
-                            if classify_scheme in ['1', '2']: kinds.append(kind_values['dir contradiction'])
+                            if classify_scheme in ['1', '2']:
+                                kinds.append(kind_values['dir contradiction'])
+
 
                             elif classify_scheme == '3':
                                 kinds.append(kind_values['flagged5'])
-                    # LEE = "D" and MI = "D"
-                    elif lee_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
+
+                    # IOL = "i" and MI = "i"
+                    elif iol_cxn_type == "i" and mi_cxn_type == "i": kinds.append(kind_values['dir contradiction'])
 
                 else:
                     # If there is a self-regulation (regulator is both target and source)
@@ -441,7 +508,8 @@ def kind_score(x,
                         kind = kind_values['self-regulation']
                     # If model does not contain interaction - check for path
                     else:
-                        kinds.append(path_finding(source_listname,target_listname,reg_sign,model_df,graph,kind_values,lee_cxn_type,reading_atts,attributes,classify_scheme))
+                        kinds.append(path_finding(source_listname,target_listname,reg_sign,model_df,graph,kind_values,iol_cxn_type,reading_atts,attributes,classify_scheme))
+
 
         if len(kinds) == 1:
             kind = kinds[0]
@@ -620,9 +688,9 @@ def kind_score(x,
     return kind
 
 
-def epistemic_value(x,reading_df):
+def epistemic_value(x: int,reading_df: pd.DataFrame) -> float:
     """
-    Finds the epistemic value of the LEE (when available)
+    Finds the epistemic value of the interactions of literature (IOL) (when available)
 
     Parameters
     ----------
@@ -634,7 +702,7 @@ def epistemic_value(x,reading_df):
     Returns
     -------
     e_value : float
-        The Epistemic Value; if there is no Epistemic Value available for the reading, default is 1 for all LEEs
+        The Epistemic Value; if there is no Epistemic Value available for the reading, default is 1 for all IOLs
     """
 
     if 'Epistemic Value' in reading_df.columns:
@@ -644,10 +712,15 @@ def epistemic_value(x,reading_df):
     return e_value
 
 
-def score_reading(reading_df, model_df, graph,
-                  embedding_match=False, counter=None,
-                  kind_values = kind_dict, match_values = match_dict,
-                  attributes = atts_list, classify_scheme = '1', mi_cxn = 'd'):
+def score_reading(reading_df: pd.DataFrame, 
+                model_df: pd.DataFrame, 
+                graph:nx.DiGraph, 
+                counter: dict=None,
+                kind_values: dict=None, 
+                match_values: dict=None,
+                attributes: list=atts_list, 
+                classify_scheme: str='1', 
+                mi_cxn: str='d') -> pd.DataFrame:
     """
     Creates new columns for the Match Score, Kind Score, Epistemic Value, and Total Score.
     Calls scoring functions and stores the values in the approriate column.
@@ -662,13 +735,13 @@ def score_reading(reading_df, model_df, graph,
         directed graph of the model, necessary for calling kind_score module
     counter: dict
         A dictionary for counting the corrobrated and contradicted interaction
-        defulat value is None
+        defulat value is None and ignore the counting step
     kind_values : dict
         Dictionary assigning Kind Score values
-        Default values found in kind_dict
+        Default values found in KIND_DICT_A and KIND_DICT_B
     match_values : dict
         Dictionary assigning Match Score values
-        Default values found in match_dict
+        Default values found in MATCH_DICT
     attributes : list
         List of attributes compared between the model and the machine reading output
         Default is None
@@ -680,6 +753,21 @@ def score_reading(reading_df, model_df, graph,
     scored = reading_df : pd.DataFrame
         reading dataframe with added scores
     """
+    assert (classify_scheme in ['1', '2', '3'])
+    assert (mi_cxn in ['d', 'i'])
+
+    if kind_values is None:
+        if classify_scheme in ['1', '2']:
+            kind_values = KIND_DICT_A
+
+        elif classify_scheme == '3':
+            kind_values = KIND_DICT_B
+    else:
+        pass
+
+    if match_values is None:
+        match_values = MATCH_DICT
+
 
     #Create new DF columns for score calculations
     scored_reading_df = reading_df.copy()
@@ -687,11 +775,11 @@ def score_reading(reading_df, model_df, graph,
     scored_reading_df['Kind Score'] = pd.Series()
     scored_reading_df['Epistemic Value'] = pd.Series()
     scored_reading_df['Total Score'] = pd.Series()
-    print(reading_df.shape[0])
+
     #Calculate scores
     for x in range(reading_df.shape[0]):
-        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df,embedding_match, match_values)
-        scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph,embedding_match, counter,kind_values,attributes,classify_scheme,mi_cxn)
+        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df, match_values)
+        scored_reading_df.at[x,'Kind Score'] = kind_score(x,model_df,reading_df,graph, counter,kind_values,attributes,classify_scheme,mi_cxn)
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
         scored_reading_df.at[x,'Total Score'] =  ((scored_reading_df.at[x,'Evidence Score']*scored_reading_df.at[x,'Match Score'])+scored_reading_df.at[x,'Kind Score'])*scored_reading_df.at[x,'Epistemic Value']
 

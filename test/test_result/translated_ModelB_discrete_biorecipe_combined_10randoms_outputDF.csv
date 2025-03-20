@@ -1,0 +1,84 @@
+Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+mtorc1,other,,,,mtorc1,,,rapamycin,chemical,,,pubchem,5284616,,,negative,i,none,,,cl:cl:0001063,,,nan,nan,"both rapamycin and rapalogs also suppresses the negative ‐ feedback loop of molecules downstream from mtorc1 , including s6k and grb10.45 , 46 this results in the activation of akt and paradoxically promotes cell growth.47 moreover , as mtorc1 also negatively regulates mtorc2 , rapamycin and the rapalogs lower inhibition against mtorc2 , resulting in compensatory akt activation by mtorc2 .",pmc5765289,1,0.1,39,1,39.1
+cell cycle,biologicalprocess,,,,go:0007049,,,mtorc1 inhibitors,other,,,uaz,uaz6d544f52433120696e68696269746f7273,,,negative,i,none,,cellosaurus:cvcl_m861,,,,nan,nan,"it is widely believed that rapamycin inhibits the translation of key mrnas required for progression from the g1 to the s phase , inducing cell ‐ cycle arrest at g0/g1.42 although both rapamycin and pp242 induced g0/g1 arrest in ed ‐ 40515 ( − ) cells effectively ( figure 3a , b ) , only pp242 induced apoptosis compared to the control and the mtorc1 inhibitors in ed ‐ 40515 ( − ) , mt ‐ 2 , and atl ‐ 43t cells ( figures 3c , s3 ) .",pmc5765289,1,0.1,39,1,39.1
+mtorc1,other,,,,mtorc1,,,mtorc2,other,,,fplx,mtorc2,,,negative,i,none,,,cl:cl:0001063,,,nan,nan,"both rapamycin and rapalogs also suppresses the negative ‐ feedback loop of molecules downstream from mtorc1 , including s6k and grb10.45 , 46 this results in the activation of akt and paradoxically promotes cell growth.47 moreover , as mtorc1 also negatively regulates mtorc2 , rapamycin and the rapalogs lower inhibition against mtorc2 , resulting in compensatory akt activation by mtorc2 .",pmc5765289,1,0.1,39,1,39.1
+ly294002,chemical,,,,chebi:65329,,,proliferation,biologicalprocess,,,go,go:0008283,,,negative,i,none,,cellosaurus:cvcl_m861 ++++ cellosaurus:cvcl_7028 ++++ cellosaurus:cvcl_0065,,,,nan,nan,"by contrast , ly294002 and pp242 effectively and uniformly suppressed the proliferation of all cell lines according to dose .",pmc5765289,1,0.1,39,1,39.1
+pi3k/akt/mtor,other,,,,uaz5049334b2f416b742f6d544f52,,,proliferation,biologicalprocess,,,go,go:0008283,,,negative,i,none,,cellosaurus:cvcl_7028 ++++ cellosaurus:cvcl_m861,,,,nan,nan,3.2 pi3k/akt/mtor pathway inhibitors suppress proliferation of atl and htlv-1-infected cells .,pmc5765289,1,0.1,39,1,39.1
+pp242,chemical,,,,24905147,,,pi3k/akt/mtor,other,,,uaz,uaz5049334b2f416b742f6d544f52,,,negative,i,none,,cellosaurus:cvcl_m861,,,,nan,nan,3.4 pp242 and azd8055 block the feedback activation of pi3k/akt/mtor signaling .,pmc5765289,1,0.1,39,1,39.1
+pp242,chemical,,,,24905147,,,proliferation,biologicalprocess,,,go,go:0008283,,,negative,i,none,,cellosaurus:cvcl_m861 ++++ cellosaurus:cvcl_7028 ++++ cellosaurus:cvcl_0065,,,,nan,nan,"by contrast , ly294002 and pp242 effectively and uniformly suppressed the proliferation of all cell lines according to dose .",pmc5765289,1,0.1,39,1,39.1
+rapamycin,chemical,,,,5284616,,,translation,biologicalprocess,,,go,go:0006412,,,negative,i,none,,cellosaurus:cvcl_m861,,,,nan,nan,"it is widely believed that rapamycin inhibits the translation of key mrnas required for progression from the g1 to the s phase , inducing cell ‐ cycle arrest at g0/g1.42 although both rapamycin and pp242 induced g0/g1 arrest in ed ‐ 40515 ( − ) cells effectively ( figure 3a , b ) , only pp242 induced apoptosis compared to the control and the mtorc1 inhibitors in ed ‐ 40515 ( − ) , mt ‐ 2 , and atl ‐ 43t cells ( figures 3c , s3 ) .",pmc5765289,1,0.1,39,1,39.1
+cell cycle,biologicalprocess,,,,go:0007049,,,translation,biologicalprocess,,,go,go:0006412,,,negative,i,none,,cellosaurus:cvcl_m861,,,,nan,nan,"it is widely believed that rapamycin inhibits the translation of key mrnas required for progression from the g1 to the s phase , inducing cell ‐ cycle arrest at g0/g1.42 although both rapamycin and pp242 induced g0/g1 arrest in ed ‐ 40515 ( − ) cells effectively ( figure 3a , b ) , only pp242 induced apoptosis compared to the control and the mtorc1 inhibitors in ed ‐ 40515 ( − ) , mt ‐ 2 , and atl ‐ 43t cells ( figures 3c , s3 ) .",pmc5765289,1,0.1,39,1,39.1
+rapamycin,chemical,,,,5284616,,,mtorc1 inhibitors,other,,,uaz,uaz6d544f52433120696e68696269746f7273,,,negative,i,none,,cellosaurus:cvcl_m861,,,,nan,nan,"it is widely believed that rapamycin inhibits the translation of key mrnas required for progression from the g1 to the s phase , inducing cell ‐ cycle arrest at g0/g1.42 although both rapamycin and pp242 induced g0/g1 arrest in ed ‐ 40515 ( − ) cells effectively ( figure 3a , b ) , only pp242 induced apoptosis compared to the control and the mtorc1 inhibitors in ed ‐ 40515 ( − ) , mt ‐ 2 , and atl ‐ 43t cells ( figures 3c , s3 ) .",pmc5765289,1,0.1,39,1,39.1
+azd8055,chemical,,,,chebi:91329,,,pi3k/akt/mtor,other,,,uaz,uaz5049334b2f416b742f6d544f52,,,negative,i,none,,cellosaurus:cvcl_m861,,,,nan,nan,3.4 pp242 and azd8055 block the feedback activation of pi3k/akt/mtor signaling .,pmc5765289,1,0.1,39,1,39.1
+pi3k,protein,,,,p42336,,,mtorc2,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pkctheta,protein,,,,hmdb10147,,,nfkappab,protein,,,,q04206,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pip3,chemical,,,,hmdb10147,,,pdk1,protein,,,,q15118,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,pten,protein,,,,p60484,,,negative,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pi3k,protein,,,,p42336,,,pip3,chemical,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pi3k,protein,,,,p42336,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pdk1,protein,,,,q15118,,,akt,protein,,,,p31749,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+stat5,protein,,,,p42229,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfkappab,protein,,,,q04206,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfkappab,protein,,,,q04206,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfat,proteinfamily,,,,q13469,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tgfbeta,protein,,,,p01137,,,smad3,protein,,,,p84022,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfat,proteinfamily,,,,q13469,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+nfat,proteinfamily,,,,q13469,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pkctheta,protein,,,,hmdb10147,,,tak1,protein,,,,o43318,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+stat5,protein,,,,p42229,,,stat5,protein,,,,p42229,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,pkctheta,protein,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pten,protein,,,,p60484,,,pip3,chemical,,,,hmdb10147,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+pten,protein,,,,p60484,,,pten,protein,,,,p60484,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+raf,protein,,,,p04049,,,mek2,protein,,,,p36507,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,mtorc2,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ras,protein,,,,p01116,,,raf,protein,,,,p04049,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ras,protein,,,,p01116,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+rheb,protein,,,,q15382,,,mtorc1,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+s6k1,protein,,,,q15418,,,mtorc2,complex,,,,p42345,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+s6k1,protein,,,,q15418,,,ps6,protein,,,,p62753,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+smad3,protein,,,,p84022,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tcr,protein,,,,p01850,,,ca,chemical,,,,,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tak1,protein,,,,o43318,,,mkk7,protein,,,,o14733,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+stat5,protein,,,,p42229,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,pkctheta,protein,,,,hmdb10147,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+akt,protein,,,,p31749,,,akt,protein,,,,p31749,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,mtor,protein,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd28,protein,,,,p10747,,,pkctheta,protein,,,,hmdb10147,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,il2,protein,,,,p60568,extracellular,go:0005576,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+foxp3,protein,,,,q9bzs1,,,pten,protein,,,,p60484,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+foxp3,protein,,,,q9bzs1,,,il2,protein,,,,p60568,,,negative,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+foxp3,protein,,,,q9bzs1,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+fos,protein,,,,p01100,,,ap1,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+erk,protein,,,,p29323,,,fos,protein,,,,p01100,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd28,protein,,,,p10747,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd28,protein,,,,p10747,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc2,complex,,,,p42345,,,akt,protein,,,,p31749,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd25,protein,,,,p01589,,,il2r,protein,,,,p14784,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd132,protein,,,,p31785,,,il2r,protein,,,,p14784,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+cd122,protein,,,,p14784,,,il2r,protein,,,,p14784,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ca,chemical,,,,,,,nfat,proteinfamily,,,,q13469,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ap1,protein,,,,p05412,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+ap1,protein,,,,p05412,,,cd25,protein,,,,p01589,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+akt,protein,,,,p31749,,,tsc,protein,,,,q92574,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,jak3,protein,,,,p52333,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,extracellular,go:0005576,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,,,il2,protein,,,,p60568,extracellular,go:0005576,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+akt,protein,,,,p31749,,,nfkappab,protein,,,,q04206,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,s6k1,protein,,,,q15418,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,mtorc1,complex,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,mtor,protein,,,,p42345,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtorc1,complex,,,,p42345,,,mtor,protein,,,,p42345,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mtor,protein,,,,p42345,,,foxp3,protein,,,,q9bzs1,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mkk7,protein,,,,o14733,,,jnk,protein,,,,p45983,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+mek2,protein,,,,p36507,,,erk,protein,,,,p29323,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+jun,protein,,,,p05412,,,ap1,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+jnk,protein,,,,p45983,,,jun,protein,,,,p05412,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+jak3,protein,,,,p52333,,,stat5,protein,,,,p42229,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2r,protein,,,,p14784,,,ras,protein,,,,p01116,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2r,protein,,,,p14784,,,pi3k,protein,,,,p42336,,,positive,i,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2r,protein,,,,p14784,,,jak3,protein,,,,p52333,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+il2,protein,,,,p60568,,,il2,protein,,,,p60568,,,positive,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12
+tsc,protein,,,,q92574,,,rheb,protein,,,,q15382,,,negative,d,,,,,,,nan,nan,nan,nan,1,10,2,1,12

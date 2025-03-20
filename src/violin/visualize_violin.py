@@ -10,7 +10,13 @@ import matplotlib.patches as mpatches
 import matplotlib.ticker as mticker
 import numpy as np
 
-def visualize (match_values, kind_values, file_name, filter_opt='100%'):
+from violin.scoring import KIND_DICT_A, KIND_DICT_B, MATCH_DICT
+
+def visualize (file_name: str, 
+            filter_opt: str='100%', 
+            match_values: dict=None, 
+            kind_values: dict=None, 
+            classify_scheme: str='1') -> None:
     """
     This creates graphs of the VIOLIN output:
     evidence score, match score, and total score,
@@ -33,9 +39,22 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
         where X, Y, and Z, are values
         Default is '100%' (Total Output)
     """
+    assert (classify_scheme in ['1', '2', '3'])
+    if match_values is None:
+        match_values = MATCH_DICT
+    
+    if kind_values is None:
+        if classify_scheme in ['1', '2']:
+            kind_values = KIND_DICT_A
+        elif classify_scheme == '3':
+            kind_values = KIND_DICT_B
+        else: pass
 
     # Input file
     output = pd.read_csv(file_name, sep=',',index_col=None).fillna("nan")
+    if len(output) == 0:
+        print("The file to plot is empty.")
+        return None
 
     # Filtering by %
     if '%' in filter_opt:
@@ -62,109 +81,109 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
     # If visualizing all categories of output
     if '_outputDF' in file_name:
         # Separating output my category
-        corroborations = kept[kept["Kind Score"].isin([kind_values['strong corroboration'],
-                                                           kind_values['empty attribute'],
-                                                           kind_values['indirect interaction'],
-                                                           kind_values['path corroboration'],
-                                                           kind_values['specification']])]
-        extensions = kept[kept["Kind Score"].isin([kind_values['full extension'],
-                                                    kind_values['hanging extension'],
-                                                    kind_values['internal extension']])]
-        contradictions = kept[kept["Kind Score"].isin([kind_values['dir contradiction'],
-                                                        kind_values['sign contradiction'],
-                                                        kind_values['att contradiction']])]
-        flagged = kept[kept["Kind Score"].isin([kind_values['dir mismatch'],
-                                                    kind_values['path mismatch'],
-                                                    kind_values['self-regulation']])]
+        # corroborations = kept[kept["Kind Score"].isin([kind_values['strong corroboration'],
+        #                                                    kind_values['empty attribute'],
+        #                                                    kind_values['indirect interaction'],
+        #                                                    kind_values['path corroboration'],
+        #                                                    kind_values['specification']])]
+        # extensions = kept[kept["Kind Score"].isin([kind_values['full extension'],
+        #                                             kind_values['hanging extension'],
+        #                                             kind_values['internal extension']])]
+        # contradictions = kept[kept["Kind Score"].isin([kind_values['dir contradiction'],
+        #                                                 kind_values['sign contradiction'],
+        #                                                 kind_values['att contradiction']])]
+        # flagged = kept[kept["Kind Score"].isin([kind_values['dir mismatch'],
+        #                                             kind_values['path mismatch'],
+        #                                             kind_values['self-regulation']])]
 
-        plt.figure(figsize=(12, 6))
-        # Plot main category distribution
-        category = ['Corroboration','Extension','Contradiction','Flagged']
-        X_axis = np.arange(len(category))
-        mycolors = ['royalblue','limegreen','gold','darkorange']
-        counts = [corroborations.shape[0],extensions.shape[0],contradictions.shape[0],flagged.shape[0]]
+        # plt.figure(figsize=(12, 6))
+        # # Plot main category distribution
+        # category = ['Corroboration','Extension','Contradiction','Flagged']
+        # X_axis = np.arange(len(category))
+        # mycolors = ['royalblue','limegreen','gold','darkorange']
+        # counts = [corroborations.shape[0],extensions.shape[0],contradictions.shape[0],flagged.shape[0]]
 
-        plt.subplot(2, 2, 1)
-        plt.bar(X_axis,counts,label=category,color=mycolors)
-        plt.xticks(X_axis, category)
-        plt.ylabel('Number of LEEs')
+        # plt.subplot(2, 2, 1)
+        # plt.bar(X_axis,counts,label=category,color=mycolors)
+        # plt.xticks(X_axis, category)
+        # plt.ylabel('Number of IOLs')
 
-        #Evidence Score plots
-        scores = list(set(kept['Evidence Score']))
-        X_axis = np.arange(len(scores))
-        category = [corroborations['Evidence Score'],extensions['Evidence Score'],
-                    contradictions['Evidence Score'],flagged['Evidence Score']]
-        cat_lab = ['corroboration', 'extensions', 'contradictions', 'flagged']
-        colors = ['royalblue','limegreen','gold','darkorange']
+        # #Evidence Score plots
+        # scores = list(set(kept['Evidence Score']))
+        # X_axis = np.arange(len(scores))
+        # category = [corroborations['Evidence Score'],extensions['Evidence Score'],
+        #             contradictions['Evidence Score'],flagged['Evidence Score']]
+        # cat_lab = ['corroboration', 'extension', 'contradiction', 'flagged']
+        # colors = ['royalblue','limegreen','gold','darkorange']
 
-        plt.subplot(2, 2, 2)
-        for idx in range(len(category)):
-            evidence = category[idx].value_counts().keys().tolist()
-            counts = category[idx].value_counts().tolist()
-            # housekeeping to make sure all data is the same size
-            for value in scores:
-                if value not in evidence:
-                    evidence += [value]
-                    counts += [0]
-            counts = [x for _,x in sorted(zip(evidence,counts))]
-            plt.bar(X_axis+(idx*0.2),counts,0.2,color=colors[idx],label=cat_lab[idx])
-        plt.xticks(X_axis, scores, rotation=45)
-        plt.yscale('log')
-        plt.legend(prop={'size': 6})
-        plt.ylabel('Number of LEEs')
-        plt.xlabel('Evidence Score')
+        # plt.subplot(2, 2, 2)
+        # for idx in range(len(category)):
+        #     evidence = category[idx].value_counts().keys().tolist()
+        #     counts = category[idx].value_counts().tolist()
+        #     # housekeeping to make sure all data is the same size
+        #     for value in scores:
+        #         if value not in evidence:
+        #             evidence += [value]
+        #             counts += [0]
+        #     counts = [x for _,x in sorted(zip(evidence,counts))]
+        #     plt.bar(X_axis+(idx*0.2),counts,0.2,color=colors[idx],label=cat_lab[idx])
+        # plt.xticks(X_axis, scores, rotation=45)
+        # plt.yscale('log')
+        # plt.legend(prop={'size': 6})
+        # plt.ylabel('Number of IOLs')
+        # plt.xlabel('Evidence Score')
 
-        #Match Score plots
-        scores = list(set(kept['Match Score']))
-        X_axis = np.arange(len(scores))
-        category = [corroborations['Match Score'],extensions['Match Score'],
-                    contradictions['Match Score'],flagged['Match Score']]
-        cat_lab = ['corroboration', 'extensions', 'contradictions', 'flagged']
-        colors = ['royalblue','limegreen','gold','darkorange']
+        # #Match Score plots
+        # scores = list(set(kept['Match Score']))
+        # X_axis = np.arange(len(scores))
+        # category = [corroborations['Match Score'],extensions['Match Score'],
+        #             contradictions['Match Score'],flagged['Match Score']]
+        # cat_lab = ['corroboration', 'extension', 'contradiction', 'flagged']
+        # colors = ['royalblue','limegreen','gold','darkorange']
 
-        plt.subplot(2, 2, 3)
-        for idx in range(len(category)):
-            evidence = category[idx].value_counts().keys().tolist()
-            counts = category[idx].value_counts().tolist()
-            for value in scores:
-                if value not in evidence:
-                    evidence += [value]
-                    counts += [0]
-            counts = [x for _,x in sorted(zip(evidence,counts))]
-            plt.bar(X_axis+(idx*0.2),counts,0.2,color=colors[idx],label=cat_lab[idx])
-        plt.xticks(X_axis, scores)
-        plt.legend(prop={'size': 6})
-        plt.ylabel('Number of LEEs')
-        plt.xlabel('Match Score')
+        # plt.subplot(2, 2, 3)
+        # for idx in range(len(category)):
+        #     evidence = category[idx].value_counts().keys().tolist()
+        #     counts = category[idx].value_counts().tolist()
+        #     for value in scores:
+        #         if value not in evidence:
+        #             evidence += [value]
+        #             counts += [0]
+        #     counts = [x for _,x in sorted(zip(evidence,counts))]
+        #     plt.bar(X_axis+(idx*0.2),counts,0.2,color=colors[idx],label=cat_lab[idx])
+        # plt.xticks(X_axis, scores)
+        # plt.legend(prop={'size': 6})
+        # plt.ylabel('Number of IOLs')
+        # plt.xlabel('Match Score')
 
-        #Total Score plots
-        score_set = list(set(kept['Total Score'].tolist()))
-        scores = [float(i) for i in score_set]
-        X_axis = np.arange(len(scores))
-        category = [corroborations['Total Score'],extensions['Total Score'],
-                    contradictions['Total Score'],flagged['Total Score']]
-        cat_lab = ['corroboration', 'extensions', 'contradictions', 'flagged']
-        colors = ['royalblue','limegreen','gold','darkorange']
+        # #Total Score plots
+        # score_set = list(set(kept['Total Score'].tolist()))
+        # scores = [float(i) for i in score_set]
+        # X_axis = np.arange(len(scores))
+        # category = [corroborations['Total Score'],extensions['Total Score'],
+        #             contradictions['Total Score'],flagged['Total Score']]
+        # cat_lab = ['corroboration', 'extension', 'contradiction', 'flagged']
+        # colors = ['royalblue','limegreen','gold','darkorange']
 
-        plt.subplot(2, 2, 4)
-        for idx in range(4):
-            evidence = [float(i) for i in category[idx].value_counts().keys().tolist()]
-            counts = category[idx].value_counts().tolist()
-            for value in scores:
-                if value not in evidence:
-                    evidence += [value]
-                    counts += [0]
-            counts = [x for _,x in sorted(zip(evidence,counts))]
-            plt.bar(X_axis+(idx*0.2),counts,0.2,color=colors[idx],label=cat_lab[idx])
-        scores.sort()
-        plt.xticks(X_axis, scores, rotation=60)
-        plt.yscale('log')
-        plt.legend(prop={'size': 6})
-        plt.ylabel('Number of LEEs')
-        plt.xlabel('Total Score')
-        plt.show()
-        #plt.savefig('Output_Overview.png',bbox_inches = "tight",dpi=200)
-        plt.close()
+        # plt.subplot(2, 2, 4)
+        # for idx in range(4):
+        #     evidence = [float(i) for i in category[idx].value_counts().keys().tolist()]
+        #     counts = category[idx].value_counts().tolist()
+        #     for value in scores:
+        #         if value not in evidence:
+        #             evidence += [value]
+        #             counts += [0]
+        #     counts = [x for _,x in sorted(zip(evidence,counts))]
+        #     plt.bar(X_axis+(idx*0.2),counts,0.2,color=colors[idx],label=cat_lab[idx])
+        # scores.sort()
+        # plt.xticks(X_axis, scores, rotation=60)
+        # plt.yscale('log')
+        # plt.legend(prop={'size': 6})
+        # plt.ylabel('Number of IOLs')
+        # plt.xlabel('Total Score')
+        # plt.show()
+        # #plt.savefig('Output_Overview.png',bbox_inches = "tight",dpi=200)
+        # plt.close()
 
         # If Kind Score identifies sub-categories, add additional plot;
         #check with contradictions
@@ -179,46 +198,37 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
             weak_corr3 = kind.count(kind_values['path corroboration'])
             spec = kind.count(kind_values['specification'])
             corrs = np.array([strong_corr, weak_corr1, weak_corr2, weak_corr3, spec])
-            mylabels = ["Strong Corroborations: "+str(strong_corr), "empty attribute: "+str(weak_corr1),
-                        "indirect interactions: "+str(weak_corr2), "path corroborations: "+str(weak_corr3), "Specifications: "+str(spec)]
+            mylabels = ["strong corroboration: "+str(strong_corr), "empty attribute: "+str(weak_corr1),
+                        "indirect interaction: "+str(weak_corr2), "path corroboration: "+str(weak_corr3), "specification: "+str(spec)]
             mycolors = ['#235490','#2B65AD','#718EC5','#B0BEDA', '#E7EFF9']
             plt.figure(figsize=(16, 4))
             plt.subplot(1, 4, 1)
-            if all(x == 0 for x in corrs):
-                pass
-            else:
-                plt.pie(corrs,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.2,0), loc="lower center",
+            plt.pie(corrs,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.2,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
 
             full_ext = kind.count(kind_values['full extension'])
             hang_ext = kind.count(kind_values['hanging extension'])
             int_ext = kind.count(kind_values['internal extension'])
             exts = np.array([full_ext, hang_ext, int_ext])
-            mylabels = ["Full Extensions: "+str(full_ext), "Hanging Extensions: "+str(hang_ext),
-                        "Internal Extensions: "+str(int_ext)]
+            mylabels = ["full extension: "+str(full_ext), "hanging extension: "+str(hang_ext),
+                        "internal extension: "+str(int_ext)]
             mycolors = ['#24552D','#49A155','#7DBA84']
             plt.subplot(1, 4, 2)
-            if all(x == 0 for x in exts):
-                pass
-            else:
-                plt.pie(exts,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
+            plt.pie(exts,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.4,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
 
             dir_cont = kind.count(kind_values['dir contradiction'])
             sign_cont = kind.count(kind_values['sign contradiction'])
             att_cont =  kind.count(kind_values['att contradiction'])
             conts = np.array([dir_cont, sign_cont, att_cont])
-            mylabels = ["Direction Contradictions: "+str(dir_cont), "Sign Contradictions: "+str(sign_cont),
-                        "Attribute Contradictions: "+str(att_cont)]
+            mylabels = ["direction contradiction: "+str(dir_cont), "sign contradiction: "+str(sign_cont),
+                        "attribute contradiction: "+str(att_cont)]
             mycolors = ['#BE9735','#E2B441','#F9E6A9']
             plt.subplot(1, 4, 3)
-            if all(x == 0 for x in conts):
-                pass
-            else:
-                plt.pie(conts,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
+            plt.pie(conts,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.62,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
             flg4, flg5 = False, False
             flg1 = kind.count(kind_values['dir mismatch'])
@@ -231,17 +241,14 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                 flg5 = kind.count(kind_values['flagged5'])
             else: pass
             flgds = np.array([flg1, flg2, flg3, flg4, flg5]) if (flg4 and flg5) else np.array([flg1, flg2, flg3])
-            mylabels = ["dir mismatch: "+str(flg1), "path mismatch: "+str(flg2),
-                        "self-regulation: "+str(flg3), "Flagged 4: "+str(flg4), "Flagged 5: "+str(flg5)] if (flg4 and flg5) else \
-                        ["dir mismatch: " + str(flg1), "path mismatch: " + str(flg2),
+            mylabels = ["direction mismatch: "+str(flg1), "path mismatch: "+str(flg2),
+                        "self-regulation: "+str(flg3), "flagged 4: "+str(flg4), "flagged 5: "+str(flg5)] if (flg4 and flg5) else \
+                        ["direction mismatch: " + str(flg1), "path mismatch: " + str(flg2),
                         "self-regulation: " + str(flg3)]
             mycolors = ['#AA5626','#C7652E','#F1C6A8', '#F5D4BE', '#FCF1EA'] if (flg4 and flg5) else ['#AA5626','#C7652E','#F1C6A8']
             plt.subplot(1, 4, 4)
-            if all(x == 0 for x in flgds):
-                pass
-            else:
-                plt.pie(flgds,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
+            plt.pie(flgds,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(0.82,0), loc="lower center",
                        bbox_transform=plt.gcf().transFigure)
             #plt.savefig('Subcategory_Overview.png',bbox_inches = "tight",dpi=200)
             plt.close
@@ -249,68 +256,68 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
     # If only visualizing one category:
     else:
         category = file_name.split('.')[0].split('_')[-1]
-        mycolors = {"corroborations" : 'royalblue',
-                    "extensions" : 'limegreen',
-                    "contradictions" : 'gold',
+        mycolors = {"corroboration" : 'royalblue',
+                    "extension" : 'limegreen',
+                    "contradiction" : 'gold',
                     "flagged" : 'darkorange'}
 
-        plt.figure(figsize=(12, 6))
+        plt.figure(figsize=(6, 6))
         #Evidence Score plots
         evidence = kept['Evidence Score'].value_counts().keys().tolist()
         counts = kept['Evidence Score'].value_counts().tolist()
-        plt.subplot(2, 2, 1)
-        plt.bar(evidence,counts,0.2,color=mycolors[category],label=category)
-        plt.yscale('log')
-        plt.legend(prop={'size': 6})
-        plt.ylabel('Number of LEEs')
-        plt.xlabel('Evidence Score')
+        # plt.subplot(2, 2, 1)
+        # plt.bar(evidence,counts,0.2,color=mycolors[category],label=category)
+        # plt.yscale('log')
+        # plt.legend(prop={'size': 6})
+        # plt.ylabel('Number of IOLs')
+        # plt.xlabel('Evidence Score')
 
-        #Match Score plots
-        plt.subplot(2, 2, 2)
-        scores = [match_values['source present'],match_values['target present'],
-                match_values['both present'],match_values['neither present']]
-        scores.sort()
-        X_axis = np.arange(len(scores))
-        evidence = kept['Match Score'].value_counts().keys().tolist()
-        counts = kept['Match Score'].value_counts().tolist()
-        for value in scores:
-            if value not in evidence:
-                evidence += [value]
-                counts += [0]
-        counts = [x for _,x in sorted(zip(evidence,counts))]
-        plt.bar(X_axis,counts,0.2,color=mycolors[category],label=category)
-        plt.xticks(X_axis, scores)
-        plt.legend(prop={'size': 6})
-        plt.ylabel('Number of LEEs')
-        plt.xlabel('Match Score')
-        ticks_loc = X_axis
+        # #Match Score plots
+        # plt.subplot(2, 2, 2)
+        # scores = [match_values['source present'],match_values['target present'],
+        #         match_values['both present'],match_values['neither present']]
+        # scores.sort()
+        # X_axis = np.arange(len(scores))
+        # evidence = kept['Match Score'].value_counts().keys().tolist()
+        # counts = kept['Match Score'].value_counts().tolist()
+        # for value in scores:
+        #     if value not in evidence:
+        #         evidence += [value]
+        #         counts += [0]
+        # counts = [x for _,x in sorted(zip(evidence,counts))]
+        # plt.bar(X_axis,counts,0.2,color=mycolors[category],label=category)
+        # plt.xticks(X_axis, scores)
+        # plt.legend(prop={'size': 6})
+        # plt.ylabel('Number of IOLs')
+        # plt.xlabel('Match Score')
+        # ticks_loc = X_axis
 
 
-        #Total Score plots
-        plt.subplot(2, 2, 3)
+        # #Total Score plots
+        # plt.subplot(2, 2, 3)
 
-        scores = list(set(kept['Total Score']))
-        scores = [float(i) for i in scores]
-        X_axis = np.arange(len(scores))
-        evidence = kept['Total Score'].value_counts().keys().tolist()
-        counts = kept['Total Score'].value_counts().tolist()
-        plt.bar(evidence,counts,0.2,color=mycolors[category],label=category)
-        # plt.xticks(X_axis, evidence, rotation=45)
-        plt.yscale('log')
-        plt.legend(prop={'size': 6})
-        plt.ylabel('Number of LEEs')
-        plt.xlabel('Total Score')
+        # scores = list(set(kept['Total Score']))
+        # scores = [float(i) for i in scores]
+        # X_axis = np.arange(len(scores))
+        # evidence = kept['Total Score'].value_counts().keys().tolist()
+        # counts = kept['Total Score'].value_counts().tolist()
+        # plt.bar(evidence,counts,0.2,color=mycolors[category],label=category)
+        # # plt.xticks(X_axis, evidence, rotation=45)
+        # plt.yscale('log')
+        # plt.legend(prop={'size': 6})
+        # plt.ylabel('Number of IOLs')
+        # plt.xlabel('Total Score')
 
         #Category Breakdown
-        plt.subplot(2, 2, 4)
+        # plt.subplot(2, 2, 4)
         #Pie Chart
         kind = list(kept['Kind Score'])
-        cats = {'corroborations':['strong corroboration', 'empty attribute', 'indirect interaction', 'path corroboration'],
-                'corroborations colors':['#235490','#2B65AD','#718EC5','#B0BEDA'],
-                'extensions':['full extension', 'hanging extension', 'internal extension', 'specification'],
-                'extensions colors': ['#24552D','#49A155','#7DBA84','#B6D5B8'],
-                'contradictions':['dir contradiction', 'sign contradiction', 'att contradiction','none'],
-                'contradictions colors':['#BE9735','#E2B441','#F9E6A9','none'],
+        cats = {'corroboration':['strong corroboration', 'empty attribute', 'indirect interaction', 'path corroboration'],
+                'corroboration colors':['#235490','#2B65AD','#718EC5','#B0BEDA'],
+                'extension':['full extension', 'hanging extension', 'internal extension', 'specification'],
+                'extension colors': ['#24552D','#49A155','#7DBA84','#B6D5B8'],
+                'contradiction':['dir contradiction', 'sign contradiction', 'att contradiction','none'],
+                'contradiction colors':['#BE9735','#E2B441','#F9E6A9','none'],
                 'flagged':['dir mismatch', 'path mismatch', 'self-regulation', 'none'],
                 'flagged colors':['#AA5626','#C7652E','#F1C6A8','none']}
         cat_df = pd.DataFrame(cats)
@@ -330,20 +337,14 @@ def visualize (match_values, kind_values, file_name, filter_opt='100%'):
                 mylabels += [x+": "+str(kind.count(kind_values[x]))]
                 counts += [kind.count(kind_values[x])]
             numbs = np.array(counts)
-            if all(x ==0 for x in numbs):
-                pass
-            else:
-                plt.pie(numbs,colors=mycolors)
-                plt.legend(labels=mylabels,bbox_to_anchor=(1,0.25), loc="lower right",
+            plt.pie(numbs,colors=mycolors)
+            plt.legend(labels=mylabels,bbox_to_anchor=(1,0.25), loc="lower right",
                     bbox_transform=plt.gcf().transFigure)
         else:
             mylabels = [category]
             counts = [output.shape[0]]
             numbs = np.array(counts)
-            if all(x==0 for x in numbs):
-                pass
-            else:
-                plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
-                #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
-                plt.close
+            plt.pie(numbs,colors=[mycolors[1]],autopct=lambda p: '{:.0f}'.format(p * counts[0] / 100))
+        #plt.savefig(category+'_Overview.png',bbox_inches = "tight",dpi=200)
+        plt.close
     return

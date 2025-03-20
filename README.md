@@ -1,66 +1,58 @@
 # VIOLIN
 [![Documentation Status](https://readthedocs.org/projects/melody-violin/badge/?version=latest)](https://melody-violin.readthedocs.io/en/latest/?badge=latest)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
 
-### VIOLIN (Validating Interactions Of Likely Importance to the Network)
+## What is VIOLIN? 
+VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions curated from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
 
-VIOLIN (Validating Interactions Of Likely Importance to the Network) is a tool used to automatically classify and judge literature-extracted interactions curated from machine readers by comparing them to existing models. This comparison can help identify key interactions for model extension.
 
-## Contents
+## Repo Contents
 
-- [Functionality](#Functionality)
-- [I/O](#IO)
-- [Online Tutorial](#Online-Tutorial)
-- [Offline Installation](#Offline-Installation)
+<!-- - [Functionality](#Functionality) -->
+- [Tutorial](#Tutorial)
+- [Installation](#Installation)
 - [Package Structure](#Package-Structure)
-- [Reproducibility](#Reproducibility)
+- [User Interface](#User-Interface)
 - [Citation](#Citation)
 - [Funding](#Funding)
 - [Support](#Support)
 
-## Functionality
+<!-- ## Functionality
 - Identification: identifying the importance of the interactions for a user-defined cellular model
 - Error Detection: finding the contradictions in interactions list
-- Scoring: showing the quality of the interactions for a model
+- Scoring: showing the quality of the interactions for a model -->
 
-## I/O
 
-### Input/Output
-- `exmaple/input` - [folder](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input) containing model files and automatically retrieved interactions lists.
-- `example/output` - [example/output/<interactions_filename>_<class>.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output), in BioRECIPE format, containing classified interactions (corroborations, contradictions, extensions, and flagged) and [example/output/<interactions_filename>_<class>_score.csv](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/master/examples/output) (evidence score, match score, kind score, epistemic score and total score) 
+## Tutorial
+This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder.
+### Input
+- `Model` - A model for classification, in BioRECIPE model format. See the example file [modelA_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/ModelA_biorecipe.xlsx) 
+- `interaction set` - A interaction set, in BioRECIPE interaction list format. An example file is provided in [RA2_reading_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/interactions/RA2_reading_BioRECIPE.xlsx).
+
+### Output
+The output for each pair of a interaction set and a model consists of 5 files, which are:
+
+| Output Annotations    | Contents                                             |
+|-----------------------|------------------------------------------------------|
+| #_corroborations.csv | All interactions classified as collaborations        |
+| #_contradictions.csv | All interactions classified as contradictions        |
+| #_extensions.csv     | All interactions classified as extensions            |
+| #_flagged.csv        | All interactions classified as flagged               |
+| #_outputDF.csv       | All interactions, in order of descending Total Score |
+
+### Usage
+The example usage for VIOLIN could be found in Jupyter notebook and the python script:
 - `use_VIOLIN.ipynb` - [Jupyter notebook](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_VIOLIN.ipynb) used to run VIOLIN
 - `use_violin_script.py` - [python script](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_violin_script.py) used to run VIOLIN at the command line
 
-### I/O Annotations
-
-| Input Annotations      | Query                                                                    | Curation Method |
-|------------------------|--------------------------------------------------------------------------|-----------------|
-| RA1_reading.xlsx       | Melanoma                                                                 | REACH           |
-| RA2_reading.xlsx       | MEK, ERK, AKT, GSK3, P70RSK, S6, CDK4, 4EBP1, YB1, SRC, CHK2, MTOR, PI3K | REACH explorer  |
-| RA2_0_1_reading.xlsx   | RA2 without LEEs involving biological processes or chemicals             | Manual          |
-| RA2_0_1_1_reading.xlsx | RA2_0_1 without LEEs which were redundant or irrelevant                  | Manual          |
-| RA3_reading.xlsx       | MAPK/ERK pathway                                                         | REACH explorer  |
-| RA4_reading.xlsx       | RPS6K1                                                                   | REACH explorer  |
-
-For each reading set `R#` in `test_input`
-
-| Output Annotations    | Contents                                     |
-|-----------------------|----------------------------------------------|
-| R#_corroborations.csv | All LEEs judged as collaborations            |
-| R#_contradictions.csv | All LEEs judged as contradictions            |
-| R#_extensions.csv     | All LEEs judged as extensions                |
-| R#_flagged.csv        | All LEEs judged as flagged                   |
-| R#_outputDF.csv       | All LEEs, in order of descending Total Score |
-
-## Online Tutorial
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
-
-Run the demonstrated example; or alternatively upload user-customized input files (see [I/O](#IO)) to the _input/_ directory on File Browser Tab (upper left corner) of Binder.
-
-#### This interactive jupyter notebook walks you though all of the code and functions to:
 
 
-## Offline Installation
+### Customized input 
+To use your own curated model for VIOLIN, please follow the BioRECIPE model format and proofread the model file using the command below before running in the VIOLIN: 
+```python 
+python preprocessing/normalization.py --format model --file [MODEL_FILENAME] 
+```
+
+## Installation
 
 1. Clone the VIOLIN repository to your computer.
    ```
@@ -80,25 +72,52 @@ Run the demonstrated example; or alternatively upload user-customized input file
 
 - [`setup.py`](setup.py): python file that help set up python dependencies installation
 - [`src/violin/`](src/violin/): directory that includes core python VIOLIN files
-  - [`src/violin/formatting.py`](src/violin/formatting.py): functions of preprocessing strings in tabular input;
-  - [`src/violin/in_out.py`](src/violin/in_out.py): functions of reading interactions list and model file and writing VIOLIN outputs;
-  - [`src/violin/network.py`](src/violin/in_out.py): functions of creating model network and finding paths between nodes;
-  - [`src/violin/scoring.py`](src/violin/in_out.py): implementation of decision tree for classification;
-  - [`src/violin/visualize_violin.py`](src/violin/in_out.py): functions of visualizing classifying results;
-  - 
+  - [`src/violin/formatting.py`](src/violin/formatting.py): functions for formatting input spreadsheet values.
+  - [`src/violin/in_out.py`](src/violin/in_out.py): functions for converting files into readable tables and saving results.
+  - [`src/violin/network.py`](src/violin/network.py): functions for building networks and searching paths between nodes.
+  - [`src/violin/numeric.py`](src/violin/numeric.py): functions for matching the mutual nodes and attributes in the interaction set and model.
+  - [`src/violin/scoring.py`](src/violin/scoring.py): functions for classifying interactions using the decision tree.
+  - [`src/violin/visualize_violin.py`](src/violin/visualize_violin.py): functions for visualizing VIOLIN results.
+
 - [`examples/`](examples/): directory that includes tutorial notebook and example inputs and outputs
-- [`environment.yml`](environment.yml): environment file, required by [Binder](https://mybinder.readthedocs.io/en/latest/using/config_files.html#environment-yml-install-a-conda-environment)
 - [`docs/`](docs/): containing files supporting the repo's host on [Read the Docs](https://melody-violin.readthedocs.io)
 - [`LICENSE.txt`](LICENSE.txt): MIT License
 - [`README.md`](README.md): this is me!
 
-## Reproducibility
-The data and code for running experiments and creating figures in paper can be found in `data.zip`. The code is tested by `example/test` and `example/test_VIOLIN`.
+## Evaluation 
+### Evaluation on four machine readers and classification schemes
+The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the model of CD4+ T cell differentiation model. To get the results, run `evaluation_schemes.py` by:
+```python
+python evaluation_schemes.py --scheme [SCHEME] --reader [READER_NAME] --output [OUTPUT_DIRECTORY] --attributes [ATTRIBUTES_LIST]
+```
 
+e.g.
+```python
+python evaluation_schemes.py --scheme v1 --reader REACH --output ./
+```
+For more details, check the helper function of argparse or in `evaluation_schemes.py`.
+## User Interface
+For your convenience, VIOLIN includes a user interface that visualizes the classification results. The interface is built using Next.js for the frontend and FastAPI for the backend. 
+
+### Running the frontend
+Install npm (if not already installed yet) and start the development server:
+```python
+brew install npm
+npm run dev
+```
+
+### Running the backend
+Install FastAPI to start the server:
+```python
+pip install fastapi[standard]
+fastapi run main.py
+```
+You could find out the interface at http://localhost:3000, where you can upload your interaction set and model file for classification. 
 
 ## Citation
 
-```bibtex
+If you use this code or find this effort useful or relevant to your research, please cite the following paper:
+```
 @article{luo2024context,
   title={Context-driven interaction retrieval and classification for modeling, curation, and reuse},
   author={Luo, Haomiao and Hansen, Casey and Telmer, Cheryl A and Tang, Difei and Arazkhani, Niloofar and Zhou, Gaoxiang and Spirtes, Peter and Miskov-Zivanov, Natasa},
@@ -111,7 +130,7 @@ The data and code for running experiments and creating figures in paper can be f
 
 ## Funding
 
-This work was funded in part by DARPA Big Mechanism award, AIMCancer (W911NF-17-1-0135) and in part by the NSF EAGER award CCF-2324742.
+This work was funded in part by DARPA Big Mechanism award, AIMCancer (W911NF-17-1-0135); and in part by the University of Pittsburgh, Swanson School of Engineering.
 
 ## Support
 Feel free to reach out via email nmzivanov@pitt.edu for additional support if you run into any error.

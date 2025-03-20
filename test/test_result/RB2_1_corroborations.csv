@@ -1,0 +1,7 @@
+index,Regulator Name,Regulator Type,Regulator Subtype,Regulator HGNC Symbol,Regulator Database,Regulator ID,Regulator Compartment,Regulator Compartment ID,Regulated Name,Regulated Type,Regulated Subtype,Regulated HGNC Symbol,Regulated Database,Regulated ID,Regulated Compartment,Regulated Compartment ID,Sign,Connection Type,Mechanism,Site,Cell Line,Cell Type,Tissue Type,Organism,Score,Source,Statements,Paper IDs,Evidence Score,Match Score,Kind Score,Epistemic Value,Total Score
+62,pi3k,protein,,,,p42336,,,pten,protein,,,uniprot,p60484,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4712330,pmc4712330",2,10,5,1,25
+67,pten,protein,,,,p60484,,,pi3k,protein,,,be,p42336,,,negative,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc4712330,pmc4712330",2,10,5,1,25
+17,cd28,protein,,,,p10747,,,pi3k,protein,,,be,p42336,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3949578,pmc3949578",2,10,2,1,22
+81,tcr,protein,,,,p04234,,,pi3k,protein,,,be,p42336,,,positive,i,,,,,,,"nan,nan","nan,nan","nan,nan","pmc3949578,pmc3949578",2,10,2,1,22
+77,tcr,protein,,,,p04234,,,cd25,protein,,,uniprot,p01589,,,positive,i,,,,,,,nan,nan,nan,pmc3949578,1,10,5,1,15
+33,il2,protein,,,,p60568,,,pi3k,protein,,,be,p42336,,,positive,i,,,,,,,nan,nan,nan,pmc3949578,1,10,2,1,12
