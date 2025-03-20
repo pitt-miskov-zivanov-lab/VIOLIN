@@ -1,18 +1,15 @@
 VIOLIN Function References (:py:mod:`violin`)
-=======================================================
+*******************************************************
 
 Input and Output Functions (:py:mod:`violin.in_out`)
 =======================================================
 
-I/O function
-^^^^^^^^^^^^
-
 This section details the functions which handle the input files and output of VIOLIN.
 
-For more information on the types of accepted inputs, see :doc:`files`.
+For more information on the types of accepted inputs, see `BioRECIPE <https://melody-biorecipe.readthedocs.io/en/latest/index.html>`_.
 
 Functions
----------
+^^^^^^^^^^^^
 
 .. autofunction:: violin.in_out.preprocessing_model
 
@@ -40,15 +37,12 @@ Default Model Columns (From BioRECIPE format)
     :lineno-start: 69
 
 
-Input and Output Functions (:py:mod:`violin.formatting`)
+Formatting Functions (:py:mod:`violin.formatting`)
 =======================================================
-
-Formatting function
-^^^^^^^^^^^^^^^^^^^
 
 This section details the formatting functions of VIOLIN, used during model and reading input.
 
-The formatting , as it:
+The formatting, as it:
 
 * identifies duplicate interactions in the reading output,
 * counts the number of times an interaction was found in the reading (:ref:`scoring:Evidence Score`),
@@ -58,7 +52,7 @@ The formatting functions are also responsible for inputting models and machine
 reading output which are not in the BioRECIPES or REACH format (respectively).
 
 Functions
----------
+^^^^^^^^^^^^
 
 .. autofunction:: violin.formatting.evidence_score
 
@@ -68,7 +62,7 @@ Functions
 
 
 Network Functions (:py:mod:`violin.network`)
-============================================
+=======================================================
 
 This page details how paths are defined and found in the model in VIOLIN.
 Because of the compact nature of the BioRECIPES model format,
@@ -86,8 +80,7 @@ the model. This functionality reduces the number of false extensions.
 .. image:: figures/PathFigure.png
 
 Functions
----------
-
+^^^^^^^^^^^^
 
 .. autofunction:: violin.network.node_edge_list
 
@@ -95,7 +88,7 @@ Functions
 
 
 
-Numerical Functions (:py:mod:`violin.numeric`)
+Numeric Functions (:py:mod:`violin.numeric`)
 ==============================================
 
 This page details the numeric operators of VIOLIN.
@@ -103,7 +96,7 @@ This page details the numeric operators of VIOLIN.
 These functions discretize qualitative operations within VIOLIN:
 
 #. searching for an element in the reading output,
-#. comparing attributes, indentifying whether a given attribute
+#. comparing attributes, identifying whether a given attribute
 
    * matches exactly an attribute in a corresponding model interaction (MI),
    * is missing where a MI attribute is present,
@@ -114,7 +107,7 @@ Both functions return numerical values to represent the outcome of the function.
 
 
 Functions
----------
+^^^^^^^^^^^^^
 
 .. autofunction:: violin.numeric.get_attributes
 
@@ -130,7 +123,7 @@ Scoring (:py:mod:`violin.scoring`)
 This page details the scoring functions of VIOLIN
 
 Match Score
------------
+^^^^^^^^^^^^^
 
 The Match Score (S\ :sub:`M`\) measures how many new nodes are found in the reading with respect to the model.
 For an interaction from the reading **A → B**, where **A** is the regulator and **B** is the
@@ -141,12 +134,12 @@ regulated node, this calculation considers 4 cases which determine the scoring o
 #. **B** is in the model, **A** is not
 #. Neither **A** nor **B** are in the model
 
-Deafult Match Level scores are given for the assumption that the user wants to extend a given model without
+Default Match Level scores are given for the assumption that the user wants to extend a given model without
 adding new nodes which may not be useful to the network. Thus, new regulators and new edges between model nodes are
 considered most important.
 
 Kind Score
-----------
+^^^^^^^^^^^^^
 
 The Kind Score (S\ :sub:`K`\) measures the edges of a reading interaction (LEE) with respect to the model (MI).
 The Kind Score easily identifies the classification of an interaction, as well as
@@ -220,27 +213,27 @@ Flagged
 
 
 Evidence Score
---------------
+^^^^^^^^^^^^^^^^^
 The Evidence Score (S\ :sub:`E`\) is a measure of how many times an LEE is found in the machine reading output. In the :py:func:`violin.formatting.evidence_score` function, column names
 are defined to determine how the function determines duplicates. For example, the Evidence Score can be calculated by comparing all LEE attributes and all machine readings spreadsheet columns.
 So only an exact match between LEEs will be counted as a duplicate. However, the user can also define fewer attributes, creating a more coarse-grained Evidence Score calculation.
 
 Epistemic Value
----------------
+^^^^^^^^^^^^^^^^^
 
 In the NLP output, we sometimes receive an Epistemic Value (S\ :sub:`B`\), which is a measure
 of the believability of an interaction in the LEI. Zero, Low, Moderate, and High
 believability correspond to numerical scores of 0.0, 0.33, 0.67, and 1.0, respectively.
 
 Total Score
------------
+^^^^^^^^^^^^^^^^^
 The total score (S\ :sub:`T`\) is calculated by
 
 .. math:: S_T = [S_K + (S_E*S_M)]*S_B
 
 
 Functions
----------
+^^^^^^^^^^^^^^^^^
 
 .. autofunction:: violin.scoring.match_score
 
@@ -271,6 +264,6 @@ on how to use the VIOLIN output. Visualization can be filtered by three possible
 - When subcategories are identified in the Kind Score definition, additional plots of subcategory distribution are included
 
 Functions
----------
+^^^^^^^^^^^^^^^
 
 .. autofunction:: violin.visualize_violin.visualize
