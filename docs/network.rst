@@ -19,11 +19,9 @@ the model. This functionality reduces the number of false extensions.
 Functions
 ---------
 
-.. currentmodule:: network
-.. autofunction:: node_edge_list
+.. autofunction:: network.node_edge_list
 
-.. currentmodule:: network
-.. autofunction:: path_finding
+.. autofunction:: network.path_finding
 
 Dependencies
 ------------
