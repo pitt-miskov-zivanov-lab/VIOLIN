@@ -8,3 +8,7 @@ dependencies:
     - matplotlib
     - openpyxl
     - tornado
+    - httplib2
+    - requests
+    - gilda
+    - tqdm

@@ -12,3 +12,7 @@ pandas>=1.5.3
 networkx
 numpy
 tornado
+httplib2
+requests
+tqdm
+gilda

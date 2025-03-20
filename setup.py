@@ -21,7 +21,7 @@ setup(
         'networkx',
         'numpy',
         'pandas',
-        'tornado', 
+        'tornado',
         'httplib2',
         "matplotlib",
         "requests",
