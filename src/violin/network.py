@@ -1,0 +1,193 @@
+"""
+network.py
+
+Handles the functions necessary for finding paths within the model for VIOLIN
+Created November 2019 - Casey Hansen MeLoDy Lab
+"""
+from typing import Union
+import pandas as pd
+import numpy as np
+import networkx as nx
+from violin.numeric import get_attributes, compare
+
+
+def node_edge_list(model_df: pd.DataFrame) -> nx.DiGraph:
+    """
+    This function converts the model from the BioRECIPES format into a node-edge list for use with NetworkX
+
+    Parameters
+    ----------
+    model_df : pd.DataFrame
+        The model dataframe, must be in BioRECIPES format
+
+    Returns
+    -------
+    node_edge_list : nx.DiGraph
+        A directed graph representation of the model
+    """
+
+    # If elements are defined by variables, use the variable names. Else, use the common names
+    if 'Listname' in model_df.columns and not model_df['Listname'].empty:
+        target = 'Listname'
+    elif 'Variable' in model_df.columns and not model_df['Variable'].empty:
+        target = 'Variable'
+    else:
+        target = 'Element Name'
+
+    # Subset of the model, just element and regulator columns
+    graph = model_df[[target, 'Positive Regulator List', 'Negative Regulator List']].astype(str)
+    # removes 'nan' placeholder
+    graph = graph.replace('nan', '')
+
+    # #remove excess punctuation from the regulator cells
+    graph['Positive Regulator List'] = (graph['Positive Regulator List'].str.replace('[', '').
+                                        str.replace(']', '').str.replace('\'', ''))
+    graph['Negative Regulator List'] = (graph['Negative Regulator List'].str.replace('[', '').
+                                        str.replace(']', '').str.replace('\'', ''))
+
+    # combine regulators into one column, separated by '-' symbol
+    # positiveRegulators_negativeRegulators
+    graph['Regulators'] = graph['Positive Regulator List'] + '/////' + graph['Negative Regulator List']
+    graph = graph.drop(columns=['Positive Regulator List', 'Negative Regulator List'])
+
+    # Split each row by '-' character
+    # This allows us to assign weights so that we know the "sign" (positive/negative) of the regulator
+    # Even rows are positive regulators, odd rows are negative regulators
+    graph = (graph.set_index([target]).stack().str.split('/////', expand=True).stack().
+             unstack(-2).reset_index(-1, drop=True).reset_index())
+    # Assign 'weights' to edge defined edge, 0 for positive regulators, 1 for negative regulators
+    for y in range(graph.shape[0]):
+        if y % 2 == 0:
+            graph.at[y, 'weight'] = 0
+        else:
+            graph.at[y, 'weight'] = 1
+
+    # Remove rows without a regulator node (housekeeping)
+    graph = graph.replace(r'^\s*$', np.nan, regex=True).dropna()
+    graph = (graph.set_index([target, 'weight']).stack().str.split(',', expand=True).stack().
+             unstack(-2).reset_index(-1, drop=True).reset_index())
+    # Remove any lingering whitespace
+    graph['Regulators'] = graph['Regulators'].str.strip()
+    graph[target] = graph[target].str.strip()
+    # Output edgelist
+    # graph.to_csv(r'/NodeEdgeList.csv')
+    # Create NetworkX directed graph
+    node_edge_list_ = nx.from_pandas_edgelist(graph, 'Regulators', target, 'weight', create_using=nx.DiGraph())
+    return node_edge_list_
+
+
+def path_finding(regulator: str,
+                 regulated: str,
+                 sign: str,
+                 model_df: pd.DataFrame,
+                 graph: nx.DiGraph,
+                 kind_values: dict,
+                 reading_cxn_type: str,
+                 reading_atts: dict,
+                 attributes: list,
+                 scheme='1') -> Union[str, int]:
+    """
+    This function searches for a path between the reading regulator and regulated in the model,
+    and calculates the kind score based on the results
+
+    Parameters
+    ----------
+    regulator : str
+        Element variable name of the regulator node
+    regulated : str
+        Element variable name of the regulated node
+    sign : str
+        Sign of regulated node
+    model_df : pd.DataFrame
+        Model dataframe
+    graph : nx.DiGraph
+        Model edgelist to create network for finding paths between elements
+    kind_values : dict
+        Dictionary containing the numerical values for the Kind Score classifications
+    reading_cxn_type : str
+        Connection Type of interaction from reading - 'i' for indirect, 'd' for direct
+    reading_atts: dict
+        attributes from interaction, where keys are attributes names and values are attributes values
+    attributes: list
+        attributes list for reading file
+    scheme: str
+        The scheme of classification, i.e. '1', '2', or '3'
+    Returns
+    -------
+    kind : int
+        Kind Score value for the interaction
+    """
+
+    # Sign of regulator; assigned same numbering as node_edge_list() function
+    # negativeRegulators = 1; positiveRegulators = 0
+    if sign == 'Negative':
+        sign = 1
+    else:
+        sign = 0
+
+    # Have to make sure regulator and regulated are in the directed graph representation of the model
+    # Some nodes may be in the model, but aren't regulated/regulators anywhere
+    if (regulator in graph) and (regulated in graph):
+        # If there is a path of the same direction and LEE = D: internal extension
+        if nx.has_path(graph, regulator, regulated) and len(
+                nx.shortest_path(graph, source=regulator, target=regulated)) > 1 and reading_cxn_type == "d":
+            if scheme in ['1', '3']:
+                kind = kind_values['internal extension']
+            elif scheme == '2':
+                kind = kind_values['path mismatch']
+            else:
+                raise ValueError('Enter a right scheme (1, 2, 3).')
+        # If there is a path of the same direction and LEE = I: check sign and attributes
+        elif nx.has_path(graph, regulator, regulated) and len(
+                nx.shortest_path(graph, source=regulator, target=regulated)) > 1 and reading_cxn_type == "i":
+            # Finding atts of beginning and end of path
+            s_idx = list(model_df['Listname']).index(regulator)
+            t_idx = list(model_df['Listname']).index(regulated)
+            # No need to assign value to `sign` since no influence attributes need to compare
+            # sign is ambiguous in path
+            model_atts = get_attributes(s_idx, t_idx, sign, model_df, attributes, path=True)
+            compare_atts = compare(model_atts, reading_atts)
+
+            # Finding Path sign
+            # path list
+            path = nx.shortest_path(graph, source=regulator, target=regulated, weight='weight')
+            # Check path sign
+            path_wgt = 0
+            idx = 0
+            # Sum the edge weights to determine the overall effect
+            while idx < len(path) - 1:
+                path_wgt += graph[path[idx]][path[idx + 1]]['weight']
+                idx += 1
+            # if %2 = 0, then positive regulation, if %2 = 1, then negative regulation
+            # Weak corroboration - regulation matches reading
+            if path_wgt % 2 == sign and compare_atts in [0, 1, 2]:
+                kind = kind_values[('path corroboration'
+                                    '')]
+            # Flagged - Regulation same sign, but contradictory attributes
+            elif path_wgt % 2 == sign and compare_atts == 3:
+                if scheme in ['1', '3']:
+                    kind = kind_values['path mismatch']
+                elif scheme == '2':
+                    kind = str(kind_values['att contradiction'])
+            # Flagged - Regulation opposite sign as reading
+            else:
+                if scheme in ['1', '3']:
+                    kind = kind_values['path mismatch']
+                elif scheme == '2':
+                    kind = str(kind_values['sign contradiction'])
+
+        # If there is a path of the opposite direction - Flagged
+        elif nx.has_path(graph, regulated, regulator) and len(
+                nx.shortest_path(graph, source=regulated, target=regulator)) > 1:
+            if scheme in ['1', '3']:
+                kind = kind_values['path mismatch']
+            elif scheme == '2':
+                kind = str(kind_values['dir contradiction'])
+
+        # If there is no path
+        else:
+            kind = kind_values['internal extension']
+    else:
+        kind = kind_values['internal extension']
+
+    return kind
