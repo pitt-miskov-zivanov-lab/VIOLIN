@@ -124,14 +124,14 @@ SUBTYPE_ABBR_DICT = {
 
 def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
     """
-    This function merges duplicate interactions and calculates evidence score of each LEE
+    This function merges duplicate interactions and calculates evidence score of each interaction
 
     Parameters
     ----------
     reading_df : pd.DataFrame
-        The dataframe of the machine reading output
+        A dataframe of the machine reading output within BioRECIPE
     col_names: list
-        Specifically the column headings used to determine if interactions are identical
+        A list of column headings used to determine if interactions are identical
 
     Returns
     -------
@@ -144,8 +144,7 @@ def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
     # The columns that aren't used to determine duplicates (such as Paper ID or Evidence Text)
     remainder = [x for x in reading_df.columns if x not in col_names]
 
-    # As VIOLIN Identifies duplicates, it merges attributes from the remainder list into a single cell
-    # This is how we count the number of times an LEE appears, and keep track of paper IDs and evidence text
+    # As VIOLIN identifies duplicates, it merges duplicate attributes into a list
     counted_reading = reading.groupby(col_names)[remainder[0]].apply(list).reset_index(name=remainder[0])
     for x in range(1, len(remainder)):
         sub = reading.groupby(col_names)[remainder[x]].apply(list).reset_index(name=remainder[x])
@@ -153,7 +152,6 @@ def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
 
     # Counting the number of duplicates
     counted_reading['Evidence Score'] = counted_reading[remainder[0]].str.len()
-    # counted_reading.to_csv("Trying.csv")
 
     return counted_reading
 
@@ -271,7 +269,7 @@ def get_type(input_type: str) -> str:
     Parameters
     ----------
     input_type: str
-        A string of entity type
+        An entity type
     Returns
     -------
     standard string to describe the type of entity
@@ -299,18 +297,18 @@ def get_type(input_type: str) -> str:
 
 def get_hgnc_symbol(hgnc_id: str, url: str='https://rest.genenames.org/fetch/hgnc_id') -> str:
     """
-    The function to fetch hgnc symbol by hngc identifier, function will also save a cache file locally to
-    save the fetching time.
+    The function to fetch hgnc symbol by hgnc identifier.
+
     Parameters
     ----------
     hgnc_id: str
         A string of the hgnc identifier to search
     url: str
         The url of HUGO Gene Nomenclature Committee
-    Returns 
+    Returns
     -------
-    hgnc_symbol: 
-        The string of hgnc symbol 
+    hgnc_symbol:
+        The string of hgnc symbol
     """
     response, content = h.request(
         url + f'/{hgnc_id}',
@@ -318,7 +316,7 @@ def get_hgnc_symbol(hgnc_id: str, url: str='https://rest.genenames.org/fetch/hgn
         '',
         headers
     )
-    print(hgnc_id)
+
     data = json.loads(content)
     status_code = False
     i = 0
@@ -470,7 +468,7 @@ def split_comma_out_parentheses(reg_rule: str) -> list:
     Returns
     -------
     reg_list: list
-    A list of expressions that are separated by brackets
+        A list of expressions that are separated by brackets
 
     """
 

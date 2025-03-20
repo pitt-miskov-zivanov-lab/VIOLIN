@@ -15,10 +15,10 @@ from violin.network import path_finding
 #                 "empty attribute" : 1,
 #                 "indirect interaction" : 1,
 #                 "path corroboration" : 1,
-#                 "hanging extension" : 40, 
-#                 "full extension" : 40, 
-#                 "internal extension" : 40, 
-#                 "specification" : 30, 
+#                 "hanging extension" : 40,
+#                 "full extension" : 40,
+#                 "internal extension" : 40,
+#                 "specification" : 30,
 #                 "dir contradiction" : 10,
 #                 "sign contradiction" : 10,
 #                 "att contradiction" : 10,
@@ -26,31 +26,31 @@ from violin.network import path_finding
 #                 "path mismatch" : 20,
 #                 "self-regulation" : 20}
 
-KIND_DICT_A = {"strong corroboration" : 2, 
+KIND_DICT_A = {"strong corroboration" : 2,
                 "empty attribute" : 1,
                 "indirect interaction" : 3,
                 "path corroboration" : 5,
                 "specification" : 7,
-                "hanging extension" : 40, 
-                "full extension" : 39, 
-                "internal extension" : 38,  
+                "hanging extension" : 40,
+                "full extension" : 39,
+                "internal extension" : 38,
                 "dir contradiction" : 11,
-                "sign contradiction" : 10, 
+                "sign contradiction" : 10,
                 "att contradiction" : 9,
                 "dir mismatch" : 20,
                 "path mismatch" : 19,
                 "self-regulation" : 18}
 
-KIND_DICT_B = {"strong corroboration" : 2, 
+KIND_DICT_B = {"strong corroboration" : 2,
                 "empty attribute" : 1,
                 "indirect interaction" : 3,
                 "path corroboration" : 5,
                 "specification" : 7,
-                "hanging extension" : 40, 
-                "full extension" : 39, 
-                "internal extension" : 38,  
+                "hanging extension" : 40,
+                "full extension" : 39,
+                "internal extension" : 38,
                 "dir contradiction" : 11,
-                "sign contradiction" : 10, 
+                "sign contradiction" : 10,
                 "att contradiction" : 9,
                 "dir mismatch" : 20,
                 "path mismatch" : 19,
@@ -59,8 +59,8 @@ KIND_DICT_B = {"strong corroboration" : 2,
                 "flagged5" : 16}
 
 MATCH_DICT = {"source present" : 1,
-                "target present" : 100, 
-                "both present" : 10, 
+                "target present" : 100,
+                "both present" : 10,
                 "neither present" : 0.1}
 
 # Default attributes list is empty
@@ -169,7 +169,7 @@ def kind_score(x: int,
         default value is None
     kind_values : dict
         Dictionary assigning Kind Score values
-        Default values found in KIND_DICT_A and KIND_DICT_B. 
+        Default values found in KIND_DICT_A and KIND_DICT_B
     attributes : list
         List of attributes compared between the model and the machine reading output
         Default is None
@@ -712,14 +712,14 @@ def epistemic_value(x: int,reading_df: pd.DataFrame) -> float:
     return e_value
 
 
-def score_reading(reading_df: pd.DataFrame, 
-                model_df: pd.DataFrame, 
-                graph:nx.DiGraph, 
+def score_reading(reading_df: pd.DataFrame,
+                model_df: pd.DataFrame,
+                graph:nx.DiGraph,
                 counter: dict=None,
-                kind_values: dict=None, 
+                kind_values: dict=None,
                 match_values: dict=None,
-                attributes: list=atts_list, 
-                classify_scheme: str='1', 
+                attributes: list=atts_list,
+                classify_scheme: str='1',
                 mi_cxn: str='d') -> pd.DataFrame:
     """
     Creates new columns for the Match Score, Kind Score, Epistemic Value, and Total Score.

@@ -34,31 +34,31 @@ KIND_DICT = {"strong corroboration": 2,
 
 # Default Kind Score values for subcategories
 
-KIND_DICT_A = {"strong corroboration" : 2, 
+KIND_DICT_A = {"strong corroboration" : 2,
                 "empty attribute" : 1,
                 "indirect interaction" : 3,
                 "path corroboration" : 5,
                 "specification" : 7,
-                "hanging extension" : 40, 
-                "full extension" : 39, 
-                "internal extension" : 38,  
+                "hanging extension" : 40,
+                "full extension" : 39,
+                "internal extension" : 38,
                 "dir contradiction" : 11,
-                "sign contradiction" : 10, 
+                "sign contradiction" : 10,
                 "att contradiction" : 9,
                 "dir mismatch" : 20,
                 "path mismatch" : 19,
                 "self-regulation" : 18}
 
-KIND_DICT_B = {"strong corroboration" : 2, 
+KIND_DICT_B = {"strong corroboration" : 2,
                 "empty attribute" : 1,
                 "indirect interaction" : 3,
                 "path corroboration" : 5,
                 "specification" : 7,
-                "hanging extension" : 40, 
-                "full extension" : 39, 
-                "internal extension" : 38,  
+                "hanging extension" : 40,
+                "full extension" : 39,
+                "internal extension" : 38,
                 "dir contradiction" : 11,
-                "sign contradiction" : 10, 
+                "sign contradiction" : 10,
                 "att contradiction" : 9,
                 "dir mismatch" : 20,
                 "path mismatch" : 19,
@@ -93,7 +93,7 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
 
 def preprocessing_model(model: str) -> pd.DataFrame:
     """
-    This function check if your model is correct or necessary columns are missing or not
+    This function check if the model is correct or necessary columns are missing or not
     Parameters
     ----------
     model : str
@@ -126,7 +126,7 @@ def preprocessing_model(model: str) -> pd.DataFrame:
 
         # Create a column for list-name
         model_df['Listname'] = [get_listname(idx, model_df) for idx in range(len(model_df))]
-        
+
         # Normalize element type
         model_df['Element Type'] = model_df['Element Type'].str.replace(' ', '')
 
@@ -145,8 +145,8 @@ def preprocessing_model(model: str) -> pd.DataFrame:
     return new_model
 
 
-def preprocessing_reading(reading: str, 
-                        evidence_score_cols: dict = None, 
+def preprocessing_reading(reading: str,
+                        evidence_score_cols: dict = None,
                         atts: list = None) -> pd.DataFrame:
     """
     This function import the reading file and check if the reading format is correct
@@ -157,9 +157,9 @@ def preprocessing_reading(reading: str,
         Directory and filename of the machine reading spreadsheet output, in BioRECIPE format
         Accepted file: .txt, .csv, .tsv, .xlsx
     evidence_score_cols : list
-        Column headings used to identify identical interactions in the machine reading output
+        A list of column headings used to identify identical interactions
     atts : list
-        a List of additional attributes which are available in LEE output
+        A list of additional attributes which are available in interactions set
         Default is none
 
     Returns
@@ -216,10 +216,10 @@ def preprocessing_reading(reading: str,
     return new_reading
 
 
-def output(reading_df: pd.DataFrame, file_name:str, classify_scheme: str='1', kind_values:dict=None):
+def output(reading_df: pd.DataFrame, file_name:str, classify_scheme: str='1', kind_values:dict=None) -> None:
     """
-    This function outputs the scored reading interactions.
-    This writes output files, there are no return variables
+    This function outputs the classified reading interactions.
+    The output filenames are composed with {filename}_{category}.csv.
 
     Parameters
     ----------
@@ -232,10 +232,12 @@ def output(reading_df: pd.DataFrame, file_name:str, classify_scheme: str='1', ki
     kind_values : dict
         Dictionary containing the numerical values for the Kind Score classifications
         Default values are found in KIND_DICT
+    Returns
+    -------
     """
     global BioRECIPE_READING_COL
     if kind_values is None:
-        if classify_scheme in ['1', '2']: 
+        if classify_scheme in ['1', '2']:
             kind_values = KIND_DICT_A
         elif classify_scheme == '3':
             kind_values = KIND_DICT_B

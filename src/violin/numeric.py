@@ -8,27 +8,27 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import pandas as pd
 
 
-def get_attributes(A_idx, B_idx, sign, model_df, attrs: list, path=False):
+def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:
     """
     The function get the attributes of the interaction in model
     Parameters
     ----------
     A_idx: int
-    A represents the element
+        A row index of element A in the input model dataframe
     B_idx: int
-    B represents the regulator
-    sign: string
-        'positive' or 'negative'
-    model_df: pd.DataFrame object
-        DataFrame of BioRECIPE model file
+        A row index of element B in the input model dataframe
+    sign: str
+        A sign of the interaction, available options: 'positive' or 'negative'
+    model_df: pd.DataFrame
+        A DataFrame of a model with BioRECIPE format
     attrs: list
         attributes list for reading file
-    path: boolean
-        influence attributes will be empty if only path is found in model
+    path: bool
+        An indicator if it is path interaction. Attributes will be empty if only path is found in model
 
     Returns
     -------
-    model_atts, dictionary
+    model_atts: dict
     """
     model_attrs = {attr: x for attr, x in zip(attrs, ['nan'] * len(attrs))}
     # Check if user input redundant attributes
@@ -91,35 +91,35 @@ def get_attributes(A_idx, B_idx, sign, model_df, attrs: list, path=False):
     return model_attrs
 
 
-def find_element(search_type,
-                 element_name,
-                 element_type,
-                 model_df,
-                 id_db=None ):
+def find_element(search_type: str,
+                 element_name: str,
+                 element_type: str,
+                 model_df: pd.DataFrame,
+                 id_db: str=None ) -> list | int:
     """
     This function finds the correct indices of an element within the model.
-    Because elements can exist as multiple types (Protein, RNA, gene, etc.),
+    Because elements can exist as multiple types (protein, RNA, gene, etc.),
     this function checks the element name/ID along with the element type.
-    Function may return a list, if a given element of a specific type 
+    Function may return a list, if a given element of a specific type
     exists with varying attributes (such as different locations)
 
     Parameters
     ----------
     search_type : str
-        Whether the element is being searched for by 'name' or 'ID'
+        An identifier of the element, available options are 'hgnc', 'name', and 'id'
     element_name: str
-        The name (or ID) of the element being searched for
+        A name (or ID) of the element being searched for
+    element_type: str
+        A type of element ('protein', 'protein family', etc.)
+    model_df: pd.DataFrame
+        A model dataframe within BioRECIPE format
     id_db: str
         provide id's database
-    element_type: str
-        The type of element searched for ('protein', 'protein family', etc.)
-    model_df: pd.DataFrame
-        The model dataframe
 
     Returns
     -------
-    location : list
-        All rows of the model spreadsheet in which the element is found (returns -1 if not found)
+    location : list|int
+        All row indices of the model spreadsheet in which the element is found (returns -1 if not found)
     """
 
     # Searching for element by HGNC symbol
@@ -155,20 +155,20 @@ def find_element(search_type,
         return -1
 
 
-def compare(model_atts: dict, reading_atts: dict):
+def compare(model_atts: dict, reading_atts: dict) -> int:
     """
-    Compares a list of model attributes to the corresponding LEE attributes, returns numeric value\n
-        Attributes are the same (strong corroboration): 0 \n
-        Some or all LEE attributes are missing (weak corroboration): 1\n
-        Some or all of the model attributes are missing (specification): 2\n
-        One or more model attribute differs from the LEE attributes (contradiction): 3
+    Compares a list of model attributes to the corresponding interaction attributes, returns numeric value
+        - Attributes are the same (strong corroboration): 0
+        - Some or all LEE attributes are missing (weak corroboration): 1
+        - Some or all of the model attributes are missing (specification): 2
+        - One or more model attribute differs from the LEE attributes (contradiction): 3
 
     Parameters
     ----------
     model_atts : dict
-        dictionary of attributes from the model interaction
+        A dictionary of attributes from the model interaction
     reading_atts : dict
-        dictionary of attributes from the literature extracted event (LEE)
+        A dictionary of attributes from the literature extracted event
 
     Returns
     -------
