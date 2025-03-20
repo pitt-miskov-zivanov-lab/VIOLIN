@@ -19,12 +19,10 @@ the model. This functionality reduces the number of false extensions.
 Functions
 ---------
 
-.. automodule:: violin.network
-   :members:
 
-.. autofunction:: network.node_edge_list
+.. autofunction:: violin.network.node_edge_list
 
-.. autofunction:: network.path_finding
+.. autofunction:: violin.network.path_finding
 
 Dependencies
 ------------
