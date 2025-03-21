@@ -66,7 +66,7 @@ KIND_DICT_B = {"strong corroboration" : 2,
                 "flagged4" : 17,
                 "flagged5" : 16}
 
-MODEL_COLUMNS = ['Element Name', 'Element Type', 'Element IDs', 'Variable',
+MODEL_COLUMNS = ['Element Name', 'Element Type', 'Element Subtype','Element IDs', 'Element HGNC Symbol', 'Compartment ID', 'Variable',
                  'Positive Regulator List', 'Positive Connection Type List',
                  'Negative Regulator List', 'Negative Connection Type List']
 

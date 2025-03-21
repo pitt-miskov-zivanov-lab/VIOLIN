@@ -32,7 +32,7 @@ Default Model Columns (From BioRECIPE format)
 
 .. literalinclude:: ../src/violin/in_out.py
     :language: python
-    :lines: 69-75
+    :lines: 69-72
     :lineno-start: 69
 
 
