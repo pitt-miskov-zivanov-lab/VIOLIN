@@ -93,10 +93,10 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
 
 def preprocessing_model(model: str) -> pd.DataFrame:
     """
-    This function check if the model is correct or necessary columns are missing.
+    This function checks whether the model is correct and verifies that all necessary columns are present.
 
-    This function could receive .text, .csv, .xlsx, .tsv file. The string in file will be convert into lower case.
-    Additionally, A 'Listname' column will be created as the unique identifier for every element for further indexing.
+    It accepts an executable BioRECIPE model provided in .txt, .csv, .xlsx, or .tsv format. Thefile's content will be convert into lower case.
+    Additionally, A 'Listname' is created as a unique identifier for every element for further indexing.
 
     Parameters
     ----------
@@ -106,7 +106,7 @@ def preprocessing_model(model: str) -> pd.DataFrame:
     Returns
     -------
     new_model : pd.DataFrame
-        A Formatted model dataframe.
+        A formatted model dataframe.
     """
     # Upload the model and reading files as dataframes based on the file extension
     global MODEL_COLUMNS
@@ -159,13 +159,13 @@ def preprocessing_reading(reading: str,
     Parameters
     ----------
     reading : str
-        Directory and filename of the machine reading spreadsheet output, in BioRECIPE format.
-        Accepted file: .txt, .csv, .tsv, .xlsx
+        A pathname of the machine reading spreadsheet output or interactions set from database, in BioRECIPE format.
+        Accepted file: .txt, .csv, .tsv, .xlsx.
     evidence_score_cols : list
         A list of column headings used to identify identical interactions.
     atts : list
         A list of additional attributes which are available in interactions set.
-        Default is none
+        Default is none.
 
     Returns
     -------
@@ -223,15 +223,15 @@ def preprocessing_reading(reading: str,
 
 def output(reading_df: pd.DataFrame, file_name:str, classify_scheme: str='1', kind_values:dict=None) -> None:
     """
-    This function outputs the classified reading interactions.
-    The output filenames are composed with {file_name_suffix}_{category}.csv.
+    This function outputs the classified interactions.
+    The output filenames are composed with {file_name_prefix}_{category}.csv.
 
     Parameters
     ----------
     reading_df : pd.dataframe
         A classified dataframe of a interactions set.
     file_name : str
-        A suffix of output filename.
+        A prefix of output filename.
     classify_scheme: str
         Scheme approach to classify, available options are '1', '2', and '3'.
     kind_values : dict

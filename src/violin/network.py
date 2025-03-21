@@ -89,7 +89,8 @@ def path_finding(regulator: str,
                  scheme='1') -> Union[str, int]:
     """
     This function searches for a path in the model, where the source and target are the identifier of the matched elements,
-    and calculates the kind score based on the results.
+    and calculates the kind score based on the results. The Dijkstra's algorithm is used to find the shortest path algorithm.
+    The path is identified as a negatively regulation between source and target, if the sum of edge weights is an odd number, and vice versa.
 
     Parameters
     ----------
@@ -113,7 +114,7 @@ def path_finding(regulator: str,
         attributes list for reading file.
     scheme: str
         The scheme of classification, i.e. '1', '2', or '3'.
-        
+
     Returns
     -------
     kind : int

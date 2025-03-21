@@ -152,14 +152,14 @@ def kind_score(x: int,
                classify_scheme: str='1',
                mi_cxn: str='d') -> int:
     """
-    This function calculates the Kind Score for an interaction in the Interactions Set (IS).
+    This function calculates the Kind Score for an interaction in the Interactions Set (iIS).
     The kind score will be used to represent the subcategories.
     For further details, please find out in: https://www.biorxiv.org/content/10.1101/2024.07.21.604448v1.
 
     Parameters
     ----------
     x : int
-        The row index for an interaction in IS.
+        The row index for an iIS.
     model_df: pd.DataFrame
         The model dataframe
     reading_df : pd.DataFrame
@@ -692,12 +692,12 @@ def kind_score(x: int,
 
 def epistemic_value(x: int,reading_df: pd.DataFrame) -> float:
     """
-    Finds the epistemic value of the interactions in Interaction Set (IS) (when available).
+    Finds the epistemic value of the interaction in Interaction Set (IS) (when available).
 
     Parameters
     ----------
     x : int
-        The row index for an interaction in IS.
+        The row index for an iIS.
     reading_df : pd.DataFrame
         An IS dataframe.
 

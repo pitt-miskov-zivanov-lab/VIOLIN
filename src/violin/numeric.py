@@ -11,7 +11,7 @@ from typing import Union, List
 
 def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:
     """
-    The function get the attributes of the interaction in model, available attributes includes
+    The function gets the attributes of the interaction in model, available attributes includes
     [Regulator Compartment, Regulator Compartment ID, Regulated Compartment, Regulated Compartment ID,
     Mechansim, Site, Cell Line, Cell Type, Tissue Type, Organism]. If Regulator Compartment is selected,
     Regulator Compartment ID will also be selected.
