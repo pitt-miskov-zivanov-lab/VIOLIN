@@ -236,7 +236,7 @@ def compare(model_atts: dict, reading_atts: dict) -> int:
             # Else: both model and reading attributes are available, but they differ
             else:
                 compare_atts.append(3)
-
+    # Check if compartment ID is matched or not
     s_location_atts = [0] * len(s_location_atts) if any(x == 0 for x in s_location_atts) else s_location_atts
     t_location_atts = [0] * len(t_location_atts) if any(x == 0 for x in t_location_atts) else t_location_atts
 

@@ -59,6 +59,8 @@ def merge_duplicates(reading_df, col_names):
 
 def main(result_dir: str, out_dir: str, reader_name: str, scheme: str ) -> None:
         
+        global FILES
+        
         print("Make sure your results match the scheme you are used for summary...")
         print(f'current result folder: {result_dir}')
         print(f'scheme: {scheme}')
@@ -72,11 +74,11 @@ def main(result_dir: str, out_dir: str, reader_name: str, scheme: str ) -> None:
             print(f)
 
             for c_ in ['corroboration', 'contradiction', 'flagged', 'extension']:
-                file = os.path.join(out_dir, 'f_{c_}.csv')
+                file = os.path.join(result_dir, f'{f}_{c_}.csv')
                 out_name = f
 
                 df = pd.read_csv(file, index_col=None).fillna('nan').astype(str)
-                df = df.applymap(lambda x: x.lower().strip() if isinstance(x, str) else x)
+                df = df.map(lambda x: x.lower().strip() if isinstance(x, str) else x)
 
                 if c_ not in count:
                     count[c_] = {}
@@ -111,7 +113,7 @@ def main(result_dir: str, out_dir: str, reader_name: str, scheme: str ) -> None:
                 else:
                     kind_dict = KIND_DICT_B
 
-                if c_ == 'corroborations':
+                if c_ == 'corroboration':
                     if 'strong corroboration' not in count[c_]:
                         count[c_]['strong corroboration'] = {}
                     if 'empty attribute' not in count[c_]:
@@ -129,7 +131,7 @@ def main(result_dir: str, out_dir: str, reader_name: str, scheme: str ) -> None:
                     count[c_]['path corroboration'][out_name] = len(df[df['Kind Score'] == str(kind_dict['path corroboration'])])
                     count[c_]['specification'][out_name] = len(df[df['Kind Score'] == str(kind_dict['specification'])])
 
-                elif c_ == 'contradictions':
+                elif c_ == 'contradiction':
                     if "sign contradiction" not in count[c_]:
                         count[c_]["sign contradiction"] = {}
                     if 'dir contradiction' not in count[c_]:
@@ -203,6 +205,7 @@ def main(result_dir: str, out_dir: str, reader_name: str, scheme: str ) -> None:
 
             count_df = pd.DataFrame(dict_)
             out_file = os.path.join(out_dir, reader_name, f'{scheme}_{_}_summary.csv')
+            os.makedirs(os.path.dirname(out_file), exist_ok=True)
             count_df.to_csv(out_file, index=False)
 
 

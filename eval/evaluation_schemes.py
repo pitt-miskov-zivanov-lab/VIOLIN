@@ -40,9 +40,10 @@ def main(scheme: str, reader: str, out_dir: str, attributes: list) -> None:
         kind_dict = KIND_DICT_B
 
     if attributes == None:
-        pass
-    else: 
         attributes = []
+    else: 
+        pass
+
 
     model_files = ['input/models/SkMel133_biorecipe.xlsx', 'input/models/ModelB_discrete_biorecipe.xlsx']
     reading_A_files = glob.glob(f'input/interactions/{reader}/RA*.xlsx')
@@ -62,10 +63,13 @@ def main(scheme: str, reader: str, out_dir: str, attributes: list) -> None:
     else:
         pass
 
+
     if os.path.isdir(os.path.join(out_dir, reader)):
         pass
     else:
         os.makedirs(os.path.join(out_dir, reader))
+    
+    print(attributes)
 
     for reading_file in reading_A_files:
         if 'FLUTE' in reader:
@@ -78,6 +82,7 @@ def main(scheme: str, reader: str, out_dir: str, attributes: list) -> None:
                                         evidence_score_cols=evidence_scoring_cols, 
                                         atts=attributes)
         counter_A = {'corroboration': [], 'contradiction': []}
+        time2 = time.time()
         scored = score_reading(reading_df, 
                         model_A_df, 
                         graph_A, 
@@ -87,8 +92,9 @@ def main(scheme: str, reader: str, out_dir: str, attributes: list) -> None:
                         attributes=attributes, 
                         classify_scheme=approach,
                         )
+        print(f'classification time: {time.time() - time2}')
         output(scored, output_file, kind_values=kind_dict)
-        print(time.time() - time1)
+        print(f'total time: {time.time() - time1}')
         print('corroboration in model: {}'.format(len(set(counter_A['corroboration']))))
         print('contradiction in model: {}'.format(len(set(counter_A['contradiction']))))
 
@@ -103,6 +109,7 @@ def main(scheme: str, reader: str, out_dir: str, attributes: list) -> None:
                                         evidence_score_cols=evidence_scoring_cols, 
                                         atts=attributes)
         counter_B = {'corroboration': [], 'contradiction': []}
+        time2 = time.time()
         scored = score_reading(reading_df, 
                         model_B_df, 
                         graph_B, 
@@ -111,22 +118,24 @@ def main(scheme: str, reader: str, out_dir: str, attributes: list) -> None:
                         match_values=MATCH_DICT, 
                         attributes=attributes, 
                         classify_scheme=approach)
+        print(f'classification time: {time.time() - time2}')
         output(scored, output_file, kind_values=kind_dict)
-        print(time.time() - time1)
+        print(f'total time: {time.time() - time1}')
         print('corroboration in model: {}'.format(len(set(counter_B['corroboration']))))
         print('contradiction in model: {}'.format(len(set(counter_B['contradiction']))))
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser(description='Evaluation Scheme')
     args.add_argument('-s', '--scheme', required=False, choices=['v1', 'v2', 'v3'], default='v1', help='Scheme name, i.e. v1, v2, or v3')
-    args.add_argument('-r', '--reader', required=True, choices=['REACH', 'LLAMA', 'GPT', 'LLAMA', 'FLUTE/REACH',
-                    'FLUTE/LLAMA', 'FLUTE/GPT', 'FLUTE/LLAMA'], help='Output directory')
+    args.add_argument('-r', '--reader', required=True, choices=['REACH', 'INDRA', 'GPT', 'LLAMA', 'FLUTE/REACH',
+                    'FLUTE/INDRA', 'FLUTE/GPT', 'FLUTE/LLAMA'], help='Readers name, e.g. REACH.')
     args.add_argument('-o', '--output', required=True, help='Output directory')
     args.add_argument('-a', '--attributes', required=False, choices=[
         'Regulated Compartment ID', 'Regulator Compartment ID', 'Mechanism', 'Cell Line', 'Cell Type', 'Tissue Type', 'Organism'
     ], 
-    default=['Regulated Compartment ID', 'Regulator Compartment ID'],nargs='+', help='Model approach')
+    default=['Regulated Compartment ID', 'Regulator Compartment ID'],nargs='+', help='Element, influence, and context attributes used to compare.')
     args = args.parse_args()
+    print(args.attributes)
     main(args.scheme, args.reader, args.output, args.attributes)
 
 
