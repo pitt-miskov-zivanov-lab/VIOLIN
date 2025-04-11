@@ -14,6 +14,12 @@ from violin.formatting import (
     evidence_score, get_type,
     format_variable_names, wrap_list_to_str, get_listname)
 
+import logging 
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
 # Default Kind Score values for categories
 """
 KIND_DICT = {"strong corroboration": 2,
@@ -203,7 +209,7 @@ def preprocessing_reading(reading: str,
             reading_df.loc[row, 'Connection Type'] = 'i'
         elif reading_df.loc[row, 'Connection Type'].lower() in ['', 'nan', 'none']:
             reading_df.loc[row, 'Connection Type'] = 'i'
-            warnings.warn(f'Connection type does not exist in row {row}, saving as indirect connection type.')
+            logger.warning(f'Connection type does not exist in row {row}, saving as indirect connection type.')
         else:
             reading_df.loc[row, 'Connection Type'] = 'd'
 

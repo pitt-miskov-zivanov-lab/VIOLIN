@@ -24,6 +24,15 @@ FILES = ["RA1",
          "RB_star_1",
          "RB_star_2"]
 
+# FILES = [
+#     "translated_SkeMel133_biorecipe",
+#     "translated_ModelB_discrete_biorecipe",
+#     "translated_SkeMel133_biorecipe_combined_10contradictions",
+#     "translated_ModelB_discrete_biorecipe_combined_10contradictions",
+#     "translated_SkeMel133_biorecipe_combined_10randoms",
+#     "translated_ModelB_discrete_biorecipe_combined_10randoms",
+# ]
+
 
 def merge_duplicates(reading_df, col_names):
     """

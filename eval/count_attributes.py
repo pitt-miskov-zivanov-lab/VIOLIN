@@ -15,6 +15,15 @@ FILES = ["RA1",
          "RB_star_1",
          "RB_star_2"]
 
+TEST_FILES = [
+    "translated_SkeMel133_biorecipe",
+    "translated_ModelB_discrete_biorecipe",
+    "translated_SkeMel133_biorecipe_combined_10contradictions",
+    "translated_ModelB_discrete_biorecipe_combined_10contradictions",
+    "translated_SkeMel133_biorecipe_combined_10randoms",
+    "translated_ModelB_discrete_biorecipe_combined_10randoms",
+]
+
 # FILES = ["RA1",
 #          "RA2",
 #          "RA3",
@@ -60,17 +69,26 @@ def merge_duplicates(reading_df, col_names):
 
     return counted_reading
 
-def main(result_dir: str, out_dir: str, reader_name: str) -> None: 
+def main(result_dir: str, out_dir: str, reader_name: str, test: bool=False) -> None: 
     count = {}
     #filenames = [file for file in glob.glob(f'input/{reader_name}/*.xlsx')]
-    if reader_name == 'FLUTE/GPT' or reader_name == 'FLUTE/LLAMA':
-        FILES = FILES[1:]
-    for f in FILES:
+    if test: 
+        files = TEST_FILES
+    else:
+        if reader_name == 'FLUTE/GPT' or reader_name == 'FLUTE/LLAMA':
+            files = FILES[1:]
+        else: 
+            pass
+    for f in files:
         out_name = f
-        if reader_name == 'FLUTE':
-            f_in = os.path.join(result_dir, f'{f}_reading_BioRECIPE_filtered.xlsx')
+
+        if test: 
+            f_in = os.path.join(result_dir, f'{f}.xlsx')
         else:
-            f_in = os.path.join(result_dir, f'{f}_reading_BioRECIPE.xlsx')
+            if reader_name == 'FLUTE':
+                f_in = os.path.join(result_dir, f'{f}_reading_BioRECIPE_filtered.xlsx')
+            else:
+                f_in = os.path.join(result_dir, f'{f}_reading_BioRECIPE.xlsx')
 
         df = pd.read_excel(f_in, index_col=None).fillna('nan').astype(str)
         df = df.applymap(lambda x: x.lower().strip() if isinstance(x, str) else x)
@@ -159,8 +177,8 @@ def main(result_dir: str, out_dir: str, reader_name: str) -> None:
         count['paper_id'][out_name] = paper_attr
 
     dict_ = {}
-    dict_['reading'] = FILES
-    for key, value in count.items():
+    dict_['reading'] = files
+    for key, _ in count.items():
         dict_[key] = list(count[key].values())
 
     count_df = pd.DataFrame(dict_)
@@ -173,11 +191,12 @@ if __name__ == '__main__':
 
     args = argparse.ArgumentParser(description="Classification results.")
     args.add_argument('--result_dir', required=True, help="The classified results folder name.")
-    args.add_argument('--reeader_name', required=True, help="The name of the reader.")
+    args.add_argument('--reader_name', required=True, help="The name of the reader.")
     args.add_argument('--out_dir', required=True, help="The directory of output summary.")
+    args.add_argument('--test', required=False, type=bool, default=False, help="Test mode.")
     args = args.parse_args()
     
-    main(args.result_dir, args.out_dir, args.reader_name)
+    main(args.result_dir, args.out_dir, args.reader_name, test=args.test)
     
 
 

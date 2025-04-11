@@ -274,3 +274,5 @@ def compare(model_atts: dict, reading_atts: dict) -> int:
         value = 2
 
     return value
+
+
