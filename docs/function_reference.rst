@@ -257,7 +257,8 @@ on how to use the VIOLIN output. Visualization can be filtered by three possible
 
 - When subcategories are identified in the Kind Score definition, additional plots of subcategory distribution are included
 
-Functions
+Class
 ^^^^^^^^^^^^^^^
 
-.. autofunction:: violin.visualize_violin.visualize
+.. autoClass:: violin.visualize_violin.ViolinPlot
+

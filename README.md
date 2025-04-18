@@ -63,11 +63,10 @@ The example usage for VIOLIN could be found in Jupyter notebook and the python s
 
 
 ### Customized input
-To use your own curated model for VIOLIN, please follow the BioRECIPE model format and proofread the model file using the command below before running in the VIOLIN:
-```python
+To use your own curated model for VIOLIN, please follow the BioRECIPE model format. Please also note that VIOLIN use unique identifiers for every element in the model to construct the graph. The unique identifiers could distinguish the elements by `name`, `type`, `subtype`, and `compartment ID`, these identifiers are used in regulator list for regarding elements. For example, if IL2 positively influences IL2R, then in `Positive Regulator List` of IL2R, the IL2 should be written as 'IL2_pn_nan_GO0005576', where the `name`, `type`, `subtype`, and `compartment ID` of IL2 is 'IL2', 'protein', '', and 'GO0005576'. Before running the VIOLIN, we encourage you proofread the model file using the command below:
+```bash
 python preprocessing/normalization.py --format model --file [MODEL_FILENAME]
 ```
-
 
 ## Package Structure
 
@@ -87,13 +86,16 @@ python preprocessing/normalization.py --format model --file [MODEL_FILENAME]
 
 ## Evaluation
 ### Evaluation on four machine readers and classification schemes
-The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the model of CD4+ T cell differentiation model. To get the results, run `evaluation_schemes.py` by:
-```python
+The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the model of CD4+ T cell differentiation model. The output from four readers are cached in `input.zip`.
+To get the results, run `evaluation_schemes.py` by:
+```bash
+cd eval
+unzip input.zip
 python evaluation_schemes.py --scheme [SCHEME] --reader [READER_NAME] --output [OUTPUT_DIRECTORY] --attributes [ATTRIBUTES_LIST]
 ```
 
 e.g.
-```python
+```bash
 python evaluation_schemes.py --scheme v1 --reader REACH --output ./
 ```
 For more details, check the helper function of argparse or in `evaluation_schemes.py`.
@@ -102,14 +104,14 @@ For your convenience, VIOLIN includes a user interface that visualizes the class
 
 ### Running the frontend
 Install npm (if not already installed yet) and start the development server:
-```python
+```bash
 brew install npm
 npm run dev
 ```
 
 ### Running the backend
 Install FastAPI to start the server:
-```python
+```bash
 pip install fastapi[standard]
 fastapi run main.py
 ```
