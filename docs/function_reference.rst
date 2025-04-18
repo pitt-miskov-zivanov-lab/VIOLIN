@@ -260,5 +260,5 @@ on how to use the VIOLIN output. Visualization can be filtered by three possible
 Class
 ^^^^^^^^^^^^^^^
 
-.. autoClass:: violin.visualize_violin.ViolinPlot
+.. autoclass:: violin.visualize_violin.ViolinPlot
 
