@@ -261,4 +261,5 @@ Class
 ^^^^^^^^^^^^^^^
 
 .. autoclass:: violin.visualize_violin.ViolinPlot
+    :members: get_pie_plots, get_summary_plots, get_category_summary
 
