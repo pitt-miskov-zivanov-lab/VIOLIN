@@ -5,6 +5,7 @@ Handles file input and output functions for VIOLIN tool
 Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
+import io
 import os.path
 import warnings
 from typing import Union
@@ -15,6 +16,7 @@ from violin.formatting import (
     format_variable_names, wrap_list_to_str, get_listname)
 
 import logging 
+from tempfile import SpooledTemporaryFile
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -96,8 +98,7 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
                          "Cell Line", "Cell Type", "Tissue Type", "Organism",
                          "Score", "Source", "Statements", "Paper IDs"]
 
-
-def preprocessing_model(model: str) -> pd.DataFrame:
+def preprocessing_model(model: Union[str, SpooledTemporaryFile]) -> pd.DataFrame:
     """
     This function checks whether the model is correct and verifies that all necessary columns are present.
 
@@ -117,18 +118,32 @@ def preprocessing_model(model: str) -> pd.DataFrame:
     # Upload the model and reading files as dataframes based on the file extension
     global MODEL_COLUMNS
     model_cols = MODEL_COLUMNS
-    model_ext = os.path.splitext(model)[1]
 
-    if model_ext == '.txt':
-        model_df = pd.read_csv(model, sep='\t', index_col=None).fillna("nan")
-    elif model_ext == '.csv':
-        model_df = pd.read_csv(model, sep=',', index_col=None).fillna("nan")
-    elif model_ext == '.xlsx':
-        model_df = pd.read_excel(model, index_col=None).fillna("nan")
-    elif model_ext == '.tsv':
-        model_df = pd.read_csv(model, sep='\t', index_col=None).fillna("nan")
+    if isinstance(model, str):
+        model_ext = os.path.splitext(model)[1]
+
+        if model_ext == '.txt':
+            model_df = pd.read_csv(model, sep='\t', index_col=None).fillna("nan")
+        elif model_ext == '.csv':
+            model_df = pd.read_csv(model, sep=',', index_col=None).fillna("nan")
+        elif model_ext == '.xlsx':
+            model_df = pd.read_excel(model, index_col=None).fillna("nan")
+        elif model_ext == '.tsv':
+            model_df = pd.read_csv(model, sep='\t', index_col=None).fillna("nan")
+        else:
+            raise ValueError("The accepted file extensions are .txt, .csv, .xslx, and .tsv")
+        
     else:
-        raise ValueError("The accepted file extensions are .txt, .csv, .xslx, and .tsv")
+        # FIXME: hard code for web upload temporary file
+        try: 
+            # Web access for temporary file object 
+            # TODO: current support only excel file, need to extend to other file types
+            # make sure read from the beginning
+            model.seek(0)
+            model_df = pd.read_excel(model.read(), index_col=None).fillna("nan")
+        except Exception as error:
+            raise ValueError(f"Get error: {error}")
+
 
     model_df = format_variable_names(model_df)
 
@@ -156,7 +171,7 @@ def preprocessing_model(model: str) -> pd.DataFrame:
     return new_model
 
 
-def preprocessing_reading(reading: str,
+def preprocessing_reading(reading: Union[str, SpooledTemporaryFile],
                         evidence_score_cols: dict = None,
                         atts: list = None) -> pd.DataFrame:
     """
@@ -185,21 +200,34 @@ def preprocessing_reading(reading: str,
 
     if atts is None:
         atts = []
-    reading_ext = os.path.splitext(reading)[1]
 
-    read_functions = {
-        '.txt': pd.read_csv,
-        '.csv': pd.read_csv,
-        '.xlsx': pd.read_excel,
-        '.tsv': pd.read_csv
-    }
+    if isinstance(reading, str):
+        reading_ext = os.path.splitext(reading)[1]
 
-    if reading_ext not in read_functions:
-        raise ValueError("The accepted file extensions are .txt, .csv, .xlsx, and .tsv")
+        read_functions = {
+            '.txt': pd.read_csv,
+            '.csv': pd.read_csv,
+            '.xlsx': pd.read_excel,
+            '.tsv': pd.read_csv
+        }
 
-    read_func = read_functions[reading_ext]
-    kwargs = {'sep': '\t'} if reading_ext in ['.txt', '.tsv'] else {}
-    reading_df = read_func(reading, index_col=None, **kwargs).fillna('nan')
+        if reading_ext not in read_functions:
+            raise ValueError("The accepted file extensions are .txt, .csv, .xlsx, and .tsv")
+
+        read_func = read_functions[reading_ext]
+        kwargs = {'sep': '\t'} if reading_ext in ['.txt', '.tsv'] else {}
+        reading_df = read_func(reading, index_col=None, **kwargs).fillna('nan')
+
+    else:
+        # FIXME: hard code for web upload temporary file
+        try: 
+            # Web access for temporary file object 
+            # TODO: current support only excel file, need to extend to other file types
+            # make sure read from the beginning
+            reading.seek(0)
+            reading_df = pd.read_excel(reading.read(), index_col=None).fillna("nan")
+        except Exception as error:
+            raise ValueError(f"Get error: {error}")
 
     reading_df = reading_df.astype(str)
 
