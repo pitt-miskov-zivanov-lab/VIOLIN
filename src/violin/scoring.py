@@ -745,40 +745,98 @@ def kind_score(x: int,
         # Extensions
         elif kind_values['hanging extension'] in kinds:
             kind = kind_values['hanging extension']
+            if counter is None:
+                pass
+            else:
+                raise NotImplementedError('hanging extension counter is not implemented yet.')
         elif kind_values['internal extension'] in kinds:
             kind = kind_values['internal extension']
+            if counter is None:
+                pass
+            else:
+                hit = ['extension', kind,
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['full extension'] in kinds:
             kind = kind_values['full extension']
+            if counter is None:
+                pass
+            else:
+                raise NotImplementedError('full extension counter is not implemented yet.')
 
         # Flagged
         elif kind_values['dir mismatch'] in kinds:
             kind = kind_values['dir mismatch']
+            if counter is None:
+                pass
+            else:
+                hit = ['flagged', kind,
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['path mismatch'] in kinds:
             kind = kind_values['path mismatch']
+            if counter is None:
+                pass
+            else:
+                hit = ['flagged', kind,
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['self-regulation'] in kinds:
             kind = kind_values['self-regulation']
+            if counter is None:
+                pass
+            else:
+                hit = ['flagged', kind,
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+
         # check if the classify scheme is version 3
         elif 'flagged4' in kind_values:
             if kind_values['flagged4'] in kinds:
                 kind = kind_values['flagged4']
+            if counter is None:
+                pass
+            else:
+                raise NotImplementedError('Flagged4 counter is not implemented yet.')
         elif 'flagged5' in kind_values:
             if kind_values['flagged5'] in kinds:
                 kind = kind_values['flagged5']
+            if counter is None:
+                pass
+            else:
+                raise NotImplementedError('Flagged5 counter is not implemented yet.')
         else: pass
 
     # Both Extension - Both nodes from reading not in model
     elif (source_id == -1 and source_name == -1 and source_hgnc == -1) and (target_id == -1 and target_name == -1 and target_hgnc == -1):
         kind = kind_values['full extension']
+        if counter is None: 
+            pass 
+        else: 
+            hits = ['extension', kind, '', '']
     # Hanging Extension - One from reading not in model
-    else: kind = kind_values['hanging extension']
+    else: 
+        kind = kind_values['hanging extension']
+        if (source_id != -1 or source_name != -1 or source_hgnc != -1):
+            assert (target_id == -1 and target_name == -1 and target_hgnc == -1)
+            if counter is None:
+                pass
+            else:
+                source_idx = source_hgnc[0] if source_hgnc != -1 else source_name[0] if source_name != -1 else source_id[0]
+                hits = ['extension', kind, '', source_idx]
 
-    try:
-        return kind, hits
-    except UnboundLocalError: 
-        print("unable to find hit...")
-        print(kind)
-        print(kinds)
+        if (target_id != -1 or target_name != -1 or target_hgnc != -1):
+            assert (source_id == -1 and source_name == -1 and source_hgnc == -1)
+            if counter is None:
+                pass
+            else:
+                target_idx = target_hgnc[0] if target_hgnc != -1 else target_name[0] if target_name != -1 else target_id[0]
+                hits = ['extension', kind, target_idx, '']
+
+    # invalid hits
+    if len(hits) != 4:
         return kind, None
+    return kind, hits
 
 
 def epistemic_value(x: int,reading_df: pd.DataFrame) -> float:
