@@ -64,10 +64,32 @@ KIND_DICT_B = {"strong corroboration" : 2,
                 "flagged4" : 17,
                 "flagged5" : 16}
 
+_LABEL2SUB = {
+    'strong corroboration': 'corroboration',
+    'empty attribute': 'corroboration',
+    'indirect interaction': 'corroboration',
+    'path corroboration': 'corroboration',
+    'specification': 'corroboration',
+    'full extension': 'extension',
+    'hanging extension': 'extension',
+    'internal extension': 'extension',
+    'dir contradiction': 'contradiction',
+    'sign contradiction': 'contradiction',
+    'att contradiction': 'contradiction',
+    'dir mismatch': 'flagged',
+    'path mismatch': 'flagged',
+    'self-regulation': 'flagged',
+    'flagged4': 'flagged',
+    'flagged5': 'flagged',
+}
+
 MATCH_DICT = {"source present" : 1,
                 "target present" : 100,
                 "both present" : 10,
                 "neither present" : 0.1}
+
+_SCORE2LABEL_A = {v: k for k, v in KIND_DICT_A.items()}
+_SCORE2LABEL_B = {v: k for k, v in KIND_DICT_B.items()}
 
 # Default attributes list is empty
 atts_list = []
@@ -154,8 +176,7 @@ def _kind_score_to_model_int_id(row_idx: int,
                            model_s_indices: List[int],
                            counter_list: List[str],
                            search_point: int=0,
-                           count_path:bool=False,
-                           hits: list=None) -> str:
+                           count_path:bool=False) -> str:
     """Function to record the interaction ID of the model that is classified. The function recursively records the unique IDs
     Parameters
     ----------
@@ -201,10 +222,6 @@ def _kind_score_to_model_int_id(row_idx: int,
     # Check if the interaction ID is already in the counter
     if '%s+%s' % (source_found, target_found) not in counter_list:
         counter_list.append('%s+%s' % (source_found, target_found))
-        if hits is not None:
-            hits.append(query_kind)
-            hits.append(target_found)
-            hits.append(source_found)
         return 
     
     # If the interaction ID is already in the counter, check next kind is same as queried kind
@@ -215,8 +232,7 @@ def _kind_score_to_model_int_id(row_idx: int,
                                model_t_indices, 
                                model_s_indices, 
                                counter_list, 
-                               search_point=current_kind_idx + 1,
-                               hits=hits)
+                               search_point=current_kind_idx + 1)
         
         
     
@@ -274,10 +290,13 @@ def kind_score(x: int,
     if kind_values is None:
         if classify_scheme in ['1', '2']:
             kind_values = KIND_DICT_A
+            _SCORE2LABEL = _SCORE2LABEL_A
 
         elif classify_scheme == '3':
             kind_values = KIND_DICT_B
+            _SCORE2LABEL = _SCORE2LABEL_B
     else:
+        _SCORE2LABEL = {v: k for k, v in kind_values.items()}
         pass
 
     if attributes is None:
@@ -606,7 +625,7 @@ def kind_score(x: int,
                             kind_values['specification']]:
                     
                     _kind_score_to_model_int_id(
-                        x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration'], hits=hits.append('corroboration')
+                        x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                     )
 
                 elif int(kind) in [kind_values['dir contradiction'],
@@ -619,16 +638,21 @@ def kind_score(x: int,
                             kind = int(kind)
                         else:
                             _kind_score_to_model_int_id(
-                                x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                                x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
 
                     else:
                         _kind_score_to_model_int_id(
-                            x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                            x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                         )
-
                 else:
                     pass
+
+            # write hits
+            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+
 
         # Strong Corroboration
         elif kind_values['strong corroboration'] in kinds:
@@ -638,8 +662,12 @@ def kind_score(x: int,
             # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
             else:
                 _kind_score_to_model_int_id(
-                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration'], hits=hits.append('corroboration')
+                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
+                
+            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # Weak Corroboration
         elif kind_values['empty attribute'] in kinds:
@@ -650,8 +678,12 @@ def kind_score(x: int,
             else:
 
                 _kind_score_to_model_int_id(
-                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration'], hits=hits.append('corroboration')
+                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
+
+            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         elif kind_values['indirect interaction'] in kinds:
             kind = kind_values['indirect interaction']
@@ -660,8 +692,12 @@ def kind_score(x: int,
             # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
             else:
                 _kind_score_to_model_int_id(
-                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration'], hits=hits.append('corroboration')
+                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
+
+            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         elif kind_values['path corroboration'] in kinds:
             kind = kind_values['path corroboration']
@@ -672,8 +708,12 @@ def kind_score(x: int,
             # Track every matched interaction that is classified as corroborated interaction or contradicted interaction
             else:
                 _kind_score_to_model_int_id(
-                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration'], hits=hits.append('corroboration')
+                    x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
+
+                hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # Contradiction
         elif kind_values['dir contradiction'] in kinds or str(kind_values['dir contradiction']) in kinds:
@@ -690,14 +730,20 @@ def kind_score(x: int,
                             pass
                         else:
                             _kind_score_to_model_int_id(
-                                x, _, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                                x, _, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
-
+                            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                                model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
                             break
                 else:
                     _kind_score_to_model_int_id(
-                        x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                        x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                     )
+
+                    hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                        model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         elif kind_values['sign contradiction'] in kinds or str(kind_values['sign contradiction']) in kinds:
             kind = kind_values['sign contradiction']
@@ -713,13 +759,20 @@ def kind_score(x: int,
                             pass
                         else:
                             _kind_score_to_model_int_id(
-                                x, _, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                                x, _, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
+                            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
+                                model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
                             break
                 else:
                     _kind_score_to_model_int_id(
-                        x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                        x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                     )
+
+                    hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
+                            model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                            model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         elif kind_values['att contradiction'] in kinds or str(kind_values['att contradiction']) in kinds:
             kind = kind_values['att contradiction']
@@ -734,13 +787,21 @@ def kind_score(x: int,
                             pass
                         else:
                             _kind_score_to_model_int_id(
-                                x, _, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                                x, _, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
+
+                            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
+                                model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
                             break
                 else:
                     _kind_score_to_model_int_id(
-                        x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction'], hits=hits.append('contradiction')
+                        x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                     )
+            
+                    hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
+                            model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                            model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # Extensions
         elif kind_values['hanging extension'] in kinds:
@@ -754,7 +815,7 @@ def kind_score(x: int,
             if counter is None:
                 pass
             else:
-                hit = ['extension', kind,
+                hits = ['extension', kind,
                     model_t_indices[kinds.index(kind) // len(model_s_indices)],
                     model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['full extension'] in kinds:
@@ -770,7 +831,7 @@ def kind_score(x: int,
             if counter is None:
                 pass
             else:
-                hit = ['flagged', kind,
+                hits = ['flagged', kind,
                     model_t_indices[kinds.index(kind) // len(model_s_indices)],
                     model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['path mismatch'] in kinds:
@@ -778,7 +839,7 @@ def kind_score(x: int,
             if counter is None:
                 pass
             else:
-                hit = ['flagged', kind,
+                hits = ['flagged', kind,
                     model_t_indices[kinds.index(kind) // len(model_s_indices)],
                     model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['self-regulation'] in kinds:
@@ -786,7 +847,7 @@ def kind_score(x: int,
             if counter is None:
                 pass
             else:
-                hit = ['flagged', kind,
+                hits = ['flagged', kind,
                     model_t_indices[kinds.index(kind) // len(model_s_indices)],
                     model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 

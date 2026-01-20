@@ -28,6 +28,7 @@ LABEL_CONFIG = {
     'flagged': ['dir mismatch', 'path mismatch', 'self-regulation', 'flagged4', 'flagged5'],
 }
 
+
 _LABEL_COLORS = {
     'strong corroboration': '#235490',
     'empty attribute': '#2B65AD',
