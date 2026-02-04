@@ -5,7 +5,7 @@ Handles the model and reading formatting functions for VIOLIN
 Created November 2019 - Casey Hansen MeLoDy Lab
 Updated May 2024 - Haomiao Luo
 """
-from typing import Union, List
+from typing import Tuple, Union, List
 import logging
 import re
 import httplib2 as http
@@ -156,6 +156,22 @@ def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
     return counted_reading
 
 
+def get_regulators_list(reg_list_str: str) -> List[str]:
+    """
+    This function converts the regulator list string into a list of regulators.
+    
+    :param reg_list_str: text of regulator list
+    :type reg_list_str: str
+    :return: a list of regulators
+    """
+    if reg_list_str.strip().lower() in ['', 'nan', 'n/a', 'none', 'null']:
+        return []
+    else:
+        reg_list = reg_list_str.split(',')
+        reg_list = [reg.strip() for reg in reg_list if reg.strip() != '']
+        return reg_list
+
+    
 def add_regulator_names_id(model_df: pd.DataFrame) -> pd.DataFrame:
     """
     This function converts the model regulator lists from 'variables' to the common element names and database
@@ -187,22 +203,20 @@ def add_regulator_names_id(model_df: pd.DataFrame) -> pd.DataFrame:
     # Convert Regulators
     for sign in ['Negative', 'Positive']:
         for y in range(model_df.shape[0]):
-            if model_df[sign + ' Regulator List'][y] in ['', "nan"]:
+            reg_name = get_regulators_list(str(model_df[sign + ' Regulator List'][y]))
+            if reg_name == []:
                 model_df.at[y, sign + ' Names'] = "nan"
                 model_df.at[y, sign + ' IDs'] = "nan"
 
             else:
-                reg_name = model_df[sign + " Regulator List"][y].split(",")
-                if '' in reg_name:
-                    reg_name.remove('')
                 reg_id = []
                 reg_var = reg_name.copy()
                 model_df.at[y, sign + ' Regulator List'] = reg_var
 
                 # find index for regulator in variable column, and copy the Element Name and IDs to the new columns
-                for element in reg_name:
-                    idx = list(model_df['Listname']).index(element)
-                    reg_name[reg_name.index(element)] = model_df['Element Name'][idx]
+                for i, element in enumerate(reg_name):
+                    idx = list(model_df['Variable']).index(element)
+                    reg_name[i] = model_df['Element Name'][idx]
                     # idx = list(model_df["Element Name"]).index(element)
                     # Since there are multiple IDs for each element, need to keep track of which
                     # IDs go with which regulator
@@ -262,6 +276,51 @@ def format_variable_names(model: pd.DataFrame) -> pd.DataFrame:
 
     return model
 
+
+def validate_variable_names(model: pd.DataFrame) -> Tuple[bool, str]: 
+    """
+    This function check the validity of variable names in the model.
+    
+    Parameters
+    ----------
+    model: pd.DataFrame
+        A dataframe of model file.
+    Returns
+    -------
+    x: Tuple[bool, str]: 
+        A boolean value indicating whether there are invalid variable names in the model.
+        A message string indicating the issues found with variable names.
+    """
+    valid = True; msgs = []
+    # Check uniqueness of variable names
+    if model['Variable'].duplicated().any():
+        msg = 'Duplicate variable names: ' + ', '.join(
+            model['Variable'][model['Variable'].duplicated(keep=False)].unique().tolist()
+        )
+        logging.info(msg)
+        msgs.append(msg)
+        valid = False
+    
+    # Check if variable names includes all the names in regulator lists 
+    variable_names = set(model['Variable'].str.strip().tolist())
+    _regulator_names = model[['Positive Regulator List', 'Negative Regulator List']].apply(
+        lambda x: x.astype(str).str.strip()
+    ).values.flatten().tolist() 
+    regulator_names = []
+    for reg_list in _regulator_names: 
+        reg_names = get_regulators_list(reg_list)
+        regulator_names += reg_names
+    regulator_names = set(regulator_names)
+    if not regulator_names.issubset(variable_names): 
+        msg = 'Regulator names not found in variable names: ' + ', '.join(regulator_names - variable_names)
+        logging.info(msg)
+        msgs.append(msg)
+        valid = False
+
+    message = '\n'.join(msgs) if len(msgs) > 0 else ''
+    return valid, message
+    
+    
 
 def get_type(input_type: str) -> str:
     """
@@ -513,7 +572,7 @@ def wrap_list_to_str(df: pd.DataFrame, cols: list) -> pd.DataFrame:
             df.loc[row, col] = ','.join(list(df.loc[row, col]))
     return df
 
-
+# TODO: This function will be deprecated in future versions. 
 def get_listname(idx: int, model_df: pd.DataFrame) -> str:
     """
     Create the listnames by element attributes.

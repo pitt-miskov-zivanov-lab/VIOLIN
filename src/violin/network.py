@@ -28,9 +28,7 @@ def node_edge_list(model_df: pd.DataFrame) -> nx.DiGraph:
     """
 
     # If elements are defined by variables, use the variable names. Else, use the common names
-    if 'Listname' in model_df.columns and not model_df['Listname'].empty:
-        target = 'Listname'
-    elif 'Variable' in model_df.columns and not model_df['Variable'].empty:
+    if 'Variable' in model_df.columns and not model_df['Variable'].empty:
         target = 'Variable'
     else:
         target = 'Element Name'
@@ -144,8 +142,8 @@ def path_finding(regulator: str,
         elif nx.has_path(graph, regulator, regulated) and len(
                 nx.shortest_path(graph, source=regulator, target=regulated)) > 1 and reading_cxn_type == "i":
             # Finding atts of beginning and end of path
-            s_idx = list(model_df['Listname']).index(regulator)
-            t_idx = list(model_df['Listname']).index(regulated)
+            s_idx = list(model_df['Variable']).index(regulator)
+            t_idx = list(model_df['Variable']).index(regulated)
             # No need to assign value to `sign` since no influence attributes need to compare
             # sign is ambiguous in path
             model_atts = get_attributes(s_idx, t_idx, sign, model_df, attributes, path=True)

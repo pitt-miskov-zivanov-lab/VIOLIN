@@ -8,12 +8,13 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 import io
 import os.path
 import warnings
-from typing import Union
+from typing import Union, Dict
 import pandas as pd
 
 from violin.formatting import (
     evidence_score, get_type,
-    format_variable_names, wrap_list_to_str, get_listname)
+    format_variable_names, validate_variable_names, wrap_list_to_str
+)
 
 import logging 
 from tempfile import SpooledTemporaryFile
@@ -98,12 +99,12 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
                          "Cell Line", "Cell Type", "Tissue Type", "Organism",
                          "Score", "Source", "Statements", "Paper IDs"]
 
-def preprocessing_model(model: Union[str, SpooledTemporaryFile]) -> pd.DataFrame:
+def preprocessing_model(model: Union[str, SpooledTemporaryFile]) -> Union[Dict[str, str], pd.DataFrame]:
     """
     This function checks whether the model is correct and verifies that all necessary columns are present.
 
     It accepts an executable BioRECIPE model provided in .txt, .csv, .xlsx, or .tsv format. Thefile's content will be convert into lower case.
-    Additionally, A 'Listname' is created as a unique identifier for every element for further indexing.
+    Additionally, A 'Variable' is created as a unique identifier for every element for further indexing.
 
     Parameters
     ----------
@@ -150,9 +151,15 @@ def preprocessing_model(model: Union[str, SpooledTemporaryFile]) -> pd.DataFrame
     if {(set(model_cols).issubset(set(model_df.columns))) and
         (set(REQUIRED_MODEL).issubset(set(model_cols)))}:
 
-        # Create a column for list-name
-        model_df['Listname'] = [get_listname(idx, model_df) for idx in range(len(model_df))]
-
+        # Check if 'Variable' column is empty, if so fill with 'default'
+        if model_df['Variable'].isnull().all(): 
+            return {"error": "The 'Variable' column in model is empty."}
+        
+        # Send message if variable names are not valid
+        valid, msg = validate_variable_names(model_df)
+        if not valid: 
+            return {"error": msg}
+        
         # Normalize element type
         model_df['Element Type'] = model_df['Element Type'].str.replace(' ', '')
 

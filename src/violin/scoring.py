@@ -371,6 +371,7 @@ def kind_score(x: int,
                              reading_df.loc[x, 'Regulated Database'])
 
     # Both regulator (source) and regulated (target) node found in the model
+    hits = []
     if (source_name != -1 or source_hgnc != -1 or source_id != -1) and \
             (target_name != -1 or target_hgnc != -1 or target_id != -1):
         # Find indices of regulator element (target) in model
@@ -397,14 +398,14 @@ def kind_score(x: int,
 
             for s_idx in model_s_indices:
 
-                source_listname = model_df.loc[s_idx, 'Listname']
+                source_variable = model_df.loc[s_idx, 'Variable']
 
-                target_listname = model_df.loc[t_idx, 'Listname']
+                target_variable = model_df.loc[t_idx, 'Variable']
 
                 # MI with match direction, match sign
-                if str(model_s_list) != "nan" and source_listname in model_s_list.split(','):
+                if str(model_s_list) != "nan" and source_variable in model_s_list.split(','):
                     # Index of regulator name within regulator list
-                    s_index = model_s_list.split(',').index(source_listname)
+                    s_index = model_s_list.split(',').index(source_variable)
                     # Finding index MI regulator variable
                     model_s_variable = model_df.loc[t_idx,reg_sign+' Regulator List'].split(',')[s_index]
                     #model_s_element = list(model_df['Variable']).index(model_s_variable)
@@ -455,9 +456,9 @@ def kind_score(x: int,
                         elif compare_atts == 3: kinds.append(kind_values['att contradiction'])
 
                 # MI with Matched direction, Mismatched sign
-                elif str(model_s_opp) != "nan" and source_listname in model_s_opp.split(','):
+                elif str(model_s_opp) != "nan" and source_variable in model_s_opp.split(','):
                     reg_index = model_df.loc[t_idx, opp_sign + " Regulator List"].split(',').index(
-                        source_listname)
+                        source_variable)
                     # Finding connection type
                     if (reg_sign+' Connection Type List') in model_df.columns.values.tolist() and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
@@ -478,10 +479,10 @@ def kind_score(x: int,
                         kinds.append(kind_values['sign contradiction'])
 
                 # MI with Mismatched direction, Matched sign
-                elif (model_df.loc[s_idx, reg_sign + " Regulator List"] != "nan" and target_listname
+                elif (model_df.loc[s_idx, reg_sign + " Regulator List"] != "nan" and target_variable
                       in model_df.loc[s_idx, reg_sign + " Regulator List"].split(',')):
                     reg_index = model_df.loc[s_idx, reg_sign + " Regulator List"].split(',').index(
-                        target_listname)
+                        target_variable)
                     # Finding connection type
                     if (reg_sign + ' Connection Type List') in model_df.columns.values.tolist() and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
@@ -545,9 +546,9 @@ def kind_score(x: int,
                         kinds.append(kind_values['dir contradiction'])
 
                 #MI with Mismatched direction, Mismatched sign
-                elif (model_df.loc[s_idx,opp_sign+" Regulator List"] != "nan" and target_listname in
+                elif (model_df.loc[s_idx,opp_sign+" Regulator List"] != "nan" and target_variable in
                       model_df.loc[s_idx,opp_sign+" Regulator List"].split(',')):
-                    reg_index = model_df.loc[s_idx,opp_sign+" Regulator List"].split(',').index(target_listname)
+                    reg_index = model_df.loc[s_idx,opp_sign+" Regulator List"].split(',').index(target_variable)
                     #Finding connection type
                     if (opp_sign+' Connection Type List') in model_df.columns.values.tolist()and \
                             all(cxn_type.lower().strip() in ['i', 'd'] for cxn_type in
@@ -609,9 +610,8 @@ def kind_score(x: int,
                             t_idx, s_idx]
                     # If model does not contain interaction - check for path
                     else:
-                        kinds.append(path_finding(source_listname,target_listname,reg_sign,model_df,graph,kind_values,iis_cxn_type,reading_atts,attributes,classify_scheme))
-
-        hits = []
+                        kinds.append(path_finding(source_variable,target_variable,reg_sign,model_df,graph,kind_values,iis_cxn_type,reading_atts,attributes,classify_scheme))
+        
         if len(kinds) == 1:
             kind = kinds[0]
             if counter is None:

@@ -57,7 +57,7 @@ def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, at
     else:
         assert (sign in ['Positive', 'Negative'])
         source_position = model_df.loc[A_idx, f'{sign} Regulator List'].split(',').index(
-            model_df.loc[B_idx, 'Listname'])
+            model_df.loc[B_idx, 'Variable'])
         for a in ['Mechanism', 'Site']:
             if a in attrs:
                 if model_df.at[A_idx, f'{sign} {a} List'] != 'nan' and \
