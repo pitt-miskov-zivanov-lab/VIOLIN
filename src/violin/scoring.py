@@ -701,6 +701,10 @@ def kind_score(x: int,
 
         elif kind_values['path corroboration'] in kinds:
             kind = kind_values['path corroboration']
+            # Pseudo-hit for path corroboration
+            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
+                model_t_indices[kinds.index(kind) // len(model_s_indices)],
+                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
         elif kind_values['specification'] in kinds:
             kind = kind_values['specification']
             if counter is None:
