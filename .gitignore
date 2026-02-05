@@ -55,4 +55,5 @@ __pycache__/
 
 # Ignore running outputs
 examples/violin.ipynb
+examples/gbm_formatting.ipynb
 examples/*.csv

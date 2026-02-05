@@ -151,9 +151,13 @@ def preprocessing_model(model: Union[str, SpooledTemporaryFile]) -> Union[Dict[s
     if {(set(model_cols).issubset(set(model_df.columns))) and
         (set(REQUIRED_MODEL).issubset(set(model_cols)))}:
 
-        # Check if 'Variable' column is empty, if so fill with 'default'
-        if model_df['Variable'].isnull().all(): 
-            return {"error": "The 'Variable' column in model is empty."}
+
+        # Check graph topology validity
+        # Check if graph is empty
+        for col in ['Positive Regulator List', 'Negative Regulator List', 'Variable']:
+            # Check if all the value is 'nan' in the column
+            if (model_df[col] == "nan").all():
+                return {"error": f"The '{col}' column in model is empty."}
         
         # Send message if variable names are not valid
         valid, msg = validate_variable_names(model_df)

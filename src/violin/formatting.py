@@ -31,7 +31,7 @@ _VALID_CHARS = r'a-zA-Z0-9\_'
 
 # valid element types
 CANONICAL_TYPES = [
-    'protein',
+    'protein', 'gene', # protein and gene
     'proteinfamily', 'proteincomplex', 'proteinfamilyproteincomplex',
     'rna', 'mrna', 'microrna', 'trna',  # RNA
     'chemical', 'simplechemical', 'chemicalcompound', 'compound',  # chemical
@@ -40,7 +40,7 @@ CANONICAL_TYPES = [
 ]
 
 CANONICAL_PROTEIN = [
-    'protein', 'proteinfamily', 'proteincomplex', 'proteinfamilyproteincomplex'
+    'gene', 'protein', 'proteinfamily', 'proteincomplex', 'proteinfamilyproteincomplex'
 ]
 CANONICAL_CHEMICAL = [
     'chemical', 'simplechemical', 'chemicalcompound', 'compound', 'chemicalfamily'
@@ -342,15 +342,16 @@ def get_type(input_type: str) -> str:
     global CANONICAL_CHEMICAL
     global CANONICAL_BIOPROCESS
     global CANONICAL_RNA
-    input_type = ''.join(re.findall(r'[A-z]+', input_type)) if str(input_type) != 'nan' else 'other'
-    if input_type in CANONICAL_TYPES:
-        if input_type in CANONICAL_PROTEIN:
+    input_type = re.findall(r'[A-z]+', input_type) if str(input_type) != 'nan' else 'other'
+    input_type = set(x.lower().strip() for x in input_type) 
+    if input_type.intersection(CANONICAL_TYPES):
+        if input_type.intersection(CANONICAL_PROTEIN):
             return 'protein'
-        elif input_type in CANONICAL_CHEMICAL:
+        elif input_type.intersection(CANONICAL_CHEMICAL):
             return 'chemical'
-        elif input_type in CANONICAL_BIOPROCESS:
+        elif input_type.intersection(CANONICAL_BIOPROCESS):
             return 'bioprocess'
-        elif input_type in CANONICAL_RNA:
+        elif input_type.intersection(CANONICAL_RNA):
             return 'rna'
     else:
         return 'other'
