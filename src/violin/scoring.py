@@ -7,6 +7,7 @@ Created November 2019 - Casey Hansen MeLoDy Lab
 
 import pandas as pd
 import networkx as nx
+from violin.formatting import get_type
 from violin.numeric import get_attributes, find_element, compare
 from violin.network import path_finding
 from typing import List, Union
@@ -925,7 +926,9 @@ def score_reading(reading_df: pd.DataFrame,
                 mi_cxn: str='d',
                 include_hits=False,
                 name_match_threshold: float=None,
-                match_sim_metric: str='jaccard') -> pd.DataFrame:
+                match_sim_metric: str='jaccard',
+                normalize_type: bool=False,
+                differ_gene_type: bool=False) -> pd.DataFrame:
     """
     This function creates new columns for the Match Score, Kind Score, Epistemic Value, and Total Score.
     it calls scoring functions and stores the values in the approriate column.
@@ -959,6 +962,10 @@ def score_reading(reading_df: pd.DataFrame,
         The confidence threshold for finding element in the model.
     match_sim_metric : str
         The similarity metric for calculating match score.
+    normalize_type: bool
+        Whether to normalize the type of elements in the model and reading dataframes before scoring.
+    differ_gene_type: bool
+        Whether to distinguish gene type and protein type 
 
     Returns
     -------
@@ -979,6 +986,13 @@ def score_reading(reading_df: pd.DataFrame,
 
     if match_values is None:
         match_values = MATCH_DICT
+
+    # To compatible with UI, we also add a normalization step during classification
+    # Normalize the type of elements in the model and reading dataframes
+    if normalize_type: 
+        reading_df['Regulator Type'] = reading_df['Regulator Type'].apply(lambda x: get_type(x, differ_gene=differ_gene_type))
+        reading_df['Regulated Type'] = reading_df['Regulated Type'].apply(lambda x: get_type(x, differ_gene=differ_gene_type))
+        model_df['Element Type'] = model_df['Element Type'].apply(lambda x: get_type(x, differ_gene=differ_gene_type))
 
 
     #Create new DF columns for score calculations

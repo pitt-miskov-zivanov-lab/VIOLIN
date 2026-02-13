@@ -100,7 +100,8 @@ BioRECIPE_READING_COL = ["Regulator Name", "Regulator Type", "Regulator Subtype"
                          "Score", "Source", "Statements", "Paper IDs"]
 
 def preprocessing_model(model: Union[str, SpooledTemporaryFile],
-                        differ_gene: bool = False) -> Union[Dict[str, str], pd.DataFrame]:
+                        normalize_type: bool = True, 
+                        differ_gene: bool=False) -> Union[Dict[str, str], pd.DataFrame]:
     """
     This function checks whether the model is correct and verifies that all necessary columns are present.
 
@@ -173,7 +174,8 @@ def preprocessing_model(model: Union[str, SpooledTemporaryFile],
 
         # Convert all model text to lower-case
         new_model = model_df.apply(lambda x: x.astype(str).str.lower())
-        new_model['Element Type'] = new_model['Element Type'].apply(lambda x: get_type(x, differ_gene=differ_gene))  # normalize type
+        if normalize_type:
+            new_model['Element Type'] = new_model['Element Type'].apply(lambda x: get_type(x, differ_gene=differ_gene))  # normalize type
 
     else:
         raise ValueError("Either your file does not match the column names," +
@@ -186,6 +188,7 @@ def preprocessing_model(model: Union[str, SpooledTemporaryFile],
 def preprocessing_reading(reading: Union[str, SpooledTemporaryFile],
                         evidence_score_cols: dict = None,
                         atts: list = None, 
+                        normalize_type: bool = True, 
                         differ_gene: bool = False) -> pd.DataFrame:
     """
     This function import the reading file and check if the reading format is correct.
@@ -200,6 +203,8 @@ def preprocessing_reading(reading: Union[str, SpooledTemporaryFile],
     atts : list
         A list of additional attributes which are available in interactions set.
         Default is none.
+    normalize_type: bool
+        Whether to normalize the type of elements in the reading dataframe, default is True.
     differ_gene: bool
         Whether to distinguish the gene and protein type, default is False.
 
@@ -256,8 +261,9 @@ def preprocessing_reading(reading: Union[str, SpooledTemporaryFile],
         else:
             reading_df.loc[row, 'Connection Type'] = 'd'
 
-    reading_df['Regulator Type'] = reading_df['Regulator Type'].apply(lambda x: get_type(x.lower(), differ_gene=differ_gene))  # normalize type
-    reading_df['Regulated Type'] = reading_df['Regulated Type'].apply(lambda x: get_type(x.lower(), differ_gene=differ_gene))  # normalize type
+    if normalize_type:
+        reading_df['Regulator Type'] = reading_df['Regulator Type'].apply(lambda x: get_type(x.lower(), differ_gene=differ_gene))  # normalize type
+        reading_df['Regulated Type'] = reading_df['Regulated Type'].apply(lambda x: get_type(x.lower(), differ_gene=differ_gene))  # normalize type
 
     # Make sure evidence_cols match what is in the LEE input file
     if set(evidence_score_cols).issubset(set(reading_df.columns)):
