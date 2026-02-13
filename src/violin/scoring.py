@@ -244,7 +244,9 @@ def kind_score(x: int,
                kind_values: dict=None,
                attributes: list=None,
                classify_scheme: str='1',
-               mi_cxn: str='d') -> int:
+               mi_cxn: str='d',
+               name_match_threshold: float=None,
+               match_sim_metric: str='jaccard') -> int:
     """
     This function calculates the Kind Score for an interaction in the Interactions Set (iIS).
     The kind score will be used to represent the subcategories.
@@ -276,6 +278,13 @@ def kind_score(x: int,
         What connection type should be assigned to model interactions if not available.
         Accepted values are "d" (direct) or "i" (indirect).
         Deafult is "d".
+    name_match_threshold : float
+        The threshold of the match between the reading entity and the model entity
+        e.g., 0.8 means that at least the similarity of compared reading entity string and model entity string
+        reach 0.8, the entity pair will be considered as a match. 
+    match_sim_metric : str
+        The similarity metric for calculating the similarity.
+        Available options: "jaccard" and "edit_sim". Default is "jaccard".
 
     Returns
     -------
@@ -342,33 +351,46 @@ def kind_score(x: int,
         reading_atts = {}
 
     # Comparing to model
-    source_hgnc = find_element("hgnc",
+    source_hgnc, source_hgnc_confs = find_element("hgnc",
                                reading_df.loc[x, 'Regulator HGNC Symbol'],
                                reading_df.loc[x, 'Regulator Type'],
-                               model_df)
-    source_name = find_element("name",
+                               model_df,
+                               threshold=name_match_threshold,
+                               metric=match_sim_metric)
+    source_name, source_name_confs = find_element("name",
                                reading_df.loc[x, 'Regulator Name'],
                                reading_df.loc[x, 'Regulator Type'],
-                               model_df)
-    source_id = find_element("id",
+                               model_df,
+                               threshold=name_match_threshold,
+                               metric=match_sim_metric)
+    source_id, source_id_confs = find_element("id",
                              reading_df.loc[x, 'Regulator ID'],
                              reading_df.loc[x, 'Regulator Type'],
                              model_df,
-                             reading_df.loc[x, 'Regulator Database'])
+                             reading_df.loc[x, 'Regulator Database'],
+                             threshold=name_match_threshold,
+                             metric=match_sim_metric)
+    
 
-    target_hgnc = find_element("hgnc",
+    target_hgnc, target_hgnc_confs = find_element("hgnc",
                                reading_df.loc[x, 'Regulated HGNC Symbol'],
                                reading_df.loc[x, 'Regulated Type'],
-                               model_df)
-    target_name = find_element("name",
+                               model_df,
+                               threshold=name_match_threshold,
+                               metric=match_sim_metric)
+    target_name, target_name_confs = find_element("name",
                                reading_df.loc[x, 'Regulated Name'],
                                reading_df.loc[x, 'Regulated Type'],
-                               model_df)
-    target_id = find_element("id",
+                               model_df,
+                               threshold=name_match_threshold,
+                               metric=match_sim_metric)
+    target_id, target_id_confs = find_element("id",
                              reading_df.loc[x, 'Regulated ID'],
                              reading_df.loc[x, 'Regulated Type'],
                              model_df,
-                             reading_df.loc[x, 'Regulated Database'])
+                             reading_df.loc[x, 'Regulated Database'],
+                             threshold=name_match_threshold,
+                             metric=match_sim_metric)
 
     # Both regulator (source) and regulated (target) node found in the model
     hits = []
@@ -377,13 +399,26 @@ def kind_score(x: int,
         # Find indices of regulator element (target) in model
         #FIXME: TBD for order
         # Privilege: HGNC > Name > ID
-        if source_hgnc != -1: model_s_indices = source_hgnc
-        elif source_name != -1: model_s_indices = source_name
-        else: model_s_indices = source_id
+        if source_hgnc != -1: 
+            model_s_indices = source_hgnc
+            model_s_confs = source_hgnc_confs
+        elif source_name != -1: 
+            model_s_indices = source_name
+            model_s_confs = source_name_confs
+        else: 
+            model_s_indices = source_id
+            model_s_confs = source_id_confs
 
-        if target_hgnc != -1: model_t_indices = target_hgnc
-        elif target_name != -1: model_t_indices = target_name
-        else: model_t_indices = target_id
+
+        if target_hgnc != -1: 
+            model_t_indices = target_hgnc
+            model_t_confs = target_hgnc_confs
+        elif target_name != -1: 
+            model_t_indices = target_name
+            model_t_confs = target_name_confs
+        else: 
+            model_t_indices = target_id
+            model_t_confs = target_id_confs
 
         kinds = []
         # print(f"s:{model_s_indices}, t:{model_t_indices}")
@@ -606,8 +641,11 @@ def kind_score(x: int,
                     # If there is a self-regulation (regulator is both target and source)
                     if t_idx == s_idx:
                         kind = kind_values['self-regulation']
+                        t_list_idx= model_t_indices.index(t_idx)
+                        s_list_idx = model_s_indices.index(s_idx)
+
                         hits = ["flagged", kind,
-                            t_idx, s_idx]
+                            t_idx, s_idx, model_t_confs[t_list_idx], model_s_confs[s_list_idx]]
                     # If model does not contain interaction - check for path
                     else:
                         kinds.append(path_finding(source_variable,target_variable,reg_sign,model_df,graph,kind_values,iis_cxn_type,reading_atts,attributes,classify_scheme))
@@ -648,12 +686,6 @@ def kind_score(x: int,
                 else:
                     pass
 
-            # write hits
-            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
-
-
         # Strong Corroboration
         elif kind_values['strong corroboration'] in kinds:
             kind = kind_values['strong corroboration']
@@ -664,10 +696,6 @@ def kind_score(x: int,
                 _kind_score_to_model_int_id(
                     x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
-                
-            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # Weak Corroboration
         elif kind_values['empty attribute'] in kinds:
@@ -681,10 +709,6 @@ def kind_score(x: int,
                     x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
 
-            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
-
         elif kind_values['indirect interaction'] in kinds:
             kind = kind_values['indirect interaction']
             if counter is None:
@@ -695,16 +719,10 @@ def kind_score(x: int,
                     x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
 
-            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
-
         elif kind_values['path corroboration'] in kinds:
             kind = kind_values['path corroboration']
             # Pseudo-hit for path corroboration
-            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
-                model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+
         elif kind_values['specification'] in kinds:
             kind = kind_values['specification']
             if counter is None:
@@ -714,10 +732,6 @@ def kind_score(x: int,
                 _kind_score_to_model_int_id(
                     x, kind, kinds, model_t_indices, model_s_indices, counter['corroboration']
                 )
-
-                hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # Contradiction
         elif kind_values['dir contradiction'] in kinds or str(kind_values['dir contradiction']) in kinds:
@@ -736,18 +750,12 @@ def kind_score(x: int,
                             _kind_score_to_model_int_id(
                                 x, _, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
-                            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                                model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+
                             break
                 else:
                     _kind_score_to_model_int_id(
                         x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                     )
-
-                    hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
-                        model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                        model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         elif kind_values['sign contradiction'] in kinds or str(kind_values['sign contradiction']) in kinds:
             kind = kind_values['sign contradiction']
@@ -765,18 +773,11 @@ def kind_score(x: int,
                             _kind_score_to_model_int_id(
                                 x, _, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
-                            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
-                                model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
                             break
                 else:
                     _kind_score_to_model_int_id(
                         x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                     )
-
-                    hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
-                            model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                            model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         elif kind_values['att contradiction'] in kinds or str(kind_values['att contradiction']) in kinds:
             kind = kind_values['att contradiction']
@@ -793,35 +794,25 @@ def kind_score(x: int,
                             _kind_score_to_model_int_id(
                                 x, _, kinds, model_t_indices, model_s_indices, counter['contradiction']
                             )
-
-                            hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
-                                model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                                model_s_indices[kinds.index(kind) % len(model_s_indices)]]
                             break
                 else:
                     _kind_score_to_model_int_id(
                         x, kind, kinds, model_t_indices, model_s_indices, counter['contradiction']
                     )
-            
-                    hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind,
-                            model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                            model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # Extensions
+        # TODO: this branch will never be taken, deprecated in the future version
         elif kind_values['hanging extension'] in kinds:
             kind = kind_values['hanging extension']
             if counter is None:
                 pass
             else:
                 raise NotImplementedError('hanging extension counter is not implemented yet.')
+            
         elif kind_values['internal extension'] in kinds:
             kind = kind_values['internal extension']
-            if counter is None:
-                pass
-            else:
-                hits = ['extension', kind,
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+        
+        #TODO: this branch will never be taken, deprecated in the future version
         elif kind_values['full extension'] in kinds:
             kind = kind_values['full extension']
             if counter is None:
@@ -832,74 +823,69 @@ def kind_score(x: int,
         # Flagged
         elif kind_values['dir mismatch'] in kinds:
             kind = kind_values['dir mismatch']
-            if counter is None:
-                pass
-            else:
-                hits = ['flagged', kind,
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+
         elif kind_values['path mismatch'] in kinds:
             kind = kind_values['path mismatch']
-            if counter is None:
-                pass
-            else:
-                hits = ['flagged', kind,
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
+
         elif kind_values['self-regulation'] in kinds:
             kind = kind_values['self-regulation']
-            if counter is None:
-                pass
-            else:
-                hits = ['flagged', kind,
-                    model_t_indices[kinds.index(kind) // len(model_s_indices)],
-                    model_s_indices[kinds.index(kind) % len(model_s_indices)]]
 
         # check if the classify scheme is version 3
         elif 'flagged4' in kind_values:
             if kind_values['flagged4'] in kinds:
                 kind = kind_values['flagged4']
-            if counter is None:
-                pass
-            else:
-                raise NotImplementedError('Flagged4 counter is not implemented yet.')
+
         elif 'flagged5' in kind_values:
             if kind_values['flagged5'] in kinds:
                 kind = kind_values['flagged5']
-            if counter is None:
-                pass
-            else:
-                raise NotImplementedError('Flagged5 counter is not implemented yet.')
         else: pass
 
     # Both Extension - Both nodes from reading not in model
     elif (source_id == -1 and source_name == -1 and source_hgnc == -1) and (target_id == -1 and target_name == -1 and target_hgnc == -1):
         kind = kind_values['full extension']
-        if counter is None: 
-            pass 
-        else: 
-            hits = ['extension', kind, '', '']
     # Hanging Extension - One from reading not in model
     else: 
         kind = kind_values['hanging extension']
+
+
+    # Handle hits corresponding to kind
+    # Since kind is assigned based on priority, 
+    # the rest of the condition statements are regardless of the priority order.
+    if kind == kind_values['hanging extension']:
         if (source_id != -1 or source_name != -1 or source_hgnc != -1):
             assert (target_id == -1 and target_name == -1 and target_hgnc == -1)
-            if counter is None:
-                pass
-            else:
-                source_idx = source_hgnc[0] if source_hgnc != -1 else source_name[0] if source_name != -1 else source_id[0]
-                hits = ['extension', kind, '', source_idx]
+
+            source_idx = source_hgnc[0] if source_hgnc != -1 else source_name[0] if source_name != -1 else source_id[0]
+            regulator_conf = source_hgnc_confs[0] if source_hgnc != -1 else source_name_confs[0] if source_name != -1 else source_id_confs[0]
+            hits = ['extension', kind, '', source_idx, 0.0, regulator_conf]
 
         if (target_id != -1 or target_name != -1 or target_hgnc != -1):
             assert (source_id == -1 and source_name == -1 and source_hgnc == -1)
-            if counter is None:
-                pass
-            else:
-                target_idx = target_hgnc[0] if target_hgnc != -1 else target_name[0] if target_name != -1 else target_id[0]
-                hits = ['extension', kind, target_idx, '']
+            target_idx = target_hgnc[0] if target_hgnc != -1 else target_name[0] if target_name != -1 else target_id[0]
+            regulated_conf = target_hgnc_confs[0] if target_hgnc != -1 else target_name_confs[0] if target_name != -1 else target_id_confs[0]
+            hits = ['extension', kind, target_idx, '', regulated_conf, 0.0]
+    
+    elif kind == kind_values['full extension']:
+        hits = ['extension', kind, '', '', 0.0, 0.0]
+    
+    elif set(['flagged4', 'flagged5']).intersection(set(kind_values.keys())) and kind in [kind_values['flagged4'], kind_values['flagged5']]:
+        raise NotImplementedError('Flagged4 and Flagged5 hits are not implemented yet.')
+    
+    elif kind == kind_values['self-regulation']:
+        pass
+    
+    else:
+        t_list_idx = kinds.index(kind) // len(model_s_indices)
+        s_list_idx = kinds.index(kind) % len(model_s_indices)
+        hits = [_LABEL2SUB[_SCORE2LABEL[kind]], kind, 
+                model_t_indices[t_list_idx],
+                model_s_indices[s_list_idx],
+                model_t_confs[t_list_idx],
+                model_s_confs[s_list_idx]]
+
 
     # invalid hits
-    if len(hits) != 4:
+    if len(hits) != 6:
         return kind, None
     return kind, hits
 
@@ -937,7 +923,9 @@ def score_reading(reading_df: pd.DataFrame,
                 attributes: list=atts_list,
                 classify_scheme: str='1',
                 mi_cxn: str='d',
-                include_hits=False) -> pd.DataFrame:
+                include_hits=False,
+                name_match_threshold: float=None,
+                match_sim_metric: str='jaccard') -> pd.DataFrame:
     """
     This function creates new columns for the Match Score, Kind Score, Epistemic Value, and Total Score.
     it calls scoring functions and stores the values in the approriate column.
@@ -967,6 +955,10 @@ def score_reading(reading_df: pd.DataFrame,
         Default value is '1'.
     include_hits: bool
         Whether to include the hits information
+    name_match_threshold : float
+        The confidence threshold for finding element in the model.
+    match_sim_metric : str
+        The similarity metric for calculating match score.
 
     Returns
     -------
@@ -1000,15 +992,37 @@ def score_reading(reading_df: pd.DataFrame,
     collections = []
     for x in range(reading_df.shape[0]):
         scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df, match_values)
-        scored_reading_df.at[x,'Kind Score'], interaction_hit = kind_score(x,model_df,reading_df,graph, counter,kind_values,attributes,classify_scheme,mi_cxn)
+        scored_reading_df.at[x,'Kind Score'], interaction_hit = kind_score(
+            x,model_df,
+            reading_df,
+            graph, 
+            counter,
+            kind_values,
+            attributes,
+            classify_scheme,
+            mi_cxn, 
+            name_match_threshold=name_match_threshold,
+            match_sim_metric=match_sim_metric)
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
         scored_reading_df.at[x,'Total Score'] =  ((scored_reading_df.at[x,'Evidence Score']*scored_reading_df.at[x,'Match Score'])+int(scored_reading_df.at[x,'Kind Score']))*scored_reading_df.at[x,'Epistemic Value']
+
         if interaction_hit != None:
             collections.append({"category": interaction_hit[0], 
                             "kind_score": str(interaction_hit[1]),
                             "target_index": interaction_hit[2],
                             "source_index": interaction_hit[3],
-                            "interaction_index": x})
+                            "interaction_index": x,
+                            "regulated_conf": interaction_hit[4],
+                            "regulator_conf": interaction_hit[5]})
+            prob = interaction_hit[4] * interaction_hit[5]
+        
+        else:
+            prob = -1 # Unknown error
+
+        scored_reading_df.at[x, 'Entity Match Score'] = prob
+
+    col = scored_reading_df.pop("Entity Match Score")
+    scored_reading_df.insert(0, "Entity Match Score", col)
     if include_hits:
         return scored_reading_df, collections
     else: 

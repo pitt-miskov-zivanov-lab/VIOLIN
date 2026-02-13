@@ -21,12 +21,11 @@ setup(
         'networkx',
         'numpy',
         'pandas',
-        'tornado',
         'httplib2',
         "matplotlib",
         "requests",
         "tqdm",
-        "gilda"
+        "nltk",
     ],
     zip_safe=False # install as directory
     )

@@ -15,10 +15,6 @@ import pandas as pd
 
 pd.options.mode.chained_assignment = None
 
-try:
-    from urlparse import urlparse
-except ImportError:
-    from urllib.parse import urlparse
 
 headers = {
     "Accept": 'application/json'
@@ -322,7 +318,7 @@ def validate_variable_names(model: pd.DataFrame) -> Tuple[bool, str]:
     
     
 
-def get_type(input_type: str) -> str:
+def get_type(input_type: str, differ_gene=False) -> str:
     """
     This function standardizes element types.
 
@@ -330,6 +326,8 @@ def get_type(input_type: str) -> str:
     ----------
     input_type: str
         An type of an element.
+    differ_gene: bool
+        Whether to distinguish the gene and protein type, default is False.
 
     Returns
     -------
@@ -344,6 +342,8 @@ def get_type(input_type: str) -> str:
     global CANONICAL_RNA
     input_type = re.findall(r'[A-z]+', input_type) if str(input_type) != 'nan' else 'other'
     input_type = set(x.lower().strip() for x in input_type) 
+    if differ_gene and input_type.intersection(['gene']):
+        return 'gene'
     if input_type.intersection(CANONICAL_TYPES):
         if input_type.intersection(CANONICAL_PROTEIN):
             return 'protein'

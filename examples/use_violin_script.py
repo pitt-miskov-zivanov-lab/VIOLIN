@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), os.pardir, '/src/vi
 from violin.in_out import preprocessing_model, preprocessing_reading, output
 from violin.scoring import score_reading
 from violin.network import node_edge_list
-from violin.visualize_violin import visualize
+from violin.visualize import visualize
 
 evidence_scoring_cols = ["Regulator Name", "Regulator Type", "Regulator Subtype", "Regulator HGNC Symbol", "Regulator Database", "Regulator ID", "Regulator Compartment", "Regulator Compartment ID",
                         "Regulated Name", "Regulated Type", "Regulated Subtype", "Regulated HGNC Symbol", "Regulated Database", "Regulated ID", "Regulated Compartment", "Regulated Compartment ID",

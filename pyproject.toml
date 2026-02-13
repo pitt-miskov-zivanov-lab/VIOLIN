@@ -9,16 +9,15 @@ description = "VIOLIN (Validating Interactions Of Likely Importance to the Netwo
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
-    "openpyxl",
-    "networkx",
-    "numpy",
-    "pandas",
-    "tornado",
-    "httplib2",
+    'openpyxl',
+    'networkx',
+    'numpy',
+    'pandas',
+    'httplib2',
     "matplotlib",
     "requests",
     "tqdm",
-    "gilda"
+    "nltk",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

@@ -9,7 +9,7 @@ import argparse
 from violin.in_out import preprocessing_model, preprocessing_reading, output, BioRECIPE_READING_COL, KIND_DICT_A
 from violin.network import node_edge_list
 from violin.scoring import score_reading
-from violin.visualize_violin import LABEL_CONFIG
+from violin.visualize import LABEL_CONFIG
 
 EVIDENCE_COLS = ["Score", "Source", "Statements", "Paper IDs"]
 EVIDENCE_SCORING_COLS = [x for x in BioRECIPE_READING_COL if x not in EVIDENCE_COLS]

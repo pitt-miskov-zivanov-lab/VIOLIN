@@ -4,9 +4,10 @@ numeric.py
 Handles the element finding and comparison functions for VIOLIN
 Created November 2019 - Casey Hansen MeLoDy Lab
 """
-
+import re
 import pandas as pd
-from typing import Union, List
+from typing import Tuple, Union, List
+from violin.utils import get_similarity_score
 
 
 def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:
@@ -101,7 +102,9 @@ def find_element(search_type: str,
                  element_name: str,
                  element_type: str,
                  model_df: pd.DataFrame,
-                 id_db: str=None ) -> Union[List, int]:
+                 id_db: str=None,
+                 threshold: float=None,
+                 metric: str="jaccard") -> Union[Tuple[List[int], List[float]], Tuple[int, list]]:
     """
     This function finds the correct indices of an element within the model.
     Because elements can exist as multiple types (protein, RNA, gene, etc.),
@@ -121,6 +124,9 @@ def find_element(search_type: str,
         A model dataframe within BioRECIPE format.
     id_db: str
         A database name for provided identifier.
+    threshold: float
+        A similarity score threshold for element matching, only used for 'name', default is None,
+        which means the losest match will be accepted.
 
     Returns
     -------
@@ -131,18 +137,50 @@ def find_element(search_type: str,
     # Searching for element by HGNC symbol
     if search_type == "hgnc":
         # indices of all instances of an element in the model
-        indices = [i for i, x in enumerate(list(model_df['Element HGNC Symbol'])) if
-                   element_name in x and element_name != 'nan']
+        sim_score = model_df['Element HGNC Symbol'].apply(get_similarity_score, name2=element_name, metric=metric)
+        # Default option
+        if not threshold:
+            indices = [i for i, x in enumerate(list(model_df['Element HGNC Symbol'])) if
+                    element_name in x and element_name != 'nan']
+        else:
+            indices = sim_score[sim_score >= threshold].index.tolist()
+
+        conf_scores = [sim_score[i] for i in indices]
     # Searching for element by name
     elif search_type == "name":
-        # indices of all instances of an element in the model
-        indices = [i for i, x in enumerate(list(model_df['Element Name'])) if
-                   element_name in x and element_name != 'nan']
-    # Searching for element by ID
+        sim_score = model_df['Element Name'].apply(get_similarity_score, name2=element_name, metric=metric)
+        # Default option
+        if not threshold:
+            # indices of all instances of an element in the model
+            indices = [i for i, x in enumerate(list(model_df['Element Name'])) if
+                    element_name in x and element_name != 'nan']
+        else: 
+            # take into account similarity score
+            indices = sim_score[sim_score >= threshold].index.tolist()
+        conf_scores = [sim_score[i] for i in indices]
+    # Searching for element by ID, calculating the similarity score of between a ID and IDs list is not meaningful,
+    # so we only check if the provided ID is a substring of the model element IDs,
+    # and the model element database matches the provided database name. 
     elif search_type == "id":
+        # TODO: support for more accurate ID confidence score calculation
+        # elements_ids = model_df['Element IDs'].apply(
+        #     lambda x: re.split(r'[\/\|\,\;]', x) if x != 'nan' else []
+        # )
+
+        # Due to the nature of ID matching, although the ID may collide with 
+        # a substring of the model element IDs, the chance of it is small.
+        # Therefore, we assign a high confidence score for all matched IDs
+        sim_scores = [0.95] * len(model_df['Element IDs'])
+
         # indices of all instances of an element in the model
         indices = [i for i, x in enumerate(list(model_df['Element IDs'])) if (element_name in x) \
-                   and (element_name != 'nan') and (id_db == model_df.loc[i, 'Element Database'])]
+                and (element_name != 'nan') and (id_db == model_df.loc[i, 'Element Database'])]
+        if not threshold:
+            pass
+        else:
+            indices = [x for i, x in enumerate(indices) if sim_scores[i] >= threshold]
+            
+        conf_scores = [sim_scores[i] for i in indices]
 
     else:
         indices = []
@@ -155,10 +193,10 @@ def find_element(search_type: str,
 
     # If element has been found, return a list of its locations within the model
     if len(indices_list) > 0:
-        return indices_list
+        return indices_list, conf_scores
     # Value -1: means element not found
     else:
-        return -1
+        return -1, []
 
 
 def compare(model_atts: dict, reading_atts: dict) -> int:
