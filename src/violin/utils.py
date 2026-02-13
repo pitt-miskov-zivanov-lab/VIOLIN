@@ -7,7 +7,7 @@ def get_similarity_score(name1:str, name2:str, metric: str='jaccard')-> float:
     Get the confidence score of two names,
     currently using edit distance as the metric
     """
-    if metric == 'edit_distance':
+    if metric == 'edit_sim':
         total_len = max(len(name1), len(name2))
         # special case: when both names are null-like, we consider them as a meaningless match
         if total_len == 0: 
