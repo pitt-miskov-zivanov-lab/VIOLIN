@@ -163,24 +163,41 @@ def find_element(search_type: str,
     # and the model element database matches the provided database name. 
     elif search_type == "id":
         # TODO: support for more accurate ID confidence score calculation
-        # elements_ids = model_df['Element IDs'].apply(
-        #     lambda x: re.split(r'[\/\|\,\;]', x) if x != 'nan' else []
-        # )
+        elements_ids = model_df['Element IDs'].apply(
+            lambda x: re.split(r'[\/\|\,\;\ ]+', x) if x != 'nan' else []
+        )
 
-        # Due to the nature of ID matching, although the ID may collide with 
-        # a substring of the model element IDs, the chance of it is small.
-        # Therefore, we assign a high confidence score for all matched IDs
-        sim_scores = [0.95] * len(model_df['Element IDs'])
+        # [model_len, ids_list_len]
+        all_sim_scores = elements_ids.apply(lambda ids_list: [get_similarity_score(element_name, model_id, metric=metric) \
+                                                   for model_id in ids_list] if ids_list else [])
 
+        # TODO: remove the legacy code for ID matching
         # indices of all instances of an element in the model
-        indices = [i for i, x in enumerate(list(model_df['Element IDs'])) if (element_name in x) \
+        # indices = [i for i, x in enumerate(list(model_df['Element IDs'])) if (element_name in x) \
+        #         and (element_name != 'nan') and (id_db == model_df.loc[i, 'Element Database'])]
+        # TODO end
+
+        # find exactly match IDs list 
+        # [match_len, ]
+        indices = [i for i, x in enumerate(elements_ids) if (element_name in x) \
                 and (element_name != 'nan') and (id_db == model_df.loc[i, 'Element Database'])]
+        # [match_len, ]
+        match_position = [elements_ids[i].index(element_name) for i in indices]
+        # take out all similarity score of the matched IDs
+        # [match_len, ]
+        match_sim_indices = {i: pos for i, pos in zip(indices, match_position)}
+        # [match_len, ]
+        match_sim_scores = [all_sim_scores[i][pos] for i, pos in match_sim_indices.items()]
         if not threshold:
             pass
         else:
-            indices = [x for i, x in enumerate(indices) if sim_scores[i] >= threshold]
+            # Remove indices with similarity score below the threshold
+            # [filtered_indices_len, ]
+            indices = [x for i, x in enumerate(indices) if match_sim_scores[i] >= threshold]
             
-        conf_scores = [sim_scores[i] for i in indices]
+        # Take out confidence scores of the remaining indices
+        # [filtered_indices_len, ]
+        conf_scores = [all_sim_scores[i][match_sim_indices[i]] for i in indices]
 
     else:
         indices = []
