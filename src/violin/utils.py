@@ -26,6 +26,8 @@ def get_similarity_score(name1:str, name2:str, metric: str='jaccard')-> float:
             return 0.0
         set1 = set(name1); set2 = set(name2)
         return len(set1 & set2) / len(set1 | set2)
+    
+    elif metric == 'none':
+        return 0.0
     else:
         raise NotImplementedError(f'Metric {metric} is not implemented yet.')
-    

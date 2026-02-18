@@ -1033,7 +1033,7 @@ def score_reading(reading_df: pd.DataFrame,
         else:
             prob = -1 # Unknown error
 
-        scored_reading_df.at[x, 'Entity Match Score'] = prob
+        scored_reading_df.at[x, 'Entity Match Score'] = round(prob, 2)
 
     col = scored_reading_df.pop("Entity Match Score")
     scored_reading_df.insert(0, "Entity Match Score", col)

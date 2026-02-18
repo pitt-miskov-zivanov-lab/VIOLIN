@@ -127,6 +127,9 @@ def find_element(search_type: str,
     threshold: float
         A similarity score threshold for element matching, only used for 'name', default is None,
         which means the losest match will be accepted.
+    metric: str
+        A metric for calculating the similarity score, available options are 'jaccard' and 'edit_sim', 'None'.
+        If 'None', the similarity score will not be calculated
 
     Returns
     -------
@@ -134,10 +137,15 @@ def find_element(search_type: str,
         All row indices of the model spreadsheet in which the element is found (returns -1 if not found).
     """
 
+    if metric == "none": 
+        # Threshold should not be provided when metric is None.
+        threshold = None
+
     # Searching for element by HGNC symbol
     if search_type == "hgnc":
         # indices of all instances of an element in the model
         sim_score = model_df['Element HGNC Symbol'].apply(get_similarity_score, name2=element_name, metric=metric)
+
         # Default option
         if not threshold:
             indices = [i for i, x in enumerate(list(model_df['Element HGNC Symbol'])) if
@@ -148,7 +156,9 @@ def find_element(search_type: str,
         conf_scores = [sim_score[i] for i in indices]
     # Searching for element by name
     elif search_type == "name":
+
         sim_score = model_df['Element Name'].apply(get_similarity_score, name2=element_name, metric=metric)
+
         # Default option
         if not threshold:
             # indices of all instances of an element in the model
