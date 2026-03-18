@@ -17,8 +17,7 @@ dependencies = [
     "httplib2",
     "matplotlib",
     "requests",
-    "tqdm",
-    "gilda"
+    "tqdm"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

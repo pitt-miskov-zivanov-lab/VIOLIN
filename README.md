@@ -2,16 +2,18 @@
 [![Documentation Status](https://readthedocs.org/projects/melody-violin/badge/?version=latest)](https://melody-violin.readthedocs.io/en/latest/?badge=latest)
 [![Documentation Status](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
 
-## What is VIOLIN?
-VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
+## Introduction to VIOLIN
+This repo is for VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
 
+## Note
+This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the UI, please access the through [UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and switch branch to [webdev](#https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
 
 ## Repo Contents
 
 <!-- - [Functionality](#Functionality) -->
 - [Installation](#Installation)
 - [Tutorial](#Tutorial)
-- [Package Structure](#Package-Structure)
+- [Repository structure](#Repository%20structure)
 - [User Interface](#User-Interface)
 - [Citation](#Citation)
 - [Funding](#Funding)
@@ -40,12 +42,12 @@ VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage 
 
 
 ## Tutorial
-This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder.
+This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder. The binder also provides an online runtime environment to run VIOLIN. 
 
 
-VIOLIN adopts BioRECIPE format standards to structure the inputs and outputs:
+VIOLIN I/O adopts [BioRECIPE](https://melody-biorecipe.readthedocs.io/en/latest/) format standards to structure the inputs and outputs:
 ### Input
-- `Model` - A model for classification, in BioRECIPE model format. See the example file [modelA_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/ModelA_biorecipe.xlsx)
+- `Model` - A model for classification, in BioRECIPE model format. See the example file [SkMel133_biorecipe.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/SkMel133_biorecipe.xlsx)
 - `interaction set` - A interaction set, in BioRECIPE interaction list format. An example file is provided in [RA2_reading_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/interactions/RA2_reading_BioRECIPE.xlsx).
 
 ### Output
@@ -65,14 +67,7 @@ The example usage for VIOLIN could be found in Jupyter notebook and the python s
 - `use_violin_script.py` - [python script](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_violin_script.py) used to run VIOLIN at the command line
 
 
-
-### Customized input
-To use your own curated model for VIOLIN, please follow the BioRECIPE model format. Please also note that VIOLIN use unique identifiers for every element in the model to construct the graph. The unique identifiers could distinguish the elements by `name`, `type`, `subtype`, and `compartment ID`, these identifiers are used in regulator list for regarding elements. For example, if IL2 positively influences IL2R, then in `Positive Regulator List` of IL2R, the IL2 should be written as 'IL2_pn_nan_GO0005576', where the `name`, `type`, `subtype`, and `compartment ID` of IL2 is 'IL2', 'protein', '', and 'GO0005576'. Before running the VIOLIN, we encourage you proofread the model file using the command below:
-```bash
-python preprocessing/normalization.py --format model --file [MODEL_FILENAME]
-```
-
-## Package Structure
+## Repository structure 
 
 - [`setup.py`](setup.py): python file that help set up python dependencies installation
 - [`src/violin/`](src/violin/): directory that includes core python VIOLIN files
@@ -83,8 +78,9 @@ python preprocessing/normalization.py --format model --file [MODEL_FILENAME]
   - [`src/violin/scoring.py`](src/violin/scoring.py): functions for classifying interactions using the decision tree.
   - [`src/violin/visualize_violin.py`](src/violin/visualize_violin.py): functions for visualizing VIOLIN results.
 
-- [`examples/`](examples/): directory that includes tutorial notebook and example inputs and outputs
-- [`docs/`](docs/): containing files supporting the repo's host on [Read the Docs](https://melody-violin.readthedocs.io)
+- [`examples/`](examples/): directory that includes tutorial notebook and example inputs and outputs.
+<!-- - [`docs/`](docs/): containing files supporting the repo's host on [Read the Docs](https://melody-violin.readthedocs.io) -->
+- [`eval/`](eval/): directory that includes all testing files and scripts. 
 - [`LICENSE.txt`](LICENSE.txt): MIT License
 - [`README.md`](README.md): this is me!
 
@@ -98,28 +94,16 @@ unzip input.zip
 python evaluation_schemes.py --scheme [SCHEME] --reader [READER_NAME] --output [OUTPUT_DIRECTORY] --attributes [ATTRIBUTES_LIST]
 ```
 
-e.g.
+e.g.:
 ```bash
 python evaluation_schemes.py --scheme v1 --reader REACH --output ./
 ```
 For more details, check the helper function of argparse or in `evaluation_schemes.py`.
+To access the curation results, unzip `curation.zip` (manual curations for RA2 output) and run `mc_eval.py` to evaluate classification accuracy.
+
 ## User Interface
-For your convenience, VIOLIN includes a user interface that visualizes the classification results. The interface is built using Next.js for the frontend and FastAPI for the backend.
+Graph structure is complicated to view with a spreadsheet, VIOLIN includes a user interface that visualizes the classification results. The interface is built using React for the frontend and FastAPI for the backend. To access the user interface, first access the [VIOLIN UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) page and upload the interaction list and model files in corresponding windows. 
 
-### Running the frontend
-Install npm (if not already installed yet) and start the development server:
-```bash
-brew install npm
-npm run dev
-```
-
-### Running the backend
-Install FastAPI to start the server:
-```bash
-pip install fastapi[standard]
-fastapi run main.py
-```
-You could find out the interface at http://localhost:3000, where you can upload your interaction set and model file for classification.
 
 ## Citation
 

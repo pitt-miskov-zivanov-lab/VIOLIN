@@ -25,8 +25,7 @@ setup(
         'httplib2',
         "matplotlib",
         "requests",
-        "tqdm",
-        "gilda"
+        "tqdm"
     ],
     zip_safe=False # install as directory
     )
