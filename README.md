@@ -6,7 +6,7 @@
 VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
 
 ## Note
-This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the user-interface, please access them through [UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and switch branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
+This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the user-interface, please access them through the [link](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) or by switching branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
 
 ## Repo Contents
 
@@ -39,7 +39,14 @@ This repository is primarily hold for reproducing results reported in paper. To 
    ```
    jupyter notebook examples/use_VIOLIN.ipynb
    ```
-
+4. (Optional) You can also interact with VIOLIN with command line:
+   ```bash
+   cd examples
+   # For arguments info:
+   python run_VIOLIN.py -h
+   # Example:
+   python run_VIOLIN.py --model ./input/models/SkMel133_biorecipe.xlsx --reading ./input/interactions/RA2_reading_BioRECIPE.xlsx --output ./ex --summary pie_plots --scheme '1' --show_plot
+   ```
 
 ## Tutorial
 This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder. The binder also provides an online runtime environment to run VIOLIN. 
@@ -64,7 +71,7 @@ The output for each pair of a interaction set and a model consists of 5 files, w
 ### Usage
 The example usage for VIOLIN could be found in Jupyter notebook and the python script:
 - `use_VIOLIN.ipynb` - [Jupyter notebook](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_VIOLIN.ipynb) used to run VIOLIN
-- `use_violin_script.py` - [python script](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/use_violin_script.py) used to run VIOLIN at the command line
+- `run_VIOLIN.py` - [python script](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/run_VIOLIN.py) used to run VIOLIN at the command line
 
 
 ## Repository structure 
