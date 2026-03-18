@@ -3,10 +3,10 @@
 [![Documentation Status](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
 
 ## Introduction to VIOLIN
-This repo is for VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
+VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
 
 ## Note
-This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the UI, please access the through [UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and switch branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
+This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the user-interface, please access them through [UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and switch branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
 
 ## Repo Contents
 
@@ -45,7 +45,7 @@ This repository is primarily hold for reproducing results reported in paper. To 
 This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder. The binder also provides an online runtime environment to run VIOLIN. 
 
 
-VIOLIN I/O adopts [BioRECIPE](https://melody-biorecipe.readthedocs.io/en/latest/) format standards to structure the inputs and outputs:
+VIOLIN I/O follows [BioRECIPE](https://melody-biorecipe.readthedocs.io/en/latest/) format standards to structure the inputs and outputs:
 ### Input
 - `Model` - A model for classification, in BioRECIPE model format. See the example file [SkMel133_biorecipe.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/SkMel133_biorecipe.xlsx)
 - `interaction set` - A interaction set, in BioRECIPE interaction list format. An example file is provided in [RA2_reading_BioRECIPE.xlsx](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/examples/input/interactions/RA2_reading_BioRECIPE.xlsx).
