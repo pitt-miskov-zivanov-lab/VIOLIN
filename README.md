@@ -6,7 +6,7 @@
 This repo is for VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
 
 ## Note
-This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the UI, please access the through [UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and switch branch to [webdev](#https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
+This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the UI, please access the through [UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and switch branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
 
 ## Repo Contents
 
