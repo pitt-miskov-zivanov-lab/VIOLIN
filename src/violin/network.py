@@ -3,6 +3,7 @@ network.py
 
 Handles the functions necessary for finding paths within the model for VIOLIN
 Created November 2019 - Casey Hansen MeLoDy Lab
+Updated June 2025 - Haomiao Luo
 """
 from typing import Union
 import pandas as pd

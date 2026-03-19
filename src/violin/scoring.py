@@ -3,6 +3,7 @@ scoring.py
 
 Handles the Match Score, Kind Score, and Epistemic Value functions for VIOLIN
 Created November 2019 - Casey Hansen MeLoDy Lab
+Updated June 2025 - Haomiao Luo
 """
 
 import pandas as pd

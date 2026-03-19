@@ -1,6 +1,9 @@
 # VIOLIN
-[![Documentation Status](https://readthedocs.org/projects/melody-violin/badge/?version=latest)](https://melody-violin.readthedocs.io/en/latest/?badge=latest)
+<!-- [![Documentation Status](https://readthedocs.org/projects/melody-violin/badge/?version=latest)](https://melody-violin.readthedocs.io/en/latest/?badge=latest) -->
+[![Live Demo](https://img.shields.io/badge/access-web-FFEDD4.svg)](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/)
 [![Documentation Status](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/LICENSE)
+
 
 ## Introduction to VIOLIN
 VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.

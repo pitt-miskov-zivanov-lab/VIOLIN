@@ -2,7 +2,6 @@
 in_out.py
 
 Handles file input and output functions for VIOLIN tool
-Created November 2019 - Casey Hansen MeLoDy Lab
 """
 
 import os.path
