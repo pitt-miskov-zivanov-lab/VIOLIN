@@ -6,10 +6,12 @@
 
 
 ## Introduction to VIOLIN
-VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks, is a tool written with python used to automatically classify and judge literature-extracted interactions from machine readers or interactions retrieved from database by comparing them to existing curated models. This comparison can help identify key interactions in the context of model.
+VIOLIN (**V**ersatile **I**nteraction **O**rganizing to **L**everage **I**nformation in **N**etworks) is a configurable, attribute-aware reconciliation framework that formally compares new interaction lists against structured baseline graphs, enabling systematic knowledge integration. VIOLIN classifies each interaction as a corroboration, contradiction, flagged case, or extension, and supports configurable attribute inclusion strategies and mismatch semantics to adjust reconciliation strictness. 
+
+As automated extraction technologies continue to expand the volume of structured interaction data, reconciliation frameworks such as VIOLIN will play a critical role in maintaining coherence between evolving literature and curated knowledge representations. The ability to quantify corroboration, contradiction, ambiguity, and expansion in a transparent and configurable manner provides a foundation for reproducible and scalable model updating in AI-assisted scientific discovery.
 
 ## Note
-This repository is primarily hold for reproducing results reported in paper. To use the latest version or access the user-interface, please access them through the [link](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) or by switching branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
+This repository includes the VIOLIN stand-alone package, a collection of files that can be used as inputs to VIOLIN, Jupyter notebooks, and VIOLIN documentation. The web-based user-interface is available [here](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) and the latest versions can be found by switching branch to [webdev](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/tree/webdev).
 
 ## Repo Contents
 
@@ -19,6 +21,7 @@ This repository is primarily hold for reproducing results reported in paper. To 
 - [Repository structure](#Repository%20structure)
 - [User Interface](#User-Interface)
 - [Citation](#Citation)
+- [Acknowledgments](#Acknowledgments)
 - [Funding](#Funding)
 - [Support](#Support)
 
@@ -128,9 +131,11 @@ If you use this code or find this effort useful or relevant to your research, pl
 }
 ```
 
-## Funding
+## Acknowledgments
+The original version of interaction classifier was developed by Dr. Peter Spirtes (CMU) as part of the AIMCancer project (DARPA's Big Mechanism program) and later revised and further expanded by Dr. Casey Hansen during her PhD studies in Melody Lab. Dr. Cheryl Telmer (CMU) has provided invaluable feedback and biological, as well as manually curated files for testing VIOLIN throughout the project. Dr. Gaoxiang Zhou assisted in maintaining the code and developed the Binder notebook. The current version of VIOLIN has been developed primarily thanks to the efforts of Haomiao Luo. The front-end for the web-based interface was developed by Niloofar Arazkhani and the back-end was set up on Amazon AWS by Difei Tang. 
 
-This work was funded in part by DARPA Big Mechanism award, AIMCancer (W911NF-17-1-0135); and in part by the NSF EAGER award CCF-2324742.
+## Funding
+This work was funded by DARPA Big Mechanism award W911NF-17-1-0135, NSF EAGER award CCF-2324742, and NIH award R01LM014673.
 
 ## Support
 Feel free to reach out via email nmzivanov@pitt.edu for additional support if you run into any error.
