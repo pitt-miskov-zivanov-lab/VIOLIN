@@ -96,11 +96,10 @@ The example usage for VIOLIN could be found in Jupyter notebook and the python s
 
 ## Evaluation
 ### Evaluation on four machine readers and classification schemes
-The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the model of CD4+ T cell differentiation model. The output from four readers are cached in `input.zip`.
+The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the model of CD4+ T cell differentiation model. The output from four readers and their filtered results are included in input folder.
 To get the results, run `evaluation_schemes.py` by:
 ```bash
 cd eval
-unzip input.zip
 python evaluation_schemes.py --scheme [SCHEME] --reader [READER_NAME] --output [OUTPUT_DIRECTORY] --attributes [ATTRIBUTES_LIST]
 ```
 
@@ -109,7 +108,7 @@ e.g.:
 python evaluation_schemes.py --scheme v1 --reader REACH --output ./
 ```
 For more details, check the helper function of argparse or in `evaluation_schemes.py`.
-To access the curation results, unzip `curation.zip` (manual curations for RA2 output) and run `mc_eval.py` to evaluate classification accuracy.
+`manual_curation` folder contains manually curated results (referred to as Group 5 and Group 6 in the paper). To evaluate classification accuracy on this data, run `mc_eval.py`.
 
 ## User Interface
 Graph structure is complicated to view with a spreadsheet, VIOLIN includes a user interface that visualizes the classification results. The interface is built using React for the frontend and FastAPI for the backend. To access the user interface, first access the [VIOLIN UI](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/violin) page and upload the interaction list and model files in corresponding windows. 
