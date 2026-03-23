@@ -55,7 +55,7 @@ This repository includes the VIOLIN stand-alone package, a collection of files t
    ```
 
 ## Tutorial
-This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder. The binder also provides an online runtime environment to run VIOLIN. 
+This section briefly describes the inputs and outputs of VIOLIN, as well as how to use it via a Jupyter Notebook. All tutorial examples are located in the `examples` folder. The Binder notebook also provides an online runtime environment to run VIOLIN. 
 
 
 VIOLIN I/O follows [BioRECIPE](https://melody-biorecipe.readthedocs.io/en/latest/) format standards to structure the inputs and outputs:
@@ -99,7 +99,7 @@ The example usage for VIOLIN could be found in Jupyter notebook and the python s
 
 ## Evaluation
 ### Evaluation on four machine readers and classification schemes
-The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the model of CD4+ T cell differentiation model. The output from four readers and their filtered results are included in input folder.
+The evaluation and experiment could be found in `eval` folder. `eval/input` includes the results from four readers. `RA` in the filenames stands for the interactions to be compared with the model of Melanoma SkMel133 cell line, and filenames with `RB` prefix are for the CD4+ T cell differentiation model. The output from four readers and their filtered results are included in input folder.
 To get the results, run `evaluation_schemes.py` by:
 ```bash
 cd eval
@@ -132,7 +132,7 @@ If you use this code or find this effort useful or relevant to your research, pl
 ```
 
 ## Acknowledgments
-The original version of interaction classifier was developed by Dr. Peter Spirtes (CMU) as part of the AIMCancer project (DARPA's Big Mechanism program) and later revised and further expanded by Dr. Casey Hansen during her PhD studies in Melody Lab. Dr. Cheryl Telmer (CMU) has provided invaluable feedback and biological, as well as manually curated files for testing VIOLIN throughout the project. Dr. Gaoxiang Zhou assisted in maintaining the code and developed the Binder notebook. The current version of VIOLIN has been developed primarily thanks to the efforts of Haomiao Luo. The front-end for the web-based interface was developed by Niloofar Arazkhani and the back-end was set up on Amazon AWS by Difei Tang. 
+The original version of interaction classifier was developed by Dr. Peter Spirtes (CMU) as part of the AIMCancer project (DARPA's Big Mechanism program) and later revised and further expanded by Dr. Casey Hansen during her PhD studies in Melody Lab (Pitt). Dr. Cheryl Telmer (CMU) has provided invaluable feedback and biological, as well as manually curated files for testing VIOLIN throughout the project. Dr. Gaoxiang Zhou (Pitt) assisted in maintaining the code and developed the Binder notebook. The current version of VIOLIN has been developed primarily by Haomiao Luo at MeLoDy Lab. The front-end for the web-based interface was developed by Niloofar Arazkhani and the back-end was set up on Amazon AWS by Difei Tang at MeLoDy Lab. 
 
 ## Funding
 This work was funded by DARPA Big Mechanism award W911NF-17-1-0135, NSF EAGER award CCF-2324742, and NIH award R01LM014673.
