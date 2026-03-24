@@ -51,7 +51,13 @@ This repository includes the VIOLIN stand-alone package, a collection of files t
    # For arguments info:
    python run_VIOLIN.py -h
    # Example:
-   python run_VIOLIN.py --model ./input/models/SkMel133_biorecipe.xlsx --reading ./input/interactions/RA2_reading_BioRECIPE.xlsx --output ./ex --summary pie_plots --scheme '1' --show_plot
+   python run_VIOLIN.py --model ./input/models/SkMel133_biorecipe.xlsx \
+                        --reading ./input/interactions/RA2_reading_BioRECIPE.xlsx \
+                        --output ./ex \
+                        --summary pie_plots \
+                        --scheme '1' \
+                        --attributes 'Regulator Compartment' 'Regulated Compartment' \
+                        --show_plot
    ```
 
 ## Tutorial

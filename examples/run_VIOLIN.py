@@ -25,7 +25,7 @@ evidence_scoring_cols = ["Regulator Name", "Regulator Type", "Regulator Subtype"
 attributes = ['Regulated Compartment ID', 'Regulator Compartment ID', 'Cell Line']
 
 #Inputs: Model file, Reading File, Output Header, Classification, Filtering Option, Attributes
-def use_violin(model_file, lee_file, out_file, approach = '1', score = 'extend', filt_opt = '100%', plot=True):
+def use_violin(model_file, lee_file, out_file, approach = '1', attributes=attributes, score = 'extend', filt_opt = '100%', plot=True):
     """
     This function runs VIOLIN via a terminal command
 
@@ -109,6 +109,7 @@ def main():
                    lee_file=args.reading,
                    out_file=args.output,
                    approach=args.scheme,
+                   attributes=args.attributes,
                    score=args.summary,
                    filt_opt=args.filter,
                    plot=args.show_plot)
