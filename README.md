@@ -141,7 +141,10 @@ If you use this code or find this effort useful or relevant to your research, pl
 ```
 
 ## Acknowledgments
-The original version of interaction classifier was developed by Dr. Peter Spirtes (CMU) as part of the AIMCancer project (DARPA's Big Mechanism program) and later revised and further expanded by Dr. Casey Hansen during her PhD studies in Melody Lab (Pitt). Dr. Cheryl Telmer (CMU) has provided invaluable feedback and biological, as well as manually curated files for testing VIOLIN throughout the project. Dr. Gaoxiang Zhou (Pitt) assisted in maintaining the code and developed the Binder notebook. The current version of VIOLIN has been developed primarily by Haomiao Luo at MeLoDy Lab. The front-end for the web-based interface was developed by Niloofar Arazkhani and the back-end was set up on Amazon AWS by Difei Tang at MeLoDy Lab. 
+The original version of the interaction classifier was developed by Dr. Peter Spirtes (CMU) as part of the AIMCancer project (DARPA’s Big Mechanism program) and was subsequently revised and expanded by Dr. Casey Hansen during her PhD studies in the MeLoDy Lab (Pitt). Dr. Cheryl Telmer (CMU) provided invaluable feedback, biological insight, and manually curated datasets for testing VIOLIN throughout the project. Dr. Gaoxiang Zhou (Pitt) contributed to code maintenance and developed the Binder notebook.
+
+The current version of VIOLIN has been developed primarily by Haomiao Luo in the MeLoDy Lab. The front end of the web-based interface was developed by Niloofar Arazkhani, and the back end was deployed on Amazon Web Services (AWS) by Difei Tang, both in the MeLoDy Lab. The project has been led throughout by the MeLoDy Lab’s PI, Dr. Natasa Miskov-Zivanov.
+
 
 ## Funding
 This work was funded by DARPA Big Mechanism award W911NF-17-1-0135, NSF EAGER award CCF-2324742, and NIH award R01LM014673.
