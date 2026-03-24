@@ -103,7 +103,7 @@ The evaluation and experiment could be found in `eval` folder. `eval/input` incl
 To get the results, run `evaluation_schemes.py` by:
 ```bash
 cd eval
-python evaluation_schemes.py --scheme <SCHEME> --reader <READER_NAME> --output <OUTPUT_DIRECTORY> --attributes <ATTRIBUTES_LIST>
+python evaluation_schemes.py --scheme [SCHEME] --reader [READER_NAME] --output [OUTPUT_DIRECTORY] --attributes [ATTRIBUTES_LIST]
 ```
 
 e.g.:
@@ -113,7 +113,7 @@ python evaluation_schemes.py --scheme v1 --reader REACH --output ./
 For more details, check the helper function of argparse or in `evaluation_schemes.py`.
 `manual_curation` folder contains manually curated results (referred to as Group 5 and Group 6 in the paper). To evaluate classification accuracy on this data, run `mc_eval.py` by: 
 ```bash
-python mc_eval.py --model <baseline_graph_filename.xlsx> --reading <curated_interaction_list.xlsx> --output <evaluation_results.json>
+python mc_eval.py --model {baseline_graph_filename.xlsx} --reading {curated_interaction_list.xlsx} --output {evaluation_results.json}
 ```
 
 ## User Interface
