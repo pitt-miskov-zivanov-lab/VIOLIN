@@ -6,7 +6,7 @@ def readme():
 
 setup(
     name='violin',
-    version='1.0',
+    version='1.1',
 
     author='Casey Hansen and Haomiao Luo',
     description='VIOLIN',

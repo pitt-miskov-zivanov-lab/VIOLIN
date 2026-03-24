@@ -11,7 +11,8 @@ import matplotlib.ticker as mticker
 import numpy as np
 from typing import List
 
-from violin.scoring import KIND_DICT_A, KIND_DICT_B, MATCH_DICT
+from violin.in_out import KIND_DICT_A, KIND_DICT_B 
+from violin.scoring import MATCH_DICT
 
 COLOR_CONFIG = {
     'corroboration': ['#235490','#2B65AD','#718EC5','#B0BEDA', '#E7EFF9'],
@@ -27,7 +28,6 @@ LABEL_CONFIG = {
     'contradiction': ['dir contradiction', 'sign contradiction', 'att contradiction'],
     'flagged': ['dir mismatch', 'path mismatch', 'self-regulation', 'flagged4', 'flagged5'],
 }
-
 
 _LABEL_COLORS = {
     'strong corroboration': '#235490',
@@ -145,7 +145,7 @@ class ViolinPlot:
         self.static_colors = ['royalblue','limegreen','gold','darkorange']
         self.cat_labs = ['corroboration', 'extension', 'contradiction', 'flagged']
 
-    def get_pie_plots(self) -> None:
+    def get_pie_plots(self, out_file: str='', save=True, show=False) -> None:
         """
         This creates figures of the VIOLIN output: the classification distribution shown in pie charts
         """
@@ -169,6 +169,11 @@ class ViolinPlot:
                     plt.pie(count_cat, colors=COLOR_CONFIG[cat])
                     plt.legend(labels=captions, bbox_to_anchor=((i+1)*0.2, 0), loc="lower center",
                             bbox_transform=plt.gcf().transFigure)
+            if save:
+                plt.savefig(f'{out_file}_pie.png',bbox_inches = "tight",dpi=200)
+            if show: 
+                plt.show()
+                plt.tight_layout()
         else:
             raise ValueError("The file to plot is empty.")
 
@@ -343,12 +348,15 @@ class ViolinPlot:
         """
         Count scores (evidence, match, total) for each category
         """
-        score = category_df[score_name].value_counts().keys().tolist()
-        counts = category_df[score_name].value_counts().tolist()
-        for value in list(df[score_name]):
-            # Add placeholder if value not in score
-            if value not in score:
-                score += [value]
-                counts += [0]
-        counts = [x for _,x in sorted(zip(score, counts))]
-        return counts
+        if category_df.empty:
+            return [0] * len(df[score_name].unique())
+        else:
+            score = category_df[score_name].value_counts().keys().tolist()
+            counts = category_df[score_name].value_counts().tolist()
+            for value in list(df[score_name]):
+                # Add placeholder if value not in score
+                if value not in score:
+                    score += [value]
+                    counts += [0]
+            counts = [x for _,x in sorted(zip(score, counts))]
+            return counts
