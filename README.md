@@ -141,7 +141,7 @@ If you use this code or find this effort useful or relevant to your research, pl
 ```
 
 ## Acknowledgments
-The current version of VIOLIN has been created and is maintained by MeLoDy Lab members at Pitt. The project student lead, Haomiao Luo made significant updates to the code base, developed additional scripts for format compatibility, created prompts and infrastructure for LLM use (Llama), as well as the initial version of the web-based interface. The current interface is developed and integrated with other tools by Niloofar Arazkhani. The back-end was deployed on Amazon Web Services (AWS) by Difei Tang, who also contributed to developing infrastructure for GPT use. 
+The current version of VIOLIN has been created and is maintained by MeLoDy Lab members at Pitt. The project student lead, Haomiao Luo made significant updates to the code base, developed additional scripts for format compatibility, created prompts and inference code for LLM use (Llama), as well as the initial version of the web-based interface. The current interface is developed and integrated with other tools by Niloofar Arazkhani. The back-end was deployed on Amazon Web Services (AWS) by Difei Tang, who also contributed to developing inference code for GPT use. 
 
 The original version of the interaction classifier was developed by Dr. Peter Spirtes (CMU) as part of the AIMCancer project (DARPA’s Big Mechanism program) and was subsequently revised and expanded by Dr. Casey Hansen during her PhD studies in MeLoDy Lab (Pitt). Dr. Cheryl Telmer (CMU) provided invaluable feedback, biological insight, and manually curated datasets for testing VIOLIN throughout the project. Dr. Gaoxiang Zhou (Pitt) contributed to code maintenance and developed the Binder notebook.
 
