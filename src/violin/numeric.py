@@ -214,13 +214,15 @@ def find_element(search_type: str,
     indices_list = []
 
     # Searching for matching element type
-    for idx in indices:
+    confs = []
+    for k, idx in enumerate(indices):
         if model_df.loc[idx, "Element Type"] == element_type:
             indices_list.append(idx)
+            confs.append(conf_scores[k])
 
     # If element has been found, return a list of its locations within the model
     if len(indices_list) > 0:
-        return indices_list, conf_scores
+        return indices_list, confs
     # Value -1: means element not found
     else:
         return -1, []
