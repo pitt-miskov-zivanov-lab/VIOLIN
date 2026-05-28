@@ -16,9 +16,9 @@ This repo is for VIOLIN, stands for **V**ersatile **I**nteraction **O**rganizing
 ## Updates
 #### [2026-05-28] CURIE-based matching
 - Multiple matching strategies are now supported. Configure `match_sim_metric` to pick the one that fits your use case:
-  - `'jaccard'` — measure element string similarity using the Jaccard index
-  - `'edit_sim'` — measure element string similarity using Levenshtein distance
-  - `'grounding'` — match element strings via [CURIE](https://bioregistry.io/) identifiers.
+  - `'jaccard'` — measure element string similarity using the [Jaccard index](https://en.wikipedia.org/wiki/Jaccard_index#:~:text=The%20Jaccard%20index%20is%20a,intersection%20over%20union%20(IoU).)
+  - `'edit_sim'` — measure element string similarity using [Levenshtein distance](https://en.wikipedia.org/wiki/Edit_distance)
+  - `'grounding'` — match element strings via [CURIE](https://bioregistry.io/).
 
 ## Repo Contents
 
