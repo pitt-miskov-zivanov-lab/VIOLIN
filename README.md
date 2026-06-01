@@ -1,5 +1,5 @@
 # VIOLIN
-[![API Status](https://img.shields.io/website?url=http%3A%2F%2Fboheme-alb-616936326.us-east-1.elb.amazonaws.com%2Fdocs&up_message=live&up_color=FFEDD4&down_message=inactive&down_color=red&label=web)](http://boheme-alb-616936326.us-east-1.elb.amazonaws.com/)
+[![API Status](https://img.shields.io/website?url=http%3A%2F%2Fboheme.pitt.edu%2Fdocs&up_message=live&up_color=FFEDD4&down_message=inactive&down_color=red&label=web)](https://boheme.pitt.edu/violin)
 [![Documentation Status](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pitt-miskov-zivanov-lab/VIOLIN/HEAD?labpath=%2Fexamples%2Fuse_VIOLIN.ipynb)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/pitt-miskov-zivanov-lab/VIOLIN/blob/master/LICENSE)
 ![version tag](https://img.shields.io/badge/VIOLIN-v1.1-blue.svg)
