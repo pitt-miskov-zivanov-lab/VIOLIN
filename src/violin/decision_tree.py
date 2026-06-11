@@ -281,12 +281,10 @@ def kind_score(x: int,
         source_grd, source_grd_confs =  element_matcher.find_element(
             reading_df.loc[x, 'Regulator Name'], 
             threshold=name_match_threshold,
-            _cache=_cache
         )
         target_grd, target_grd_confs = element_matcher.find_element(
             reading_df.loc[x, 'Regulated Name'], 
             threshold=name_match_threshold,
-            _cache=_cache
         )
         
     else:
