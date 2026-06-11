@@ -233,6 +233,9 @@ def score_reading(reading_df: pd.DataFrame,
     assert (classify_scheme in ['1', '2', '3'])
     assert (mi_cxn in ['d', 'i'])
 
+    logger.info(f"metric: {match_sim_metric}")
+    logger.info(f"name_match_threshold: {name_match_threshold}")
+
     if kind_values is None:
         if classify_scheme in ['1', '2']:
             kind_values = KIND_DICT_A

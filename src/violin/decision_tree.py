@@ -234,6 +234,7 @@ def kind_score(x: int,
 
     assert (mi_cxn in ['d', 'i'])
 
+
     ### Finding interaction in Interactions Set (iIS) attributes ###
     # Finding iIS regulator sign
     signs = ['Negative', 'Positive']

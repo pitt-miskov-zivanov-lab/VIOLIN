@@ -9,6 +9,10 @@ import pandas as pd
 from typing import Tuple, Union, List
 from violin.utils import get_similarity_score
 
+# caching for storing the results of find_element function
+_find_element_cache = dict()
+
+
 
 def get_attributes(A_idx: int, B_idx: int, sign: str, model_df: pd.DataFrame, attrs: list, path: bool=False) -> dict:
     """
@@ -136,7 +140,11 @@ def find_element(search_type: str,
     location : list|int
         All row indices of the model spreadsheet in which the element is found (returns -1 if not found).
     """
-
+    # Check if the result is already in cache
+    cache_key = (search_type, element_name, element_type, id_db, threshold, metric)
+    if cache_key in _find_element_cache:
+        return _find_element_cache[cache_key]
+    
     if metric == "none": 
         # Threshold should not be provided when metric is None.
         threshold = None
@@ -222,9 +230,13 @@ def find_element(search_type: str,
 
     # If element has been found, return a list of its locations within the model
     if len(indices_list) > 0:
+        # Cache the result before returning
+        _find_element_cache[cache_key] = (indices_list, confs)
         return indices_list, confs
     # Value -1: means element not found
     else:
+        # Cache the result before returning
+        _find_element_cache[cache_key] = (-1, [])
         return -1, []
 
 
