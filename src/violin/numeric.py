@@ -108,7 +108,8 @@ def find_element(search_type: str,
                  model_df: pd.DataFrame,
                  id_db: str=None,
                  threshold: float=None,
-                 metric: str="jaccard") -> Union[Tuple[List[int], List[float]], Tuple[int, list]]:
+                 metric: str="jaccard",
+                 _cache: dict=None) -> Union[Tuple[List[int], List[float]], Tuple[int, list]]:
     """
     This function finds the correct indices of an element within the model.
     Because elements can exist as multiple types (protein, RNA, gene, etc.),
@@ -134,6 +135,8 @@ def find_element(search_type: str,
     metric: str
         A metric for calculating the similarity score, available options are 'jaccard' and 'edit_sim', 'None'.
         If 'None', the similarity score will not be calculated
+    _cache: dict
+        A cache dict for storing the results of find_element function, where keys are tuples of function
 
     Returns
     -------
@@ -142,8 +145,8 @@ def find_element(search_type: str,
     """
     # Check if the result is already in cache
     cache_key = (search_type, element_name, element_type, id_db, threshold, metric)
-    if cache_key in _find_element_cache:
-        return _find_element_cache[cache_key]
+    if _cache is not None and cache_key in _cache:
+        return _cache[cache_key]
     
     if metric == "none": 
         # Threshold should not be provided when metric is None.
@@ -231,12 +234,14 @@ def find_element(search_type: str,
     # If element has been found, return a list of its locations within the model
     if len(indices_list) > 0:
         # Cache the result before returning
-        _find_element_cache[cache_key] = (indices_list, confs)
+        if _cache is not None:
+            _cache[cache_key] = (indices_list, confs)
         return indices_list, confs
     # Value -1: means element not found
     else:
         # Cache the result before returning
-        _find_element_cache[cache_key] = (-1, [])
+        if _cache is not None:
+            _cache[cache_key] = (-1, [])
         return -1, []
 
 

@@ -74,7 +74,7 @@ MATCH_DICT = {"source present" : 1,
 atts_list = []
 
 
-def match_score(x:int, reading_df: pd.DataFrame, model_df: pd.DataFrame, match_values: dict=None) -> int:
+def match_score(x:int, reading_df: pd.DataFrame, model_df: pd.DataFrame, match_values: dict=None, _cache: dict=None) -> int:
     """
     This function calculates the Match Score for an interaction from the reading.
 
@@ -108,32 +108,38 @@ def match_score(x:int, reading_df: pd.DataFrame, model_df: pd.DataFrame, match_v
     if (find_element("name",
                      reading_df.loc[x, 'Regulated Name'],
                      reading_df.loc[x, 'Regulated Type'],
-                     model_df) != -1 or
+                     model_df,
+                     _cache=_cache) != -1 or
         find_element("hgnc",
                      reading_df.loc[x, 'Regulated HGNC Symbol'],
                      reading_df.loc[x, 'Regulated Type'],
-                     model_df) != -1 or
+                     model_df,
+                     _cache=_cache) != -1 or
         find_element("id",
                      reading_df.loc[x, 'Regulated ID'],
                      reading_df.loc[x, 'Regulated Type'],
                      model_df,
-                     reading_df.loc[x, 'Regulated Database']) != -1 ):
+                     reading_df.loc[x, 'Regulated Database'],
+                     _cache=_cache) != -1,):
         regulated = True
 
     # Search for regulator from reading in model
     if (find_element("name",
                      reading_df.loc[x, 'Regulator Name'],
                      reading_df.loc[x, 'Regulator Type'],
-                     model_df) != -1 or
+                     model_df,
+                     _cache=_cache) != -1 or
         find_element("hgnc",
                      reading_df.loc[x, 'Regulator HGNC Symbol'],
                      reading_df.loc[x, 'Regulator Type'],
-                     model_df) != -1 or
+                     model_df,
+                     _cache=_cache) != -1 or
         find_element("id",
                      reading_df.loc[x, 'Regulator ID'],
                      reading_df.loc[x, 'Regulator Type'],
                      model_df,
-                     reading_df.loc[x, 'Regulator Database']) != -1 ):
+                     reading_df.loc[x, 'Regulator Database'],
+                     _cache=_cache) != -1 ):
         regulator = True
 
     # Scoring definition
@@ -264,9 +270,9 @@ def score_reading(reading_df: pd.DataFrame,
     scored_reading_df['Total Score'] = pd.Series()
 
     #Calculate scores
-    collections = []
+    collections = []; _cache_element_match = {}
     for x in range(reading_df.shape[0]):
-        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df, match_values)
+        scored_reading_df.at[x,'Match Score'] = match_score(x,reading_df,model_df, match_values, _cache=_cache_element_match)
         scored_reading_df.at[x,'Kind Score'], interaction_hit = kind_score(
             x,model_df,
             reading_df,
@@ -277,7 +283,9 @@ def score_reading(reading_df: pd.DataFrame,
             classify_scheme,
             mi_cxn, 
             name_match_threshold=name_match_threshold,
-            match_sim_metric=match_sim_metric)
+            match_sim_metric=match_sim_metric,
+            _cache=_cache_element_match)
+        
         scored_reading_df.at[x,'Epistemic Value'] = epistemic_value(x,reading_df)
         scored_reading_df.at[x,'Total Score'] =  ((scored_reading_df.at[x,'Evidence Score']*scored_reading_df.at[x,'Match Score'])+int(scored_reading_df.at[x,'Kind Score']))*scored_reading_df.at[x,'Epistemic Value']
 
@@ -298,6 +306,10 @@ def score_reading(reading_df: pd.DataFrame,
 
     col = scored_reading_df.pop("Entity Match Score")
     scored_reading_df.insert(0, "Entity Match Score", col)
+
+    # Clear cache after scoring the whole reading
+    _cache_element_match.clear()
+
     if include_hits:
         return scored_reading_df, collections
     else: 

@@ -167,7 +167,8 @@ def kind_score(x: int,
                classify_scheme: str='1',
                mi_cxn: str='d',
                name_match_threshold: float=None,
-               match_sim_metric: str='jaccard') -> int:
+               match_sim_metric: str='jaccard',
+               _cache:dict=None) -> int:
     """
     This function calculates the Kind Score for an interaction in the Interactions Set (iIS).
     The kind score will be used to represent the subcategories.
@@ -280,10 +281,12 @@ def kind_score(x: int,
         source_grd, source_grd_confs =  element_matcher.find_element(
             reading_df.loc[x, 'Regulator Name'], 
             threshold=name_match_threshold,
+            _cache=_cache
         )
         target_grd, target_grd_confs = element_matcher.find_element(
             reading_df.loc[x, 'Regulated Name'], 
             threshold=name_match_threshold,
+            _cache=_cache
         )
         
     else:
@@ -292,20 +295,23 @@ def kind_score(x: int,
                                 reading_df.loc[x, 'Regulator Type'],
                                 model_df,
                                 threshold=name_match_threshold,
-                                metric=match_sim_metric)
+                                metric=match_sim_metric,
+                                _cache=_cache)
         source_name, source_name_confs = find_element("name",
                                 reading_df.loc[x, 'Regulator Name'],
                                 reading_df.loc[x, 'Regulator Type'],
                                 model_df,
                                 threshold=name_match_threshold,
-                                metric=match_sim_metric)
+                                metric=match_sim_metric,
+                                _cache=_cache)
         source_id, source_id_confs = find_element("id",
                                 reading_df.loc[x, 'Regulator ID'],
                                 reading_df.loc[x, 'Regulator Type'],
                                 model_df,
                                 reading_df.loc[x, 'Regulator Database'],
                                 threshold=name_match_threshold,
-                                metric=match_sim_metric)
+                                metric=match_sim_metric,
+                                _cache=_cache)
         
 
         target_hgnc, target_hgnc_confs = find_element("hgnc",
@@ -313,20 +319,23 @@ def kind_score(x: int,
                                 reading_df.loc[x, 'Regulated Type'],
                                 model_df,
                                 threshold=name_match_threshold,
-                                metric=match_sim_metric)
+                                metric=match_sim_metric,
+                                _cache=_cache)
         target_name, target_name_confs = find_element("name",
                                 reading_df.loc[x, 'Regulated Name'],
                                 reading_df.loc[x, 'Regulated Type'],
                                 model_df,
                                 threshold=name_match_threshold,
-                                metric=match_sim_metric)
+                                metric=match_sim_metric,
+                                _cache=_cache)
         target_id, target_id_confs = find_element("id",
                                 reading_df.loc[x, 'Regulated ID'],
                                 reading_df.loc[x, 'Regulated Type'],
                                 model_df,
                                 reading_df.loc[x, 'Regulated Database'],
                                 threshold=name_match_threshold,
-                                metric=match_sim_metric)
+                                metric=match_sim_metric,
+                                _cache=_cache)
 
     # Both regulator (source) and regulated (target) node found in the model
     hits = []
