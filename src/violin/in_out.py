@@ -156,10 +156,17 @@ def preprocessing_model(model: Union[str, SpooledTemporaryFile],
 
         # Check graph topology validity
         # Check if graph is empty
-        for col in ['Positive Regulator List', 'Negative Regulator List', 'Variable']:
+        cols_empty = []
+        for col in ['Positive Regulator List', 'Negative Regulator List']:
             # Check if all the value is 'nan' in the column
             if (model_df[col] == "nan").all():
-                return {"error": f"The '{col}' column in model is empty."}
+                cols_empty.append(col)
+            
+        if len(cols_empty) == 2:
+                return {"error": f"The '{','.join(cols_empty)}' column in model is empty."}
+        
+        if (model_df['Variable'] == "nan").all():
+            return {"error": "The 'Variable' column in model is empty."}
         
         # Send message if variable names are not valid
         valid, msg = validate_variable_names(model_df)
