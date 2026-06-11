@@ -107,7 +107,7 @@ def get_model_element_curies(model_df) -> dict:
             for id_ in ids:
                 if id_ in model_name_dict:
                     model_name_dict[id_]['name'].append(str(name))
-                    model_name_dict[id_]['model_index'].append(i+2)
+                    model_name_dict[id_]['model_index'].append(i)
                     model_name_dict[id_]['confidence'].append(conf)
                 else:
                     model_name_dict[id_] = {'name': [str(name)], 'model_index': [i], 'confidence': [conf]}
