@@ -342,6 +342,7 @@ def get_type(input_type: str, differ_gene=False) -> str:
     global CANONICAL_RNA
     input_type = re.findall(r'[A-z]+', input_type) if str(input_type) != 'nan' else 'other'
     input_type = set(x.lower().strip() for x in input_type) 
+    input_type.add(''.join(w.lower() for w in input_type))
     if differ_gene and input_type.intersection(['gene']):
         return 'gene'
     if input_type.intersection(CANONICAL_TYPES):
