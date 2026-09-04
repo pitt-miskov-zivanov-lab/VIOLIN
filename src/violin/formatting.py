@@ -141,9 +141,9 @@ def evidence_score(reading_df: pd.DataFrame, col_names: list) -> pd.DataFrame:
     remainder = [x for x in reading_df.columns if x not in col_names]
 
     # As VIOLIN identifies duplicates, it merges duplicate attributes into a list
-    counted_reading = reading.groupby(col_names)[remainder[0]].apply(list).reset_index(name=remainder[0])
+    counted_reading = reading.groupby(col_names, sort=False)[remainder[0]].apply(list).reset_index(name=remainder[0])
     for x in range(1, len(remainder)):
-        sub = reading.groupby(col_names)[remainder[x]].apply(list).reset_index(name=remainder[x])
+        sub = reading.groupby(col_names, sort=False)[remainder[x]].apply(list).reset_index(name=remainder[x])
         counted_reading[remainder[x]] = sub[remainder[x]]
 
     # Counting the number of duplicates
